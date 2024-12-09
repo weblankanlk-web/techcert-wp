@@ -1,0 +1,51 @@
+
+@function get-vw($target) {
+    $vw-context: (1920*.01) * 1px;
+    $res: (calc($target/$vw-context)) * 1vw;
+    @return $res;
+}
+body{
+    font-family: $primary-font;
+    font-size: 16px;
+    line-height: 27px;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.btn{
+    width: fit-content;
+    a{
+        color: $color-1;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    &.underline{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border: 1px solid $color-1;
+        }
+    }
+}
+.slick-slider{
+    .slick-arrow{
+        &.slick-next{
+           right: 0; 
+           z-index: 999;    
+        }
+        &.slick-prev{
+            left: 0;
+            z-index: 999;
+        }
+    }
+}
+
+

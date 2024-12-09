@@ -1,0 +1,98 @@
+footer{
+    padding: 20px 20px;
+    background-color: #ddd;
+    .footer-inner{
+        .footer-socail-media{
+            .footer-social-media-list{
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 0;
+                li{
+                    margin-right: 20px;
+                    .footer-social-media-link{
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+
+            }
+        }
+        .footer-menu{
+            .menu{
+                list-style: none;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.bottom-footer{
+    padding: 5px 20px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 992px){
+    footer{
+     
+        .footer-inner{
+            display: flex;
+            flex-wrap: wrap;
+            .footer-main{
+                width: 33.33%;
+            }
+            .footer-menu{
+                width: 33.33%;
+            }
+            .footer-socail-media{
+                .footer-social-media-list{
+                    
+                }      
+            }
+        }
+    }
+    
+}
+
+
+@media only screen and (min-width: 1200px){
+    footer{
+        padding: get-vw(60px) get-vw(240px);
+        .footer-inner{
+
+            .footer-socail-media{
+                .footer-social-media-list{
+                    li{
+                        margin-right: get-vw(20px);
+                        .footer-social-media-link{
+                            svg{
+                                width: get-vw(20px);
+                                height: get-vw(20px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-main{
+                .footer-des{
+                    font-size: get-vw(16px);
+                }
+            }
+            .footer-menu{
+                
+            }
+
+
+        }
+    }
+
+    .bottom-footer{
+        padding: get-vw(15px) get-vw(240px);
+        text-align: center;
+    }
+    
+    
+}

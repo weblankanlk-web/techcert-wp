@@ -1,0 +1,91 @@
+ .main-banner{
+    &.inner-banner{
+        .main-slider-wrapper{
+                .slider-item{
+                    position: relative;
+                    .slider-content{
+                        position: absolute;
+                        top:50%;
+                        left: 0;
+                        width: 100%;
+                        transform: translateY(-50%);
+                        padding: 20px;
+                        text-align: center;
+                        .banner-title{
+                            font-family: $primary-font;
+                            font-size: 30px;
+                        }
+                    }        
+                }
+            }
+        .breadcrumb-wrapper{
+            padding: 0 20px;
+            .bredcrumbswrap{
+                .bredcrumbs{
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    padding-left: 0px;
+                    li{
+                        a{
+                            text-decoration: none;
+                        }
+                        &+li{
+                            padding-left: 15px;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: $black;
+                                position: absolute;
+                                left: 5px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+   
+}
+.navigation{
+    padding: 20px;
+}
+
+@media only screen and (min-width: 1200px){
+    .main-banner{
+        &.inner-banner{
+            .main-slider-wrapper{
+                    .slider-item{
+                        position: relative;
+                        .slider-content{
+                            position: absolute;
+                            top:50%;
+                            left: 0;
+                            width: 100%;
+                            transform: translateY(-50%);
+                            padding: 0 get-vw(240px);
+                            text-align: center;
+                            .banner-title{
+                                font-family: $primary-font;
+                                font-size: get-vw(60px);
+                            }
+                        }        
+                    }
+                }
+            }
+
+            
+       
+    }
+
+    .navigation{
+        padding: get-vw(20px) get-vw(240px);
+    }
+    
+}

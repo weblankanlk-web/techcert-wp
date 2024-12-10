@@ -1,0 +1,19 @@
+.cmp-logo-slider{
+    .section-inner{
+        padding: 0 20px;
+        margin-bottom: 60px;
+         .logo-slider{
+            img{
+                margin: auto;
+            }    
+         }
+    }
+}
+@media only screen and (min-width: 1200px){
+    .cmp-logo-slider{
+            .section-inner{
+               padding: 0 get-vw(240px);
+               margin-bottom: get-vw(100px); 
+            }
+    }
+}

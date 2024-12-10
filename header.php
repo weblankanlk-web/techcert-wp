@@ -45,12 +45,95 @@
 <?php wp_body_open(); ?>
 <?php 
 	$main_logo		= get_field("main_logo","option");
-	$main_logo_url	= validateImage(100,50,$main_logo);
+	$main_logo_url	= validateImage(380,64,$main_logo);
 ?>
+<header id="header" class="header">
+	<div class="header-main">
+		<div class="main-wrapper">
+			<div class="header-inner">
+				<div class="left">
+					<a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+						<img src="<?php echo $main_logo_url; ?> " alt="" />
+					</a>
+				</div>
+				<div class="mid d-hide-m">
+					<div class="menu" id="navbar_main">
+						<?php wp_nav_menu(
+							array(
+								'theme_location'  => 'primary',
+								'depth'           => 2,
+								'menu_class'      => 'navbar-nav navbardropdown',
+								'menu_id'         => 'primary',
+							)
+						); ?>
+					</div>
+				</div>
+				<div class="right">
+					<div class="btn-wrap d-hide-m" id="desktop-hum">
+						<a href="" class="btn-item">Menu</a>
+						<div class="message-icon">
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/hum-arr.png" alt="">
+						</div>
+					</div>
+					<div class="mobile-btn d-hide-t" id="mobile-hum">
+						<a href="" class="btn-item">Menu</a>
+						<div class="message-icon">
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/hum-arr.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
 
-<div class="navigation">
-	<img src="<?php echo $main_logo_url; ?>" class="main-logo">
-</div>
+<nav id="navbar_main_desktop" class="offcanvas-d d-hide-m">
+	<div class="header-inner">
+		<div class="container-fluid">
+			<div class="close-btn">
+				<img class="close-menu" id="close-menu-desktop" src="<?php bloginfo('template_directory'); ?>/assets/images/header-mobile.png" alt="">
+			</div>
+			<div class="header-main-menu">
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'sub',
+						'depth'           => 2,
+						'menu_class'      => 'navbar-nav-desktop-sub navbardropdown-desktop-sub',
+						'menu_id'         => 'sub'
+					)
+				); ?>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<nav id="navbar_main_mobile" class="offcanvas d-hide-t">
+	<div class="header-inner">
+		<div class="container-fluid">
+			<div class="close-btn">
+				<img class="close-menu" id="close-menu-mobile" src="<?php bloginfo('template_directory'); ?>/assets/images/header-mobile.png" alt="">
+			</div>
+			<div class="header-main-menu">
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						'depth'           => 2,
+						'menu_class'      => 'navbar-nav-mobile navbardropdown--mobile',
+						'menu_id'         => 'primary'
+					)
+				); ?>
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'sub',
+						'depth'           => 2,
+						'menu_class'      => 'navbar-nav-mobile-sub navbardropdown-mobile-sub',
+						'menu_id'         => 'sub'
+					)
+				); ?>
+			</div>
+		</div>
+	</div>
+</nav>
 
 <?php if (is_front_page()){
 	$hm_main_banner		= get_field("hm_main_banner","option"); 
@@ -110,13 +193,13 @@
  <?php 
  	}else{
 ?>
-	<section class="main-banner inner-banner">
 	<?php 
 	$page_id			= get_the_id();
 	$inner_main_banner	= get_field("inner_main_banner",$page_id);
 	$has_breadcrum		= get_field("has_breadcrum",$page_id);
 	if($inner_main_banner){  
 	?>
+	<section class="main-banner inner-banner">
 	<div class="main-slider-wrapper">
 		<?php
 			foreach($inner_main_banner as $banner_item){

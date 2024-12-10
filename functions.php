@@ -76,6 +76,8 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 			array(
 				'primary' => esc_html__( 'Primary menu', 'NewBasetheme' ),
 				'footer'  => esc_html__( 'Footer menu', 'NewBasetheme' ),
+				'footer_sub'  => esc_html__( 'Footer Secondary Menu', 'NewBasetheme' ),
+				'sub' => esc_html__( 'Sub menu', 'NewBasetheme' ),
 			)
 		);
 

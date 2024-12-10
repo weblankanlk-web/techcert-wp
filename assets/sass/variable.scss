@@ -1,5 +1,47 @@
 // Fonts
-$primary-font:"Roboto", sans-serif;
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-ExtraLight.woff') format('woff');
+    font-weight: 200; /* ExtraLight */
+}
+
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-Light.woff') format('woff');
+    font-weight: 300; /* Light */
+}
+
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-Regular.woff') format('woff');
+    font-weight: 400; /* Regular */
+}
+
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-Medium.woff') format('woff');
+    font-weight: 500; /* Medium */
+}
+
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-Bold.woff') format('woff');
+    font-weight: 700; /* Bold */
+}
+
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-ExtraBold.woff') format('woff');
+    font-weight: 800; /* ExtraBold */
+}
+
+@font-face {
+    font-family: 'Forma DJR Micro';
+    src: url('FormaDJRMicro-Black.woff') format('woff');
+    font-weight: 900; /* Black */
+}
+
+$primary-font:"Forma DJR Micro", sans-serif;
 $secondary-font:"Poppins", sans-serif;
 
 // Colors
@@ -7,6 +49,12 @@ $color-1:#770000;
 $color-2:#2a2a2a;
 $white:#ffffff;
 $black:#000000;
+$primary-color:#3752A3;
+$secondary-color:#F69517;
+$blue-bg:#20408A;
+$white-bg:#F7F9FF;
+$b-text:#0E0D35;
+
 *,
 *::before,
 *::after {

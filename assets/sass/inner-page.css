@@ -1,3 +1,38 @@
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("FormaDJRMicro-ExtraLight.woff") format("woff");
+  font-weight: 200; /* ExtraLight */
+}
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("FormaDJRMicro-Light.woff") format("woff");
+  font-weight: 300; /* Light */
+}
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("FormaDJRMicro-Regular.woff") format("woff");
+  font-weight: 400; /* Regular */
+}
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("FormaDJRMicro-Medium.woff") format("woff");
+  font-weight: 500; /* Medium */
+}
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("FormaDJRMicro-Bold.woff") format("woff");
+  font-weight: 700; /* Bold */
+}
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("FormaDJRMicro-ExtraBold.woff") format("woff");
+  font-weight: 800; /* ExtraBold */
+}
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("FormaDJRMicro-Black.woff") format("woff");
+  font-weight: 900; /* Black */
+}
 *,
 *::before,
 *::after {
@@ -5,7 +40,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Forma DJR Micro", sans-serif;
   font-size: 16px;
   line-height: 27px;
   margin: 0;
@@ -16,9 +51,12 @@ img {
   display: block;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .btn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .btn a {
@@ -47,12 +85,259 @@ img {
   z-index: 999;
 }
 
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fw-9 {
+  font-weight: 900;
+}
+
+.d-hide-m {
+  display: none;
+}
+
+.d-hide-t {
+  display: block;
+}
+
+.inner-wrapper {
+  padding: 0 20px;
+}
+
+.main-wrapper {
+  padding: 0 40px;
+}
+
+.h-140 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.839px; /* 76.129% */
+  letter-spacing: -2.4px;
+}
+
+.h-80 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px; /* 75% */
+  letter-spacing: -2.4px;
+}
+
+.btn-text {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 18.104px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.362px;
+}
+
+.h-30 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 17.059px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.341px;
+}
+
+.h-100 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120px; /* 300% */
+  letter-spacing: -2px;
+}
+
+.h-120 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px; /* 75% */
+  letter-spacing: -3px;
+}
+
+.p-20 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 157.143% */
+}
+
+.h-80-s {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 87.5% */
+  letter-spacing: -2px;
+}
+
+.p-18 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+}
+
+.p-18-l {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 124%; /* 18.6px */
+  letter-spacing: -0.75px;
+}
+
+.h-70 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.8px;
+}
+
+.h-50 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 35px; /* 87.5% */
+  letter-spacing: -2px;
+}
+
+.full-wrapper {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .inner-wrapper {
+    padding: 0 40px;
+  }
+  .main-wrapper {
+    padding: 0 60px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .inner-wrapper {
+    padding: 0 12.6041666667vw;
+  }
+  .main-wrapper {
+    padding: 0 12.6041666667vw;
+  }
+  .d-hide-m {
+    display: block;
+  }
+  .d-hide-t {
+    display: none;
+  }
+  .h-140 {
+    font-size: 7.2916666667vw;
+    font-weight: 700;
+    line-height: 5.7291666667vw; /* 78.571% */
+    letter-spacing: -0.21875vw;
+  }
+  .h-80 {
+    font-size: 4.1666666667vw;
+    font-weight: 400;
+    line-height: 6.7708333333vw; /* 162.5% */
+    letter-spacing: -0.2083333333vw;
+  }
+  .btn-text {
+    font-size: 0.9484895833vw;
+    letter-spacing: -0.0189583333vw;
+  }
+  .h-30 {
+    font-size: 1.5625vw;
+    letter-spacing: -0.03125vw;
+  }
+  .h-100 {
+    font-size: 5.2083333333vw;
+    line-height: 6.25vw; /* 120% */
+    letter-spacing: -0.2604166667vw;
+  }
+  .h-120 {
+    font-size: 6.25vw;
+    font-weight: 700;
+    line-height: 5.2083333333vw;
+    letter-spacing: -0.3125vw;
+  }
+  .p-20 {
+    font-size: 1.0416666667vw;
+    line-height: 1.5625vw; /* 150% */
+  }
+  .h-80-s {
+    font-size: 4.1666666667vw;
+    font-weight: 700;
+    line-height: 3.125vw;
+    letter-spacing: -0.2083333333vw;
+  }
+  .p-18 {
+    font-size: 0.9375vw;
+    line-height: 1.5625vw;
+  }
+  .p-18-l {
+    font-size: 0.9375vw;
+    letter-spacing: -0.046875vw;
+  }
+  .h-70 {
+    font-size: 3.6458333333vw;
+    letter-spacing: -0.21875vw;
+  }
+  .h-50 {
+    font-size: 2.6041666667vw;
+    line-height: 2.0833333333vw;
+    letter-spacing: -0.1302083333vw;
+  }
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .comp-welcome-section .section-inner {
   padding: 0 20px;
   margin-bottom: 60px;
 }
 .comp-welcome-section .section-inner .welcome-section-title {
-  font-family: "Roboto", sans-serif;
+  font-family: "Forma DJR Micro", sans-serif;
   font-size: 30px;
   text-align: center;
   margin-bottom: 50px;
@@ -69,7 +354,7 @@ img {
     margin-bottom: 5.2083333333vw;
   }
   .comp-welcome-section .section-inner .welcome-section-title {
-    font-family: "Roboto", sans-serif;
+    font-family: "Forma DJR Micro", sans-serif;
     font-size: 3.125vw;
     text-align: center;
     margin-bottom: 2.6041666667vw;
@@ -149,7 +434,7 @@ img {
 }
 .cmp-accordion .section-inner .accordion-item .accordion-head {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Forma DJR Micro", sans-serif;
   font-weight: 700;
   transition: ease all 0.8s;
   padding: 0 20px;
@@ -200,7 +485,7 @@ img {
   z-index: 99;
 }
 .cmp-image-content-card-slider .section-inner .responsive-card-slider .item .item-content .item-content-title {
-  font-family: "Roboto", sans-serif;
+  font-family: "Forma DJR Micro", sans-serif;
   color: #ffffff;
 }
 .cmp-image-content-card-slider .section-inner .responsive-card-slider .item::after {
@@ -234,7 +519,7 @@ img {
     z-index: 99;
   }
   .cmp-image-content-card-slider .section-inner .responsive-card-slider .item .item-content .item-content-title {
-    font-family: "Roboto", sans-serif;
+    font-family: "Forma DJR Micro", sans-serif;
     color: #ffffff;
   }
   .cmp-image-content-card-slider .section-inner .responsive-card-slider .item::after {
@@ -377,8 +662,6 @@ img {
 
 @media only screen and (min-width: 992px) {
   .team-modal .modal-content-box {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
   .team-modal .modal-content-box .team-modal-content {
@@ -410,8 +693,6 @@ img {
     padding: 0.78125vw;
   }
   .team-modal .modal-content-box {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
     width: 52.0833333333vw;
     top: 50%;

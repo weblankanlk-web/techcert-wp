@@ -1,0 +1,141 @@
+
+
+
+
+
+.wrap-breadcrumb {
+    border-bottom: 1px solid #afafaf;
+}
+
+.wrap-right-115{
+    padding: 0;
+    width: 94.688vw;
+    margin: 0 auto;
+}
+
+.branch-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.main-details a:hover {
+    color: var(--leave-green);
+    text-decoration: underline;
+}
+.phone-main a {
+    padding: 0 25px;
+    white-space: nowrap;
+}
+
+.phone-main a:nth-child(odd) {
+    padding-left: 0 !important;
+}
+
+
+
+
+
+
+
+/* contact us  */
+
+.titleContat {
+    color: var(--black);
+    font-family: var(--OutfitFont);
+    font-size: var(--font-64);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 98%;
+    letter-spacing: -3.2px;
+    text-align: center;
+}
+.mainContentContact p {
+    color: var(--black);
+    font-family: var(--OutfitFont);
+    font-size: var(--font-18);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 195%;
+}
+.main-details-box {
+    padding: 75px 125px;
+    border: none;
+    background: #F4F4F4;
+}
+.visitText{
+    color: #031227;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 182.938%; /* 29.27px */
+    letter-spacing: 0.32px;
+}
+.addres-main,.addres-main a {
+    color: #031227;
+    font-family: Outfit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 103%; /* 32.96px */
+    letter-spacing: -1.92px;
+}
+.addres-main a {
+    text-decoration: none;
+}
+.spacebetween {
+    justify-content: space-between;
+    align-items: center;
+}
+.branchDetails {
+    width: 45%;
+}
+.branch-map {
+    width: 55%;
+}
+.box-map {
+    padding: 15px 0 15px 70px !important;
+}
+.inquery-form {
+    padding: 120px 250px;
+}
+.main-formtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 103%;
+    letter-spacing: -4.8px;
+}
+section.land-inquery label {
+    color: var(--ash-color);
+    font-family: var(--schibsted-font-family);
+    font-size: var(--font-18);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 182.938%;
+    letter-spacing: 0.36px;
+}
+select.wpcf7-form-control.wpcf7-select.form-control {
+    color: rgba(217, 217, 217, 0.54);
+    background: var(--leave-green);
+}
+.form-control {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #D9D9D9;
+    border-radius: 0;
+    color: var(--white-color);
+    font-family: var(--lora-font-family);
+    font-size: var(--font-35);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 103%;
+    letter-spacing: -2.88px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--ash-color);
+    border-radius: 0;
+}

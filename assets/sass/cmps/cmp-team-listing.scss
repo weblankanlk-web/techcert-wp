@@ -1,0 +1,155 @@
+.cmp-team-listing{
+    .section-inner{
+        padding: 0 20px;
+        margin-bottom: 60px;
+         .team-listing{
+             .listing-item{
+                width: 100%;
+                .team-item{
+                    cursor: pointer;
+                    .team-img{
+                        width: 100%;
+                    }
+                    .team-content{
+                        padding: 10px;
+                        background-color: $color-2; 
+                        padding: 15px;
+                        .team-name{
+                            color: $white;
+                            margin-bottom: 0;
+                            text-align: center;
+                            display: block;
+                        }
+                        .team-position{
+                            color: $white;
+                            font-size: 16px;
+                            margin-top: 0;
+                            text-align: center;
+                            display: block;
+                        }
+                    }
+                }
+             }  
+             
+             &.listing{
+                .listing-item{
+                    margin-top: 40px;
+                }
+             }
+         }
+    }
+}
+
+.team-modal{
+    position: fixed;
+    width:100%;
+    top: 0px;
+    left:0px;
+    height: 100%; 
+    z-index: 9999;
+    background-color: rgba($black,0.6);
+    display: none;
+    .modal-content-box{
+        padding:30px 20px 20px;
+        position: fixed;
+        width: calc( 100% - 80px);
+        top: 20px;
+        left: 20px;
+        height: calc( 100% - 80px);
+        background-color: $white;
+        z-index: 99999;
+        .modal-close{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 5px;
+           
+            svg{
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 992px){
+.team-modal{
+    
+    .modal-content-box{
+        height: fit-content;
+        .team-modal-content{
+            display: flex;
+            flex-wrap: wrap;
+            .modal-img{
+                width: 33.33%;
+            }
+            .modal-content{
+                width: 66.66%;
+            }
+        }
+    }
+}
+
+    .team-listing{
+        .listing-item{
+        width: 100%;
+            .team-item{
+               padding: 15px;     
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .cmp-team-listing{
+        .section-inner{
+            padding: 0 get-vw(240px);
+            margin-bottom: get-vw(100px);
+        }
+        .team-listing{
+            .listing-item{
+                 width: 100%;
+                .team-item{
+                   padding: get-vw(15px);     
+                }
+            }
+        }
+    }
+    .team-modal{ 
+    
+        .modal-content-box{
+            height: fit-content;
+            width: get-vw(1000px);
+            top: 50%;
+            left:50%;
+            transform: translateX(-50%) translateY(-50%);
+            .team-modal-content{
+                .modal-close{
+                    width: get-vw(40px);
+                    height: get-vw(20px);
+                    position: absolute;
+                    top: get-vw(5px);
+                    right: get-vw(5px);
+                    padding: 5px;
+                   
+                    svg{
+                        width: get-vw(25px);
+                        height: get-vw(15px);
+                        cursor: pointer;
+                    }
+                }
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                .modal-img{
+                    width: 33.33%;
+                }
+                .modal-content{
+                    width: 66.66%;
+                }
+            }
+        }
+    }
+}

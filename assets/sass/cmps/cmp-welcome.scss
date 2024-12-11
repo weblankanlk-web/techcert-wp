@@ -1,0 +1,46 @@
+
+ .comp-welcome-section{
+    .section-inner{
+        padding: 0 20px;
+        margin-bottom: 60px;
+        .welcome-section-title{
+            font-family: $primary-font;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 50px; 
+            font-weight: 700;
+        }
+        .welcome-section-para{
+            font-family: $secondary-font;
+            text-align: center;  
+        }  
+        
+        
+    }
+
+ }
+ 
+ @media only screen and (min-width: 1200px){
+    .comp-welcome-section{
+        .section-inner{
+            padding: 0 get-vw(240px);
+            margin-bottom: get-vw(100px);
+            .welcome-section-title{
+                font-family: $primary-font;
+                font-size: get-vw(60px);
+                text-align: center;
+                margin-bottom:get-vw(50px); 
+                font-weight: 700;
+            }
+            .welcome-section-para{
+                font-family: $secondary-font;
+                text-align: center;  
+                font-size: get-vw(16px);
+            }  
+            
+            
+        }
+    
+     }
+ }
+ 

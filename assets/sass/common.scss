@@ -1,3 +1,5 @@
+@import "variable.scss";
+
 @function get-vw($target) {
     $vw-context: (1920*.01) * 1px;
     $res: (calc($target/$vw-context)) * 1vw;
@@ -81,25 +83,29 @@ p,h1,h2,h3,h4,h5,h6{
 }
 
 .inner-wrapper{
-    padding: 0 20px;
+    padding: 0 25px;
 }
 .main-wrapper{
-    padding: 0 40px;
+    padding: 0 35px;
 }
 .h-140{
-    font-family: $primary-font;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22.839px; /* 76.129% */
-    letter-spacing: -2.4px;
-}
-.h-80{
     font-family: $primary-font;
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
     line-height: 45px; /* 75% */
+    letter-spacing: -2.4px;
+    background: linear-gradient(90deg, #FFF 10.52%, #4061AD 94.21%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.h-80{
+    font-family: $primary-font;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.839px; /* 76.129% */
     letter-spacing: -2.4px;
 }
 .btn-text{
@@ -122,7 +128,7 @@ p,h1,h2,h3,h4,h5,h6{
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120px; /* 300% */
+    line-height: 120%; /* 300% */
     letter-spacing: -2px;
 }
 .h-120{
@@ -186,6 +192,75 @@ p,h1,h2,h3,h4,h5,h6{
     letter-spacing: -0.12px;
     text-transform: capitalize;
 }
+.common-btn{
+    text-decoration: none;
+    .btn-wrap{
+        border-radius: 4.224px;
+        display: flex;
+        background: $primary-color;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        width: 200px;
+        .ar-icon{
+            display: flex;
+            flex-direction: row;
+            svg{
+                width: 13px;
+                height: 12.316px;
+                object-fit: contain;
+            }
+        }
+        p.btn-text{
+            color: $white;
+            margin-left: 5px;
+        }
+    }
+}
+.tagline-white{
+    border-radius: 70px;
+    border: 1px solid $white;
+    padding: 4px 10px 4px 24.5px;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+    color: $white;
+    &::before{
+        position: absolute;
+        height: 4.549px;
+        width: 4.549px;
+        content: "";
+        left: 25px;
+        background: url("../images/white-dot-tc.png");
+        background-repeat: repeat;
+        background-size: contain;
+        z-index: 3;
+        bottom:11px;
+    }
+}
+.tagline-black{
+    border-radius: 70px;
+    border: 1px solid $black-text;
+    padding: 4px 10px;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+    color: $black-text;
+    &::before{
+        position: absolute;
+        height: 4.549px;
+        width: 4.549px;
+        content: "";
+        left: 25px;
+        background: url("../images/black-dot-tc.png");
+        background-repeat: repeat;
+        background-size: contain;
+        z-index: 3;
+        bottom:11px;
+    }
+}
 .full-wrapper{
     width: 100%;
 }
@@ -199,10 +274,10 @@ p,h1,h2,h3,h4,h5,h6{
 }
 @media only screen and (min-width: 1200px){
     .inner-wrapper{
-        padding: 0 get-vw(242px);
+        padding: 0 get-vw(140px);
     }
     .main-wrapper{
-        padding: 0 get-vw(242px);
+        padding: 0 get-vw(140px);
     }
     .d-hide-m{
         display: block;
@@ -271,6 +346,48 @@ p,h1,h2,h3,h4,h5,h6{
     .p-16{
         font-size:get-vw( 16px);
         letter-spacing:get-vw( -0.16px);
+    }
+    .tagline-white{
+        border-radius: get-vw(70px);
+        border: get-vw(1px) solid $white;
+        padding: get-vw(8px) get-vw(31px) get-vw(7px) get-vw(43px);
+        width: fit-content;
+        margin-bottom: get-vw(20px);
+        &::before{
+            height: get-vw(8px);
+            width: get-vw(8px);
+            left: get-vw(21.5px);
+            bottom: get-vw(19.84px);
+        }
+    }
+    .tagline-black{
+        border-radius: get-vw(70px);
+        border: get-vw(1px) solid $black-text;
+        padding: get-vw(8px) get-vw(31px) get-vw(7px) get-vw(43px);
+        width: fit-content;
+        margin-bottom: get-vw(20px);
+        &::before{
+            height: get-vw(8px);
+            width: get-vw(8px);
+            left: get-vw(21.5px);
+            bottom: get-vw(19.84px);
+        }
+    }
+    .common-btn{
+        .btn-wrap{
+            border-radius: get-vw(5.099px);
+            padding: get-vw(16px) get-vw(49px);
+            width: get-vw(228px);
+            .ar-icon{
+                svg{
+                    width: get-vw(13px);
+                    height: get-vw(12.316px);
+                }
+            }
+            p.btn-text{
+                margin-left: get-vw(10px);
+            }
+        }
     }
 }
 

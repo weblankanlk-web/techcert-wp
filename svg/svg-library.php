@@ -43,4 +43,15 @@
 		<circle cx="5" cy="5" r="5" fill="#fff"/>
 	</symbol>
 
+	<symbol id="left" viewBox="0 0 13 13">
+		<g clip-path="url(#a)">
+		<path fill="#fff" d="M7.752 6.16L2.889 1.553a.65.65 0 0 1 0-.953l.426-.403A.726.726 0 0 1 3.818 0c.19 0 .369.07.502.197l5.791 5.485a.65.65 0 0 1 0 .957l-5.785 5.48a.726.726 0 0 1-.503.197.726.726 0 0 1-.503-.197l-.426-.404a.65.65 0 0 1 0-.952L7.752 6.16z"/>
+		</g>
+		<defs>
+		<clipPath id="a">
+			<path fill="#fff" d="M0 0h13v12.32H0z" transform="matrix(-1 0 0 1 13 0)"/>
+		</clipPath>
+		</defs>
+	</symbol>
+
 </svg>

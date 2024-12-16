@@ -226,15 +226,11 @@
 							echo "<".$in_banner_title_tag." class='banner-title'>".$in_banner_title."</".$in_banner_title_tag.">";	
 						}	
 					?>
-					 
-
 					<?php if($in_banner_link_url){?>
 						<a href="<?php echo $in_banner_link_url; ?>" class="slider-content-link">
 							<?php echo $in_banner_link_text;?>
 						</a>
 					<?php } ?>   
-					
-
 				</div>
 			</div>
 		<?php 

@@ -139,7 +139,7 @@ p,h1,h2,h3,h4,h5,h6{
     line-height: 45px; /* 75% */
     letter-spacing: -3px;
 }
-.p-20{
+.p-20,.p-20 p{
     font-family: $secondary-font;
     font-size: 14px;
     font-style: normal;
@@ -192,7 +192,15 @@ p,h1,h2,h3,h4,h5,h6{
     letter-spacing: -0.12px;
     text-transform: capitalize;
 }
-.common-btn{
+.h-200{
+    font-family: $primary-font;
+    font-size: 102px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -7.35px;
+}
+.common-btn-blue{
     text-decoration: none;
     .btn-wrap{
         border-radius: 4.224px;
@@ -202,6 +210,37 @@ p,h1,h2,h3,h4,h5,h6{
         justify-content: center;
         padding: 10px 30px;
         width: 200px;
+        .ar-icon{
+            display: flex;
+            flex-direction: row;
+            svg{
+                width: 13px;
+                height: 12.316px;
+                object-fit: contain;
+            }
+        }
+        p.btn-text{
+            color: $white;
+            margin-left: 5px;
+        }
+    }
+}
+.common-btn-trans{
+    text-decoration: none;
+    &:hover{
+        .btn-wrap{
+            background: $primary-color;
+        }
+    }
+    .btn-wrap{
+        border-radius: 4.224px;
+        display: flex;
+        background: transparent;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        width: 200px;
+        border: 1px solid $white;
         .ar-icon{
             display: flex;
             flex-direction: row;
@@ -243,7 +282,7 @@ p,h1,h2,h3,h4,h5,h6{
     border-radius: 70px;
     border: 1px solid $black-text;
     padding: 4px 10px;
-    width: 50%;
+    width: 63%;
     text-align: center;
     margin-bottom: 8px;
     position: relative;
@@ -253,7 +292,7 @@ p,h1,h2,h3,h4,h5,h6{
         height: 4.549px;
         width: 4.549px;
         content: "";
-        left: 25px;
+        left: 11px;
         background: url("../images/black-dot-tc.png");
         background-repeat: repeat;
         background-size: contain;
@@ -264,12 +303,32 @@ p,h1,h2,h3,h4,h5,h6{
 .full-wrapper{
     width: 100%;
 }
+svg.arr-left{
+    border-radius: 5px;
+    border: 1px solid $white;
+    background: rgba(255, 255, 255, 0.30);
+    width: 40px;
+    height: 38.698px;
+}
+svg.arr-right{
+    border-radius: 5px;
+    border: 1px solid $white;
+    background: rgba(255, 255, 255, 0.30);
+    width: 40px;
+    height: 38.698px;
+}
 @media only screen and (min-width: 768px){
     .inner-wrapper{
         padding: 0 40px;
     }
     .main-wrapper{
         padding: 0 60px;
+    }
+    .tagline-white{
+        width: 30%;
+    }
+    .tagline-black{
+        width: 30%;
     }
 }
 @media only screen and (min-width: 1200px){
@@ -316,7 +375,7 @@ p,h1,h2,h3,h4,h5,h6{
         line-height: get-vw(100px);
         letter-spacing: get-vw(-6px);
     }
-    .p-20{
+    .p-20,.p-20 p{
         font-size: get-vw(20px);
         line-height:get-vw( 30px); /* 150% */
     }
@@ -347,6 +406,11 @@ p,h1,h2,h3,h4,h5,h6{
         font-size:get-vw( 16px);
         letter-spacing:get-vw( -0.16px);
     }
+    .h-200{
+        font-size: get-vw(200px);
+        line-height:get-vw( 156px);
+        letter-spacing:get-vw( -14px);
+    }
     .tagline-white{
         border-radius: get-vw(70px);
         border: get-vw(1px) solid $white;
@@ -373,11 +437,11 @@ p,h1,h2,h3,h4,h5,h6{
             bottom: get-vw(19.84px);
         }
     }
-    .common-btn{
+    .common-btn-blue{
         .btn-wrap{
             border-radius: get-vw(5.099px);
             padding: get-vw(16px) get-vw(49px);
-            width: get-vw(228px);
+            width: get-vw(247.2px);
             .ar-icon{
                 svg{
                     width: get-vw(13px);
@@ -388,6 +452,36 @@ p,h1,h2,h3,h4,h5,h6{
                 margin-left: get-vw(10px);
             }
         }
+    }
+    .common-btn-trans{
+        .btn-wrap{
+            border-radius: get-vw(5.099px);
+            padding: get-vw(16px) get-vw(49px);
+            width: get-vw(247.2px);
+            border: get-vw(1px) solid $white;
+            .ar-icon{
+                svg{
+                    width: get-vw(13px);
+                    height: get-vw(12.316px);
+                }
+            }
+            p.btn-text{
+                margin-left: get-vw(10px);
+            }
+        }
+    }
+   
+    svg.arr-left{
+        border-radius: get-vw(7px);
+        border: get-vw(1px) solid $white;
+        width: get-vw(71px);
+        height: get-vw(67.698px);
+    }
+    svg.arr-right{
+        border-radius: get-vw(7px);
+        border: get-vw(1px) solid $white;
+        width: get-vw(71px);
+        height: get-vw(67.698px);
     }
 }
 

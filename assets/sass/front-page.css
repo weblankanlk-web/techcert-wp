@@ -186,6 +186,15 @@ p, h1, h2, h3, h4, h5, h6 {
   letter-spacing: -3px;
 }
 
+.h-160 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 102px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -7.35px;
+}
+
 .p-20, .p-20 p {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -403,6 +412,11 @@ svg.arr-right {
   }
   .d-hide-t {
     display: none;
+  }
+  .h-160 {
+    font-size: 8.3333333333vw;
+    line-height: 5.46875vw; /* 65.625% */
+    letter-spacing: -0.5vw;
   }
   .h-140 {
     font-size: 7.2916666667vw;
@@ -1017,6 +1031,11 @@ html {
 }
 .home-map .full-wrapper .details-section .detail-inner .para span {
   color: #F69517;
+}
+@media only screen and (min-width: 768px) {
+  .home-map .full-wrapper .details-section .detail-inner {
+    align-items: center;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .home-map .full-wrapper::after {

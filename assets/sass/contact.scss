@@ -187,14 +187,14 @@
                 padding: get-vw(130px) get-vw(100px);
                 .main-wrapper{
                     .left-div{
-                        width: get-vw(629px);
+                        width: get-vw(590.6px);
                         margin-bottom: 0;
                         .main{
                             margin-bottom: get-vw(12px);
                         }
                     }
                     .right-div{
-                        width: get-vw(811px);
+                        width: get-vw(849.4px);
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
@@ -305,6 +305,7 @@
                         border: none;
                         width: 100%; 
                         border-bottom: 1px solid rgba(146, 172, 191, 0.36);
+                        color: $white;
                         &::placeholder{
                             font-size: 16px;  
                             color: $white;  
@@ -388,6 +389,7 @@
                         width: 100%;
                         position: relative;
                         height:30px;
+                        color: $white;
                         &::placeholder{
                             font-size: 16px;  
                             color: $white; 
@@ -462,6 +464,75 @@
             .right-div{
                 .form-wrap{
                     width: get-vw(725px);
+                    padding: get-vw(120px) get-vw(130px) get-vw(100px);
+                    z-index: 2;
+              
+                    form{ 
+                        label{
+                                margin-top: get-vw(30px);
+                                font-size: get-vw(16px);
+                        }
+                        input{
+                            height: get-vw(35.9125px);
+                            border-bottom: get-vw(1px) solid rgba(146, 172, 191, 0.36);
+                            &::placeholder{
+                                font-size:get-vw( 30px); 
+                                text-align: right; 
+                                font-weight: 700;
+                                line-height: normal;
+                            }
+                            &.wpcf7-submit{
+                                font-size:get-vw( 18.211px);
+                                letter-spacing:get-vw( -0.364px);
+                            }
+                        }
+                        a.btn-form{
+                            margin-top: get-vw(35px);
+                        }
+                        // .submit{
+                        //     margin: get-vw(76px) auto 0;
+                        //     a{
+                        //     padding: get-vw(24px) get-vw(59px) get-vw(24px) get-vw(59px);
+                        //     input{
+                        //         font-size: get-vw(18px);
+                        //         letter-spacing: get-vw(7.2px);
+                        //     }
+                        //     }
+                        //         svg{
+                        //             width: get-vw(18px);
+                        //             height: get-vw(10px);
+                        //         }
+                        // }
+                        select{
+                                height: get-vw(35.9125px);
+                                border-bottom: get-vw(1px) solid rgba(146, 172, 191, 0.36);
+                                font-size: get-vw(30px);  
+                                line-height: normal;
+                                font-weight: 700; 
+                                option {
+                                    font-size: get-vw(20px);
+                                    text-align: right;  
+                                    font-weight: 700; 
+                                    background: $black-text;
+                                }
+                        }
+                        textarea{
+                                border-bottom: get-vw(1px) solid rgba(146, 172, 191, 0.36);
+                                height: get-vw(35.9125px);
+                                &::placeholder{
+                                    font-size: get-vw(30px); 
+                                    font-weight: 700; 
+                                }
+                        }
+                        .input-group{
+                            padding: get-vw(10px);
+                            &.full-width{
+                                input{
+                                    height: get-vw(35.9125px);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         } 

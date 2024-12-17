@@ -177,6 +177,14 @@ p,h1,h2,h3,h4,h5,h6{
     line-height: 124%; /* 18.6px */
     letter-spacing: -0.75px;
 }
+.h-40{
+    font-family: $primary-font;
+    font-size: 20px; 
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px; /* 18.6px */
+    letter-spacing: -0.75px;
+}
 .h-70{
     font-family: $primary-font;
     font-size: 30px;
@@ -376,6 +384,10 @@ svg.arr-right{
     .h-30{
         font-size: get-vw(30px);
         letter-spacing: get-vw(-0.6px);
+    }
+    .h-40{
+        font-size: get-vw(40px);
+        line-height:get-vw( 46px); /* 115% */
     }
     .h-100{
         font-size: get-vw(100px);

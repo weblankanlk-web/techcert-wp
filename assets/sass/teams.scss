@@ -1,0 +1,174 @@
+.team-listing-sec{
+    .main-wrapper{
+        padding-top: 60px;
+        background: $black-bg;
+        .team-div{
+            .team-inner{
+                padding-bottom: 60px;
+                .top-section{
+                    &.left{
+                        .deatil-div{
+                            display: flex;
+                            flex-direction: row;
+                            gap: 5px;
+                            .sub{
+                                background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                        .main{
+                            background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            margin-top: -4px;
+                            span{
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                    &.center{
+                        .deatil-div{
+                            .sub{
+                                background: linear-gradient(90deg, #4061AD 24.6%, #FFF 173.24%);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                text-align: center;
+                            }
+                        }
+                        .main{
+                            background: linear-gradient(90deg, #4061AD 24.6%, #FFF 173.24%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-weight: 700;
+                            text-align: center;
+                            line-height: 60px;
+                            font-size: 54px;
+                            margin-top: -15px;
+                            span{
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .bottom-section{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    column-count: 1;
+                    padding-top: 30px;
+                    .content-div{
+                        width: 100%;
+                       .content-inner{
+                        border-radius: 8px;
+                        /* opacity: 0.19; */
+                        padding: 30px;
+                        background: rgba(255, 255, 255, 0.2);
+                            .t-name{
+                                color: $white;
+                                font-family:$secondary-font;
+                                margin-bottom: 20px;
+                            }
+                            .t-des{
+                                color: $white;
+                                padding: 5px 10px;
+                                width: 50%;
+                                text-align: center;
+                                border-radius: 4px;
+                                background: $secondary-color;
+                                margin-bottom: 20px;
+                            }
+                            .detail-inner{
+                                display: flex;
+                                flex-direction: row;
+                                gap: 15px;
+                                .t-ach{
+                                    color: $white;
+                                }
+                                img.t-img{
+                                    width: 50px;
+                                    height: 40px;
+                                    object-fit: contain;
+                                }
+                            }
+                       } 
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 768px){
+        .main-wrapper{
+            .team-div{
+                .team-inner{
+                    .bottom-section{
+                        column-count: 2;
+                        .content-div{
+                            width: 48.4%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        .main-wrapper{
+            padding-top: get-vw(140px);
+            .team-div{
+                .team-inner{
+                    padding-bottom: get-vw(140px);
+                    .top-section{
+                        &.left{
+                            .deatil-div{
+                                gap: get-vw(10px);
+                                align-items: flex-end;
+                            }
+                            .main{
+                                margin-top: get-vw(-4px);
+                            }
+                        }
+                        &.center{
+                            .main{
+                                line-height: get-vw(138.406px);
+                                font-size: get-vw(120px);
+                                margin-top: get-vw(-34.2px);
+                            }
+                        }
+                    }
+                    .bottom-section{
+                        gap: get-vw(20px);
+                        padding-top: get-vw(60px);
+                        .content-div{
+                           .content-inner{
+                            border-radius: get-vw(8px);
+                            padding: get-vw(60px);
+                                .t-name{
+                                    margin-bottom: get-vw(27px);
+                                }
+                                .t-des{
+                                    padding: get-vw(4px) get-vw(20px);
+                                    width: fit-content;
+                                    border-radius:get-vw(4px);
+                                    margin-bottom: get-vw(0px);
+                                }
+                                .detail-inner{
+                                    gap: 0;
+                                    justify-content: space-between;
+                                    align-items: flex-end;
+                                    img.t-img{
+                                        width: get-vw(90px);
+                                        height: get-vw(90px);
+                                    }
+                                }
+                           } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

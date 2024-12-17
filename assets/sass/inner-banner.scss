@@ -3,6 +3,15 @@
         margin-top: -118px;
         position: relative;
         .image-container{
+            &::after{
+                width: 100%;
+                height: 461px;
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.76) 28.17%, #000 271.37%);
+            }
             img.inner-banner-img{
                 width: 100%;
                 height: 699px;
@@ -63,6 +72,10 @@
         .full-wrapper{
             margin-top: get-vw(-255px);
             .image-container{
+                &::after{
+                    height: get-vw(497px);
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.76) 59.84%, #000 271.37%);
+                }
                 img.inner-banner-img{
                     height: get-vw(830px);
                 }

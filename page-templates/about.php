@@ -46,6 +46,54 @@
 </section>
 
 <?php 
+	$avm_title	= get_field("avm_title");
+	$avm_tagline	= get_field("avm_tagline");
+	$avm_image	= get_field("avm_image");
+	$avm_image_url= validateImage(707.622,758.127,$avm_image);
+	$avm_vision_title	= get_field("avm_vision_title");
+	$avm_vision_content	= get_field("avm_vision_content");
+	$avm_vision_image	= get_field("avm_vision_image");
+	$avm_vision_image_url= validateImage(216,238,$avm_vision_image);
+	$avm_mission_title	= get_field("avm_mission_title");
+	$avm_mission_content	= get_field("avm_mission_content");
+	$avm_mission_image	= get_field("avm_mission_image");
+	$avm_mission_image_url= validateImage(216,238,$avm_mission_image);
+?>
+<section class="about-vision-mission">
+    <div class="main-wrapper">  
+        <div class="left-div">
+			<p class="h-30 tagline-white"><?php echo $avm_tagline; ?></p>
+            <h2 class="main h-120"><?php echo $avm_title;?></h2>
+            <div class="image-wrap">
+                <img src="<?php echo $avm_image_url; ?>" alt="" class="main">
+            </div>
+        </div>
+        <div class="right-div">
+            <div class="right-inner">
+				<div class="item-div">
+					<div class="item-inner">
+						<div class="image-container">
+							<img src="<?php echo $avm_vision_image_url; ?>" alt="">
+						</div>
+						<h4 class="title h-100"><?php echo $avm_vision_title; ?></h4>
+						<p class="para p-18"><?php echo $avm_vision_content; ?></p>
+					</div>
+				</div>
+				<div class="item-div">
+					<div class="item-inner">
+						<div class="image-container">
+							<img src="<?php echo $avm_mission_image_url; ?>" alt="">
+						</div>
+						<h4 class="title h-100"><?php echo $avm_mission_title; ?></h4>
+						<p class="para p-18"><?php echo $avm_mission_content; ?></p>
+					</div>
+				</div>
+			</div>
+        </div>  
+    </div>
+</section>
+
+<?php 
 	$aw_image	= get_field("aw_image");
 	$aw_image_url=validateImage(1920,827,$aw_image);
 	$white_tagline	= get_field("white_tagline");

@@ -139,6 +139,14 @@ p,h1,h2,h3,h4,h5,h6{
     line-height: 45px; /* 75% */
     letter-spacing: -3px;
 }
+.h-160{
+    font-family: $primary-font;
+    font-size: 102px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -7.35px;
+}
 .p-20,.p-20 p{
     font-family: $secondary-font;
     font-size: 14px;
@@ -343,6 +351,11 @@ svg.arr-right{
     }
     .d-hide-t{
         display: none;
+    }
+    .h-160{
+        font-size: get-vw(160px);
+        line-height:get-vw( 124px); /* 65.625% */
+        letter-spacing:get-vw( -9.6px);
     }
     .h-140{
         font-size:get-vw( 140px);

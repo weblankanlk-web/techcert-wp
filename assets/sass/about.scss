@@ -408,3 +408,147 @@
         }
     }
 }
+
+.about-vision-mission{
+    .main-wrapper{
+        background: $black-bg;
+        padding-bottom: 50px;
+        .left-div{
+            .main{
+                background: linear-gradient(90deg, #4061AD 0.21%, #FFF 156.34%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                span{
+                    font-weight: 700;
+                }
+            }
+            .image-wrap{
+                position: relative;
+                z-index: 0;
+                img.main{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+        }
+        .right-div{
+            .right-inner{
+                margin-top: -100px;
+                position: relative;
+                z-index: 1;
+                .item-div{
+                    .item-inner{
+                        border-radius: 15px;
+                        background: linear-gradient(0deg, #151F3D 0%, #151F3D 100%), #151F3D;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 40px 30px;
+                        margin-bottom: 30px;
+                        .image-container{
+                            img{
+                                width: 130px;
+                                height: 142px;
+                                object-fit: cover;
+                            }
+                        }
+                        .title{
+                            font-weight: 700;
+                            color: $white;
+                            text-transform: uppercase;
+                            margin-bottom: 15px;
+                        }
+                        .para{
+                            text-align: center;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 768px){
+        .main-wrapper{
+            .left-div{
+                .image-wrap{
+                    img.main{
+                        height: 783px;
+                    }
+                }
+            }
+            .right-div{
+                .right-inner{
+                    margin-top: -230px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    column-count: 2;
+                    gap: 20px;
+                    .item-div{
+                        width: 48.4%;
+                        .item-inner{
+                            .para{
+                                min-height:(110px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        .main-wrapper{
+            padding-bottom:get-vw(80px);
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            padding-top: get-vw(140px);
+            .left-div{
+                width: get-vw(516px);
+                .main{
+                  width: get-vw(963px);
+                   font-weight: 400;
+                }
+                .image-wrap{
+                    position: absolute;
+                    bottom: get-vw(-309.6px);
+                    img.main{
+                        width: get-vw(726.812px);
+                        height: get-vw(969.2px);
+                    }
+                }
+            }
+            .right-div{
+                width: get-vw(1124px);
+                .right-inner{
+                    margin-top: 0;
+                    padding-top: get-vw(223px);
+                    gap: get-vw(20px);
+                    .item-div{
+                        .item-inner{
+                            border-radius: get-vw(15px);
+                            padding: get-vw(40px) get-vw(50px) get-vw(60px);
+                            margin-bottom: 0;
+                            .image-container{
+                                position: relative;
+                                z-index: 1;
+                                img{
+                                    width: get-vw(216px);
+                                    height: get-vw(236px);
+                                }
+                            }
+                            .title{
+                                margin-bottom: get-vw(35px);
+                                margin-top: get-vw(-54px);
+                            }
+                            .para{
+                                min-height: get-vw(150px);
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}

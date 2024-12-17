@@ -37,7 +37,7 @@
     $cfp_image_url=validateImage(938,651,$cfp_image);
 ?>
 <section class="contact-page-form">
-    <div class="main-wrapper">  
+    <div class="main-wrapper">
         <div class="left-div">
             <h3 class="h-120 main"><?php echo $cfp_title; ?></h3>
             <p class="p-18 para"><?php echo $cfp_content; ?></p>

@@ -888,9 +888,10 @@ function the_breadcrumb(){
     $breadcrumb_content .= '</ol>';
 
 	return $breadcrumb_content;
-}
 
 add_filter(‘wpcf7_autop_or_not’, ‘__return_false’);
+
+}
 
 
 

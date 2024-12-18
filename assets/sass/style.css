@@ -3250,6 +3250,12 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: #151F3D;
 }
+.contact-page-form .main-wrapper .right-div .form-wrap form .wpcf7 p {
+  margin: 0;
+}
+.contact-page-form .main-wrapper .right-div .form-wrap form .wpcf7 p br {
+  display: none;
+}
 .contact-page-form .main-wrapper .right-div .form-wrap form label {
   display: block;
   font-size: 14px;

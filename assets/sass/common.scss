@@ -154,6 +154,15 @@ p,h1,h2,h3,h4,h5,h6{
     font-weight: 700;
     line-height: 22px; /* 157.143% */
 }
+
+.p-25{
+    font-family: $primary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 157.143% */
+}
+
 .h-80-s{
     font-family: $primary-font;
     font-size: 40px;
@@ -246,6 +255,7 @@ p,h1,h2,h3,h4,h5,h6{
     &:hover{
         .btn-wrap{
             background: $primary-color;
+            border: 1px solid transparent;
         }
     }
     .btn-wrap{
@@ -388,6 +398,10 @@ svg.arr-right{
     .h-40{
         font-size: get-vw(40px);
         line-height:get-vw( 46px); /* 115% */
+    }
+    .p-25{
+        font-size: get-vw(25px);
+        line-height: 160%;
     }
     .h-100{
         font-size: get-vw(100px);

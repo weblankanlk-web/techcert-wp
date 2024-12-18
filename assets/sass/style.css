@@ -244,6 +244,14 @@ p, h1, h2, h3, h4, h5, h6 {
   line-height: 22px; /* 157.143% */
 }
 
+.p-25 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 157.143% */
+}
+
 .h-80-s {
   font-family: "Forma DJR Micro", sans-serif;
   font-size: 40px;
@@ -345,6 +353,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .common-btn-trans:hover .btn-wrap {
   background: #3752A3;
+  border: 1px solid transparent;
 }
 .common-btn-trans .btn-wrap {
   border-radius: 4.224px;
@@ -491,6 +500,10 @@ svg.arr-right {
   .h-40 {
     font-size: 2.0833333333vw;
     line-height: 2.3958333333vw; /* 115% */
+  }
+  .p-25 {
+    font-size: 1.3020833333vw;
+    line-height: 160%;
   }
   .h-100 {
     font-size: 5.2083333333vw;
@@ -3250,12 +3263,6 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: #151F3D;
 }
-.contact-page-form .main-wrapper .right-div .form-wrap form .wpcf7 p {
-  margin: 0;
-}
-.contact-page-form .main-wrapper .right-div .form-wrap form .wpcf7 p br {
-  display: none;
-}
 .contact-page-form .main-wrapper .right-div .form-wrap form label {
   display: block;
   font-size: 14px;
@@ -3548,6 +3555,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    padding: 7.2916666667vw 0 7.2916666667vw 0;
   }
   .services-threat-bulletins .main-wrapper .main-div .top-section .first-sec .main {
     width: 41.875vw;
@@ -3611,7 +3619,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   padding-bottom: 50px;
 }
 .services-page-form .main-wrapper .left-div {
-  padding: 50px 0;
+  padding: 0 0 50px;
 }
 .services-page-form .main-wrapper .left-div .main {
   color: #ffffff;
@@ -3739,7 +3747,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
 }
 @media only screen and (min-width: 1200px) {
   .services-page-form .main-wrapper {
-    padding: 7.2916666667vw 12.5vw;
+    padding: 0 12.5vw 7.2916666667vw;
     display: flex;
     flex-direction: row;
   }
@@ -3989,7 +3997,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   .single-first-section .inner-wrapper .right-div .right-inner .white-div-sec .white-section {
     width: 48.28125vw;
     z-index: 4;
-    bottom: -21.2083333333vw;
+    bottom: -17.2083333333vw;
     position: absolute;
   }
   .single-first-section .inner-wrapper .right-div .right-inner .white-div-sec .white-section .white-section-inner {
@@ -4014,5 +4022,248 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   .single-first-section .inner-wrapper .right-div .right-inner .white-div-sec .white-section .white-section-inner .white-listing .slide-wrapper .white-icon-slider .white-item .white-inner img.white-icon {
     width: 4.4270833333vw;
     height: 4.4270833333vw;
+  }
+}
+
+.services_detail-include .full-wrapper {
+  background: #010C1A;
+  padding-bottom: 50px;
+}
+.services_detail-include .full-wrapper .image-container {
+  margin-bottom: -50px;
+}
+.services_detail-include .full-wrapper .image-container img {
+  width: 100%;
+  height: 321px;
+  object-fit: contain;
+}
+.services_detail-include .full-wrapper .detail-div .detail-inner {
+  background: #e8e8e8;
+  padding: 30px 40px;
+  margin: 0 25px;
+  border-radius: 8px;
+}
+.services_detail-include .full-wrapper .detail-div .detail-inner .main {
+  color: #1D1D1D;
+  margin-bottom: 30px;
+}
+.services_detail-include .full-wrapper .detail-div .detail-inner .main span {
+  font-weight: 700;
+  color: #3752A3;
+}
+.services_detail-include .full-wrapper .detail-div .detail-inner ul.point-list {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .services_detail-include .full-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .services_detail-include .full-wrapper .image-container {
+    width: 40%;
+  }
+  .services_detail-include .full-wrapper .image-container img {
+    height: 400px;
+    object-position: left;
+  }
+  .services_detail-include .full-wrapper .detail-div {
+    width: 60%;
+    padding-top: 50px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .services_detail-include .full-wrapper .image-container img {
+    object-fit: cover;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .services_detail-include .full-wrapper {
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 0;
+    padding-top: 23.4375vw;
+  }
+  .services_detail-include .full-wrapper .image-container {
+    width: 100%;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 3.125vw;
+  }
+  .services_detail-include .full-wrapper .image-container img {
+    width: 99.9479166667vw;
+    height: 45.5729166667vw;
+  }
+  .services_detail-include .full-wrapper .detail-div {
+    width: 100%;
+    padding-top: 0;
+  }
+  .services_detail-include .full-wrapper .detail-div .detail-inner {
+    margin: 0;
+    padding: 6.25vw 19.7395833333vw;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .services_detail-include .full-wrapper .detail-div .detail-inner main {
+    margin-bottom: 3.9583333333vw;
+  }
+  .services_detail-include .full-wrapper .detail-div .detail-inner ul.point-list {
+    padding: 0 0 0 1.5625vw;
+    width: 23.3333333333vw;
+  }
+}
+
+.services-pdf-video .full-wrapper {
+  position: relative;
+  padding-bottom: 50px;
+  background: #010C1A;
+}
+.services-pdf-video .full-wrapper .image-container {
+  height: 520px;
+  position: absolute;
+  bottom: 50px;
+  z-index: 0;
+  width: 100%;
+}
+.services-pdf-video .full-wrapper .image-container::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 520px;
+  width: 100%;
+  left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(0deg, rgba(0, 41, 93, 0.6) 0%, rgba(0, 41, 93, 0.6) 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.services-pdf-video .full-wrapper .image-container img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+.services-pdf-video .full-wrapper a.video-icon-url {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 0;
+}
+.services-pdf-video .full-wrapper a.video-icon-url img.video-icon {
+  width: 100%;
+  object-fit: contain;
+  height: 70px;
+}
+.services-pdf-video .full-wrapper .detail-div {
+  padding: 50px 15px;
+  height: 520px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.services-pdf-video .full-wrapper .detail-div .left-div .main {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 0 10px;
+}
+.services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner .item-top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner .item-top img {
+  width: 40px;
+  height: 50px;
+  object-fit: contain;
+}
+.services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner .item-top p.name {
+  margin-left: 30px;
+  width: 70%;
+}
+.services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner a.link-pdf {
+  color: #1D1D1D;
+  text-transform: uppercase;
+  text-underline-offset: 3px;
+}
+@media only screen and (min-width: 768px) {
+  .services-pdf-video .full-wrapper .detail-div {
+    padding: 50px 35px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .services-pdf-video {
+    background: #010C1A;
+  }
+  .services-pdf-video .full-wrapper {
+    padding-bottom: 7.2916666667vw;
+    width: 79.375vw;
+  }
+  .services-pdf-video .full-wrapper .image-container {
+    height: 41.9791666667vw;
+    bottom: 7.2916666667vw;
+    width: 79.375vw;
+  }
+  .services-pdf-video .full-wrapper .image-container::after {
+    height: 41.9791666667vw;
+    width: 79.375vw;
+    border: 0.0520833333vw solid rgba(255, 255, 255, 0.3);
+  }
+  .services-pdf-video .full-wrapper .image-container img {
+    height: 41.9791666667vw;
+    width: 79.375vw;
+  }
+  .services-pdf-video .full-wrapper a.video-icon-url {
+    top: 18.0208333333vw;
+    z-index: 5;
+  }
+  .services-pdf-video .full-wrapper a.video-icon-url img.video-icon {
+    height: 5.0638541667vw;
+  }
+  .services-pdf-video .full-wrapper .detail-div {
+    padding: 2.6041666667vw 5.2083333333vw 4.1666666667vw 7.2916666667vw;
+    height: 41.9791666667vw;
+    flex-direction: row;
+    justify-content: unset;
+    align-items: flex-end;
+  }
+  .services-pdf-video .full-wrapper .detail-div .left-div {
+    width: 40%;
+  }
+  .services-pdf-video .full-wrapper .detail-div .left-div .main {
+    text-align: left;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .services-pdf-video .full-wrapper .detail-div .right-div {
+    width: 60%;
+  }
+  .services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner {
+    border-radius: 0.4166666667vw;
+    padding: 1.3541666667vw 3.125vw 1.40625vw 2.0833333333vw;
+    margin: 0 0.5208333333vw;
+  }
+  .services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner .item-top {
+    margin-bottom: 0.8854166667vw;
+  }
+  .services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner .item-top img {
+    width: 3.125vw;
+    height: 3.76984375vw;
+  }
+  .services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner .item-top p.name {
+    margin-left: 1.5625vw;
+    width: 70%;
+  }
+  .services-pdf-video .full-wrapper .detail-div .right-div .pdf-listing .pdf-slider .pdf-item .pdf-inner a.link-pdf {
+    text-underline-offset: 0.15625vw;
   }
 }/*# sourceMappingURL=style.css.map */

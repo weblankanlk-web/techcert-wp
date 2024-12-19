@@ -250,6 +250,31 @@ p,h1,h2,h3,h4,h5,h6{
         }
     }
 }
+.common-btn-green{
+    text-decoration: none;
+    .btn-wrap{
+        border-radius: 4.224px;
+        display: flex;
+        background: $green;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        width: 200px;
+        .ar-icon{
+            display: flex;
+            flex-direction: row;
+            svg{
+                width: 13px;
+                height: 12.316px;
+                object-fit: contain;
+            }
+        }
+        p.btn-text{
+            color: $white;
+            margin-left: 5px;
+        }
+    }
+}
 .common-btn-trans{
     text-decoration: none;
     &:hover{
@@ -335,6 +360,9 @@ svg.arr-left{
     background: rgba(255, 255, 255, 0.30);
     width: 40px;
     height: 38.698px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 svg.arr-right{
     border-radius: 5px;
@@ -342,6 +370,9 @@ svg.arr-right{
     background: rgba(255, 255, 255, 0.30);
     width: 40px;
     height: 38.698px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 @media only screen and (min-width: 768px){
     .inner-wrapper{
@@ -477,6 +508,22 @@ svg.arr-right{
         }
     }
     .common-btn-blue{
+        .btn-wrap{
+            border-radius: get-vw(5.099px);
+            padding: get-vw(16px) get-vw(49px);
+            width: get-vw(247.2px);
+            .ar-icon{
+                svg{
+                    width: get-vw(13px);
+                    height: get-vw(12.316px);
+                }
+            }
+            p.btn-text{
+                margin-left: get-vw(10px);
+            }
+        }
+    }
+    .common-btn-green{
         .btn-wrap{
             border-radius: get-vw(5.099px);
             padding: get-vw(16px) get-vw(49px);

@@ -211,7 +211,7 @@ $bulletin_slider.slick({
   {
   breakpoint: 769,
   settings: {
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     dots: false,
   }

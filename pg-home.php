@@ -306,6 +306,7 @@
 					<div class="tab-pane <?php echo $index === 0 ? 'show active' : ''; ?>"
 						id="tab-<?php echo $index; ?>"
 						role="tabpanel"
+						data-number="<?php echo $index; ?>"
 						aria-labelledby="tab-<?php echo $index; ?>-tab">
 						<div class="slider-wrapper">
 							<div class="industry-slider">
@@ -336,6 +337,7 @@
 										data-bs-toggle="tab"
 										type="button"
 										role="tab"
+										data-number="<?php echo $index; ?>"
 										data-bs-target="#tab-<?php echo $index; ?>"
 										aria-controls="tab-<?php echo $index; ?>"
 										aria-selected="<?php echo $index === 0 ? 'true' : 'false'; ?>">
@@ -347,6 +349,21 @@
 					</div>
                 </div>
             </div>
+			<div class="arrow-num-industries">
+				<div class="left-arrow-industries">
+					<svg class="arr-left">
+						<use xlink:href="#tc-left"></use>
+					</svg>
+				</div>
+				<div class="num-pack-industries">
+						01 /<span>06</span>
+				</div>
+				<div class="right-arrow-industries">
+					<svg class="arr-right">
+						<use xlink:href="#tc-right"></use>
+					</svg>
+				</div>
+			</div>
         </div>
     </div>
 </section>
@@ -390,9 +407,7 @@
 			</div>
 			<div class="bottom-section">
 				<div class="slider-wrapper">
-					 
 					<div class="bulletin-slider">
-					
 					<?php
 					$args = [
 						'post_type' => 'threat_bulletin',
@@ -436,7 +451,6 @@
 					endif;
 					?>
 				</div>
-					
 					<div class="arrow-num-bulletins">
                         <div class="left-arrow-bulletins">
                             <svg class="arr-left">
@@ -515,23 +529,64 @@
 ?>
 
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const tabs = document.querySelectorAll("#inTabs .nav-link");
     const tabPanes = document.querySelectorAll(".tab-pane");
+    const prevArrow = document.querySelector(".left-arrow-industries");
+    const nextArrow = document.querySelector(".right-arrow-industries");
+    const numPack = document.querySelector(".num-pack-industries"); 
+    const totalTabs = tabs.length;
+
+    let activeIndex = 0;
+
+    if (numPack) {
+        const totalSpan = numPack.querySelector("span");
+        if (totalSpan) {
+            totalSpan.textContent = String(totalTabs).padStart(2, '0'); 
+        }
+    }
+
+    function updateNumberDisplay() {
+        const currentNumber = String(activeIndex + 1).padStart(2, '0'); 
+        const currentSpan = numPack?.querySelector("span");
+        if (numPack && currentSpan) {
+            numPack.firstChild.textContent = `${currentNumber} /`; 
+        }
+    }
+
+    function updateTabs(newIndex) {
+        if (newIndex >= 0 && newIndex < tabs.length) {
+            tabs[activeIndex].classList.remove("active");
+            tabPanes[activeIndex].classList.remove("show", "active");
+
+            activeIndex = newIndex;
+
+            tabs[activeIndex].classList.add("active");
+            tabPanes[activeIndex].classList.add("show", "active");
+
+            updateNumberDisplay(); 
+        }
+    }
 
     tabs.forEach((tab, index) => {
         tab.addEventListener("click", function () {
-            tabs.forEach(t => t.classList.remove("active"));
-            tabPanes.forEach(pane => pane.classList.remove("show", "active"));
-
-            this.classList.add("active");
-            const targetPane = document.querySelector(this.getAttribute("data-bs-target"));
-            if (targetPane) {
-                targetPane.classList.add("show", "active");
-            }
+            updateTabs(index);
         });
     });
-   
+
+    if (prevArrow) {
+        prevArrow.addEventListener("click", function () {
+            updateTabs(activeIndex - 1);
+        });
+    }
+
+    if (nextArrow) {
+        nextArrow.addEventListener("click", function () {
+            updateTabs(activeIndex + 1);
+        });
+    }
+
+    updateNumberDisplay();
 });
 
 </script>

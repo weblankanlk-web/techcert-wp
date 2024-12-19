@@ -909,51 +909,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6762a2cfee8fb",
-            "label": "First Button URL",
-            "name": "ssm_first_button_url",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6762a2ddee8fc",
             "label": "First Button Text",
             "name": "ssm_first_button_text",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6762a2ecee8fd",
-            "label": "Second Button URL",
-            "name": "ssm_second_button_url",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -1011,5 +969,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734517542
+    "modified": 1734583774
 }

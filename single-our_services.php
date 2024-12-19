@@ -1,8 +1,4 @@
 <?php 
-     /* Template Name: About Us */
-?>
-
-<?php 
 	get_header(); 
 ?>
 
@@ -359,6 +355,58 @@
 <?php
     endif;
 ?>
+
+<?php 
+	$ssm_title	= get_field("ssm_title");
+	$ssm_sub_title	= get_field("ssm_sub_title");
+	$ssm_image	= get_field("ssm_image");
+	$ssm_image_url=validateImage(1640,463,$ssm_image);
+	$ssm_first_button_text	= get_field("ssm_first_button_text");
+	$ssm_second_button_text	= get_field("ssm_second_button_text");
+    $sm_whatsapp	= get_field("sm_whatsapp","option");
+?>
+<?php 
+    if ($ssm_image) :
+?>
+<section class="service-redirect-social">
+    <div class="main-wrapper">
+        <div class="image-container">
+            <img src="<?php echo $ssm_image_url;?>" alt="">
+        </div>
+        <div class="detail-div">
+            <div class="detail-inner">
+                <h4 class="h-80-s main"><?php echo $ssm_title;?></h4>
+                <h3 class="h-30 sub"><?php echo $ssm_sub_title;?></h3>
+                <div class="btn-group">
+                    <a href="<?php echo $sm_whatsapp; ?>" class="common-btn-green btn-sc-1" target="_blank">
+                        <div class="btn-wrap">
+                            <div class="ar-icon">
+                                <svg class="left">
+                                    <use xlink:href="#left"></use>
+                                </svg>
+                            </div>
+                            <p class="btn-text"><?php echo $ssm_first_button_text;?></p>
+                        </div>
+                    </a>
+                    <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="common-btn-blue btn-sc-2" target="_blank">
+                        <div class="btn-wrap">
+                            <div class="ar-icon">
+                                <svg class="left">
+                                    <use xlink:href="#left"></use>
+                                </svg>
+                            </div>
+                            <p class="btn-text"><?php echo $ssm_second_button_text;?></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php
+    endif;
+?>
+
 <?php
 	get_footer();
 ?>

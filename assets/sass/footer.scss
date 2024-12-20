@@ -137,9 +137,9 @@ footer{
                                     }
                                 }
                                 &.current_page_item {
-                                    a {
-                                        color: $secondary-color;
-                                    }
+                                    // a {
+                                    //     color: $secondary-color;
+                                    // }
                                     &::marker{
                                         color: $secondary-color;
                                     }
@@ -411,9 +411,9 @@ footer{
                                 }
                                 &.menu-item-has-children{
                                     &.current_page_item {
-                                        a {
-                                            color: $secondary-color;
-                                        }
+                                        // a {
+                                        //     color: $secondary-color;
+                                        // }
                                         &::marker{
                                             color: $secondary-color;
                                         }
@@ -423,6 +423,7 @@ footer{
                                     }
                                    ul.sub-menu{
                                         li{
+                                            color: $white;
                                             &:hover{
                                                 a {
                                                     color: $secondary-color;
@@ -453,6 +454,17 @@ footer{
                                         margin-bottom: get-vw(25px);
                                         list-style: none;
                                         position: relative;
+                                        &.current-menu-item{
+                                            a {
+                                                color: $secondary-color;
+                                            }
+                                            &::marker{
+                                                color: $secondary-color;
+                                            }
+                                            &::after{
+                                                background: $secondary-color;
+                                            }
+                                        }
                                         &::after{
                                             content: "";
                                             position: absolute;
@@ -464,6 +476,7 @@ footer{
                                             background: transparent;
                                         }
                                         a{
+                                            color: $white;
                                             font-family: $secondary-font;
                                             font-size: get-vw(16px);
                                             font-style: normal;

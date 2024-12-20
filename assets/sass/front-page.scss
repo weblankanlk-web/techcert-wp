@@ -690,6 +690,7 @@
                     flex-direction: row;
                     align-items: flex-end;
                     justify-content: space-between;
+                    padding: get-vw(140px) 0 get-vw(140px) 0;
                     .first-sec{
                         .main{
                             width: get-vw(804px);
@@ -1286,6 +1287,31 @@
                     }
                 }
             }
+            .arrow-num-industries{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 15px;
+                margin-top:40px;
+                .num-pack-industries{
+                    display: flex;
+                    flex-direction: row;
+                    font-family: $primary-font;
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    background: linear-gradient(90deg, #4061AD 0.21%, #FFF 156.34%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                   span{
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 46px;
+                    }
+                }
+            }
         }
     }
     @media only screen and (min-width: 1200px){
@@ -1395,6 +1421,37 @@
                                    
                                 }
                             }
+                        }
+                    }
+                }
+                .arrow-num-industries{
+                    gap: get-vw(10px);
+                    margin-top: 0;
+                    position: absolute;
+                    left: get-vw(140px);
+                    bottom: get-vw(266px);
+                    flex-direction: column;
+                    .left-arrow-industries{
+                        svg{
+                            border: radius get-vw(7px);
+                            border: get-vw(1px) solid $white;
+                            width: get-vw(71px);
+                            height: get-vw(67.698px);
+                        }
+                    }
+                    .num-pack-industries{
+                        font-size: get-vw(40px);
+                       span{
+                            font-size: get-vw(25px);
+                            letter-spacing: get-vw(-1.5px);
+                        }
+                    }
+                    .right-arrow-industries{
+                        svg{
+                            border: radius get-vw(7px);
+                            border: get-vw(1px) solid $white;
+                            width: get-vw(71px);
+                            height: get-vw(67.698px);
                         }
                     }
                 }

@@ -211,7 +211,7 @@ $bulletin_slider.slick({
   {
   breakpoint: 769,
   settings: {
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     dots: false,
   }
@@ -386,3 +386,30 @@ $other_services_slider.slick('slickNext');
 $('.arrow-left-o').on('click', function() {
 $other_services_slider.slick('slickPrev');
 });
+
+$pdf_slider = $('.pdf-slider').slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 0,
+  responsive: [ 
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        centerMode: false,
+        centerPadding: '20px',
+        slidesToShow: 1,
+      }
+    }
+  ]
+  });

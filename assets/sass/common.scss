@@ -154,6 +154,15 @@ p,h1,h2,h3,h4,h5,h6{
     font-weight: 700;
     line-height: 22px; /* 157.143% */
 }
+
+.p-25{
+    font-family: $primary-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 157.143% */
+}
+
 .h-80-s{
     font-family: $primary-font;
     font-size: 40px;
@@ -241,11 +250,37 @@ p,h1,h2,h3,h4,h5,h6{
         }
     }
 }
+.common-btn-green{
+    text-decoration: none;
+    .btn-wrap{
+        border-radius: 4.224px;
+        display: flex;
+        background: $green;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        width: 200px;
+        .ar-icon{
+            display: flex;
+            flex-direction: row;
+            svg{
+                width: 13px;
+                height: 12.316px;
+                object-fit: contain;
+            }
+        }
+        p.btn-text{
+            color: $white;
+            margin-left: 5px;
+        }
+    }
+}
 .common-btn-trans{
     text-decoration: none;
     &:hover{
         .btn-wrap{
             background: $primary-color;
+            border: 1px solid transparent;
         }
     }
     .btn-wrap{
@@ -325,6 +360,9 @@ svg.arr-left{
     background: rgba(255, 255, 255, 0.30);
     width: 40px;
     height: 38.698px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 svg.arr-right{
     border-radius: 5px;
@@ -332,6 +370,9 @@ svg.arr-right{
     background: rgba(255, 255, 255, 0.30);
     width: 40px;
     height: 38.698px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 @media only screen and (min-width: 768px){
     .inner-wrapper{
@@ -388,6 +429,10 @@ svg.arr-right{
     .h-40{
         font-size: get-vw(40px);
         line-height:get-vw( 46px); /* 115% */
+    }
+    .p-25{
+        font-size: get-vw(25px);
+        line-height: 160%;
     }
     .h-100{
         font-size: get-vw(100px);
@@ -463,6 +508,22 @@ svg.arr-right{
         }
     }
     .common-btn-blue{
+        .btn-wrap{
+            border-radius: get-vw(5.099px);
+            padding: get-vw(16px) get-vw(49px);
+            width: get-vw(247.2px);
+            .ar-icon{
+                svg{
+                    width: get-vw(13px);
+                    height: get-vw(12.316px);
+                }
+            }
+            p.btn-text{
+                margin-left: get-vw(10px);
+            }
+        }
+    }
+    .common-btn-green{
         .btn-wrap{
             border-radius: get-vw(5.099px);
             padding: get-vw(16px) get-vw(49px);

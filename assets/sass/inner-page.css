@@ -244,6 +244,14 @@ p, h1, h2, h3, h4, h5, h6 {
   line-height: 22px; /* 157.143% */
 }
 
+.p-25 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 157.143% */
+}
+
 .h-80-s {
   font-family: "Forma DJR Micro", sans-serif;
   font-size: 40px;
@@ -340,11 +348,38 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-left: 5px;
 }
 
+.common-btn-green {
+  text-decoration: none;
+}
+.common-btn-green .btn-wrap {
+  border-radius: 4.224px;
+  display: flex;
+  background: #29A71A;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  width: 200px;
+}
+.common-btn-green .btn-wrap .ar-icon {
+  display: flex;
+  flex-direction: row;
+}
+.common-btn-green .btn-wrap .ar-icon svg {
+  width: 13px;
+  height: 12.316px;
+  object-fit: contain;
+}
+.common-btn-green .btn-wrap p.btn-text {
+  color: #ffffff;
+  margin-left: 5px;
+}
+
 .common-btn-trans {
   text-decoration: none;
 }
 .common-btn-trans:hover .btn-wrap {
   background: #3752A3;
+  border: 1px solid transparent;
 }
 .common-btn-trans .btn-wrap {
   border-radius: 4.224px;
@@ -492,6 +527,10 @@ svg.arr-right {
     font-size: 2.0833333333vw;
     line-height: 2.3958333333vw; /* 115% */
   }
+  .p-25 {
+    font-size: 1.3020833333vw;
+    line-height: 160%;
+  }
   .h-100 {
     font-size: 5.2083333333vw;
     line-height: 6.25vw; /* 120% */
@@ -575,6 +614,18 @@ svg.arr-right {
     height: 0.6414583333vw;
   }
   .common-btn-blue .btn-wrap p.btn-text {
+    margin-left: 0.5208333333vw;
+  }
+  .common-btn-green .btn-wrap {
+    border-radius: 0.2655729167vw;
+    padding: 0.8333333333vw 2.5520833333vw;
+    width: 12.875vw;
+  }
+  .common-btn-green .btn-wrap .ar-icon svg {
+    width: 0.6770833333vw;
+    height: 0.6414583333vw;
+  }
+  .common-btn-green .btn-wrap p.btn-text {
     margin-left: 0.5208333333vw;
   }
   .common-btn-trans .btn-wrap {

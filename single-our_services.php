@@ -1,8 +1,4 @@
 <?php 
-     /* Template Name: About Us */
-?>
-
-<?php 
 	get_header(); 
 ?>
 
@@ -18,6 +14,9 @@
 	$white_title	= get_field("white_title");
 	$white_content	= get_field("white_content");
 	$white_icon_listing	= get_field("white_icon_listing");
+?>
+<?php 
+    if ($white_icon_listing) :
 ?>
 <section class="single-first-section">
     <div class="inner-wrapper">
@@ -68,6 +67,117 @@
         </div>
     </div>
 </section>
+<?php
+    endif;
+?>
+
+<?php 
+	$id_desktop_image	= get_field("id_desktop_image");
+	$id_mobile_image	= get_field("id_mobile_image");
+	$id_main_title	= get_field("id_main_title");
+	$id_desktop_image_url=validateImage(1919,875,$id_desktop_image);
+	$id_mobile_image_url=validateImage(768,500,$id_mobile_image);
+	$id_points_listing	= get_field("id_points_listing");
+?>
+<?php 
+    if ($id_points_listing) :
+?>
+<section class="services_detail-include">
+    <div class="full-wrapper">
+        <div class="image-container">
+            <picture>
+                <source media="(min-width:992px)" srcset="<?php echo $id_desktop_image_url; ?>">
+                <img src="<?php echo $id_mobile_image_url;?>" alt="">
+            </picture>
+        </div>
+        <div class="detail-div">
+            <div class="detail-inner">
+                <h3 class="main h-80-s"><?php echo $id_main_title; ?></h3>
+                <div class="points-sec">
+                    <ul class="point-list">
+                        <?php 
+                            foreach($id_points_listing as $id_item):
+                                $id_point  = $id_item["id_point"];
+                            ?>
+                            <li class="point-item p-25"><?php echo $id_point; ?></li>
+                        <?php
+                            endforeach;
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php
+    endif;
+?>
+
+<?php 
+	$vf_image	= get_field("vf_image");
+	$vf_video_url	= get_field("vf_video_url");
+	$vf_title	= get_field("vf_title");
+	$vf_image_url=validateImage(1524,806,$vf_image);
+	$vf_pdf_listing	= get_field("vf_pdf_listing");
+?>
+<?php 
+    if ($vf_image) :
+?>
+<section class="services-pdf-video">
+    <div class="full-wrapper">
+        <div class="image-container">
+            <img src="<?php echo $vf_image_url; ?>" alt="">
+        </div>
+        <?php  if ($vf_video_url) :?>
+            <a href="<?php echo $vf_video_url; ?>" data-fancybox class="video-icon-url">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/images/video-btn.png" alt="" class="video-icon">
+            </a>
+        <?php
+            endif;
+        ?>
+        <div class="detail-div">
+            <div class="left-div">
+                <?php  if ($vf_title) :?>
+                    <h3 class="h-80-s main"><?php echo $vf_title; ?></h3>
+                <?php
+                    endif;
+                ?>
+            </div>
+            <div class="right-div">
+                <?php 
+                      if ($vf_pdf_listing) :
+                ?>
+                <div class="pdf-listing">
+                    <div class="pdf-slider">
+                        <?php
+                            foreach($vf_pdf_listing as $pdf_item):
+                                $vf_file_name = $pdf_item["vf_file_name"];
+                                $vf_pdf_url = $pdf_item["vf_pdf_url"];
+                        ?>
+                        <div class="pdf-item">
+                            <div class="pdf-inner">
+                                <div class="item-top">
+                                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/file.png" alt="">
+                                    <p class="name p-18"><?php echo $vf_file_name; ?></p>
+                                </div>
+                                <a href="<?php echo $vf_pdf_url; ?>" class="p-18 link-pdf" target="_blank">Read More</a>
+                            </div>
+                        </div>
+                        <?php
+                            endforeach;
+                        ?>
+                    </div>
+                </div>
+                <?php
+                    endif;
+                ?>
+            </div>
+        </div>
+    </div>
+</section>
+<?php
+    endif;
+?>
 
 <?php
     $hcp_form_title            = get_field("hcp_form_title"); 
@@ -75,6 +185,9 @@
     $hcp_form_image           = get_field("hcp_form_image");
     $hcp_contact_form           = get_field("hcp_contact_form");
     $hcp_form_image_url=validateImage(938,651,$hcp_form_image);
+?>
+<?php 
+    if ($hcp_contact_form) :
 ?>
 <section class="services-page-form">
     <div class="main-wrapper">  
@@ -96,6 +209,9 @@
         </div>  
     </div>
 </section>
+<?php
+    endif;
+?>
 
 <?php 
 	$htb_tagline	= get_field("htb_tagline");
@@ -108,6 +224,9 @@
 	$htb_desktop_image_url=validateImage(1232,1003,$htb_desktop_image);
 	$hcp_key_bulletin_listing	= get_field("hcp_key_bulletin_listing");
 	$hcp_other_bulletin_listing	= get_field("hcp_other_bulletin_listing");
+?>
+<?php 
+    if ($hcp_key_bulletin_listing||$hcp_other_bulletin_listing) :
 ?>
 <section class="services-threat-bulletins">
 	<div class="main-wrapper">
@@ -233,7 +352,60 @@
 		</div>
 	</div>
 </section>
+<?php
+    endif;
+?>
 
+<?php 
+	$ssm_title	= get_field("ssm_title");
+	$ssm_sub_title	= get_field("ssm_sub_title");
+	$ssm_image	= get_field("ssm_image");
+	$ssm_image_url=validateImage(1640,463,$ssm_image);
+	$ssm_first_button_text	= get_field("ssm_first_button_text");
+	$ssm_second_button_text	= get_field("ssm_second_button_text");
+    $sm_whatsapp	= get_field("sm_whatsapp","option");
+?>
+<?php 
+    if ($ssm_image) :
+?>
+<section class="service-redirect-social">
+    <div class="main-wrapper">
+        <div class="image-container">
+            <img src="<?php echo $ssm_image_url;?>" alt="">
+        </div>
+        <div class="detail-div">
+            <div class="detail-inner">
+                <h4 class="h-80-s main"><?php echo $ssm_title;?></h4>
+                <h3 class="h-30 sub"><?php echo $ssm_sub_title;?></h3>
+                <div class="btn-group">
+                    <a href="<?php echo $sm_whatsapp; ?>" class="common-btn-green btn-sc-1" target="_blank">
+                        <div class="btn-wrap">
+                            <div class="ar-icon">
+                                <svg class="left">
+                                    <use xlink:href="#left"></use>
+                                </svg>
+                            </div>
+                            <p class="btn-text"><?php echo $ssm_first_button_text;?></p>
+                        </div>
+                    </a>
+                    <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="common-btn-blue btn-sc-2" target="_blank">
+                        <div class="btn-wrap">
+                            <div class="ar-icon">
+                                <svg class="left">
+                                    <use xlink:href="#left"></use>
+                                </svg>
+                            </div>
+                            <p class="btn-text"><?php echo $ssm_second_button_text;?></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php
+    endif;
+?>
 
 <?php
 	get_footer();

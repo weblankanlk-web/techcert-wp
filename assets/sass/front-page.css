@@ -203,6 +203,14 @@ p, h1, h2, h3, h4, h5, h6 {
   line-height: 22px; /* 157.143% */
 }
 
+.p-25 {
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 157.143% */
+}
+
 .h-80-s {
   font-family: "Forma DJR Micro", sans-serif;
   font-size: 40px;
@@ -299,11 +307,38 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-left: 5px;
 }
 
+.common-btn-green {
+  text-decoration: none;
+}
+.common-btn-green .btn-wrap {
+  border-radius: 4.224px;
+  display: flex;
+  background: #29A71A;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  width: 200px;
+}
+.common-btn-green .btn-wrap .ar-icon {
+  display: flex;
+  flex-direction: row;
+}
+.common-btn-green .btn-wrap .ar-icon svg {
+  width: 13px;
+  height: 12.316px;
+  object-fit: contain;
+}
+.common-btn-green .btn-wrap p.btn-text {
+  color: #ffffff;
+  margin-left: 5px;
+}
+
 .common-btn-trans {
   text-decoration: none;
 }
 .common-btn-trans:hover .btn-wrap {
   background: #3752A3;
+  border: 1px solid transparent;
 }
 .common-btn-trans .btn-wrap {
   border-radius: 4.224px;
@@ -451,6 +486,10 @@ svg.arr-right {
     font-size: 2.0833333333vw;
     line-height: 2.3958333333vw; /* 115% */
   }
+  .p-25 {
+    font-size: 1.3020833333vw;
+    line-height: 160%;
+  }
   .h-100 {
     font-size: 5.2083333333vw;
     line-height: 6.25vw; /* 120% */
@@ -534,6 +573,18 @@ svg.arr-right {
     height: 0.6414583333vw;
   }
   .common-btn-blue .btn-wrap p.btn-text {
+    margin-left: 0.5208333333vw;
+  }
+  .common-btn-green .btn-wrap {
+    border-radius: 0.2655729167vw;
+    padding: 0.8333333333vw 2.5520833333vw;
+    width: 12.875vw;
+  }
+  .common-btn-green .btn-wrap .ar-icon svg {
+    width: 0.6770833333vw;
+    height: 0.6414583333vw;
+  }
+  .common-btn-green .btn-wrap p.btn-text {
     margin-left: 0.5208333333vw;
   }
   .common-btn-trans .btn-wrap {
@@ -1186,6 +1237,7 @@ html {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    padding: 7.2916666667vw 0 7.2916666667vw 0;
   }
   .home-threat-bulletins .main-wrapper .main-div .top-section .first-sec .main {
     width: 41.875vw;
@@ -1713,6 +1765,31 @@ html {
 .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .tab-sec ul#inTabs li.nav-item:hover::after {
   background: #F69517;
 }
+.home-industries .main-wrapper .industry-list .arrow-num-industries {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+.home-industries .main-wrapper .industry-list .arrow-num-industries .num-pack-industries {
+  display: flex;
+  flex-direction: row;
+  font-family: "Forma DJR Micro", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(90deg, #4061AD 0.21%, #FFF 156.34%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home-industries .main-wrapper .industry-list .arrow-num-industries .num-pack-industries span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 46px;
+}
 @media only screen and (min-width: 1200px) {
   .home-industries .main-wrapper {
     padding-bottom: 0;
@@ -1803,5 +1880,32 @@ html {
   .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .tab-sec ul#inTabs li.nav-item button.nav-link.active::after {
     height: 0.0520833333vw;
     width: 27.1875vw;
+  }
+  .home-industries .main-wrapper .industry-list .arrow-num-industries {
+    gap: 0.5208333333vw;
+    margin-top: 0;
+    position: absolute;
+    left: 7.2916666667vw;
+    bottom: 13.8541666667vw;
+    flex-direction: column;
+  }
+  .home-industries .main-wrapper .industry-list .arrow-num-industries .left-arrow-industries svg {
+    border: radius 0.3645833333vw;
+    border: 0.0520833333vw solid #ffffff;
+    width: 3.6979166667vw;
+    height: 3.5259375vw;
+  }
+  .home-industries .main-wrapper .industry-list .arrow-num-industries .num-pack-industries {
+    font-size: 2.0833333333vw;
+  }
+  .home-industries .main-wrapper .industry-list .arrow-num-industries .num-pack-industries span {
+    font-size: 1.3020833333vw;
+    letter-spacing: -0.078125vw;
+  }
+  .home-industries .main-wrapper .industry-list .arrow-num-industries .right-arrow-industries svg {
+    border: radius 0.3645833333vw;
+    border: 0.0520833333vw solid #ffffff;
+    width: 3.6979166667vw;
+    height: 3.5259375vw;
   }
 }/*# sourceMappingURL=front-page.css.map */

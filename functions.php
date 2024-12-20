@@ -889,7 +889,7 @@ function the_breadcrumb(){
 
 	return $breadcrumb_content;
 
-	define( 'WPCF7_AUTOP', false );
+	
 
 }
 

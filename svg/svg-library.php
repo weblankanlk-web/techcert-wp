@@ -90,4 +90,12 @@
 		<circle cx="31" cy="31" r="30.5" stroke="#FCF6E9"/>
 	</symbol>
 
+	<symbol id="right-tb" viewBox="0 0 19 19">
+		<path fill="#fff" fill-rule="evenodd" d="M12.279 13.709l3.669-3.937H1.772c-.49 0-.49-.74 0-.74h14.176l-3.669-3.936c-.333-.36.203-.86.536-.509l4.251 4.566a.358.358 0 0 1-.018.517l-4.233 4.547c-.323.351-.878-.148-.536-.508z" clip-rule="evenodd"/>
+	</symbol>
+
+	<symbol id="left-tb" viewBox="0 0 20 19">
+		<path fill="#fff" fill-rule="evenodd" d="M6.951 13.709L3.282 9.772h14.176c.49 0 .49-.74 0-.74H3.282l3.669-3.936c.333-.36-.203-.86-.536-.509L2.164 9.153a.358.358 0 0 0 .018.517l4.233 4.547c.323.351.878-.148.536-.508z" clip-rule="evenodd"/>
+	</symbol>
+
 </svg>

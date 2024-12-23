@@ -421,6 +421,9 @@ svg.arr-left {
   width: 40px;
   height: 38.698px;
 }
+svg.arr-left:hover {
+  cursor: pointer;
+}
 
 svg.arr-right {
   border-radius: 5px;
@@ -428,6 +431,9 @@ svg.arr-right {
   background: rgba(255, 255, 255, 0.3);
   width: 40px;
   height: 38.698px;
+}
+svg.arr-right:hover {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {

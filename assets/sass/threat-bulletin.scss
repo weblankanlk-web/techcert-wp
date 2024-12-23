@@ -1,0 +1,180 @@
+.threat-bulletin-section{
+    .main-wrapper{
+        background: $black-bg;
+        .threat-wrapper{
+            .threats-landing-slider{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                button.threat-item{
+                    background: $black-bg-3;
+                    border: 0;
+                    padding: 30px;
+                    width: 100%;
+                    &:hover{
+                        background: linear-gradient(180deg, #151F3D 15.61%, #3853A3 159.79%);
+                    }
+                    .detail-div{
+                        .sub{
+                            color: $secondary-color;
+                            padding-bottom: 20px;
+                            padding-left: 7px;
+                            position: relative;
+                            &::before{
+                                background: $secondary-color;
+                                width: 7px;
+                                height: 7px;
+                                top: 3px;
+                                left: 3px;
+                                content: "";
+                                position: absolute;
+                                border-radius: 100px;
+                            }
+                        }
+                        .title{
+                            color: $white;
+                            font-weight: 400;
+                            padding-bottom: 20px;
+                            letter-spacing: -0.7px;
+                        }
+                        .tb-date{
+                            color: $white;
+                            text-transform: uppercase;
+                            padding-bottom: 40px;
+                            line-height: 30px; /* 150% */
+                            letter-spacing: 2px;
+                        }
+                    }
+                    .btn-tb{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            }
+            .pagination-wrapper{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                // gap: 10px;
+                padding: 50px 0;
+                a.pagination-link{
+                    svg{
+                        width: 35px;
+                        height: 35px;
+                        object-fit: contain;
+                        border: 1px solid $white;
+                        border-radius: 8px;
+                        padding: 5px;
+                    }
+                }
+                .page-number{
+                    color: $white;
+                    font-family: $secondary-font;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.4px;
+                    margin-right: 5px;
+                    text-decoration: none;
+                    &.current-page{
+                        background: $primary-color;
+                        padding: 10px 15px;
+                        border-radius: 100px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 768px){
+        .main-wrapper{
+           .threat-wrapper{
+                .threats-landing-slider{
+                    column-count: 2;
+                    button.threat-item{
+                        width: 48.5%;
+                    }
+                }
+           } 
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        .main-wrapper{
+            .threat-wrapper{
+                .threats-landing-slider{
+                    gap: get-vw(20px);
+                    column-count: 3;
+                    button.threat-item{
+                        padding: get-vw(80px) get-vw(60px) get-vw(60px);
+                        width: 32.5%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        .detail-div{
+                            .sub{
+                                padding-bottom: get-vw(40px);
+                                text-align: left;
+                                padding-left: get-vw(45px);
+                                &::before{
+                                    width: get-vw(10px);
+                                    height: get-vw(10px);
+                                    border-radius: get-vw(100px);
+                                    left: get-vw(9px);
+                                    top: get-vw(12px);
+                                }
+                            }
+                            .title{
+                                padding-bottom: get-vw(40px);
+                                letter-spacing:get-vw(-0.7px);
+                                line-height: get-vw(36px);
+                                text-align: left;
+                            }
+                            .tb-date{
+                                padding-bottom: get-vw(104px);
+                                line-height: get-vw(30px); /* 150% */
+                                letter-spacing: get-vw(4px);
+                                text-align: left;
+                            }
+                        }
+                        .btn-tb{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                    }
+                }
+                .pagination-wrapper{
+                    padding: get-vw(100px) 0 get-vw(131px);
+                    gap: get-vw(35px);
+                    justify-content: center;
+                    a.pagination-link{
+                        svg{
+                            width: get-vw(33.23px);
+                            height: get-vw(31.684px);
+                            border: get-vw(1px) solid $white;
+                            border-radius:get-vw(9px);
+                            padding: get-vw(7px);
+                        }
+                    }
+                    .page-number{
+                        font-size: get-vw(20px);
+                        letter-spacing:get-vw( -0.4px);
+                        margin-right: get-vw(35px);
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        &.current-page{
+                            padding: get-vw(13.92px) get-vw(20px);
+                            border-radius: get-vw(100px);
+                            margin-right:get-vw(35px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -413,3 +413,57 @@ $pdf_slider = $('.pdf-slider').slick({
     }
   ]
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const prevPageLink = document.querySelector('.prev-page');
+    const nextPageLink = document.querySelector('.next-page');
+    const pageNumbers = document.querySelectorAll('.page-number');
+    const currentPage = parseInt(document.querySelector('.current-page').textContent, 10);
+    const totalPages = pageNumbers.length; 
+  
+    function updateButtonState() {
+        if (currentPage === 1) {
+            prevPageLink.classList.add('disabled');
+            prevPageLink.style.pointerEvents = 'none';
+        } else {
+            prevPageLink.classList.remove('disabled');
+            prevPageLink.style.pointerEvents = 'auto';
+        }
+  
+        if (currentPage === totalPages) {
+            nextPageLink.classList.add('disabled');
+            nextPageLink.style.pointerEvents = 'none';
+        } else {
+            nextPageLink.classList.remove('disabled');
+            nextPageLink.style.pointerEvents = 'auto';
+        }
+    }
+  
+    function navigateToPage(pageNumber) {
+        window.location.href = `?paged=${pageNumber}`;
+    }
+  
+    prevPageLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+            navigateToPage(currentPage - 1);
+        }
+    });
+  
+    nextPageLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+            navigateToPage(currentPage + 1);
+        }
+    });
+  
+    pageNumbers.forEach(pageNumber => {
+        pageNumber.addEventListener('click', function (e) {
+            e.preventDefault();
+            const page = parseInt(this.textContent, 10);
+            navigateToPage(page);
+        });
+    });
+  
+    updateButtonState();
+  });

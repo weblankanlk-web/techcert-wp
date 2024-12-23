@@ -4566,4 +4566,164 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   .other-services-landing .main-wrapper .other-services-listing .other-service-item .other-service-inner .details-item .content {
     margin-bottom: 2.5520833333vw;
   }
+}
+
+.threat-bulletin-section .main-wrapper {
+  background: #010C1A;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item {
+  background: #151F3D;
+  border: 0;
+  padding: 30px;
+  width: 100%;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item:hover {
+  background: linear-gradient(180deg, #151F3D 15.61%, #3853A3 159.79%);
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .detail-div .sub {
+  color: #F69517;
+  padding-bottom: 20px;
+  padding-left: 7px;
+  position: relative;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .detail-div .sub::before {
+  background: #F69517;
+  width: 7px;
+  height: 7px;
+  top: 3px;
+  left: 3px;
+  content: "";
+  position: absolute;
+  border-radius: 100px;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .detail-div .title {
+  color: #ffffff;
+  font-weight: 400;
+  padding-bottom: 20px;
+  letter-spacing: -0.7px;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .detail-div .tb-date {
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+  line-height: 30px; /* 150% */
+  letter-spacing: 2px;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .btn-tb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px 0;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper a.pagination-link svg {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 5px;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper .page-number {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+.threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper .page-number.current-page {
+  background: #3752A3;
+  padding: 10px 15px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider {
+    column-count: 2;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item {
+    width: 48.5%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider {
+    gap: 1.0416666667vw;
+    column-count: 3;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item {
+    padding: 4.1666666667vw 3.125vw 3.125vw;
+    width: 32.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .detail-div .sub {
+    padding-bottom: 2.0833333333vw;
+    text-align: left;
+    padding-left: 2.34375vw;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .detail-div .sub::before {
+    width: 0.5208333333vw;
+    height: 0.5208333333vw;
+    border-radius: 5.2083333333vw;
+    left: 0.46875vw;
+    top: 0.625vw;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .detail-div .title {
+    padding-bottom: 2.0833333333vw;
+    letter-spacing: -0.0364583333vw;
+    line-height: 1.875vw;
+    text-align: left;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .detail-div .tb-date {
+    padding-bottom: 5.4166666667vw;
+    line-height: 1.5625vw; /* 150% */
+    letter-spacing: 0.2083333333vw;
+    text-align: left;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item .btn-tb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper {
+    padding: 5.2083333333vw 0 6.8229166667vw;
+    gap: 1.8229166667vw;
+    justify-content: center;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper a.pagination-link svg {
+    width: 1.7307291667vw;
+    height: 1.6502083333vw;
+    border: 0.0520833333vw solid #ffffff;
+    border-radius: 0.46875vw;
+    padding: 0.3645833333vw;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper .page-number {
+    font-size: 1.0416666667vw;
+    letter-spacing: -0.0208333333vw;
+    margin-right: 1.8229166667vw;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper .page-number:last-child {
+    margin-right: 0;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper .pagination-wrapper .page-number.current-page {
+    padding: 0.725vw 1.0416666667vw;
+    border-radius: 5.2083333333vw;
+    margin-right: 1.8229166667vw;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -610,12 +610,14 @@ svg.arr-right:hover {
     border-radius: 0.3645833333vw;
     border: 0.0520833333vw solid #ffffff;
     width: 3.6979166667vw;
+    padding: 0.78125vw;
     height: 3.5259375vw;
   }
   svg.arr-right {
     border-radius: 0.3645833333vw;
     border: 0.0520833333vw solid #ffffff;
     width: 3.6979166667vw;
+    padding: 0.78125vw;
     height: 3.5259375vw;
   }
 }
@@ -1286,6 +1288,7 @@ html {
     border: 0.0520833333vw solid #ffffff;
     width: 3.6979166667vw;
     height: 3.5259375vw;
+    padding: 0.78125vw;
   }
   .home-threat-bulletins .main-wrapper .main-div .bottom-section .arrow-num-bulletins .num-pack-bulletins {
     font-size: 2.0833333333vw;
@@ -1298,6 +1301,7 @@ html {
     border: radius 0.3645833333vw;
     border: 0.0520833333vw solid #ffffff;
     width: 3.6979166667vw;
+    padding: 0.78125vw;
     height: 3.5259375vw;
   }
 }

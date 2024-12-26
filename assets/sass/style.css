@@ -838,6 +838,11 @@ footer .footer-inner .footer-details .top-section .main {
   line-height: 60px;
   letter-spacing: -4.8px;
   color: #ffffff;
+  background: #ffffff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
 }
 footer .footer-inner .footer-details .top-section .main span {
   font-weight: 700;
@@ -859,11 +864,12 @@ footer .footer-inner .footer-details .bottom-section .left-div {
 }
 footer .footer-inner .footer-details .bottom-section .left-div .detail-item .detail-inner .d-main {
   color: #ffffff;
+  font-weight: 700;
 }
 footer .footer-inner .footer-details .bottom-section .left-div .detail-item .detail-inner .d-sub a {
   text-decoration: none;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 400;
 }
 footer .footer-inner .footer-details .bottom-section .right-div {
   padding: 0 40px;

@@ -33,6 +33,7 @@
                         </div>
                     </div>
                     <div class="bottom-section">
+                        <div class="slide-left"></div>
                         <div class="slider-wrapper">
                             <div class="industry-land-slider">
                                 <?php
@@ -66,13 +67,16 @@
                                     endforeach;
                                 ?>
 				            </div>
-                            <div class="arrow-div">
-                                <div class="arrow-left-ii">
+                            <div class="arrow-num-indus">
+                                <div class="left-arrow-indus">
                                     <svg class="arr-left">
                                         <use xlink:href="#tc-left"></use>
                                     </svg>
                                 </div>
-                                <div class="arrow-right-ii">
+                                <div class="num-pack-indus">
+                                    01 /<span>06</span>
+                                </div>
+                                <div class="right-arrow-indus">
                                     <svg class="arr-right">
                                         <use xlink:href="#tc-right"></use>
                                     </svg>

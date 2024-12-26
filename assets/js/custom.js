@@ -467,3 +467,52 @@ $pdf_slider = $('.pdf-slider').slick({
   
     updateButtonState();
   });
+
+  var $industry_land_slider = $('.industry-land-slider');
+
+$industry_land_slider.on('init', function (event, slick) {
+    var totalSlides = slick.slideCount; 
+    $('.num-pack-indus').html(`01 / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+});
+
+$industry_land_slider.slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 0,
+  responsive: [ 
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        centerMode: false,
+        centerPadding: '20px',
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$industry_land_slider.on('afterChange', function (event, slick, currentSlide) {
+  var totalSlides = slick.slideCount; 
+  var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
+  $('.num-pack-indus').html(`${slideNumber} / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+});
+
+$('.arrow-num-indus .left-arrow-indus').click(function () {
+  $industry_land_slider.slick('slickPrev');
+});
+
+$('.arrow-num-indus .left-arrow-indus').click(function () {
+  $industry_land_slider.slick('slickNext');
+});

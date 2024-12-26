@@ -184,6 +184,11 @@ footer{
                     line-height: 60px;
                     letter-spacing: -4.8px;
                     color: $white;
+                    background:$white;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 400;
                     span{
                         font-weight: 700;
                     }
@@ -208,12 +213,13 @@ footer{
                         .detail-inner{
                             .d-main{
                                 color: $white;
+                                font-weight: 700;
                             }
                             .d-sub{
                                 a{
                                     text-decoration: none;
                                     color: $white;
-                                    font-weight: 700;
+                                    font-weight: 400;
                                 }
                             }
                         }

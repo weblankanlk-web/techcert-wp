@@ -61,7 +61,7 @@
                     <?php } ?>
                     <!-- </?php if($sm_whatsapp){?>
                         <li>
-                            <a href="<?php echo $sm_whatsapp; ?>" class="social-media-link">
+                            <a href="</?php echo $sm_whatsapp; ?>" class="social-media-link">
                                 <svg class="tw-t">
                                     <use xlink:href="#tw-t"></use>
                                 </svg>
@@ -69,6 +69,70 @@
                         </li>
                     </?php } ?> -->
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php 
+	$tbis_title	= get_field("tbis_title");
+	$tbis_threat_listing	= get_field("tbis_threat_listing");
+?>
+<section class="more-threat-slider">
+    <div class="full-wrapper">
+        <div class="top-section">
+            <h2 class="h-80 title"><?php echo $tbis_title; ?></h2>
+        </div>
+        <div class="bottom-section">
+            <div class="slider-wrapper">
+                <div class="threat-more-slider">
+                    <?php
+                        if ($tbis_threat_listing) :
+                            foreach($tbis_threat_listing as $bulletin_item):
+                                $bulletin        = $bulletin_item["tbis_threat_bulletin"];
+                                $bulletin_id     = $bulletin->ID;
+                                $tb_title = get_the_title($bulletin_id);
+                                $tb_date = get_the_date("d F Y",$bulletin_id);
+                                $tbi_sub_title=get_field("tbi_sub_title");
+                                $tbi_link=get_the_permalink($bulletin_id);
+                    ?>
+                        <button type="button" class="threat-item">
+                            <div class="detail-div">
+                                <h6 class="p-25 sub"><?php echo $tbi_sub_title; ?></h6>
+                                <h3 class="title h-30"><?php echo esc_html($tb_title); ?></h3>
+                                <p class="p-20 tb-date"><?php echo $tb_date; ?></p>
+                            </div>
+                            <a href="<?php echo $tbi_link; ?>" class="common-btn-trans btn-tb">
+                                <div class="btn-wrap">
+                                    <div class="ar-icon">
+                                        <svg class="left">
+                                            <use xlink:href="#left"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="btn-text">Read More</p>
+                                </div>
+                            </a>
+                        </button>
+                    <?php 
+                            endforeach;
+                        endif;
+                    ?>
+                </div>
+                <div class="arrow-num-bm">
+                    <div class="left-arrow-bm">
+                        <svg class="arr-left">
+                            <use xlink:href="#tc-left"></use>
+                        </svg>
+                    </div>
+                    <div class="num-pack-bm">
+                            01 /<span>06</span>
+                    </div>
+                    <div class="right-arrow-bm">
+                        <svg class="arr-right">
+                            <use xlink:href="#tc-right"></use>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

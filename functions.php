@@ -888,10 +888,108 @@ function the_breadcrumb(){
     $breadcrumb_content .= '</ol>';
 
 	return $breadcrumb_content;
-
-	
-
 }
+
+function enqueue_ajax_scripts() {
+    wp_enqueue_script('ajax-filter', get_template_directory_uri() . '/js/ajax-filter.js', array('jquery'), null, true);
+    wp_localize_script('ajax-filter', 'ajax_params', array(
+        'ajax_url' => admin_url('admin-ajax.php')
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_ajax_scripts');
+
+
+function filter_events_by_search() {
+    $search_term = isset($_POST['search']) ? sanitize_text_field($_POST['search']) : '';
+    $paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
+
+    $args = array(
+        'post_type' => 'news_events',
+        'posts_per_page' => 8,
+        'paged' => $paged,
+        'orderby' => 'date',
+        'order' => 'DESC',
+    );
+
+    if ($search_term) {
+        $args['s'] = $search_term; 
+    }
+
+    $events = new WP_Query($args);
+
+    ob_start();
+    if ($events->have_posts()) :
+        while ($events->have_posts()) : $events->the_post();
+            $event_single_url = get_the_permalink();
+            $ne_publish_date = get_the_date('j');
+			$ne_publish_month = get_the_date('M, Y');
+            $event_title = get_the_title();
+            $ne_read_time = get_field("ne_read_time");
+            $event_single_image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+            ?>
+            <div class="events-section" id="post-<?php the_ID(); ?>">
+                <div class="event-inner">
+                    <a href="<?php echo esc_url($event_single_url); ?>">
+                        <?php if ($event_single_image): ?>
+                            <div class="featured-image">
+                                <img src="<?php echo $event_single_image; ?>" alt="">
+                            </div>
+                        <?php endif; ?>
+                    </a>
+                    <div class="news-date">
+                        <p class="day h-80"><?php echo esc_html($ne_publish_date); ?></p>
+                        <p class="year h-30"><?php echo esc_html($ne_publish_month); ?></p>
+                    </div>
+                    <div class="event-item-inner">
+                        <p class="event-read p-20"><?php echo esc_html($ne_read_time); ?></p>
+                        <a href="<?php echo esc_url($event_single_url); ?>">
+                            <h2 class="event-title h-30"><?php echo esc_html($event_title); ?></h2>
+                        </a>
+                        <a href="<?php echo $event_single_url; ?>" class="common-btn-trans btn-news">
+                            <div class="btn-wrap">
+                                <div class="ar-icon">
+                                    <svg class="left">
+                                        <use xlink:href="#left"></use>
+                                    </svg>
+                                </div>
+                                <p class="btn-text">Read More</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php
+        endwhile;
+    else :
+        echo '<p>No events found.</p>';
+    endif;
+    $events_html = ob_get_clean();
+
+    // Pagination
+    ob_start();
+    echo paginate_links(array(
+        'total' => $events->max_num_pages,
+        'current' => $paged,
+        'format' => '?paged=%#%',
+        'show_all' => false,
+        'type' => 'plain',
+        'end_size' => 2,
+        'mid_size' => 1,
+        'prev_next' => false,
+        'before_page_number' => '<span class="page-link" data-page="',
+        'after_page_number' => '</span>',
+    ));
+    $pagination_html = ob_get_clean();
+
+    wp_send_json(array(
+        'events' => $events_html,
+        'pagination' => $pagination_html,
+    ));
+
+    wp_die();
+}
+add_action('wp_ajax_filter_events', 'filter_events_by_search');
+add_action('wp_ajax_nopriv_filter_events', 'filter_events_by_search');
 
 
 

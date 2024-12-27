@@ -1,0 +1,86 @@
+.privacy-policy-section{
+    .main-wrapper{
+        padding-bottom: 50px;
+        padding-top: 30px;
+        background: $black-bg;
+        .p-content{
+            margin-bottom: 30px;
+            h3{
+                color: $secondary-color;
+                font-family: $primary-font;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 35px; /* 115% */
+                padding-bottom: 20px;
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                padding-bottom: 20px;
+                li{
+                    color: $white;
+                    font-family: $primary-font;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    text-transform: capitalize;
+                    a{
+                        color: $white;
+                    }
+                }
+            }
+            h4{
+                color: $white;
+                font-family: $primary-font;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 40px */
+                text-transform: capitalize;
+                padding-bottom: 20px;
+            }
+            p{
+                color: $white;
+                font-family: $primary-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 28.8px */
+                text-transform: capitalize;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        .main-wrapper{
+            padding-bottom: get-vw(90px);
+            padding-top: get-vw(100px);
+            .p-content{
+                margin-bottom: get-vw(55px);
+                h3{
+                    font-size: get-vw(40px);
+                    line-height: get-vw(46px); /* 115% */
+                    padding-bottom: get-vw(42px);
+                    padding-top: get-vw(28px);
+                }
+                ul{
+                    padding-bottom: get-vw(54px);
+                    li{
+                        font-size: get-vw(18px);
+                    }
+                }
+                h4{
+                    font-size: get-vw(25px);
+                    padding-bottom: get-vw(54px);
+                }
+                p{
+                    font-size: get-vw(18px);
+                    padding-bottom: get-vw(54px);
+                }
+            }
+        }
+    }
+}

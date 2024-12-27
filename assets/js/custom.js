@@ -516,3 +516,92 @@ $('.arrow-num-indus .left-arrow-indus').click(function () {
 $('.arrow-num-indus .left-arrow-indus').click(function () {
   $industry_land_slider.slick('slickNext');
 });
+
+var $threat_more_slider = $('.threat-more-slider');
+
+$threat_more_slider.on('init', function (event, slick) {
+    var totalSlides = slick.slideCount; 
+    $('.num-pack-bm').html(`01 / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+});
+
+$threat_more_slider.slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 0,
+  responsive: [ 
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        centerMode: false,
+        centerPadding: '20px',
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$threat_more_slider.on('afterChange', function (event, slick, currentSlide) {
+  var totalSlides = slick.slideCount; 
+  var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
+  $('.num-pack-bm').html(`${slideNumber} / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+});
+
+$('.arrow-num-bm .left-arrow-bm').click(function () {
+  $threat_more_slider.slick('slickPrev');
+});
+
+$('.arrow-num-bm .left-arrow-bm').click(function () {
+  $threat_more_slider.slick('slickNext');
+});
+
+jQuery(document).ready(function($) {
+  function loadEvents(searchTerm = '', page = 1) {
+      $.ajax({
+          url: ajax_params.ajax_url,
+          type: 'POST',
+          data: {
+              action: 'filter_events',
+              search: searchTerm,
+              paged: page
+          },
+          success: function(response) {
+              $('#event-content').html(response.events);
+              $('#pagination').html(response.pagination);
+          }
+      });
+  }
+
+  // Search event
+  $('#search').on('keyup', function() {
+      const searchTerm = $(this).val();
+      loadEvents(searchTerm, 1); // Load events with the search term
+  });
+
+  // Pagination
+  $('#pagination').on('click', '.page-link', function(e) {
+      e.preventDefault();
+      const page = $(this).data('page');
+      const searchTerm = $('#search').val(); // Get the current search term
+      loadEvents(searchTerm, page);
+  });
+
+  loadEvents(); // Initial load
+});

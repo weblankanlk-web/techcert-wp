@@ -83,13 +83,11 @@
         <div class="filter-div">
             <div class="div-inner">
                 <div class="search-articles">
-                    <h2 class="search-main-title --sub-head fw-7">Search Articles</h2>
                     <input type="text" id="search" placeholder="Search Article">
                 </div>
                 <div class="filter-articles-div">
-                    <h2 class="filter-main-title --sub-para fw-7">Filter Articles by</h2>
-                    <div class="latest-articles">
-                        <h3 class="filter-title --text-para fw-7">Latest Articles</h3>
+                    <div class="latest-articles filter-item">
+                        <h3 class="filter-title p-18 fw-7">Recent Articles</h3>
                         <ul>
                             <?php
                             $latest_articles = new WP_Query(array(
@@ -111,8 +109,8 @@
                             ?>
                         </ul>
                     </div>
-                    <div class="categories">
-                        <h3 class="filter-title --text-para fw-7">Categories</h3>
+                    <div class="categories filter-item">
+                        <h3 class="filter-title p-18 fw-7">Categories</h3>
                         <ul>
                             <?php
                             $featured_category = get_term_by('slug', 'featured', 'news_categories');
@@ -136,8 +134,8 @@
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="archives">
-                        <h3 class="filter-title">Archives</h3>
+                    <div class="archives filter-item">
+                        <h3 class="filter-title p-18 fw-7">Archive</h3>
                          <?php
                              $args = array(
                                 'type'            => 'yearly',

@@ -572,36 +572,135 @@ $('.arrow-num-bm .left-arrow-bm').click(function () {
   $threat_more_slider.slick('slickNext');
 });
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
+  /**
+   * Function to load events via AJAX.
+   * @param {string} searchTerm - The search term for filtering events.
+   * @param {number} page - The page number for pagination.
+   */
   function loadEvents(searchTerm = '', page = 1) {
       $.ajax({
-          url: ajax_params.ajax_url,
+          url: ajax_params.ajax_url, 
           type: 'POST',
           data: {
               action: 'filter_events',
               search: searchTerm,
-              paged: page
+              paged: page,
           },
-          success: function(response) {
-              $('#event-content').html(response.events);
-              $('#pagination').html(response.pagination);
-          }
+          beforeSend: function () {
+              $('#event-content').html('<p>Loading events...</p>');
+          },
+          success: function (response) {
+              if (response.events && response.pagination) {
+                  $('#event-content').html(response.events); 
+                  $('#pagination').html(response.pagination);
+              } else {
+                  $('#event-content').html('<p>No events found.</p>');
+                  $('#pagination').html(''); 
+              }
+          },
+          error: function () {
+              console.error('Error fetching events.');
+              $('#event-content').html('<p>An error occurred. Please try again later.</p>');
+          },
       });
   }
 
-  // Search event
-  $('#search').on('keyup', function() {
-      const searchTerm = $(this).val();
-      loadEvents(searchTerm, 1); // Load events with the search term
+  $('#search').on('keyup', function () {
+      const searchTerm = $(this).val(); 
+      loadEvents(searchTerm, 1); 
   });
 
-  // Pagination
-  $('#pagination').on('click', '.page-link', function(e) {
-      e.preventDefault();
-      const page = $(this).data('page');
-      const searchTerm = $('#search').val(); // Get the current search term
-      loadEvents(searchTerm, page);
+  $('#pagination').on('click', '.page-link', function (e) {
+      e.preventDefault(); 
+      const page = $(this).data('page'); 
+      const searchTerm = $('#search').val();
+      if (page) {
+          loadEvents(searchTerm, page); 
+      }
   });
 
-  loadEvents(); // Initial load
+  loadEvents();
 });
+
+var $news_more_slider = $('.news-more-slider');
+
+$news_more_slider.on('init', function (event, slick) {
+    var totalSlides = slick.slideCount; 
+    $('.num-pack-nw').html(`01 / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+});
+
+$news_more_slider.slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 0,
+  responsive: [ 
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        centerMode: false,
+        centerPadding: '20px',
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$news_more_slider.on('afterChange', function (event, slick, currentSlide) {
+  var totalSlides = slick.slideCount; 
+  var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
+  $('.num-pack-nw').html(`${slideNumber} / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+});
+
+$('.arrow-num-nw .left-arrow-nw').click(function () {
+  $news_more_slider.slick('slickPrev');
+});
+
+$('.arrow-num-nw .left-arrow-nw').click(function () {
+  $news_more_slider.slick('slickNext');
+});
+
+$image_news_slider = $('.image-news-slider').slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [ 
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        centerMode: false,
+        centerPadding: '20px',
+        slidesToShow: 1,
+      }
+    }
+  ]
+  });

@@ -13,6 +13,47 @@
     }
 ?>
 
+<?php
+    $your_query = new WP_Query( 'pagename=news-updates' );
+    while ( $your_query->have_posts() ) : $your_query->the_post();
+        $ib_tagline	= get_field("ib_tagline");
+        $ib_main_title	= get_field("ib_main_title");
+        $ib_content	= get_field("ib_content");
+        $ib_desktop_image	= get_field("ib_desktop_image");
+        $ib_desktop_image_url=validateImage(1920,830,$ib_desktop_image);
+        $ib_mobile_image	= get_field("ib_mobile_image");
+        $ib_mobile_image_url=validateImage(375,699,$ib_mobile_image);
+        ?>
+        <?php if($ib_desktop_image || $ib_mobile_image): ?>
+    <section class="inner-bannner-tc">
+        <div class="full-wrapper">
+            <div class="image-container">
+                <picture>
+                    <source media="(min-width:992px)" srcset="<?php echo $ib_desktop_image_url; ?>">
+                    <img src="<?php echo $ib_mobile_image_url; ?>" alt="" class="inner-banner-img">
+                </picture>
+            </div>
+            <div class="banner-details">
+                <div class="inner-wrapper">
+                    <?php if($ib_tagline):?>
+                        <h1 class="h-80 sub"><?php echo $ib_tagline; ?></h1>
+                    <?php endif;?>
+                    <?php if($ib_main_title):?>
+                        <h2 class="h-120 fw-5 main">News Archive</h2>
+                    <?php endif;?>
+                    <?php if($ib_content):?>
+                        <p class="banner-content h-18"><?php echo $ib_content; ?></p>
+                    <?php endif;?>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+        <?php
+    endwhile;
+    wp_reset_postdata();
+?>
+
 <section class="event-card-listing">
     <div class="main-wrapper">
         <div class="single-inner">
@@ -88,13 +129,11 @@
         <div class="filter-div">
             <div class="div-inner">
                 <div class="search-articles">
-                    <h2 class="search-main-title --sub-head fw-7">Search Articles</h2>
                     <input type="text" id="search" placeholder="Search Article">
                 </div>
                 <div class="filter-articles-div">
-                    <h2 class="filter-main-title --sub-para fw-7">Filter Articles by</h2>
-                    <div class="latest-articles">
-                        <h3 class="filter-title --text-para fw-7">Latest Articles</h3>
+                    <div class="latest-articles filter-item">
+                        <h3 class="filter-title p-18 fw-7">Recent Articles</h3>
                         <ul>
                             <?php
                             $latest_articles = new WP_Query(array(
@@ -116,8 +155,8 @@
                             ?>
                         </ul>
                     </div>
-                    <div class="categories">
-                        <h3 class="filter-title --text-para fw-7">Categories</h3>
+                    <div class="categories filter-item">
+                        <h3 class="filter-title p-18 fw-7">Categories</h3>
                         <ul>
                             <?php
                             $featured_category = get_term_by('slug', 'featured', 'news_categories');
@@ -141,8 +180,8 @@
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="archives">
-                        <h3 class="filter-title">Archives</h3>
+                    <div class="archives filter-item">
+                        <h3 class="filter-title p-18 fw-7">Archive</h3>
                          <?php
                              $args = array(
                                 'type'            => 'yearly',

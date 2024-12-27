@@ -905,7 +905,7 @@ function filter_events_by_search() {
 
     $args = array(
         'post_type' => 'news_events',
-        'posts_per_page' => 8,
+        'posts_per_page' => 2,
         'paged' => $paged,
         'orderby' => 'date',
         'order' => 'DESC',

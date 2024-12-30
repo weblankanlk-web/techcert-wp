@@ -704,3 +704,13 @@ $image_news_slider = $('.image-news-slider').slick({
     }
   ]
   });
+
+  $(".career-item .link-c").click(function(){
+    $(".career-modal").show();
+    var image        = $(".career-item").data("career_single_image"); 
+    $(".career-modal .image-container-model img.career-image ").attr( "src", image );
+  });
+
+  $(".career-modal .modal-close").click(function(){
+    $(".career-modal").hide();
+  });

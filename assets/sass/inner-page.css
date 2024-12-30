@@ -545,7 +545,7 @@ svg.arr-right:hover {
   .h-120 {
     font-size: 6.25vw;
     font-weight: 700;
-    line-height: 5.2083333333vw;
+    line-height: 4.9083333333vw;
     letter-spacing: -0.3125vw;
   }
   .p-20, .p-20 p {
@@ -677,6 +677,22 @@ html {
   scroll-behavior: smooth;
 }
 
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    /* background: #2E2E2E; */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #F69517;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3752A3;
+  }
+}
 .comp-welcome-section .section-inner {
   padding: 0 20px;
   margin-bottom: 60px;

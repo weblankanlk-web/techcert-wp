@@ -545,7 +545,7 @@ svg.arr-right:hover {
   .h-120 {
     font-size: 6.25vw;
     font-weight: 700;
-    line-height: 5.2083333333vw;
+    line-height: 4.9083333333vw;
     letter-spacing: -0.3125vw;
   }
   .p-20, .p-20 p {
@@ -677,6 +677,22 @@ html {
   scroll-behavior: smooth;
 }
 
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    /* background: #2E2E2E; */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #F69517;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3752A3;
+  }
+}
 footer .footer-inner .footer-main {
   padding: 70px 25px 41px;
   position: relative;
@@ -3117,14 +3133,18 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   bottom: 0;
   z-index: 1;
 }
-.contact-map .full-wrapper .video-div {
-  position: relative;
-  z-index: 1;
-}
 .contact-map .full-wrapper .video-div video#mapVideo {
-  width: 100%;
+  width: 1199px;
   height: 480px;
   object-fit: cover;
+}
+.contact-map .full-wrapper .video-div svg.map-h {
+  width: 1199px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .contact-map .full-wrapper .details-section {
   position: relative;
@@ -3152,6 +3172,19 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   color: #F69517;
 }
 @media only screen and (min-width: 768px) {
+  .contact-map .full-wrapper .video-div video#mapVideo {
+    width: 1199px;
+    height: 480px;
+    object-fit: cover;
+  }
+  .contact-map .full-wrapper .video-div svg.map-h {
+    width: 1199px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
   .contact-map .full-wrapper .details-section .detail-inner {
     align-items: center;
   }
@@ -3160,8 +3193,16 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   .contact-map .full-wrapper::after {
     height: 17.65625vw;
   }
+  .contact-map .full-wrapper .video-div {
+    overflow: hidden;
+  }
   .contact-map .full-wrapper .video-div video#mapVideo {
     height: 45.15625vw;
+    width: 100%;
+  }
+  .contact-map .full-wrapper .video-div svg.map-h {
+    height: 45.15625vw;
+    width: 100%;
   }
   .contact-map .full-wrapper .details-section .detail-inner {
     flex-direction: row;
@@ -3656,6 +3697,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .services-threat-bulletins .main-wrapper .main-div .bottom-section .slider-wrapper .bulletin-slider .bulletin-div .bulletin-inner .post-content .post-title {
     margin-bottom: 3.59375vw;
+    min-height: 5.5208333333vw;
   }
   .services-threat-bulletins .main-wrapper .main-div .bottom-section .arrow-num-bulletins {
     gap: 0.5208333333vw;

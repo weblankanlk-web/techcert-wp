@@ -25,6 +25,9 @@
 							<video autoplay muted loop id="heroVideo">
 								<source src="<?php echo $hh_video_url; ?>" type="video/mp4">
 							</video>
+							<svg class="main-banner-svg">
+								<use xlink:href="#document-and-video-element-grid"></use>
+							</svg>
 							<div class="main-wrapper">
 								<div class="detail-item">
 									<h2 class="h-140 main"><?php echo $hh_title; ?></h2>
@@ -134,6 +137,9 @@
 ?>
 <section class="home-services">
 	<div class="full-wrapper">
+		<svg class="services-svg">
+			<use xlink:href="#main-banner"></use>
+		</svg>
 		<div class="top-section">
 			<div class="title-section">
 				<p class="h-30 tagline-white"><?php echo $hs_tagline; ?></p>
@@ -191,6 +197,9 @@
 ?>
 <section class="home-other-services">
 	<div class="full-wrapper">
+		<svg class="other-services-svg">
+			<use xlink:href="#main-banner"></use>
+		</svg>
 		<div class="top-section">
 			<div class="left-div">
 				<div class="title-section">
@@ -276,6 +285,9 @@
 			<video autoplay muted loop id="mapVideo">
 				<source src="<?php echo $hm_video_url; ?>" type="video/mp4">
 			</video>
+			<svg class="map-h">
+				<use xlink:href="#map-h"></use>
+			</svg>
 		</div>
 		<div class="details-section">
 			<div class="detail-inner">
@@ -293,6 +305,9 @@
 ?>
 <section class="home-industries" id="ins">
     <div class="main-wrapper">
+		<svg class="industries-svg">
+			<use xlink:href="#indusrtry"></use>
+		</svg>
         <div class="industry-list">
 			<div class="title-section d-hide-t">
 				<p class="h-30 tagline-white"><?php echo $hi_tagline; ?></p>

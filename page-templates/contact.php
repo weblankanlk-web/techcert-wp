@@ -19,6 +19,9 @@
 			<video autoplay muted loop id="mapVideo">
 				<source src="<?php echo $hm_video_url; ?>" type="video/mp4">
 			</video>
+            <svg class="map-h">
+				<use xlink:href="#map-h"></use>
+			</svg>
 		</div>
 		<div class="details-section">
 			<div class="detail-inner">

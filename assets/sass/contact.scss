@@ -13,12 +13,18 @@
             z-index: 1;
         }
         .video-div{
-            position: relative;
-            z-index: 1;
             video#mapVideo{
-                width: 100%;
+                width: 1199px;
                 height: 480px;
                 object-fit: cover;
+            }
+            svg.map-h{
+                width: 1199px;
+                height: 500px;
+                position: absolute;
+                top: 0;
+                left:0;
+                z-index: 2;
             }
         }
         .details-section{
@@ -49,6 +55,21 @@
     }
     @media only screen and (min-width: 768px){
         .full-wrapper{
+            .video-div{
+                video#mapVideo{
+                    width: 1199px;
+                    height: 480px;
+                    object-fit: cover;
+                }
+                svg.map-h{
+                    width: 1199px;
+                    height: 500px;
+                    position: absolute;
+                    top: 0;
+                    left:0;
+                    z-index: 2;
+                }
+            }
             .details-section{
                 .detail-inner{
                     align-items: center;
@@ -62,8 +83,14 @@
                 height: get-vw(339px);
             }
             .video-div{
+                overflow: hidden;
                 video#mapVideo{
                     height: get-vw(867px);
+                    width: 100%;
+                }
+                svg.map-h{
+                    height: get-vw(867px);
+                    width: 100%;
                 }
             }
             .details-section{

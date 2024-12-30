@@ -25,6 +25,14 @@
                             width: 100%;
                             object-fit: cover;
                         }
+                        svg.main-banner-svg{
+                            height: 815px;
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 2;
+                        }
                         .main-wrapper{
                             position: absolute;
                             z-index: 3;
@@ -82,7 +90,11 @@
                         .hero-inner{
                             height: get-vw(1050px);
                             video#heroVideo{
-                                height: get-vw(1050px)
+                                height: get-vw(1050px);
+                            }
+                            svg.main-banner-svg{
+                                height: get-vw(1050px);
+                                width: 100%;
                             }
                             .main-wrapper{
                                 justify-content: space-between;
@@ -491,10 +503,19 @@
         .video-div{
             position: relative;
             z-index: 1;
+            overflow-y: scroll;
             video#mapVideo{
-                width: 100%;
+                width: 790px;
                 height: 480px;
                 object-fit: cover;
+            }
+            svg.map-h{
+                width: 790px;
+                height: 500px;
+                position: absolute;
+                top: 0;
+                left:0;
+                z-index: 2;
             }
         }
         .details-section{
@@ -525,6 +546,21 @@
     }
     @media only screen and (min-width: 768px){
         .full-wrapper{
+            .video-div{
+                video#mapVideo{
+                    width: 1199px;
+                    height: 480px;
+                    object-fit: cover;
+                }
+                svg.map-h{
+                    width: 1199px;
+                    height: 500px;
+                    position: absolute;
+                    top: 0;
+                    left:0;
+                    z-index: 2;
+                }
+            }
             .details-section{
                 .detail-inner{
                     align-items: center;
@@ -538,8 +574,14 @@
                 height: get-vw(339px);
             }
             .video-div{
+                overflow: hidden;
                 video#mapVideo{
                     height: get-vw(867px);
+                    width: 100%;
+                }
+                svg.map-h{
+                    height: get-vw(867px);
+                    width: 100%;
                 }
             }
             .details-section{
@@ -719,6 +761,7 @@
                                         border: get-vw(1px) solid rgba(255, 255, 255, 0.40);
                                         .post-title{
                                             margin-bottom: get-vw(69px);
+                                            min-height: get-vw(106px);
                                         }
                                     }
                                 }
@@ -768,8 +811,19 @@
     .full-wrapper{
         background: $black-bg;
         padding-bottom: 60px;
+        position: relative;
+        svg.services-svg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left:0;
+            z-index: 0;
+        }
         .top-section{
             padding: 0 20px;
+            position: relative;
+            z-index: 2;
             .title-section{
                 margin-bottom: 20px;
                 .main{
@@ -790,6 +844,8 @@
             }
         }
         .bottom-section{
+            position: relative;
+            z-index: 2;
             .slider-wrapper{
                 height: 329px;
                 .services-slider{
@@ -982,8 +1038,19 @@
     .full-wrapper{
         background: $black-bg;
         padding-bottom: 60px;
+        position: relative;
+        svg.other-services-svg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left:0;
+            z-index: 0;
+        }
         .top-section{
             padding: 0 20px 30px;
+            position: relative;
+            z-index: 2;
             .left-div{
                 margin-bottom: 20px;
                 .title-section{
@@ -1007,6 +1074,8 @@
             }
         }
         .bottom-section{
+            position: relative;
+            z-index: 2;
             .slider-wrapper{
                 .other-services-slider{
                     .other-service-item{
@@ -1172,9 +1241,20 @@
         padding-top: 60px;
         position: relative;
         background: linear-gradient(270deg, #0A0C10 -24.66%, #151F3D 135.99%);
+        z-index: 1;
+        svg.industries-svg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left:0;
+            z-index: 3;
+        }
         .industry-list{
             .title-section{
                 margin-bottom: 20px;
+                position: relative;
+                z-index: 5;
                 .main{
                     background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);
                     background-clip: text;
@@ -1191,6 +1271,8 @@
                 }
             }
             .tab-content{
+                position: relative;
+                z-index: 2;
                 .tab-pane{
                     display: none;
                     &.show{
@@ -1214,6 +1296,8 @@
                 }
             }
             .bottom-section{
+                position: relative;
+                z-index: 5;
                 .bottom-inner{
                     .tab-sec{
                         ul#inTabs{
@@ -1295,6 +1379,8 @@
                 justify-content: center;
                 gap: 15px;
                 margin-top:40px;
+                position: relative;
+                z-index: 4;
                 .num-pack-industries{
                     display: flex;
                     flex-direction: row;

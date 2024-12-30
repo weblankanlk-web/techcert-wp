@@ -504,7 +504,7 @@ svg.arr-right:hover {
   .h-120 {
     font-size: 6.25vw;
     font-weight: 700;
-    line-height: 5.2083333333vw;
+    line-height: 4.9083333333vw;
     letter-spacing: -0.3125vw;
   }
   .p-20, .p-20 p {
@@ -636,6 +636,22 @@ html {
   scroll-behavior: smooth;
 }
 
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    /* background: #2E2E2E; */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #F69517;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3752A3;
+  }
+}
 @font-face {
   font-family: "Forma DJR Micro";
   src: url("FormaDJRMicro-ExtraLight.woff") format("woff");
@@ -699,6 +715,14 @@ html {
   width: 100%;
   object-fit: cover;
 }
+.home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner svg.main-banner-svg {
+  height: 815px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 .home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner .main-wrapper {
   position: absolute;
   z-index: 3;
@@ -739,6 +763,10 @@ html {
   }
   .home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner video#heroVideo {
     height: 54.6875vw;
+  }
+  .home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner svg.main-banner-svg {
+    height: 54.6875vw;
+    width: 100%;
   }
   .home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner .main-wrapper {
     justify-content: space-between;
@@ -1073,11 +1101,20 @@ html {
 .home-map .full-wrapper .video-div {
   position: relative;
   z-index: 1;
+  overflow-y: scroll;
 }
 .home-map .full-wrapper .video-div video#mapVideo {
-  width: 100%;
+  width: 790px;
   height: 480px;
   object-fit: cover;
+}
+.home-map .full-wrapper .video-div svg.map-h {
+  width: 790px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .home-map .full-wrapper .details-section {
   position: relative;
@@ -1105,6 +1142,19 @@ html {
   color: #F69517;
 }
 @media only screen and (min-width: 768px) {
+  .home-map .full-wrapper .video-div video#mapVideo {
+    width: 1199px;
+    height: 480px;
+    object-fit: cover;
+  }
+  .home-map .full-wrapper .video-div svg.map-h {
+    width: 1199px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
   .home-map .full-wrapper .details-section .detail-inner {
     align-items: center;
   }
@@ -1113,8 +1163,16 @@ html {
   .home-map .full-wrapper::after {
     height: 17.65625vw;
   }
+  .home-map .full-wrapper .video-div {
+    overflow: hidden;
+  }
   .home-map .full-wrapper .video-div video#mapVideo {
     height: 45.15625vw;
+    width: 100%;
+  }
+  .home-map .full-wrapper .video-div svg.map-h {
+    height: 45.15625vw;
+    width: 100%;
   }
   .home-map .full-wrapper .details-section .detail-inner {
     flex-direction: row;
@@ -1274,6 +1332,7 @@ html {
   }
   .home-threat-bulletins .main-wrapper .main-div .bottom-section .slider-wrapper .bulletin-slider .bulletin-div .bulletin-inner .post-content .post-title {
     margin-bottom: 3.59375vw;
+    min-height: 5.5208333333vw;
   }
   .home-threat-bulletins .main-wrapper .main-div .bottom-section .arrow-num-bulletins {
     gap: 0.5208333333vw;
@@ -1309,9 +1368,20 @@ html {
 .home-services .full-wrapper {
   background: #010C1A;
   padding-bottom: 60px;
+  position: relative;
+}
+.home-services .full-wrapper svg.services-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 .home-services .full-wrapper .top-section {
   padding: 0 20px;
+  position: relative;
+  z-index: 2;
 }
 .home-services .full-wrapper .top-section .title-section {
   margin-bottom: 20px;
@@ -1330,6 +1400,10 @@ html {
   font-weight: 400;
   letter-spacing: -1.8px;
   line-height: 25px;
+}
+.home-services .full-wrapper .bottom-section {
+  position: relative;
+  z-index: 2;
 }
 .home-services .full-wrapper .bottom-section .slider-wrapper {
   height: 329px;
@@ -1509,9 +1583,20 @@ html {
 .home-other-services .full-wrapper {
   background: #010C1A;
   padding-bottom: 60px;
+  position: relative;
+}
+.home-other-services .full-wrapper svg.other-services-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
 }
 .home-other-services .full-wrapper .top-section {
   padding: 0 20px 30px;
+  position: relative;
+  z-index: 2;
 }
 .home-other-services .full-wrapper .top-section .left-div {
   margin-bottom: 20px;
@@ -1532,6 +1617,10 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 400;
+}
+.home-other-services .full-wrapper .bottom-section {
+  position: relative;
+  z-index: 2;
 }
 .home-other-services .full-wrapper .bottom-section .slider-wrapper .other-services-slider .other-service-item {
   margin: 0 20px;
@@ -1679,9 +1768,20 @@ html {
   padding-top: 60px;
   position: relative;
   background: linear-gradient(270deg, #0A0C10 -24.66%, #151F3D 135.99%);
+  z-index: 1;
+}
+.home-industries .main-wrapper svg.industries-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 .home-industries .main-wrapper .industry-list .title-section {
   margin-bottom: 20px;
+  position: relative;
+  z-index: 5;
 }
 .home-industries .main-wrapper .industry-list .title-section .main {
   background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);
@@ -1697,6 +1797,10 @@ html {
   letter-spacing: -1.8px;
   line-height: 25px;
 }
+.home-industries .main-wrapper .industry-list .tab-content {
+  position: relative;
+  z-index: 2;
+}
 .home-industries .main-wrapper .industry-list .tab-content .tab-pane {
   display: none;
 }
@@ -1707,6 +1811,10 @@ html {
   width: 100%;
   height: 390.733px;
   object-fit: cover;
+}
+.home-industries .main-wrapper .industry-list .bottom-section {
+  position: relative;
+  z-index: 5;
 }
 .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .tab-sec ul#inTabs {
   margin: 0;
@@ -1781,6 +1889,8 @@ html {
   justify-content: center;
   gap: 15px;
   margin-top: 40px;
+  position: relative;
+  z-index: 4;
 }
 .home-industries .main-wrapper .industry-list .arrow-num-industries .num-pack-industries {
   display: flex;

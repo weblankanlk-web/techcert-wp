@@ -30,13 +30,31 @@
                 .news-more-slider{
                     .events-section{
                         margin: 0 10px;
+                        &:hover{
+                            .event-inner{
+                                border-radius: 10px;
+                                .featured-image{
+                                    img{
+                                        transform: scale(1.1);
+                                        border-radius: 10px;
+                                    }
+                                }
+                                .event-item-inner{
+                                    border-radius: 10px;
+                                    background: linear-gradient(90deg, rgba(0, 185, 152, 0.90) -5.02%, rgba(0, 124, 194, 0.50) 31.41%, rgba(42, 42, 42, 0.30) 69.33%, rgba(0, 0, 0, 0.00) 100%);
+                                }
+                            }
+                        }
                         .event-inner{
                             position: relative;
+                            overflow: hidden;
                             .featured-image{
                                 img{
                                     width: 100%;
                                     height: 324px;
                                     object-fit: cover;
+                                    border-radius: 10px;
+                                    transition: .7s;
                                 }
                             }
                             .news-date{
@@ -143,6 +161,7 @@
                         .events-section{
                             margin: 0 get-vw(10px);
                             .event-inner{
+                                border-radius: get-vw(10px);
                                 .featured-image{
                                     img{
                                         width: get-vw(562px);
@@ -214,12 +233,22 @@
         position: relative;
         padding-bottom: 50px;
         background: $black-bg;
+        overflow: hidden;
+        &:hover{
+            .image-container{
+                transition: .7s;
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
         .image-container{
             height: 520px;
             position: absolute;
             bottom: 50px;
             z-index: 0;
             width: 100%;
+            overflow: hidden;
             &::after{
                 position: absolute;
                 content: "";
@@ -235,6 +264,7 @@
                 width: 100%;
                 height: 520px;
                 object-fit: cover;
+                transition: .7s
             }
         }
         a.video-icon-url{
@@ -409,6 +439,14 @@
             }
             .image-wrapper{
                 margin-bottom: 30px;
+                overflow: hidden;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.40);
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
                 img{
                     width: 100%;
                     height: 145px;
@@ -416,6 +454,7 @@
                     border-radius: 10px;
                     border: 1px solid rgba(255, 255, 255, 0.40);
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    transition: .7s;
                 }
             }
             .title{
@@ -603,6 +642,8 @@
                 }
                 .image-wrapper{
                     margin-bottom: get-vw(50px);
+                    border-radius: get-vw(20px);
+                    border:get-vw(1px) solid rgba(255, 255, 255, 0.40);
                     img{
                         height: get-vw(567px);
                         border-radius: get-vw(20px);

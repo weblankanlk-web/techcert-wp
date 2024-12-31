@@ -23,13 +23,13 @@
                 <div class="industry-inner">
                     <div class="top-section">
                         <div class="left-div">
-                            <div class="img-wrap">
+                            <div class="img-wrap fade-up">
                                 <img src="<?php echo $ip_image_url; ?>" alt="">
                             </div>
                         </div>
                         <div class="right-div">
-                            <h3 class="h-120 title"><?php echo $ip_title; ?></h3>
-                            <p class="p-18 para"><?php echo $ip_content; ?></p>
+                            <h3 class="h-120 title fade-up"><?php echo $ip_title; ?></h3>
+                            <p class="p-18 para fade-up"><?php echo $ip_content; ?></p>
                         </div>
                     </div>
                     <div class="bottom-section">

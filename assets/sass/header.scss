@@ -903,7 +903,6 @@
                         list-style: none;
                         padding: get-vw(10px) get-vw(21px);
                         font-weight: 400;
-
                         .sub-menu-toggle{
                             display: none;
                         }
@@ -1084,11 +1083,37 @@
                         display: flex;
                         flex-direction: row;
                         align-items: center;
+                        border: none;
+                        transition: all 0.3s ease;
+                        overflow: hidden;
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            content: " ";
+                            top: 0;
+                            left: 0;
+                            z-index: -1;
+                            width: 200px;
+                            height: 100%;
+                            transition: all 0.7s ease;
+                            -webkit-transform: scale(.1);
+                            transform: scale(.1);
+                        }
                         &:hover{
-                            background: $primary-color;
-                            color: $white;
-                            box-shadow: 0 0 5px  $primary-color, 0 0 25px  $primary-color, 0 0 50px  $primary-color, 0 0 200px  $primary-color;
+                            color: #fff;
+                            border: none;
+                            background: transparent;
+                            &::after{
+                                background: $primary-color;
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
                             text-decoration: none;
+                            .message-icon{
+                                background: transparent;
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
                         }
                         a{
                             color: $white;
@@ -1165,6 +1190,13 @@
                             padding: 0;
                             li{
                                 list-style: none;
+                                &#menu-item-196{
+                                    .sub-menu{
+                                        column-count: 2;
+                                        width: get-vw(797.797px);
+                                        left: -177%;
+                                    }
+                                }
                                 .sub-menu-toggle{
                                     display: none;
                                     span {
@@ -1252,7 +1284,7 @@
                                         text-decoration: none;
                                         .sub-menu { 
                                             display: block;
-                                            transition: .7s;
+                                            transition: all 0.7s ease;
                                         }
                                     }
                                     &.active{
@@ -1301,11 +1333,37 @@
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    border: none;
+                    transition: all 0.3s ease;
+                    overflow: hidden;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: " ";
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        width: get-vw(147px);
+                        height: 100%;
+                        transition: all 0.7s ease;
+                        -webkit-transform: scale(.1);
+                        transform: scale(.1);
+                    }
                     &:hover{
-                        background: $primary-color;
-                        color: $white;
-                        box-shadow: 0 0 5px  $primary-color, 0 0 25px  $primary-color, 0 0 50px  $primary-color, 0 0 200px  $primary-color;
-                        text-decoration: none;
+                        color: #fff;
+                            border: none;
+                            background: transparent;
+                            &::after{
+                                background: $primary-color;
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
+                            text-decoration: none;
+                            .message-icon{
+                                background: transparent;
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
                     }
                     a{
                         color: $white;

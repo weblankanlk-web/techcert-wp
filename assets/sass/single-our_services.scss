@@ -38,7 +38,16 @@
                 .slider-wrapper{
                     .bulletin-slider{
                         .bulletin-div{
-                            margin: 0 10px;
+                            overflow: hidden;
+                            &:hover{
+                                .bulletin-inner{
+                                    .featured-image{
+                                        img{
+                                            transform: scale(1.1);
+                                        }
+                                    }
+                                }
+                            }
                             .bulletin-inner{
                                 .featured-image{
                                     height: 224.934px;
@@ -48,6 +57,8 @@
                                         height: 224.934px !important;
                                         border-radius: 6.501px 6.501px 0px 0px;
                                         max-width: unset !important;
+                                        transition: .7s;
+                                        width: 100% !important;
                                     }
                                 }
                                 .post-content{
@@ -55,6 +66,8 @@
                                     border-radius: 0 0 6.501px 6.501px;
                                     border: 0.65px solid rgba(255, 255, 255, 0.40);
                                     background: #151F3D;
+                                    position: relative;
+                                    z-index: 3;
                                     .post-title{
                                         margin-bottom: 20px;
                                         a{
@@ -273,7 +286,22 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                   }
+                        .btn-wrap{
+                            &:hover{
+                                .ar-icon{
+                                    position: relative;
+                                    z-index: 2;
+                                }
+                                p.btn-text{
+                                    position: relative;
+                                    z-index: 2;
+                                }
+                            }
+                            &::after{
+                                z-index: 1;
+                            }
+                        }
+                    }
                 //    .submit{
                 //     display: block;
                 //     margin: 40px auto;
@@ -857,12 +885,22 @@
         position: relative;
         padding-bottom: 50px;
         background: $black-bg;
+        overflow: hidden;
+        &:hover{
+            .image-container{
+                transition: .7s;
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
         .image-container{
             height: 520px;
             position: absolute;
             bottom: 50px;
             z-index: 0;
             width: 100%;
+            overflow: hidden;
             &::after{
                 position: absolute;
                 content: "";
@@ -878,6 +916,7 @@
                 width: 100%;
                 height: 520px;
                 object-fit: cover;
+                transition: .7s
             }
         }
         a.video-icon-url{

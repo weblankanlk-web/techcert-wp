@@ -13,7 +13,7 @@
 ?>
 <section class="privacy-policy-section">
     <div class="main-wrapper">
-        <div class="p-content"><?php echo $pp_content; ?></div>
+        <div class="p-content fade-up"><?php echo $pp_content; ?></div>
     </div>
 </section>
 

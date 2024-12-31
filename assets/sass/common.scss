@@ -233,8 +233,12 @@ p,h1,h2,h3,h4,h5,h6{
         background: $primary-color;
         align-items: center;
         justify-content: center;
+        position: relative;
         padding: 10px 30px;
         width: 200px;
+        border: none;
+        transition: all 0.3s ease;
+        overflow: hidden;
         .ar-icon{
             display: flex;
             flex-direction: row;
@@ -248,7 +252,30 @@ p,h1,h2,h3,h4,h5,h6{
             color: $white;
             margin-left: 5px;
         }
+        &::after{
+            position: absolute;
+            content: " ";
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 200px;
+            height: 100%;
+            transition: all 0.7s ease;
+            -webkit-transform: scale(.1);
+            transform: scale(.1);
+        }
+        &:hover{
+            color: #fff;
+            border: none;
+            background: transparent;
+            &::after{
+                background: $primary-color;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
     }
+   
 }
 .common-btn-green{
     text-decoration: none;
@@ -260,6 +287,10 @@ p,h1,h2,h3,h4,h5,h6{
         justify-content: center;
         padding: 10px 30px;
         width: 200px;
+        border: none;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        position: relative;
         .ar-icon{
             display: flex;
             flex-direction: row;
@@ -273,16 +304,32 @@ p,h1,h2,h3,h4,h5,h6{
             color: $white;
             margin-left: 5px;
         }
+        &::after{
+            position: absolute;
+            content: " ";
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 200px;
+            height: 100%;
+            transition: all 0.7s ease;
+            -webkit-transform: scale(.1);
+            transform: scale(.1);
+        }
+        &:hover{
+            color: #fff;
+            border: none;
+            background: transparent;
+            &::after{
+                background: $green;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
     }
 }
 .common-btn-trans{
     text-decoration: none;
-    &:hover{
-        .btn-wrap{
-            background: $primary-color;
-            border: 1px solid transparent;
-        }
-    }
     .btn-wrap{
         border-radius: 4.224px;
         display: flex;
@@ -292,9 +339,14 @@ p,h1,h2,h3,h4,h5,h6{
         padding: 10px 30px;
         width: 200px;
         border: 1px solid $white;
+        transition: all 0.7s ease;
+        overflow: hidden;
+        position: relative;
         .ar-icon{
             display: flex;
             flex-direction: row;
+            position: relative;
+            z-index: 3;
             svg{
                 width: 13px;
                 height: 12.316px;
@@ -304,6 +356,31 @@ p,h1,h2,h3,h4,h5,h6{
         p.btn-text{
             color: $white;
             margin-left: 5px;
+            position: relative;
+            z-index: 3;
+        }
+        &::after{
+            position: absolute;
+            content: " ";
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 200px;
+            height: 100%;
+            transition: all 0.7s ease;
+            -webkit-transform: scale(.1);
+            transform: scale(.1);
+        }
+        &:hover{
+            color: #fff;
+            border: none;
+            background: transparent;
+            &::after{
+                background: $primary-color;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                z-index: 2;
+            }
         }
     }
 }
@@ -521,6 +598,9 @@ svg.arr-right{
             p.btn-text{
                 margin-left: get-vw(10px);
             }
+            &::after{
+                width: get-vw(247.2px);
+            }
         }
     }
     .common-btn-green{
@@ -536,6 +616,9 @@ svg.arr-right{
             }
             p.btn-text{
                 margin-left: get-vw(10px);
+            }
+            &::after{
+                width: get-vw(247.2px);
             }
         }
     }
@@ -553,6 +636,9 @@ svg.arr-right{
             }
             p.btn-text{
                 margin-left: get-vw(10px);
+            }
+            &::after{
+                width: get-vw(247.2px);
             }
         }
     }

@@ -48,11 +48,18 @@
                                     padding: 30px 25px;
                                     &:hover{
                                         background: linear-gradient(0deg, rgba(0, 185, 152, 0.90) -3.74%, rgba(0, 124, 194, 0.50) 44.09%, rgba(42, 42, 42, 0.30) 93.88%, rgba(0, 0, 0, 0.00) 134.15%), #151F3D;
+                                        transition: .7s;
+                                        cursor: pointer;
+                                        img.insdustry-land-image{
+                                            transform: scale(1.1);
+                                        }
                                     }
                                     img.insdustry-land-image{
                                         height:120px;
                                         width:170px;
                                         object-fit: cover;
+                                        transform: scale(0.9);
+                                        transition: .7s;
                                     }
                                     .details-item{
                                         display: flex;

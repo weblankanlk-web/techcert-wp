@@ -30,10 +30,10 @@
 							</svg>
 							<div class="main-wrapper">
 								<div class="detail-item">
-									<h2 class="h-140 main"><?php echo $hh_title; ?></h2>
-									<h3 class="h-80 sub"><?php echo $hh_sub_title; ?></h3>
+									<h2 class="h-140 main fade-up"><?php echo $hh_title; ?></h2>
+									<h3 class="h-80 sub fade-up"><?php echo $hh_sub_title; ?></h3>
 								</div>
-								<a href="<?php echo $hh_button_url; ?>" class="common-btn-blue btn-hero">
+								<a href="<?php echo $hh_button_url; ?>" class="common-btn-blue btn-hero fade-up">
 									<div class="btn-wrap">
 										<div class="ar-icon">
 											<svg class="left">
@@ -71,7 +71,7 @@
 		<div class="top-section">
 			<div class="left-div">
 				<div class="title-section">
-					<p class="h-30 tagline-white"><?php echo $ha_tagline; ?></p>
+					<p class="h-30 tagline-white fade-up"><?php echo $ha_tagline; ?></p>
 					<!-- <div class="container-svg">
 						<svg>
 							<text class="dashed" x="0" y="0" dominant-baseline="hanging">
@@ -79,11 +79,11 @@
 							</text>
 						</svg>
 					</div> -->
-					<h3 class="h-100 sub"><?php echo $ha_sub_title; ?></h3>
+					<h3 class="h-100 sub fade-up"><?php echo $ha_sub_title; ?></h3>
 				</div>
-				<h2 class="h-120 main"><?php echo $ha_title; ?></h2>
+				<h2 class="h-120 main fade-up"><?php echo $ha_title; ?></h2>
 			</div>
-			<a href="<?php echo $ha_button_url; ?>" class="common-btn-blue btn-about">
+			<a href="<?php echo $ha_button_url; ?>" class="common-btn-blue btn-about fade-up">
 				<div class="btn-wrap">
 					<div class="ar-icon">
 						<svg class="left">
@@ -99,9 +99,9 @@
 				<img src="<?php echo $ha_image_url; ?>" alt="" class="white-image">
 			</div>
 			<div class="detail-para">
-				<p class="p-20 white-para"><?php echo $ha_content; ?></p>
+				<p class="p-20 white-para fade-up"><?php echo $ha_content; ?></p>
 			</div>
-			<div class="white-section">
+			<div class="white-section fade-up">
 				<div class="white-section-inner">
 					<p class="h-30 tagline-black"><?php echo $white_tagline; ?></p>
 					<h3 class="h-80-s white-title"><?php echo $white_title; ?></h3>
@@ -137,13 +137,10 @@
 ?>
 <section class="home-services">
 	<div class="full-wrapper">
-		<svg class="services-svg">
-			<use xlink:href="#main-banner"></use>
-		</svg>
 		<div class="top-section">
 			<div class="title-section">
-				<p class="h-30 tagline-white"><?php echo $hs_tagline; ?></p>
-				<h3 class="h-120 main"><?php echo $hs_title; ?></h3>
+				<p class="h-30 tagline-white fade-up"><?php echo $hs_tagline; ?></p>
+				<h3 class="h-120 main fade-up"><?php echo $hs_title; ?></h3>
 			</div>
 		</div>
 		<div class="bottom-section">
@@ -159,7 +156,7 @@
 							$hcp_service_image_url=validateImage(816,416,$hcp_service_image);
 							$hcp_sevice_url=get_the_permalink( $service_key_id);
 					?>
-						<div class="key-service-item">
+						<div class="key-service-item fade-up">
 							<div class="key-service-inner">
 								<img src="<?php echo $hcp_service_image_url; ?>" alt="" class="key-service-image">
 								<div class="details-item">
@@ -197,18 +194,15 @@
 ?>
 <section class="home-other-services">
 	<div class="full-wrapper">
-		<svg class="other-services-svg">
-			<use xlink:href="#main-banner-2"></use>
-		</svg>
 		<div class="top-section">
 			<div class="left-div">
 				<div class="title-section">
-					<h3 class="h-70 sub"><?php echo $hos_sub_title; ?></h3>
-					<p class="h-30 tagline-white"><?php echo $hos_tagline; ?></p>
+					<h3 class="h-70 sub fade-up"><?php echo $hos_sub_title; ?></h3>
+					<p class="h-30 tagline-white fade-up"><?php echo $hos_tagline; ?></p>
 				</div>
-				<h2 class="h-120 main"><?php echo $hos_title; ?></h2>
+				<h2 class="h-120 main fade-up"><?php echo $hos_title; ?></h2>
 			</div>
-			<a href="<?php echo $hos_button_url; ?>" class="common-btn-blue btn-other">
+			<a href="<?php echo $hos_button_url; ?>" class="common-btn-blue btn-other fade-up">
 				<div class="btn-wrap">
 					<div class="ar-icon">
 						<svg class="left">
@@ -291,8 +285,8 @@
 		</div>
 		<div class="details-section">
 			<div class="detail-inner">
-				<h2 class="h-200 main"><?php echo $hm_title; ?></h2>
-				<p class="p-18 para"><?php echo $hm_content; ?></p>
+				<h2 class="h-200 main fade-up"><?php echo $hm_title; ?></h2>
+				<p class="p-18 para fade-up"><?php echo $hm_content; ?></p>
 			</div>
 		</div>
 	</div>
@@ -310,8 +304,8 @@
 		</svg>
         <div class="industry-list">
 			<div class="title-section d-hide-t">
-				<p class="h-30 tagline-white"><?php echo $hi_tagline; ?></p>
-				<h3 class="h-120 main"><?php echo $hi_title; ?></h3>
+				<p class="h-30 tagline-white fade-up"><?php echo $hi_tagline; ?></p>
+				<h3 class="h-120 main fade-up"><?php echo $hi_title; ?></h3>
 			</div>
 			<div class="tab-content" id="inTabsContent">
 				<?php foreach ($hi_nav_tabs as $index => $tab_item):
@@ -338,15 +332,15 @@
             <div class="bottom-section">
                 <div class="bottom-inner">
 					<div class="title-section d-hide-m">
-						<p class="h-30 tagline-white"><?php echo $hi_tagline; ?></p>
-						<h3 class="h-120 main"><?php echo $hi_title; ?></h3>
+						<p class="h-30 tagline-white fade-up"><?php echo $hi_tagline; ?></p>
+						<h3 class="h-120 main fade-up"><?php echo $hi_title; ?></h3>
 					</div>
 					<div class="tab-sec">
 							<ul class="nav nav-tabs" id="inTabs" role="tablist">
 							<?php foreach ($hi_nav_tabs as $index => $tab_item):
 								$hi_tab_nav_title = $tab_item["hi_tab_nav_title"];
 							?>
-								<li class="nav-item" role="presentation">
+								<li class="nav-item fade-up" role="presentation">
 									<button class="nav-link <?php echo $index === 0 ? 'active' : ''; ?>"
 										id="tab-<?php echo $index; ?>-tab"
 										data-bs-toggle="tab"
@@ -406,10 +400,10 @@
 		<div class="main-div">
 			<div class="top-section">
 				<div class="first-sec">
-					<p class="h-30 tagline-white"><?php echo $htb_tagline; ?></p>
-					<h2 class="h-120 main"><?php echo $htb_title; ?></h2>
+					<p class="h-30 tagline-white fade-up"><?php echo $htb_tagline; ?></p>
+					<h2 class="h-120 main fade-up"><?php echo $htb_title; ?></h2>
 				</div>
-				<a href="<?php echo $htb_button_url; ?>" class="common-btn-blue btn-tb">
+				<a href="<?php echo $htb_button_url; ?>" class="common-btn-blue btn-tb fade-up">
 					<div class="btn-wrap">
 						<div class="ar-icon">
 							<svg class="left">
@@ -496,7 +490,7 @@
 <section class="home-partners">
 	<div class="full-wrapper">
 		<div class="top-section">
-			<h2 class="main h-80-s"><?php echo $hp_title;?></h2>
+			<h2 class="main h-80-s fade-up"><?php echo $hp_title;?></h2>
 		</div>
 		<?php
         if ($hp_brand_listing) :

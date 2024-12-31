@@ -2,7 +2,16 @@
     .full-wrapper{
         margin-top: -118px;
         position: relative;
+        overflow: hidden;
+        &:hover{
+            .image-container{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
         .image-container{
+            transition: .7s;
             &::after{
                 width: 100%;
                 height: 461px;
@@ -16,6 +25,7 @@
                 width: 100%;
                 height: 699px;
                 object-fit: cover;
+                transition: .7s;
             }
         }
         .banner-details{

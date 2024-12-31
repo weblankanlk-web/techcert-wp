@@ -32,16 +32,16 @@
             <div class="team-inner">
                 <div class="top-section <?php echo $ttl_left_alignment; ?>">
                     <div class="deatil-div">
-                        <h3 class="h-70 sub"><?php echo $ttl_sub_title; ?></h3>
+                        <h3 class="h-70 sub fade-up"><?php echo $ttl_sub_title; ?></h3>
                         <?php
                             if($ttl_tagline):
                         ?>
-                            <p class="h-30 tagline-white"><?php echo $ttl_tagline; ?></p>
+                            <p class="h-30 tagline-white fade-up"><?php echo $ttl_tagline; ?></p>
                         <?php
                             endif;
                         ?>
                     </div>
-                   <h4 class="h-120 main"><?php echo $ttl_title; ?></h4>
+                   <h4 class="h-120 main fade-up"><?php echo $ttl_title; ?></h4>
                 </div>
                 <div class="bottom-section">
                     <?php
@@ -51,7 +51,7 @@
                             $ttl_achivements = $t_item["ttl_achivements"];
                             $ttl_linkedin_url = $t_item["ttl_linkedin_url"];
                     ?>
-                    <div class="content-div">
+                    <div class="content-div fade-up">
                         <div class="content-inner">
                             <h5 class="h-30 t-name"><?php echo $ttl_name; ?></h5>
                             <p class="p-18 t-des"><?php echo $ttl_designation; ?></p>

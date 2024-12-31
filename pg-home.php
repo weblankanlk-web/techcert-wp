@@ -198,7 +198,7 @@
 <section class="home-other-services">
 	<div class="full-wrapper">
 		<svg class="other-services-svg">
-			<use xlink:href="#main-banner"></use>
+			<use xlink:href="#main-banner-2"></use>
 		</svg>
 		<div class="top-section">
 			<div class="left-div">

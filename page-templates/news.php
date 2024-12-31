@@ -11,7 +11,7 @@
 <section class="event-card-listing">
     <div class="main-wrapper">
         <div class="single-inner">
-            <div class="featured-section">
+            <div class="featured-section fade-up">
                 <?php
                     $args = array(
                         'post_type' => 'news_events',
@@ -82,11 +82,11 @@
         </div>
         <div class="filter-div">
             <div class="div-inner">
-                <div class="search-articles">
+                <div class="search-articles fade-up">
                     <input type="text" id="search" placeholder="Search Article">
                 </div>
                 <div class="filter-articles-div">
-                    <div class="latest-articles filter-item">
+                    <div class="latest-articles filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Recent Articles</h3>
                         <ul>
                             <?php
@@ -109,7 +109,7 @@
                             ?>
                         </ul>
                     </div>
-                    <div class="categories filter-item">
+                    <div class="categories filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Categories</h3>
                         <ul>
                             <?php
@@ -134,7 +134,7 @@
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="archives filter-item">
+                    <div class="archives filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Archive</h3>
                          <?php
                              $args = array(

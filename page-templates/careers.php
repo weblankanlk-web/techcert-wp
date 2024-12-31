@@ -18,8 +18,8 @@
 <section class="career-details">
     <div class="full-wrapper">
         <div class="top-section">
-            <p class=" h-80 sub"><?php echo $cdcp_sub_title; ?></p>
-            <h4 class="h-140 main"><?php echo $cdcp_title; ?></h4>
+            <p class=" h-80 sub fade-up"><?php echo $cdcp_sub_title; ?></p>
+            <h4 class="h-140 main fade-up"><?php echo $cdcp_title; ?></h4>
             <div class="image-wrap">
                 <img src="<?php echo $cdcp_image_url; ?>" alt="">
             </div>
@@ -32,7 +32,7 @@
                     $cdcp_detail_image       = $c_item["cdcp_detail_image"];
                     $cdcp_detail_image_url=validateImage(85,85,$cdcp_detail_image);
             ?>
-                <div class="detail-item">
+                <div class="detail-item fade-up">
                     <div class="detail-inner">
                         <img src="<?php echo $cdcp_detail_image_url; ?>" alt="">
                         <div class="detail-sec">
@@ -60,10 +60,10 @@
     <div class="main-wrapper">
         <div class="top-section">
             <div class="title-section">
-                <p class=" h-70 sub"><?php echo $cpc_sub_title; ?></p>
-                <p class="h-30 tagline-white"><?php echo $cpc_tagline; ?></p>
+                <p class=" h-70 sub fade-up"><?php echo $cpc_sub_title; ?></p>
+                <p class="h-30 tagline-white fade-up"><?php echo $cpc_tagline; ?></p>
             </div>
-            <h4 class="h-120 main"><?php echo $cpc_title; ?></h4>
+            <h4 class="h-120 main fade-up"><?php echo $cpc_title; ?></h4>
         </div>
         <div class="bottom-section">
             <?php
@@ -75,7 +75,7 @@
                     $career_publish_date = get_the_date("d.m.Y",$career_id);
                     $career_single_image = get_the_post_thumbnail_url($career_id, 'large');
             ?>
-            <div class="career-item" data-toggle="modal"
+            <div class="career-item fade-up" data-toggle="modal"
             data-target="#<?php echo esc_attr($modal_id); ?>" data-career_single_image="<?php echo $career_single_image; ?>" >
                 <div class="career-inner">
                     <div class="left-div">
@@ -146,15 +146,15 @@
     <div class="full-wrapper">
         <div class="left-div">
             <div class="detail-div">
-                <h3 class="h-140 main"><?php echo $ccfp_title; ?></h3>
-                <p class="p-18 para"><?php echo $ccfp_content; ?></p>
+                <h3 class="h-140 main fade-up"><?php echo $ccfp_title; ?></h3>
+                <p class="p-18 para fade-up"><?php echo $ccfp_content; ?></p>
             </div>
             <div class="image-wrap">
                 <img src="<?php echo $ccfp_image_url; ?>" alt="">
             </div>
         </div>
         <div class="right-div">
-            <div class="form-wrap">
+            <div class="form-wrap fade-up">
                 <?php 
                     if($ccfp_career_form){
                         echo $ccfp_career_form;

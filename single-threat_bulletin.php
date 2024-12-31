@@ -21,15 +21,15 @@
     <div class="main-wrapper">
         <div class="detail-div">
             <div class="date-contain">
-                <h6 class="sub h-30"><?php echo $tbi_sub_title; ?></h6>
-                <p class="tb-date p-25"><b>PUBLISHED : </b><?php echo $tb_date; ?></p>
+                <h6 class="sub h-30 fade-up"><?php echo $tbi_sub_title; ?></h6>
+                <p class="tb-date p-25 fade-up"><b>PUBLISHED : </b><?php echo $tb_date; ?></p>
             </div>
-            <div class="image-wrapper">
+            <div class="image-wrapper fade-up">
                 <img src="<?php echo $tbi_main_image_url; ?>" alt="">
             </div>
-            <h3 class="title h-70"><?php echo $tb_title; ?></h3>
-            <div class="tb-inner-content"><?php echo $tb_content; ?></div>
-            <div class="share-div">
+            <h3 class="title h-70 fade-up"><?php echo $tb_title; ?></h3>
+            <div class="tb-inner-content fade-up"><?php echo $tb_content; ?></div>
+            <div class="share-div fade-up">
                 <p class="p-18">SHARE THIS ARETICLE</p>
                 <ul class="social-media-list">
                     <?php if($sm_facebook){?>
@@ -76,8 +76,8 @@
                 <!-- <div class="search-articles">
                     <input type="text" id="search" placeholder="Search Article">
                 </div> -->
-                <div class="filter-articles-div">
-                    <div class="latest-articles filter-item">
+                <div class="filter-articles-div ">
+                    <div class="latest-articles filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Recent Articles</h3>
                         <ul>
                             <?php
@@ -100,7 +100,7 @@
                             ?>
                         </ul>
                     </div>
-                    <div class="categories filter-item">
+                    <div class="categories filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Categories</h3>
                         <ul>
                             <?php
@@ -124,7 +124,7 @@
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="archives filter-item">
+                    <div class="archives filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Archive</h3>
                          <?php
                              $args = array(

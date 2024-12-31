@@ -36,13 +36,13 @@
             <div class="banner-details">
                 <div class="inner-wrapper">
                     <?php if($ib_tagline):?>
-                        <h1 class="h-80 sub"><?php echo $ib_tagline; ?></h1>
+                        <h1 class="h-80 sub fade-up"><?php echo $ib_tagline; ?></h1>
                     <?php endif;?>
                     <?php if($ib_main_title):?>
-                        <h2 class="h-120 fw-5 main">Threat Bulletin Categories</h2>
+                        <h2 class="h-120 fw-5 main fade-up">Threat Bulletin Categories</h2>
                     <?php endif;?>
                     <?php if($ib_content):?>
-                        <p class="banner-content h-18"><?php echo $ib_content; ?></p>
+                        <p class="banner-content h-18 fade-up"><?php echo $ib_content; ?></p>
                     <?php endif;?>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                         $tbi_sub_title=get_field("tbi_sub_title");
                         $tbi_link=get_the_permalink();
                         ?>
-                        <button type="button" class="threat-item">
+                        <button type="button" class="threat-item fade-up">
                             <div class="detail-div">
                                 <h6 class="p-25 sub"><?php echo $tbi_sub_title; ?></h6>
                                 <h3 class="title h-30"><?php echo esc_html($tb_title); ?></h3>
@@ -133,7 +133,7 @@
                     <input type="text" id="search" placeholder="Search Article">
                 </div> -->
                 <div class="filter-articles-div">
-                    <div class="latest-articles filter-item">
+                    <div class="latest-articles filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Recent Articles</h3>
                         <ul>
                             <?php
@@ -156,7 +156,7 @@
                             ?>
                         </ul>
                     </div>
-                    <div class="categories filter-item">
+                    <div class="categories filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Categories</h3>
                         <ul>
                             <?php
@@ -180,7 +180,7 @@
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="archives filter-item">
+                    <div class="archives filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Archive</h3>
                          <?php
                              $args = array(

@@ -25,8 +25,8 @@
 		</div>
 		<div class="details-section">
 			<div class="detail-inner">
-				<h2 class="h-200 main"><?php echo $hm_title; ?></h2>
-				<p class="p-18 para"><?php echo $hm_content; ?></p>
+				<h2 class="h-200 main fade-up"><?php echo $hm_title; ?></h2>
+				<p class="p-18 para fade-up"><?php echo $hm_content; ?></p>
 			</div>
 		</div>
 	</div>
@@ -42,14 +42,14 @@
 <section class="contact-page-form">
     <div class="main-wrapper">
         <div class="left-div">
-            <h3 class="h-120 main"><?php echo $cfp_title; ?></h3>
-            <p class="p-18 para"><?php echo $cfp_content; ?></p>
-            <div class="image-wrap">
+            <h3 class="h-120 main fade-up"><?php echo $cfp_title; ?></h3>
+            <p class="p-18 para fade-up"><?php echo $cfp_content; ?></p>
+            <div class="image-wrap fade-up">
                 <img src="<?php echo $cfp_image_url; ?>" alt="">
             </div>
         </div>
         <div class="right-div">
-            <div class="form-wrap">
+            <div class="form-wrap fade-up">
                 <?php 
                     if($cfp_contact_form){
                         echo $cfp_contact_form;
@@ -81,12 +81,12 @@
         <div class="top-section">
             <div class="main-wrapper">
                 <div class="left-div">
-                    <p class="h-160 main"><?php echo $cds_title; ?></p>
-                    <p class="h-30 sub"><?php echo $cds_sub_title; ?></p>
+                    <p class="h-160 main fade-up"><?php echo $cds_title; ?></p>
+                    <p class="h-30 sub fade-up"><?php echo $cds_sub_title; ?></p>
                 </div>
                 <div class="right-div">
                     <div class="first-div">
-                        <div class="detail-div detail-1">
+                        <div class="detail-div detail-1 fade-up">
                             <div class="detail-inner">
                                 <p class="p-18 title"><?php echo $cds_contact_phone_title; ?></p>
                                 <?php
@@ -99,7 +99,7 @@
                                 ?>
                             </div>
                         </div>
-                        <div class="detail-div detail-2">
+                        <div class="detail-div detail-2 fade-up">
                             <div class="detail-inner">
                                 <p class="p-18 title"><?php echo $cds_contact_email_title; ?></p>
                                 <a href="mailto:<?php echo $cds_contact_email; ?>"><p class="h-30 contact-email"><?php echo $cds_contact_email; ?></p></a>
@@ -107,13 +107,13 @@
                         </div>
                     </div>
                     <div class="second-div">
-                        <div class="detail-div detail-3">
+                        <div class="detail-div detail-3 fade-up">
                             <div class="detail-inner">
                                 <p class="p-18 title"><?php echo $cds_contact_address_title; ?></p>
                                 <p class="h-30 contact-address"><?php echo $cds_contact_address; ?></p>
                         </div>
                         </div>
-                        <div class="detail-div detail-4">
+                        <div class="detail-div detail-4 fade-up">
                             <div class="detail-inner">
                                 <a href="<?php echo $sm_facebook; ?>">
                                     <img src="<?php bloginfo('template_directory'); ?>/assets/images/fb-tc.png" alt="" class="c-icon">
@@ -134,7 +134,7 @@
             </div>
         </div>
         <div class="bottom-section">
-            <div class="map-sec">
+            <div class="map-sec fade-up">
                 <?php echo $cds_map_url; ?>
             </div>
         </div>

@@ -19,13 +19,13 @@
             <div class="banner-details">
                 <div class="inner-wrapper">
                     <?php if($ib_tagline):?>
-                        <h1 class="h-80 sub"><?php echo $ib_tagline; ?></h1>
+                        <h1 class="h-80 sub fade-up"><?php echo $ib_tagline; ?></h1>
                     <?php endif;?>
                     <?php if($ib_main_title):?>
-                        <h2 class="h-120 fw-5 main"><?php echo $ib_main_title; ?></h2>
+                        <h2 class="h-120 fw-5 main fade-up"><?php echo $ib_main_title; ?></h2>
                     <?php endif;?>
                     <?php if($ib_content):?>
-                        <p class="banner-content h-18"><?php echo $ib_content; ?></p>
+                        <p class="banner-content h-18 fade-up"><?php echo $ib_content; ?></p>
                     <?php endif;?>
                 </div>
             </div>

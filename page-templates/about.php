@@ -21,7 +21,7 @@
 		<div class="top-section">
 			<div class="left-div">
 				<div class="title-section">
-					<p class="h-30 tagline-white"><?php echo $af_tagline; ?></p>
+					<p class="h-30 tagline-white fade-up"><?php echo $af_tagline; ?></p>
 					<!-- <div class="container-svg">
 						<svg>
 							<text class="dashed" x="0" y="0" dominant-baseline="hanging">
@@ -29,9 +29,9 @@
 							</text>
 						</svg>
 					</div> -->
-					<h3 class="h-100 sub"><?php echo $af_sub_title; ?></h3>
+					<h3 class="h-100 sub fade-up"><?php echo $af_sub_title; ?></h3>
 				</div>
-				<h2 class="h-120 main"><?php echo $af_title; ?></h2>
+				<h2 class="h-120 main fade-up"><?php echo $af_title; ?></h2>
 			</div>
 		</div>
 		<div class="bottom-section">
@@ -39,7 +39,7 @@
 				<img src="<?php echo $af_image_url; ?>" alt="" class="white-image">
 			</div>
 			<div class="detail-para">
-				<div class="p-20 white-para"><?php echo $af_content; ?></div>
+				<div class="p-20 white-para fade-up"><?php echo $af_content; ?></div>
 			</div>
 		</div>
 	</div>
@@ -62,15 +62,15 @@
 <section class="about-vision-mission">
     <div class="main-wrapper">  
         <div class="left-div">
-			<p class="h-30 tagline-white"><?php echo $avm_tagline; ?></p>
-            <h2 class="main h-120"><?php echo $avm_title;?></h2>
+			<p class="h-30 tagline-white fade-up"><?php echo $avm_tagline; ?></p>
+            <h2 class="main h-120 fade-up"><?php echo $avm_title;?></h2>
             <div class="image-wrap">
                 <img src="<?php echo $avm_image_url; ?>" alt="" class="main">
             </div>
         </div>
         <div class="right-div">
             <div class="right-inner">
-				<div class="item-div">
+				<div class="item-div fade-up">
 					<div class="item-inner">
 						<div class="image-container">
 							<img src="<?php echo $avm_vision_image_url; ?>" alt="">
@@ -79,7 +79,7 @@
 						<p class="para p-18"><?php echo $avm_vision_content; ?></p>
 					</div>
 				</div>
-				<div class="item-div">
+				<div class="item-div fade-up">
 					<div class="item-inner">
 						<div class="image-container">
 							<img src="<?php echo $avm_mission_image_url; ?>" alt="">
@@ -106,7 +106,7 @@
 		<div class="image-container">
 			<img src="<?php echo $aw_image_url; ?>" alt="">
 		</div>
-		<div class="white-div-sec">
+		<div class="white-div-sec fade-up">
 			<div class="white-section">
 				<div class="white-section-inner">
 					<p class="h-30 tagline-black"><?php echo $white_tagline; ?></p>
@@ -143,7 +143,7 @@
 <section class="about-awards">
 	<div class="full-wrapper">
 		<div class="top-section">
-			<h2 class="main h-120"><?php echo $aa_title;?></h2>
+			<h2 class="main h-120 fade-up"><?php echo $aa_title;?></h2>
 		</div>
 		<?php
         if ($aa_award_listing) :

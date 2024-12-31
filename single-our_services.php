@@ -22,21 +22,21 @@
     <div class="inner-wrapper">
         <div class="left-div">
             <div class="left-inner">
-                <p class="h-30 tagline-white"><?php echo $sf_tagline; ?></p>
-                <h2 class="main h-120 d-hide-t"><?php echo $sf_title;?></h2>
-                <p class="large-para h-40"><?php echo $sf_first_content; ?></p>
-                <div class="para p-18"><?php echo $sf_second_content; ?></div>
+                <p class="h-30 tagline-white fade-up"><?php echo $sf_tagline; ?></p>
+                <h2 class="main h-120 d-hide-t fade-up"><?php echo $sf_title;?></h2>
+                <p class="large-para h-40 fade-up"><?php echo $sf_first_content; ?></p>
+                <div class="para p-18 fade-up"><?php echo $sf_second_content; ?></div>
             </div>
         </div>
         <div class="right-div">
             <div class="right-inner">
-                <h2 class="main h-120 d-hide-m"><?php echo $sf_title;?></h2>
+                <h2 class="main h-120 d-hide-m fade-up"><?php echo $sf_title;?></h2>
                 <div class="video-wrap">
                 <video autoplay muted loop id="singleVideo">
                     <source src="<?php echo $sf_video_url; ?>" type="video/mp4">
                 </video>
                 </div>
-                <div class="white-div-sec">
+                <div class="white-div-sec fade-up">
                     <div class="white-section">
                         <div class="white-section-inner">
                             <p class="h-30 tagline-black"><?php echo $white_tagline; ?></p>
@@ -84,7 +84,7 @@
 ?>
 <section class="services_detail-include">
     <div class="full-wrapper">
-        <div class="image-container">
+        <div class="image-container fade-up">
             <picture>
                 <source media="(min-width:992px)" srcset="<?php echo $id_desktop_image_url; ?>">
                 <img src="<?php echo $id_mobile_image_url;?>" alt="">
@@ -92,14 +92,14 @@
         </div>
         <div class="detail-div">
             <div class="detail-inner">
-                <h3 class="main h-80-s"><?php echo $id_main_title; ?></h3>
+                <h3 class="main h-80-s fade-up"><?php echo $id_main_title; ?></h3>
                 <div class="points-sec">
                     <ul class="point-list">
                         <?php 
                             foreach($id_points_listing as $id_item):
                                 $id_point  = $id_item["id_point"];
                             ?>
-                            <li class="point-item p-25"><?php echo $id_point; ?></li>
+                            <li class="point-item p-25 fade-up"><?php echo $id_point; ?></li>
                         <?php
                             endforeach;
                         ?>
@@ -123,7 +123,7 @@
 <?php 
     if ($vf_image) :
 ?>
-<section class="services-pdf-video">
+<section class="services-pdf-video fade-up">
     <div class="full-wrapper">
         <div class="image-container">
             <img src="<?php echo $vf_image_url; ?>" alt="">
@@ -138,7 +138,7 @@
         <div class="detail-div">
             <div class="left-div">
                 <?php  if ($vf_title) :?>
-                    <h3 class="h-80-s main"><?php echo $vf_title; ?></h3>
+                    <h3 class="h-80-s main fade-up"><?php echo $vf_title; ?></h3>
                 <?php
                     endif;
                 ?>
@@ -192,14 +192,14 @@
 <section class="services-page-form">
     <div class="main-wrapper">  
         <div class="left-div">
-            <h3 class="h-120 main"><?php echo $hcp_form_title; ?></h3>
-            <p class="p-18 para"><?php echo $hcp_form_content; ?></p>
-            <div class="image-wrap">
+            <h3 class="h-120 main fade-up"><?php echo $hcp_form_title; ?></h3>
+            <p class="p-18 para fade-up"><?php echo $hcp_form_content; ?></p>
+            <div class="image-wrap fade-up">
                 <img src="<?php echo $hcp_form_image_url; ?>" alt="">
             </div>
         </div>
         <div class="right-div">
-            <div class="form-wrap">
+            <div class="form-wrap fade-up">
                 <?php 
                     if($hcp_contact_form){
                         echo $hcp_contact_form;
@@ -241,10 +241,10 @@
 		<div class="main-div">
 			<div class="top-section">
 				<div class="first-sec">
-					<p class="h-30 tagline-white"><?php echo $htb_tagline; ?></p>
-					<h2 class="h-120 main"><?php echo $htb_title; ?></h2>
+					<p class="h-30 tagline-white fade-up"><?php echo $htb_tagline; ?></p>
+					<h2 class="h-120 main fade-up"><?php echo $htb_title; ?></h2>
 				</div>
-				<a href="<?php echo $htb_button_url; ?>" class="common-btn-blue btn-tb">
+				<a href="<?php echo $htb_button_url; ?>" class="common-btn-blue btn-tb fade-up">
 					<div class="btn-wrap">
 						<div class="ar-icon">
 							<svg class="left">
@@ -368,17 +368,17 @@
 <?php 
     if ($ssm_image) :
 ?>
-<section class="service-redirect-social">
+<section class="service-redirect-social fade-up">
     <div class="main-wrapper">
         <div class="image-container">
             <img src="<?php echo $ssm_image_url;?>" alt="">
         </div>
         <div class="detail-div">
             <div class="detail-inner">
-                <h4 class="h-80-s main"><?php echo $ssm_title;?></h4>
-                <h3 class="h-30 sub"><?php echo $ssm_sub_title;?></h3>
+                <h4 class="h-80-s main fade-up"><?php echo $ssm_title;?></h4>
+                <h3 class="h-30 sub fade-up"><?php echo $ssm_sub_title;?></h3>
                 <div class="btn-group">
-                    <a href="<?php echo $sm_whatsapp; ?>" class="common-btn-green btn-sc-1" target="_blank">
+                    <a href="<?php echo $sm_whatsapp; ?>" class="common-btn-green btn-sc-1 fade-up" target="_blank">
                         <div class="btn-wrap">
                             <div class="ar-icon">
                                 <svg class="left">
@@ -388,7 +388,7 @@
                             <p class="btn-text"><?php echo $ssm_first_button_text;?></p>
                         </div>
                     </a>
-                    <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="common-btn-blue btn-sc-2" target="_blank">
+                    <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="common-btn-blue btn-sc-2 fade-up" target="_blank">
                         <div class="btn-wrap">
                             <div class="ar-icon">
                                 <svg class="left">

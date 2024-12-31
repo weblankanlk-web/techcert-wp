@@ -643,6 +643,16 @@
                 .slider-wrapper{
                     .bulletin-slider{
                         .bulletin-div{
+                            overflow: hidden;
+                            &:hover{
+                                .bulletin-inner{
+                                    .featured-image{
+                                        img{
+                                            transform: scale(1.1);
+                                        }
+                                    }
+                                }
+                            }
                             .bulletin-inner{
                                 .featured-image{
                                     height: 224.934px;
@@ -652,6 +662,8 @@
                                         height: 224.934px !important;
                                         border-radius: 6.501px 6.501px 0px 0px;
                                         max-width: unset !important;
+                                        transition: .7s;
+                                        width: 100% !important;
                                     }
                                 }
                                 .post-content{
@@ -659,6 +671,8 @@
                                     border-radius: 0 0 6.501px 6.501px;
                                     border: 0.65px solid rgba(255, 255, 255, 0.40);
                                     background: #151F3D;
+                                    position: relative;
+                                    z-index: 3;
                                     .post-title{
                                         margin-bottom: 20px;
                                         a{
@@ -851,6 +865,19 @@
                 .services-slider{
                     .key-service-item{
                         margin: 0 20px;
+                        overflow: hidden;
+                        &:hover{
+                            cursor: pointer;
+                            transition: all 0.7s ease;
+                            .key-service-inner{
+                                .details-item{
+                                    background: linear-gradient(90deg, rgba(0, 185, 152, 0.90) -5.02%, rgba(0, 124, 194, 0.50) 31.41%, rgba(42, 42, 42, 0.30) 69.33%, rgba(0, 0, 0, 0.00) 100%);
+                                }
+                                img {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
                         .key-service-inner{
                             height: 329px;
                             position: relative;
@@ -859,6 +886,7 @@
                                 width: 100%;
                                 object-fit: cover;
                                 border-radius: 10px;
+                                transition: .7s;
                             }
                             .details-item{
                                 height: 329px;
@@ -917,6 +945,7 @@
     @media only screen and (min-width:1200px){
         .full-wrapper{
             padding-bottom: get-vw(140px);
+            padding-top: get-vw(140px);
             .top-section{
                 padding: 0 get-vw(140px);
                 .title-section{
@@ -1090,11 +1119,18 @@
                             padding: 30px 25px;
                             &:hover{
                                 background: linear-gradient(0deg, rgba(0, 185, 152, 0.90) -3.74%, rgba(0, 124, 194, 0.50) 44.09%, rgba(42, 42, 42, 0.30) 93.88%, rgba(0, 0, 0, 0.00) 134.15%), #151F3D;
+                                cursor: pointer;
+                                transition: .7s;
+                                img.other-service-image{
+                                    transform: scale(1.1);
+                                }
                             }
                             img.other-service-image{
                                 height:120px;
                                 width:170px;
                                 object-fit: cover;
+                                transform: scale(0.9);
+                                transition: .7s;
                             }
                             .details-item{
                                 display: flex;
@@ -1218,13 +1254,13 @@
                         .arrow-left-o{
                             position: absolute;
                             left: get-vw(16.6px);
-                            top: get-vw(468.8px);
+                            top: get-vw(276.8px);
                             z-index: 4;
                         }
                         .arrow-right-o{
                             position: absolute;
                             right: get-vw(16.6px);
-                            top: get-vw(468.8px);
+                            top: get-vw(276.8px);
                             z-index: 4;
                         }
                     }
@@ -1278,6 +1314,10 @@
                     &.show{
                         &.active{
                             display: block;
+                            transition: .7s;
+                            img.industry-image{
+                                transition: .7s;
+                            }
                         }
                     }
                     .slider-wrapper{
@@ -1288,6 +1328,7 @@
                                         width: 100%;
                                         height: 390.733px;
                                         object-fit: cover;
+                                        transition: .7s;
                                     }
                                 }
                             }

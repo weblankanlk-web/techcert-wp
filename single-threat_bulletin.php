@@ -71,6 +71,80 @@
                 </ul>
             </div>
         </div>
+        <div class="filter-div">
+            <div class="div-inner">
+                <!-- <div class="search-articles">
+                    <input type="text" id="search" placeholder="Search Article">
+                </div> -->
+                <div class="filter-articles-div">
+                    <div class="latest-articles filter-item">
+                        <h3 class="filter-title p-18 fw-7">Recent Articles</h3>
+                        <ul>
+                            <?php
+                            $latest_articles = new WP_Query(array(
+                                'post_type' => 'threat_bulletin',
+                                'posts_per_page' => 5,
+                                'orderby' => 'date',
+                                'order' => 'DESC'
+                            ));
+                            if ($latest_articles->have_posts()) :
+                                while ($latest_articles->have_posts()) : $latest_articles->the_post(); ?>
+                                    <li>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </li>
+                                <?php endwhile;
+                            else : ?>
+                                <li>No recent articles found.</li>
+                            <?php endif;
+                            wp_reset_postdata();
+                            ?>
+                        </ul>
+                    </div>
+                    <div class="categories filter-item">
+                        <h3 class="filter-title p-18 fw-7">Categories</h3>
+                        <ul>
+                            <?php
+                            $featured_category = get_term_by('slug', 'featured', 'news_categories');
+                            $excluded_id = $featured_category ? $featured_category->term_id : null;
+                            $categories = get_terms(array(
+                                'taxonomy' => 'threat_bulletin_categories',
+                                'hide_empty' => false,
+                            ));
+                            if (!empty($categories) && !is_wp_error($categories)) :
+                                foreach ($categories as $category) : 
+                                     $term_link = get_term_link($category);?>
+                                    <li>
+                                        <a href="<?php echo esc_url($term_link); ?>" class="category-filter" data-category="<?php echo esc_attr($category->term_id); ?>">
+                                            <?php echo esc_html($category->name); ?>
+                                        </a>
+                                    </li>
+                                <?php endforeach;
+                            else : ?>
+                                <li>No categories found.</li>
+                            <?php endif; ?>
+                        </ul>
+                    </div>
+                    <div class="archives filter-item">
+                        <h3 class="filter-title p-18 fw-7">Archive</h3>
+                         <?php
+                             $args = array(
+                                'type'            => 'yearly',
+                                'limit'           => '',
+                                'format'          => 'html',
+                                'before'          => '',
+                                'after'           => '',
+                                'show_post_count' => false,
+                                'echo'            => 1,
+                                'order'           => 'DESC',
+                                'post_type'         => 'threat_bulletin'
+                            );
+
+                            wp_get_archives($args);
+                         ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

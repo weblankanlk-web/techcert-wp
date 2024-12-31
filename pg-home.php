@@ -52,6 +52,7 @@
 	</div>
 </section>
 
+
 <?php 
 	$ha_title	= get_field("ha_title");
 	$ha_sub_title	= get_field("ha_sub_title");

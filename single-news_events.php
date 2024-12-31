@@ -22,14 +22,14 @@
     <div class="main-wrapper">
         <div class="detail-div">
             <div class="news-date">
-                <p class="day h-80"><?php echo esc_html($ne_publish_date); ?></p>
-                <p class="year h-30"><?php echo esc_html($ne_publish_month); ?></p>
+                <p class="day h-80 fade-up"><?php echo esc_html($ne_publish_date); ?></p>
+                <p class="year h-30 fade-up"><?php echo esc_html($ne_publish_month); ?></p>
             </div>
-            <div class="image-wrapper">
+            <div class="image-wrapper fade-up">
                 <img src="<?php echo $neis_main_image_url; ?>" alt="">
             </div>
-            <h3 class="title h-70"><?php echo $neis_title; ?></h3>
-            <div class="tb-inner-content"><?php echo $neis_content_1; ?></div>
+            <h3 class="title h-70 fade-up"><?php echo $neis_title; ?></h3>
+            <div class="tb-inner-content fade-up"><?php echo $neis_content_1; ?></div>
             <div class="image-slider-section">
                 <div class="image-news-slider">
                 <?php if($neis_image_slider):
@@ -48,8 +48,8 @@
                     ?>
                 </div>
             </div>
-            <div class="tb-inner-content"><?php echo $neis_content_2; ?></div>
-            <div class="share-div">
+            <div class="tb-inner-content fade-up"><?php echo $neis_content_2; ?></div>
+            <div class="share-div fade-up">
                 <p class="p-18">SHARE THIS ARETICLE</p>
                 <ul class="social-media-list">
                     <?php if($sm_facebook){?>
@@ -84,11 +84,11 @@
         </div>
         <div class="filter-div">
             <div class="div-inner">
-                <div class="search-articles">
+                <div class="search-articles fade-up">
                     <input type="text" id="search" placeholder="Search Article">
                 </div>
                 <div class="filter-articles-div">
-                    <div class="latest-articles filter-item">
+                    <div class="latest-articles filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Recent Articles</h3>
                         <ul>
                             <?php
@@ -111,7 +111,7 @@
                             ?>
                         </ul>
                     </div>
-                    <div class="categories filter-item">
+                    <div class="categories filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Categories</h3>
                         <ul>
                             <?php
@@ -136,7 +136,7 @@
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="archives filter-item">
+                    <div class="archives filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Archive</h3>
                          <?php
                              $args = array(

@@ -263,15 +263,15 @@
 	</symbol>
 	
 	<symbol id="main-banner" viewBox="0 0 1431 1020">
-		<path stroke="#fff" stroke-opacity=".07" d="M1430.5 0v1020M1144.5 0v1020M858.5 0v1020M572.5 0v1020M286.5 0v1020M.5 0v1020"/>
+		<path stroke="#fff" width="100%" stroke-opacity=".07" d="M1430.5 0v1020M1144.5 0v1020M858.5 0v1020M572.5 0v1020M286.5 0v1020M.5 0v1020"/>
 	</symbol>
 
 	<symbol id="main-banner-2" viewBox="0 0 1431 1020">
-		<path stroke="#fff" stroke-opacity=".07" d="M1430.5 0v1020M1144.5 0v1020M858.5 0v1020M572.5 0v1020M286.5 0v1020M.5 0v1020"/>
+		<path stroke="#fff" width="100%" stroke-opacity=".07" d="M1430.5 0v1020M1144.5 0v1020M858.5 0v1020M572.5 0v1020M286.5 0v1020M.5 0v1020"/>
 	</symbol>
 
 	<symbol id="document-and-video-element-grid" viewBox="0 0 1524 806">
-		<path stroke="#fff" stroke-opacity=".07" d="M1339.04 0v806M1108.42 0v806M877.81 0v806M647.19 0v806M416.57 0v806M185.96 0v806M1524 342.33H0m1524 168.49H0M1524 703.5H0m1524-548.21H0"/>
+		<path stroke="#fff"  stroke-opacity=".07" d="M1339.04 0v806M1108.42 0v806M877.81 0v806M647.19 0v806M416.57 0v806M185.96 0v806M1524 342.33H0m1524 168.49H0M1524 703.5H0m1524-548.21H0"/>
 	</symbol>
 
 	<symbol id="indusrtry" viewBox="0 0 1920 954">

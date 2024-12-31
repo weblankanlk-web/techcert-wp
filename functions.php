@@ -927,7 +927,7 @@ function filter_events_by_search() {
             $ne_read_time = get_field("ne_read_time");
             $event_single_image = get_the_post_thumbnail_url(get_the_ID(), 'large');
             ?>
-            <div class="events-section" id="post-<?php the_ID(); ?>">
+            <div class="events-section fade-up" id="post-<?php the_ID(); ?>">
                 <div class="event-inner">
                     <a href="<?php echo esc_url($event_single_url); ?>">
                         <?php if ($event_single_image): ?>

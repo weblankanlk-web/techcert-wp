@@ -4630,6 +4630,8 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
 
 .threat-bulletin-section .main-wrapper {
   background: #010C1A;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider {
   display: flex;
@@ -4711,6 +4713,54 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   border-radius: 100px;
   margin-right: 10px;
 }
+.threat-bulletin-section .main-wrapper .filter-div .div-inner {
+  border-radius: 22px;
+  border: 1px solid rgba(217, 217, 217, 0.7);
+  background: #151F3D;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.threat-bulletin-section .main-wrapper .filter-div .div-inner .search-articles {
+  padding: 0 0 30px;
+}
+.threat-bulletin-section .main-wrapper .filter-div .div-inner .search-articles input#search {
+  border-radius: 7px;
+  border: 1px solid #D9D9D9;
+  background: #FFF;
+  padding: 10px 20px;
+  width: 100%;
+}
+.threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item .filter-title {
+  color: #ffffff;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+.threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul {
+  margin: 0;
+  padding: 0 0 20px;
+}
+.threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+.threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+}
+.threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+.threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+}
 @media only screen and (min-width: 768px) {
   .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider {
     column-count: 2;
@@ -4720,13 +4770,21 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
 }
 @media only screen and (min-width: 1200px) {
+  .threat-bulletin-section .main-wrapper {
+    flex-direction: row;
+    padding: 5.2083333333vw 7.2916666667vw;
+    justify-content: space-between;
+  }
+  .threat-bulletin-section .main-wrapper .threat-wrapper {
+    width: 59.0625vw;
+  }
   .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider {
     gap: 1.0416666667vw;
-    column-count: 3;
+    column-count: 2;
   }
   .threat-bulletin-section .main-wrapper .threat-wrapper .threats-landing-slider button.threat-item {
     padding: 4.1666666667vw 3.125vw 3.125vw;
-    width: 32.5%;
+    width: 48.5%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -4785,6 +4843,50 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     padding: 0.725vw 1.0416666667vw;
     border-radius: 5.2083333333vw;
     margin-right: 1.8229166667vw;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div {
+    width: 23.5416666667vw;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner {
+    border-radius: 1.1458333333vw;
+    border: 0.0520833333vw solid rgba(217, 217, 217, 0.7);
+    padding: 2.0833333333vw 1.71875vw 2.0833333333vw 2.0833333333vw;
+    margin-bottom: 0;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner .search-articles {
+    padding: 0 0 3.5416666667vw;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner .search-articles input#search {
+    color: #011642;
+    font-family: "Forma DJR Micro", sans-serif;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 201.042%;
+    padding: 1.0416666667vw 1.7708333333vw;
+    border-radius: 1.1458333333vw;
+    border: 0.0520833333vw solid #D9D9D9;
+    background: #FFF;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item .filter-title {
+    padding-bottom: 1.5625vw;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul {
+    padding: 0 0 4.1666666667vw;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul li {
+    padding-bottom: 1.0416666667vw;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul li a {
+    font-size: 0.9375vw;
+    line-height: normal;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item li {
+    padding-bottom: 1.0416666667vw;
+  }
+  .threat-bulletin-section .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item li a {
+    font-size: 0.9375vw;
+    line-height: normal;
   }
 }
 
@@ -5123,6 +5225,8 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
 .threat-bulletin-inner .main-wrapper {
   background: #010C1A;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .threat-bulletin-inner .main-wrapper .detail-div .date-contain .sub {
   color: #3752A3;
@@ -5239,6 +5343,54 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   height: 18px;
   object-fit: contain;
 }
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner {
+  border-radius: 22px;
+  border: 1px solid rgba(217, 217, 217, 0.7);
+  background: #151F3D;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner .search-articles {
+  padding: 0 0 30px;
+}
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner .search-articles input#search {
+  border-radius: 7px;
+  border: 1px solid #D9D9D9;
+  background: #FFF;
+  padding: 10px 20px;
+  width: 100%;
+}
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item .filter-title {
+  color: #ffffff;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul {
+  margin: 0;
+  padding: 0 0 20px;
+}
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+}
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+.threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+}
 @media only screen and (min-width: 768px) {
   .threat-bulletin-inner .main-wrapper .detail-div .date-contain {
     display: flex;
@@ -5259,7 +5411,13 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
 }
 @media only screen and (min-width: 1200px) {
   .threat-bulletin-inner .main-wrapper {
-    padding-bottom: 7.2916666667vw;
+    padding-bottom: 0;
+    flex-direction: row;
+    padding: 5.2083333333vw 7.2916666667vw;
+    justify-content: space-between;
+  }
+  .threat-bulletin-inner .main-wrapper .detail-div {
+    width: 59.0625vw;
   }
   .threat-bulletin-inner .main-wrapper .detail-div .date-contain .sub {
     margin-bottom: 1.0416666667vw;
@@ -5334,6 +5492,50 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   .threat-bulletin-inner .main-wrapper .detail-div .share-div .social-media-list li a svg {
     width: 0.8333333333vw;
     height: 0.9375vw;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div {
+    width: 23.5416666667vw;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner {
+    border-radius: 1.1458333333vw;
+    border: 0.0520833333vw solid rgba(217, 217, 217, 0.7);
+    padding: 2.0833333333vw 1.71875vw 2.0833333333vw 2.0833333333vw;
+    margin-bottom: 0;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner .search-articles {
+    padding: 0 0 3.5416666667vw;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner .search-articles input#search {
+    color: #011642;
+    font-family: "Forma DJR Micro", sans-serif;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 201.042%;
+    padding: 1.0416666667vw 1.7708333333vw;
+    border-radius: 1.1458333333vw;
+    border: 0.0520833333vw solid #D9D9D9;
+    background: #FFF;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item .filter-title {
+    padding-bottom: 1.5625vw;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul {
+    padding: 0 0 4.1666666667vw;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul li {
+    padding-bottom: 1.0416666667vw;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item ul li a {
+    font-size: 0.9375vw;
+    line-height: normal;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item li {
+    padding-bottom: 1.0416666667vw;
+  }
+  .threat-bulletin-inner .main-wrapper .filter-div .div-inner .filter-articles-div .filter-item li a {
+    font-size: 0.9375vw;
+    line-height: normal;
   }
 }
 

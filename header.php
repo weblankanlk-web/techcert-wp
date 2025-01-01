@@ -46,6 +46,10 @@
 <?php 
 	$main_logo		= get_field("main_logo","option");
 	$main_logo_url	= validateImage(380,64,$main_logo);
+	$sm_facebook	= get_field("sm_facebook","option");
+    $sm_whatsapp	= get_field("sm_whatsapp","option");
+    $sm_instagram	= get_field("sm_instagram","option");
+    $sm_linkedin		= get_field("sm_linkedin","option");
 ?>
 <header id="header" class="header">
 	<div class="header-main">
@@ -103,6 +107,40 @@
 					)
 				); ?>
 			</div>
+			<div class="logo-side">
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+					<img src="<?php echo $main_logo_url; ?> " alt="" />
+				</a>
+			</div>
+			<ul class="social-media-list">
+				<?php if($sm_facebook){?>
+					<li>
+						<a href="<?php echo $sm_facebook; ?>" class="social-media-link">
+							<svg class="fb-t">
+								<use xlink:href="#fb-t"></use>
+							</svg>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if($sm_linkedin){?>
+					<li>
+						<a href="<?php echo $sm_linkedin; ?>" class="social-media-link">
+							<svg class="ln-t">
+								<use xlink:href="#ln-t"></use>
+							</svg>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if($sm_instagram){?>
+					<li>
+						<a href="<?php echo $sm_instagram; ?>" class="social-media-link">
+							<svg class="inst-t">
+								<use xlink:href="#inst-t"></use>
+							</svg>
+						</a>
+					</li>
+				<?php } ?>
+			</ul>
 		</div>
 	</div>
 </nav>

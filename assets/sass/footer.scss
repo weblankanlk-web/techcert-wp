@@ -50,6 +50,7 @@ footer{
                                 line-height: 38.053px;
                                 letter-spacing: -0.75px;
                                 text-decoration: none;
+                                text-transform: uppercase;
                             }
                             .sub-menu-toggle{
                                 display: none;
@@ -110,6 +111,7 @@ footer{
                                 line-height: 38.053px;
                                 letter-spacing: -0.75px;
                                 text-decoration: none;
+                                text-transform: uppercase;
                             }
                             .sub-menu-toggle{
                                 display: none;
@@ -124,8 +126,10 @@ footer{
                                     }
                                     ul.sub-menu{
                                         li{
+                                            margin-bottom: 10px;
                                             a{
                                                 color: $white;
+                                                text-transform: capitalize;
                                             }
                                         }
                                     }
@@ -171,6 +175,15 @@ footer{
                 left: 0;
                 height: 335px;
                 object-fit: cover;
+                &::before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(180deg, #0A0C10 -13.09%, #0A0C10 40.01%, rgba(10, 12, 16, 0.65) 78.84%, rgba(10, 12, 16, 0.00) 99.89%);
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
         .footer-details{
@@ -260,6 +273,14 @@ footer{
                         list-style: none;
                         a{
                             text-decoration: none;
+                            &:hover{
+                                .social{
+                                    background: linear-gradient(90deg, $secondary-color 10.52%, $primary-color 94.21%);
+                                    background-clip: text;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                            }
                             .social{
                                 color: $b-text;
                                 font-family: $secondary-font;
@@ -363,13 +384,14 @@ footer{
                      .menu-footer-menu-container{
                         ul#footer{
                             li{
-                                margin-bottom: get-vw(10px);
+                                margin-bottom: get-vw(20px);
                                 &::after{
                                     width: get-vw(219px);
                                     height: get-vw(1px);
                                 }
                                 &::marker{
-                                    font-size: get-vw(20px);
+                                    font-size: get-vw(30px);
+                                    margin-top: get-vw(5px);
                                 }
                                 a{
                                     font-size: get-vw(20px);
@@ -393,7 +415,7 @@ footer{
                             // gap: get-vw(99px);
                             justify-content: space-between;
                             li{
-                                margin-bottom: get-vw(10px);
+                                margin-bottom: get-vw(20px);
                                 &:nth-child(2){
                                     ul.sub-menu{
                                         column-count: 2;
@@ -406,12 +428,14 @@ footer{
                                    
                                 }
                                 &::marker{
-                                    font-size: get-vw(20px);
+                                    font-size: get-vw(30px);
+                                    margin-top: get-vw(5px);
                                 }
                                 a{
                                     font-size: get-vw(20px);
                                     line-height: get-vw(50px);
                                     letter-spacing: get-vw(-1px);
+                                    text-transform: uppercase;
                                 }
                                 .sub-menu-toggle{
                                     display: none;
@@ -431,6 +455,7 @@ footer{
                                    ul.sub-menu{
                                         li{
                                             color: $white;
+                                            margin-bottom: get-vw(10px);
                                             &:hover{
                                                 a {
                                                     color: $secondary-color;

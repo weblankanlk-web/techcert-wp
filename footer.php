@@ -192,6 +192,6 @@
 			}
 		});
 	});
-  </script>
+</script>
 </body>
 </html>

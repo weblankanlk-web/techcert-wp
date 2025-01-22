@@ -541,6 +541,11 @@
                     p{
                         color: $white;
                     }
+                    ul{
+                        li{
+                            color: $white;
+                        }
+                    }
                 }
             }
         }
@@ -723,7 +728,7 @@
                 width: get-vw(1037px);
                 .right-inner{
                     .main{
-                        width: get-vw(618px);
+                        width: get-vw(750px);
                     }
                     .video-wrap{
                         &::before{

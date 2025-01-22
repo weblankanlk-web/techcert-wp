@@ -30,8 +30,8 @@
 							</svg>
 							<div class="main-wrapper">
 								<div class="detail-item">
-									<h2 class="h-140 main fade-up"><?php echo $hh_title; ?></h2>
-									<h3 class="h-80 sub fade-up"><?php echo $hh_sub_title; ?></h3>
+									<h3 class="h-80 sub fade-up"><?php echo $hh_title; ?></h3>
+									<h2 class="h-140 main fade-up"><?php echo $hh_sub_title; ?></h2>
 								</div>
 								<a href="<?php echo $hh_button_url; ?>" class="common-btn-blue btn-hero fade-up">
 									<div class="btn-wrap">

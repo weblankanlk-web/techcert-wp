@@ -1616,6 +1616,8 @@ html {
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(3) .key-service-inner .details-item {
     height: 29.2708333333vw;
+    padding: 3.125vw 1.5625vw 3.125vw;
+    align-items: center;
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(3) .key-service-inner .details-item .title {
     text-align: center;
@@ -1631,6 +1633,8 @@ html {
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(4) .key-service-inner .details-item {
     height: 29.2708333333vw;
+    padding: 3.125vw 1.5625vw 3.125vw;
+    align-items: center;
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(4) .key-service-inner .details-item .title {
     text-align: center;
@@ -1646,6 +1650,8 @@ html {
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(5) .key-service-inner .details-item {
     height: 29.2708333333vw;
+    padding: 3.125vw 1.5625vw 3.125vw;
+    align-items: center;
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(5) .key-service-inner .details-item .title {
     text-align: center;
@@ -1661,6 +1667,8 @@ html {
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(6) .key-service-inner .details-item {
     height: 29.2708333333vw;
+    padding: 3.125vw 1.5625vw 3.125vw;
+    align-items: center;
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(6) .key-service-inner .details-item .title {
     text-align: center;
@@ -1857,6 +1865,7 @@ html {
   }
   .home-other-services .full-wrapper .bottom-section .slider-wrapper .other-services-slider .other-service-item .other-service-inner .details-item .content {
     margin-bottom: 2.5520833333vw;
+    min-height: 6.25vw;
   }
   .home-other-services .full-wrapper .bottom-section .slider-wrapper .arrow-div {
     display: flex;

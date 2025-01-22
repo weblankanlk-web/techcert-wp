@@ -56,6 +56,7 @@
     $cpc_career_listing           = get_field("cpc_career_listing");
     $cpc_tagline           = get_field("cpc_tagline");
 ?>
+<?php if($cpc_career_listing): ?>
 <section class="careers-section">
     <div class="main-wrapper">
         <div class="top-section">
@@ -119,6 +120,7 @@
         </div>
     </div>
 </section>
+<?php endif;?>
 
 <section class="career-modal" id="main-career-modal">
     <div class="career-modal-content-box">

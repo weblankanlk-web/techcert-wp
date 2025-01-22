@@ -4504,7 +4504,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .services_detail-include .full-wrapper .detail-div .detail-inner {
     margin: 0;
-    padding: 6.25vw 19.7395833333vw 6.25vw 9.7395833333vw;
+    padding: 6.25vw 10.7395833333vw 6.25vw 9.7395833333vw;
     border-radius: 0;
     display: flex;
     flex-direction: column;
@@ -4512,7 +4512,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .services_detail-include .full-wrapper .detail-div .detail-inner .main {
     margin-bottom: 2.6041666667vw;
-    width: 60%;
+    width: 56%;
     line-height: 3.9583333333vw;
   }
   .services_detail-include .full-wrapper .detail-div .detail-inner ul.point-list {

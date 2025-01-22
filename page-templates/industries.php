@@ -48,18 +48,24 @@
                                     <div class="insdustry-land-inner">
                                         <img src="<?php echo $ip_icon_image_url; ?>" alt="" class="insdustry-land-image">
                                         <div class="details-item">
-                                            <h3 class="h-60 title"><?php echo $ip_industry_name; ?></h3>
+                                            <?php if($ip_industry_name): ?>
+                                                <h3 class="h-60 title"><?php echo $ip_industry_name; ?></h3>
+                                            <?php endif; ?>
+                                            <?php if($ip_industry_content): ?>
                                             <p class="p-18 content"><?php echo $ip_industry_content; ?></p>
-                                            <a href="<?php echo $ip_industry_url; ?>" class="common-btn-trans btn-so">
-                                                <div class="btn-wrap">
-                                                    <div class="ar-icon">
-                                                        <svg class="left">
-                                                            <use xlink:href="#left"></use>
-                                                        </svg>
+                                            <?php endif; ?>
+                                            <?php if($ip_industry_url): ?>
+                                                <a href="<?php echo $ip_industry_url; ?>" class="common-btn-trans btn-so">
+                                                    <div class="btn-wrap">
+                                                        <div class="ar-icon">
+                                                            <svg class="left">
+                                                                <use xlink:href="#left"></use>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="btn-text">Read More</p>
                                                     </div>
-                                                    <p class="btn-text">Read More</p>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>

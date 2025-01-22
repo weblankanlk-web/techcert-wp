@@ -981,6 +981,8 @@
                                     }
                                     .details-item{
                                         height: get-vw(562px);
+                                        padding: get-vw(60px) get-vw(30px) get-vw(60px);
+                                        align-items: center;
                                         .title{
                                             text-align: center;
                                         }
@@ -991,11 +993,14 @@
                                 width: 24.2%;
                                 .key-service-inner{
                                     height: get-vw(562px);
+                                   
                                     img.key-service-image{
                                         height: get-vw(562px);
                                     }
                                     .details-item{
                                         height: get-vw(562px);
+                                        padding: get-vw(60px) get-vw(30px) get-vw(60px);
+                                        align-items: center;
                                         .title{
                                             text-align: center;
                                         }
@@ -1006,11 +1011,14 @@
                                 width: 24.2%;
                                 .key-service-inner{
                                     height: get-vw(562px);
+                                   
                                     img.key-service-image{
                                         height: get-vw(562px);
                                     }
                                     .details-item{
                                         height: get-vw(562px);
+                                        padding: get-vw(60px) get-vw(30px) get-vw(60px);
+                                        align-items: center;
                                         .title{
                                             text-align: center;
                                         }
@@ -1026,6 +1034,8 @@
                                     }
                                     .details-item{
                                         height: get-vw(562px);
+                                        padding: get-vw(60px) get-vw(30px) get-vw(60px);
+                                        align-items: center;
                                         .title{
                                             text-align: center;
                                         }
@@ -1043,7 +1053,7 @@
                                     height:get-vw(410px);
                                     width: 100%;
                                     padding: get-vw(60px);
-                                    border: radius get-vw(10px);
+                                    border:radius get-vw(10px);
                                     align-items: flex-start;
                                     border: get-vw(1px) solid rgba(255, 255, 255, 0.30);
                                     .title{
@@ -1240,6 +1250,7 @@
                                     }
                                     .content{
                                         margin-bottom: get-vw(49px);
+                                        min-height: get-vw(120px);
                                     }
                                 }
                             }

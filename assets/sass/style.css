@@ -4142,7 +4142,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
 }
 @media only screen and (min-width: 1200px) {
   .services-page-form .main-wrapper {
-    padding: 0 12.5vw 7.2916666667vw;
+    padding: 7.2916666667vw 12.5vw 7.2916666667vw;
     display: flex;
     flex-direction: row;
   }
@@ -4244,6 +4244,9 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   color: #ffffff;
 }
 .single-first-section .inner-wrapper .left-div .left-inner .para ul li {
+  color: #ffffff;
+}
+.single-first-section .inner-wrapper .left-div .left-inner .para h4 {
   color: #ffffff;
 }
 .single-first-section .inner-wrapper .right-div .right-inner .main {
@@ -4360,7 +4363,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     padding-top: 7.2916666667vw;
     display: flex;
     flex-direction: row;
-    height: 56.3020833333vw;
+    height: 64.3015625vw;
     padding-bottom: 7.2916666667vw;
     justify-content: space-between;
   }
@@ -4483,7 +4486,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     flex-direction: column;
     position: relative;
     padding-bottom: 0;
-    padding-top: 23.4375vw;
+    padding-top: 16.4375vw;
   }
   .services_detail-include .full-wrapper .image-container {
     width: 100%;
@@ -4501,18 +4504,20 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .services_detail-include .full-wrapper .detail-div .detail-inner {
     margin: 0;
-    padding: 6.25vw 19.7395833333vw;
+    padding: 6.25vw 19.7395833333vw 6.25vw 9.7395833333vw;
     border-radius: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-  .services_detail-include .full-wrapper .detail-div .detail-inner main {
-    margin-bottom: 3.9583333333vw;
+  .services_detail-include .full-wrapper .detail-div .detail-inner .main {
+    margin-bottom: 2.6041666667vw;
+    width: 60%;
+    line-height: 3.9583333333vw;
   }
   .services_detail-include .full-wrapper .detail-div .detail-inner ul.point-list {
     padding: 0 0 0 1.5625vw;
-    width: 23.3333333333vw;
+    width: 31.3330208333vw;
   }
 }
 
@@ -4757,6 +4762,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
 @media only screen and (min-width: 1200px) {
   .service-redirect-social .main-wrapper {
     padding-bottom: 7.2916666667vw;
+    padding-top: 7.2916666667vw;
   }
   .service-redirect-social .main-wrapper .image-container img {
     width: 85.4166666667vw;
@@ -5363,9 +5369,10 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     margin: 0.2604166667vw;
   }
   .our-industries .main-wrapper .industry-item:nth-child(odd) .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner {
-    padding: 4.6354166667vw 3.6458333333vw 3.125vw;
+    padding: 4.6354166667vw 3.2458333333vw 3.125vw;
     border-radius: 0.3125vw;
     border: 0.0520833333vw solid rgba(255, 255, 255, 0.3);
+    height: 30.7291666667vw;
   }
   .our-industries .main-wrapper .industry-item:nth-child(odd) .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner img.insdustry-land-image {
     height: 10.2604166667vw;
@@ -5382,7 +5389,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .our-industries .main-wrapper .industry-item:nth-child(odd) .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner .details-item .title span {
     font-size: 1.5625vw;
-    line-height: 2.34375vw; /* 150% */
+    line-height: 1.14375vw; /* 150% */
     letter-spacing: -0.078125vw;
   }
   .our-industries .main-wrapper .industry-item:nth-child(odd) .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner .details-item .content {
@@ -5473,9 +5480,10 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     margin: 0.2604166667vw;
   }
   .our-industries .main-wrapper .industry-item:nth-child(even) .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner {
-    padding: 4.6354166667vw 3.6458333333vw 3.125vw;
+    padding: 4.6354166667vw 3.2458333333vw 3.125vw;
     border-radius: 0.3125vw;
     border: 0.0520833333vw solid rgba(255, 255, 255, 0.3);
+    height: 30.7291666667vw;
   }
   .our-industries .main-wrapper .industry-item:nth-child(even) .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner img.insdustry-land-image {
     height: 10.2604166667vw;
@@ -5492,7 +5500,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .our-industries .main-wrapper .industry-item:nth-child(even) .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner .details-item .title span {
     font-size: 1.5625vw;
-    line-height: 2.34375vw; /* 150% */
+    line-height: 1.14375vw; /* 150% */
     letter-spacing: -0.078125vw;
   }
   .our-industries .main-wrapper .industry-item:nth-child(even) .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner .details-item .content {
@@ -7365,6 +7373,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
 }
 .career-form .full-wrapper .left-div .detail-div .para {
   color: #ffffff;

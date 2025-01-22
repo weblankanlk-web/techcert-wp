@@ -10,6 +10,7 @@
 <?php 
 	$ip_industry_listing	= get_field("ip_industry_listing");
 ?>
+
 <section class="our-industries">
     <div class="main-wrapper">
         <?php foreach ($ip_industry_listing as $industry_item):

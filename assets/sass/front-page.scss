@@ -142,8 +142,10 @@
                 .main{
                     color: $white;
                     width:85%;
+                    font-weight: 400;
                     span{
                         color: $primary-color;
+                        font-weight: 700;
                     }
                 }
             }
@@ -636,6 +638,7 @@
                         margin-bottom: 32px;
                         span{
                             color: $primary-color;
+                            font-weight: 700;
                         }
                     }
                 }
@@ -1039,6 +1042,24 @@
                                         align-items: center;
                                         .title{
                                             text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(1){
+                                .key-service-inner{
+                                    .details-item{
+                                        .title{
+                                            width: get-vw(442px);
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                .key-service-inner{
+                                    .details-item{
+                                        .title{
+                                          width: get-vw(468px);
                                         }
                                     }
                                 }

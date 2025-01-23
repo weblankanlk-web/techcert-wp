@@ -219,6 +219,7 @@
             flex-direction: row;
             padding: get-vw(100px) get-vw(140px);
             justify-content: space-between;
+            position: relative;
             .detail-div{
                 width: get-vw(1134px);
                 .date-contain{
@@ -306,6 +307,9 @@
             }
             .filter-div{
                 width: get-vw(452px);
+                position: sticky;
+                top: 10%;
+                right: get-vw(140px);
                 .div-inner{
                     border-radius:get-vw( 22px);
                     border:get-vw(1px) solid rgba(217, 217, 217, 0.70);
@@ -475,13 +479,13 @@
                     position: relative;
                     .threat-more-slider{
                         button.threat-item{
-                            padding: get-vw(80px) get-vw(60px) get-vw(60px);
+                            padding: get-vw(80px) get-vw(48.48px) get-vw(60px);
                             margin: 0 get-vw(5px);
                             display: flex;
                             flex-direction: column;
                             align-items: flex-start;
                             justify-content: space-between;
-                            height: get-vw(557.2px);
+                            height: get-vw(576.391px);
                             .detail-div{
                                 .sub{
                                     padding-bottom: get-vw(40px);

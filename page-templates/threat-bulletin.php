@@ -16,7 +16,7 @@
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
                     'post_type' => 'threat_bulletin',
-                    'posts_per_page' => 3, 
+                    'posts_per_page' => 4, 
                     'paged' => $paged,
                 );
                 $loop = new WP_Query($args);

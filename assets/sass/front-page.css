@@ -894,9 +894,11 @@ html {
 .home-about .inner-wrapper .top-section .left-div .main {
   color: #ffffff;
   width: 85%;
+  font-weight: 400;
 }
 .home-about .inner-wrapper .top-section .left-div .main span {
   color: #3752A3;
+  font-weight: 700;
 }
 .home-about .inner-wrapper .top-section .btn-about {
   position: absolute;
@@ -1308,6 +1310,7 @@ html {
 }
 .home-threat-bulletins .main-wrapper .main-div .top-section .first-sec .main span {
   color: #3752A3;
+  font-weight: 700;
 }
 .home-threat-bulletins .main-wrapper .main-div .bottom-section .slider-wrapper .bulletin-slider .bulletin-div {
   overflow: hidden;
@@ -1672,6 +1675,12 @@ html {
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(6) .key-service-inner .details-item .title {
     text-align: center;
+  }
+  .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(1) .key-service-inner .details-item .title {
+    width: 23.0208333333vw;
+  }
+  .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item:nth-child(2) .key-service-inner .details-item .title {
+    width: 24.375vw;
   }
   .home-services .full-wrapper .bottom-section .slider-wrapper .services-slider .key-service-item .key-service-inner {
     height: 21.3541666667vw;

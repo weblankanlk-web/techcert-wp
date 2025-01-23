@@ -2626,7 +2626,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   width: 100%;
   height: 699px;
   object-fit: cover;
-  animation: 15s linear scaleDown;
+  animation: 7s linear scaleDown;
 }
 .inner-bannner-tc .full-wrapper .banner-details {
   height: 508px;
@@ -4931,6 +4931,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .other-services-landing .main-wrapper .other-services-listing .other-service-item .other-service-inner .details-item .content {
     margin-bottom: 2.5520833333vw;
+    min-height: 4.6875vw;
   }
 }
 
@@ -5080,6 +5081,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     flex-direction: row;
     padding: 5.2083333333vw 7.2916666667vw;
     justify-content: space-between;
+    position: relative;
   }
   .threat-bulletin-section .main-wrapper .threat-wrapper {
     width: 59.0625vw;
@@ -5152,6 +5154,9 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .threat-bulletin-section .main-wrapper .filter-div {
     width: 23.5416666667vw;
+    position: sticky;
+    top: 10%;
+    right: 7.2916666667vw;
   }
   .threat-bulletin-section .main-wrapper .filter-div .div-inner {
     border-radius: 1.1458333333vw;
@@ -5737,6 +5742,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     flex-direction: row;
     padding: 5.2083333333vw 7.2916666667vw;
     justify-content: space-between;
+    position: relative;
   }
   .threat-bulletin-inner .main-wrapper .detail-div {
     width: 59.0625vw;
@@ -5819,6 +5825,9 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .threat-bulletin-inner .main-wrapper .filter-div {
     width: 23.5416666667vw;
+    position: sticky;
+    top: 10%;
+    right: 7.2916666667vw;
   }
   .threat-bulletin-inner .main-wrapper .filter-div .div-inner {
     border-radius: 1.1458333333vw;
@@ -5971,13 +5980,13 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     position: relative;
   }
   .more-threat-slider .full-wrapper .bottom-section .slider-wrapper .threat-more-slider button.threat-item {
-    padding: 4.1666666667vw 3.125vw 3.125vw;
+    padding: 4.1666666667vw 2.525vw 3.125vw;
     margin: 0 0.2604166667vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    height: 29.0208333333vw;
+    height: 30.0203645833vw;
   }
   .more-threat-slider .full-wrapper .bottom-section .slider-wrapper .threat-more-slider button.threat-item .detail-div .sub {
     padding-bottom: 2.0833333333vw;
@@ -6324,6 +6333,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     flex-direction: row;
     padding: 5.2083333333vw 7.2916666667vw;
     justify-content: space-between;
+    position: relative;
   }
   .event-card-listing .main-wrapper .single-inner {
     width: 59.0625vw;
@@ -6404,6 +6414,9 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .event-card-listing .main-wrapper .filter-div {
     width: 23.5416666667vw;
+    position: sticky;
+    top: 10%;
+    right: 7.2916666667vw;
   }
   .event-card-listing .main-wrapper .filter-div .div-inner {
     border-radius: 1.1458333333vw;
@@ -7013,6 +7026,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     flex-direction: row;
     padding: 5.2083333333vw 7.2916666667vw;
     justify-content: space-between;
+    position: relative;
   }
   .news-updates-inner .main-wrapper .detail-div {
     width: 59.0625vw;
@@ -7093,6 +7107,9 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   .news-updates-inner .main-wrapper .filter-div {
     width: 23.5416666667vw;
+    position: sticky;
+    top: 10%;
+    right: 7.2916666667vw;
   }
   .news-updates-inner .main-wrapper .filter-div .div-inner {
     border-radius: 1.1458333333vw;

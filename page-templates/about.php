@@ -22,14 +22,12 @@
 			<div class="left-div">
 				<div class="title-section">
 					<p class="h-30 tagline-white fade-up"><?php echo $af_tagline; ?></p>
-					<!-- <div class="container-svg">
-						<svg>
-							<text class="dashed" x="0" y="0" dominant-baseline="hanging">
-								<tspan x="0" dy="0"></?php echo $ha_sub_title; ?></tspan>
-							</text>
-						</svg>
-					</div> -->
-					<h3 class="h-100 sub fade-up"><?php echo $af_sub_title; ?></h3>
+					<svg viewBox="0 0 1000 200" class="d-hide-m fade-up">
+						<text x="10" y="170" font-size="120"  font-weight="400" fill="none" stroke="white" stroke-width="1" stroke-dasharray="2">
+						<?php echo $af_sub_title; ?>
+						</text>
+					</svg>
+					<h3 class="h-100 sub fade-up d-hide-t"><?php echo $af_sub_title; ?></h3>
 				</div>
 				<h2 class="h-120 main fade-up"><?php echo $af_title; ?></h2>
 			</div>

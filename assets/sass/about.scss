@@ -4,6 +4,7 @@
         background: $black-bg;
         position: relative;
         padding-bottom: 60px;
+        border-bottom:(1px) solid rgba(255, 255, 255, 0.30);
         .top-section{
             margin-bottom: 288px;
             .left-div{
@@ -14,8 +15,23 @@
                     flex-direction: row;
                     align-items: flex-end;
                     gap: 5px;
+                    svg {
+                        width: 79%;
+                        max-width: 900px;
+                      }
                     .sub{
-                        color: $white;
+                        color: transparent;
+                        font-family: $primary-font;
+                        -webkit-text-stroke: 1px white;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-stroke-dasharray: 4 4;
+                        -webkit-text-stroke-dashoffset: 0;
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height:normal; /* 300% */
+                        letter-spacing: -2px;
                     }
                 }
                 .main{
@@ -82,6 +98,7 @@
             flex-direction: column;
             height: get-vw(1100px);
             padding-bottom: 0;
+            border-bottom:get-vw(1px) solid rgba(255, 255, 255, 0.30);
             .top-section{
                 display: flex;
                 flex-direction: row;
@@ -92,6 +109,11 @@
                 .left-div{
                     .title-section{
                         gap: get-vw(10px);
+                        .sub{
+                            font-size:get-vw( 100px);
+                            line-height:get-vw( 120px); /* 120% */
+                            letter-spacing: get-vw(-5px);
+                        }
                     }
                     .main{
                         width: get-vw(978px);
@@ -149,9 +171,11 @@
                     .white-title{
                         width: 90%;
                         margin-bottom: 30px;
-                        span{
-                            color: $primary-color;
-                        }
+                        font-weight: 400;
+                            span{
+                                color: $primary-color;
+                                font-weight: 700;
+                            }
                     }
                     .white-para{
                         text-align: left;
@@ -166,7 +190,7 @@
                                 display: flex;
                                 column-count: 2;
                                 flex-wrap: wrap;
-                                gap: 25px;
+                                gap: 24px;
                                 .white-item{
                                     width: 45%;
                                     .white-inner{
@@ -425,6 +449,7 @@
     .main-wrapper{
         background: $black-bg;
         padding-bottom: 50px;
+        border-bottom:(1px) solid rgba(255, 255, 255, 0.30);
         .left-div{
             .main{
                 background: linear-gradient(90deg, #4061AD 0.21%, #FFF 156.34%);
@@ -516,6 +541,7 @@
             flex-direction: row;
             position: relative;
             padding-top: get-vw(140px);
+            border-bottom:get-vw(1px) solid rgba(255, 255, 255, 0.30);
             .left-div{
                 width: get-vw(516px);
                 .main{

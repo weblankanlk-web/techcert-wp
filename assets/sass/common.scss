@@ -587,8 +587,8 @@ svg.arr-right{
     .common-btn-blue{
         .btn-wrap{
             border-radius: get-vw(5.099px);
-            padding: get-vw(16px) get-vw(49px);
-            width: get-vw(247.2px);
+            padding: get-vw(16px) get-vw(49px) get-vw(16px) get-vw(29.8px);
+            width: get-vw(228px);
             .ar-icon{
                 svg{
                     width: get-vw(13px);
@@ -599,15 +599,15 @@ svg.arr-right{
                 margin-left: get-vw(10px);
             }
             &::after{
-                width: get-vw(247.2px);
+                width: get-vw(228px);
             }
         }
     }
     .common-btn-green{
         .btn-wrap{
             border-radius: get-vw(5.099px);
-            padding: get-vw(16px) get-vw(49px);
-            width: get-vw(247.2px);
+            padding: get-vw(16px) get-vw(49px) get-vw(16px) get-vw(29.8px);
+            width: get-vw(228px);
             .ar-icon{
                 svg{
                     width: get-vw(13px);
@@ -618,15 +618,15 @@ svg.arr-right{
                 margin-left: get-vw(10px);
             }
             &::after{
-                width: get-vw(247.2px);
+                width: get-vw(228px);
             }
         }
     }
     .common-btn-trans{
         .btn-wrap{
             border-radius: get-vw(5.099px);
-            padding: get-vw(16px) get-vw(49px);
-            width: get-vw(247.2px);
+            padding: get-vw(16px) get-vw(49px) get-vw(16px) get-vw(29.8px);
+            width: get-vw(228px);
             border: get-vw(1px) solid $white;
             .ar-icon{
                 svg{
@@ -638,7 +638,7 @@ svg.arr-right{
                 margin-left: get-vw(10px);
             }
             &::after{
-                width: get-vw(247.2px);
+                width: get-vw(228px);
             }
         }
     }

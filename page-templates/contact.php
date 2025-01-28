@@ -16,9 +16,9 @@
 <section class="contact-map">
 	<div class="full-wrapper">
 		<div class="video-div">
-			<video autoplay muted loop id="mapVideo">
-				<source src="<?php echo $hm_video_url; ?>" type="video/mp4">
-			</video>
+            <video class="Video-item"  playsinline="" autoplay="" muted="" loop="" id="mapVideo"
+                src="<?php echo $hm_video_url; ?>">
+            </video>
             <svg class="map-h">
 				<use xlink:href="#map-h"></use>
 			</svg>

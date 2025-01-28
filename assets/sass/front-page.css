@@ -1696,13 +1696,13 @@ html {
   .home-partners .full-wrapper .bottom-section .slider-wrapper .arrow-div .arrow-left-b {
     position: absolute;
     left: 2.8645833333vw;
-    top: 14.4166666667vw;
+    top: 8.4166666667vw;
     z-index: 4;
   }
   .home-partners .full-wrapper .bottom-section .slider-wrapper .arrow-div .arrow-right-b {
     position: absolute;
     right: 2.8645833333vw;
-    top: 14.4166666667vw;
+    top: 8.4166666667vw;
     z-index: 4;
   }
 }

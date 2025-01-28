@@ -116,7 +116,8 @@
                         }
                     }
                     .main{
-                        width: get-vw(978px);
+                        // width: get-vw(978px);
+                        width: get-vw(1496.39px);
                     }
                 }
             }
@@ -374,6 +375,9 @@
                                 margin-top: 10px;
                                 min-height: 44px;
                             }
+                            .btn-as{
+                                margin-top: (20px);
+                            }
                         }
                     }
                 }
@@ -406,8 +410,10 @@
                                 box-shadow:get-vw( 0px) get-vw(4.112px) get-vw(65.785px) get-vw( 0px) rgba(0, 0, 0, 0.10);
                                 padding: get-vw(72px) get-vw(25px) get-vw(39.38px);
                                 img.award-img{
-                                    width: get-vw(251px);
-                                    height:get-vw( 181px);
+                                    // width: get-vw(251px);
+                                    // height:get-vw( 181px);
+                                    width: get-vw(539px);
+                                    height:get-vw(373px);
                                 }
                                 .award-year{
                                     margin-bottom: get-vw(10px);
@@ -416,6 +422,9 @@
                                     margin-top:get-vw(10px);
                                     width: get-vw(222.344px);
                                     min-height:get-vw( 44px);
+                                }
+                                .btn-as{
+                                    margin-top: get-vw(30px);
                                 }
                             }
                         }
@@ -426,6 +435,7 @@
                         justify-content: center;
                         gap: unset;
                         margin-top:unset;
+                        display: none;
                         .arrow-left-a{
                             position: absolute;
                             left: get-vw(55px);
@@ -438,6 +448,96 @@
                             top: get-vw(276.8px);
                             z-index: 4;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.award-modal{
+    position: fixed;
+    width:100%;
+    top: 0px;
+    left:0px;
+    height: 100%; 
+    z-index: 9999;
+    background-color: rgba($black,0.6);
+    display: none;
+    .award-modal-content-box{
+        // padding:30px 20px 20px;
+        position: fixed;
+        width: 90%;
+        top: 170px;
+        left: 20px;
+        height: fit-content;
+        background-color: $black-bg;
+        z-index: 99999;
+        .award-modal-content{
+            .modal-close{
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                padding: 5px;
+               
+                svg{
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                }
+            }
+            .image-container-model{
+                img{
+                    width: 100%;
+                    height: 366px;
+                    object-fit: cover;
+                }
+            }
+        }
+       
+    }
+    @media only screen and (min-width: 992px){
+        .award-modal-content-box{
+            height: fit-content;
+            .award-modal-content{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+            }
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        .award-modal-content-box{
+            height: get-vw(592.797px);
+            width: get-vw(1000px);
+            top: 50%;
+            left:50%;
+            transform: translateX(-50%) translateY(-50%);
+            // padding: get-vw(120px) get-vw(218px);
+            .award-modal-content{
+                .modal-close{
+                    width: get-vw(40px);
+                    height: get-vw(20px);
+                    position: absolute;
+                    top: get-vw(24.2px);
+                    right: get-vw(24.2px);
+                    padding: get-vw(10px) get-vw(13px);
+                    svg{
+                        width: get-vw(25px);
+                        height: get-vw(34.2px);
+                        cursor: pointer;
+                    }
+                }
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: flex-start;
+                .image-container-model{
+                    img{
+                        width:  get-vw(1000px);
+                        height: get-vw(592.797px);
                     }
                 }
             }

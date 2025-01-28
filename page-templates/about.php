@@ -149,22 +149,38 @@
 		<div class="bottom-section">
 			<div class="slider-wrapper">
 				<div class="awards-slider">
-					<?php foreach ($aa_award_listing as $award_item) : 
-						$aa_award_image = $award_item["aa_award_image"];
-						$aa_award_image_url= validateImage(251,181,$aa_award_image);
-						$aa_award_year = $award_item["aa_award_year"];
-						$aa_award_content = $award_item["aa_award_content"];
-					?>
-						<div class="award-div">
-							<div class="award-inner">
-								<img src="<?php echo $aa_award_image_url;?>" class="award-img" alt="">
-								<h5 class="h-30 award-year"><?php echo $aa_award_year;?></h5>
-								<p class="p-18 award-para"><?php echo $aa_award_content;?></p>
+					<?php 
+						$n=1;
+						foreach ($aa_award_listing as $award_item) : 
+							$aa_award_image = $award_item["aa_award_image"];
+							$aa_award_image_url= validateImage(251,181,$aa_award_image);
+							$aa_award_year = $award_item["aa_award_year"];
+							$aa_award_content = $award_item["aa_award_content"];
+							$aa_award_button = $award_item["aa_award_button"];
+							$modal_id = 'modal-' . $n;
+						?>
+							<div class="award-div">
+								<div class="award-inner" data-toggle="modal"
+								data-target="#<?php echo esc_attr($modal_id); ?>" data-aa_award_image_url="<?php echo $aa_award_image_url; ?>">
+									<img src="<?php echo $aa_award_image_url;?>" class="award-img" alt="">
+									<h5 class="h-30 award-year"><?php echo $aa_award_year;?></h5>
+									<p class="p-18 award-para"><?php echo $aa_award_content;?></p>
+									<a href="#" class="common-btn-trans btn-as">
+										<div class="btn-wrap">
+											<div class="ar-icon">
+												<svg class="left">
+													<use xlink:href="#left"></use>
+												</svg>
+											</div>
+											<p class="btn-text"><?php echo $aa_award_button; ?></p>
+										</div>
+									</a>
+								</div>
 							</div>
-						</div>
-					<?php
-					endforeach;
-					?>
+						<?php
+						$n++;
+						endforeach;
+						?>
 				</div>
 				<div class="arrow-div">
 					<div class="arrow-left-a">
@@ -185,6 +201,21 @@
         ?>
 	</div>
 </section>
+
+<section class="award-modal" id="award-modal">
+		<div class="award-modal-content-box">
+			<div class="award-modal-content">
+				<div class="modal-close">
+					<svg class="closeicon">
+						<use xlink:href="#closeicon"></use>
+					</svg>
+				</div> 
+				<div class="image-container-model">
+					<img src="" alt="" class="award-image">
+				</div>
+			</div>
+		</div>
+	</section>
 
 <?php
 	get_footer();

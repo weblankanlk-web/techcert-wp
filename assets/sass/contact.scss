@@ -30,6 +30,7 @@
         .details-section{
             position: relative;
             z-index: 2;
+            border-bottom: (1px) solid rgba(255, 255, 255, 0.30);
             .detail-inner{
                 display: flex;
                 flex-direction: column-reverse;
@@ -41,6 +42,7 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    font-size: 100px;
                 }
                 .para{
                     color: $white;
@@ -73,6 +75,9 @@
             .details-section{
                 .detail-inner{
                     align-items: center;
+                    .main{
+                        font-size: 102px;
+                    }
                 }
             }
         }
@@ -94,12 +99,14 @@
                 }
             }
             .details-section{
+                border-bottom: get-vw(1px) solid rgba(255, 255, 255, 0.30);
                 .detail-inner{
                     flex-direction: row;
                     margin-top: get-vw(-239px);
                     padding: 0 get-vw(140px) get-vw(73px);
                     .main{
                         width: get-vw(746px);
+                        font-size: get-vw(200px);
                     }
                     .para{
                         padding: 0;
@@ -519,17 +526,20 @@
             .right-div{
                 .form-wrap{
                     width: get-vw(725px);
-                    padding: get-vw(120px) get-vw(130px) get-vw(100px);
+                    padding: get-vw(90px) get-vw(130px) get-vw(100px);
                     z-index: 2;
               
                     form{ 
                         label{
                                 margin-top: get-vw(30px);
                                 font-size: get-vw(16px);
+                                position: absolute;
+                                top: get-vw(-38.12px);
                         }
                         input{
                             height: get-vw(35.9125px);
                             border-bottom: get-vw(1px) solid rgba(146, 172, 191, 0.36);
+                            font-size: get-vw(30px);
                             &::placeholder{
                                 font-size:get-vw( 30px); 
                                 text-align: right; 
@@ -581,6 +591,8 @@
                         }
                         .input-group{
                             padding: get-vw(10px);
+                            position: relative;
+                            margin-bottom: get-vw(35px);
                             &.full-width{
                                 input{
                                     height: get-vw(35.9125px);

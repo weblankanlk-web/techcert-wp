@@ -509,19 +509,20 @@
                 padding: get-vw(140px) get-vw(240px) get-vw(140px) 0;
                 .form-wrap{
                     width: get-vw(725px);
-                    padding: get-vw(120px) get-vw(130px) get-vw(100px);
+                    padding: get-vw(90px) get-vw(130px) get-vw(100px);
                     z-index: 2;
-                    position: absolute;
-                    right: get-vw(240px);
-                    top: get-vw(140px);
+              
                     form{ 
                         label{
                                 margin-top: get-vw(30px);
                                 font-size: get-vw(16px);
+                                position: absolute;
+                                top: get-vw(-38.12px);
                         }
                         input{
                             height: get-vw(35.9125px);
                             border-bottom: get-vw(1px) solid rgba(146, 172, 191, 0.36);
+                            font-size: get-vw(30px);
                             &::placeholder{
                                 font-size:get-vw( 30px); 
                                 text-align: right; 
@@ -573,6 +574,8 @@
                         }
                         .input-group{
                             padding: get-vw(10px);
+                            position: relative;
+                            margin-bottom: get-vw(35px);
                             &.full-width{
                                 input{
                                     height: get-vw(35.9125px);
@@ -589,6 +592,7 @@
 .career-details{
     .full-wrapper{
         background: $black-bg;
+        border-bottom: (1px) solid rgba(255, 255, 255, 0.30);
         .top-section{
             .sub{
                 background: linear-gradient(94deg, #4061AD 2.91%, #FFF 133.37%);
@@ -702,6 +706,7 @@
             display: flex;
             flex-direction: row;
             position: relative;
+            border-bottom: get-vw(1px) solid rgba(255, 255, 255, 0.30);
             &::after{
                 width: get-vw(911px);
                 height: 100%;

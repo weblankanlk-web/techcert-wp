@@ -1,10 +1,11 @@
 .team-listing-sec{
     .main-wrapper{
-        padding-top: 60px;
+        padding: 0;
         background: $black-bg;
         .team-div{
+            padding: 60px 35px;
+            border-bottom:(1px) solid rgba(255, 255, 255, 0.30);
             .team-inner{
-                padding-bottom: 60px;
                 .top-section{
                     &.left{
                         .deatil-div{
@@ -126,10 +127,10 @@
     }
     @media only screen and (min-width: 1200px){
         .main-wrapper{
-            padding-top: get-vw(140px);
             .team-div{
+                border-bottom:get-vw(1px) solid rgba(255, 255, 255, 0.30);
+                padding: get-vw(140px);
                 .team-inner{
-                    padding-bottom: get-vw(140px);
                     .top-section{
                         &.left{
                             .deatil-div{

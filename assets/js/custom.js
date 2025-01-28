@@ -355,7 +355,7 @@ $awards_slider = $('.awards-slider').slick({
   swipeToSlide: true,
   swipe: 200,
   pauseOnHover: true,
-  slidesToShow: 5,
+  slidesToShow: 2,
   slidesToScroll: 1,
   responsive: [ 
     {
@@ -779,7 +779,7 @@ $image_news_slider = $('.image-news-slider').slick({
 
   $(".career-item .link-c").click(function(){
     $(".career-modal").show();
-    var image        = $(".career-item").data("career_single_image"); 
+    var image        = $(this).closest(".career-item").data("career_single_image"); 
     $(".career-modal .image-container-model img.career-image ").attr( "src", image );
   });
 
@@ -793,3 +793,12 @@ $image_news_slider = $('.image-news-slider').slick({
          subjectField.value = document.title;
     }
 });
+
+$(".award-div .award-inner .btn-as").click(function(){
+  $(".award-modal").show();
+  var image        =  $(this).closest(".award-inner").data("aa_award_image_url"); 
+  $(".award-modal .image-container-model img.award-image ").attr( "src", image );
+});
+$(".award-modal .modal-close").click(function(){
+  $(".award-modal").hide();
+  });

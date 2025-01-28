@@ -267,6 +267,7 @@ footer{
                     display: flex;
                     flex-wrap: wrap;
                     padding: 16px 40px;
+                    justify-content: center;
                     li{
                        position: relative;
                        &:nth-child(1){

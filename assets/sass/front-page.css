@@ -877,6 +877,7 @@ html {
 
 .about-other-services {
   position: relative;
+  overflow: hidden;
 }
 .about-other-services svg.about-other-banner {
   height: 199.9046875vw;
@@ -1300,6 +1301,9 @@ html {
   .about-other-services .home-other-services .full-wrapper .top-section .left-div .main {
     margin-top: -1.0416666667vw;
     padding-bottom: 1.8229166667vw;
+  }
+  .about-other-services .home-other-services .full-wrapper .top-section .btn-other {
+    margin-bottom: 2.0833333333vw;
   }
   .about-other-services .home-other-services .full-wrapper .bottom-section .slider-wrapper .other-services-slider .other-service-item {
     margin: 0.2604166667vw;

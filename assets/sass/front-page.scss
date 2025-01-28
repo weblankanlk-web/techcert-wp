@@ -127,6 +127,7 @@
 
 .about-other-services{
     position: relative;
+    overflow: hidden;
     svg.about-other-banner{
         height: get-vw(3838.17px);
         width:get-vw( 1920px);
@@ -583,6 +584,9 @@
                             margin-top: get-vw(-20px);
                             padding-bottom: get-vw(35px);
                         }
+                    }
+                    .btn-other{
+                        margin-bottom: get-vw(40px);
                     }
                    
                 }

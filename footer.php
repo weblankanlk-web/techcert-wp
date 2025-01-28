@@ -51,8 +51,8 @@
 						)
 					); ?>
 				</div>
-				<video autoplay muted loop id="footerVideo">
-					<source src="<?php bloginfo('template_directory'); ?>/assets/videos/footer-bg.mp4" type="video/mp4">
+				<video class="Video-item"  playsinline="" autoplay="" muted="" loop="" id="footerVideo"
+					src="<?php bloginfo('template_directory'); ?>/assets/videos/footer-bg.mp4">
 				</video>
 			</div>
 			<!-- footer Main -->
@@ -181,6 +181,15 @@
 			fadeInObserver.observe(element);
 		});
 	});
+
+	document.addEventListener("DOMContentLoaded", function() {
+		const video = document.querySelector('.Video-item');
+		if (video) {
+			video.play().catch(error => {
+				console.error('Video autoplay blocked:', error);
+			});
+		}
+		});
 
 	document.addEventListener('DOMContentLoaded', function() {
 		var body = document.body;

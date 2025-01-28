@@ -690,8 +690,8 @@ svg.arr-right:hover {
   }
   .common-btn-blue .btn-wrap {
     border-radius: 0.2655729167vw;
-    padding: 0.8333333333vw 2.5520833333vw;
-    width: 12.875vw;
+    padding: 0.8333333333vw 2.5520833333vw 0.8333333333vw 1.5520833333vw;
+    width: 11.875vw;
   }
   .common-btn-blue .btn-wrap .ar-icon svg {
     width: 0.6770833333vw;
@@ -701,12 +701,12 @@ svg.arr-right:hover {
     margin-left: 0.5208333333vw;
   }
   .common-btn-blue .btn-wrap::after {
-    width: 12.875vw;
+    width: 11.875vw;
   }
   .common-btn-green .btn-wrap {
     border-radius: 0.2655729167vw;
-    padding: 0.8333333333vw 2.5520833333vw;
-    width: 12.875vw;
+    padding: 0.8333333333vw 2.5520833333vw 0.8333333333vw 1.5520833333vw;
+    width: 11.875vw;
   }
   .common-btn-green .btn-wrap .ar-icon svg {
     width: 0.6770833333vw;
@@ -716,12 +716,12 @@ svg.arr-right:hover {
     margin-left: 0.5208333333vw;
   }
   .common-btn-green .btn-wrap::after {
-    width: 12.875vw;
+    width: 11.875vw;
   }
   .common-btn-trans .btn-wrap {
     border-radius: 0.2655729167vw;
-    padding: 0.8333333333vw 2.5520833333vw;
-    width: 12.875vw;
+    padding: 0.8333333333vw 2.5520833333vw 0.8333333333vw 1.5520833333vw;
+    width: 11.875vw;
     border: 0.0520833333vw solid #ffffff;
   }
   .common-btn-trans .btn-wrap .ar-icon svg {
@@ -732,7 +732,7 @@ svg.arr-right:hover {
     margin-left: 0.5208333333vw;
   }
   .common-btn-trans .btn-wrap::after {
-    width: 12.875vw;
+    width: 11.875vw;
   }
   svg.arr-left {
     border-radius: 0.3645833333vw;

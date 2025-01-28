@@ -40,15 +40,20 @@
                         .bulletin-div{
                             overflow: hidden;
                             &:hover{
+                                border-radius: 6.501px 6.501px 0px 0px;
                                 .bulletin-inner{
                                     .featured-image{
                                         img{
                                             transform: scale(1.1);
+                                            border-radius: 6.501px 6.501px 0px 0px !important;
+                                            border: (1px) solid rgba(255, 255, 255, 0.40);
                                         }
                                     }
                                 }
                             }
                             .bulletin-inner{
+                                border: 0.65px solid rgba(255, 255, 255, 0.40);
+                                border-radius: 6.501px;
                                 .featured-image{
                                     height: 224.934px;
                                     width: 100%;
@@ -64,7 +69,6 @@
                                 .post-content{
                                     padding: 30px;
                                     border-radius: 0 0 6.501px 6.501px;
-                                    border: 0.65px solid rgba(255, 255, 255, 0.40);
                                     background: #151F3D;
                                     position: relative;
                                     z-index: 3;
@@ -92,7 +96,7 @@
                         font-family: $primary-font;
                         font-size: 26px;
                         font-style: normal;
-                        font-weight: 700;
+                        font-weight: 400;
                         line-height: normal;
                         background: linear-gradient(90deg, #4061AD 0.21%, #FFF 156.34%);
                         background-clip: text;
@@ -156,21 +160,33 @@
                         .bulletin-slider{
                             .bulletin-div{
                                 margin-right: get-vw(10px);
+                                &:hover{
+                                    border-radius:  get-vw(10px) get-vw(10px) 0px 0px;
+                                    .bulletin-inner{
+                                        .featured-image{
+                                            img{
+                                                border-radius:get-vw(10px) get-vw(10px) 0px 0px;
+                                                border: get-vw(1px) solid rgba(255, 255, 255, 0.40);
+                                            }
+                                        }
+                                    }
+                                }
                                 .bulletin-inner{
+                                    border-radius: get-vw(10px) ;
+                                    border: get-vw(1px) solid rgba(255, 255, 255, 0.40);
                                     .featured-image{
                                         height: get-vw(345px);
                                         img.wp-post-image{
                                             height: get-vw(345px) !important;
-                                            border-radius: get-vw(10px) get-vw(10px) 0 0;
+                                            border-radius: get-vw(10px) get-vw(10px) 0 0 !important;
                                         }
                                     }
                                     .post-content{
                                         padding: get-vw(47px) get-vw(59px) get-vw(61px);
                                         border-radius: 0 0 get-vw(10px) get-vw(10px);
-                                        border: get-vw(1px) solid rgba(255, 255, 255, 0.40);
                                         .post-title{
                                             margin-bottom: get-vw(69px);
-                                            min-height: get-vw(106px);
+                                            min-height: get-vw(169px);
                                         }
                                     }
                                 }
@@ -443,17 +459,20 @@
             .right-div{
                 .form-wrap{
                     width: get-vw(725px);
-                    padding: get-vw(120px) get-vw(130px) get-vw(100px);
+                    padding: get-vw(90px) get-vw(130px) get-vw(100px);
                     z-index: 2;
               
                     form{ 
                         label{
                                 margin-top: get-vw(30px);
                                 font-size: get-vw(16px);
+                                position: absolute;
+                                top: get-vw(-38.12px);
                         }
                         input{
                             height: get-vw(35.9125px);
                             border-bottom: get-vw(1px) solid rgba(146, 172, 191, 0.36);
+                            font-size: get-vw(30px);
                             &::placeholder{
                                 font-size:get-vw( 30px); 
                                 text-align: right; 
@@ -505,6 +524,8 @@
                         }
                         .input-group{
                             padding: get-vw(10px);
+                            position: relative;
+                            margin-bottom: get-vw(35px);
                             &.full-width{
                                 input{
                                     height: get-vw(35.9125px);
@@ -599,9 +620,11 @@
                             .white-title{
                                 width: 90%;
                                 margin-bottom: 30px;
-                                span{
-                                    color: $primary-color;
-                                }
+                                font-weight: 400;
+                            span{
+                                color: $primary-color;
+                                font-weight: 700;
+                            }
                             }
                             .white-para{
                                 text-align: left;
@@ -616,7 +639,7 @@
                                         display: flex;
                                         column-count: 2;
                                         flex-wrap: wrap;
-                                        gap: 25px;
+                                        gap: 24px;
                                         .white-item{
                                             width: 45%;
                                             .white-inner{

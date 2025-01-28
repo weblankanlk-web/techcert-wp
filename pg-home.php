@@ -22,8 +22,8 @@
 				?>
 					<div class="hero-item">
 						<div class="hero-inner">
-							<video autoplay muted loop id="heroVideo">
-								<source src="<?php echo $hh_video_url; ?>" type="video/mp4">
+							<video class="Video-item"  playsinline="" autoplay="" muted="" loop="" id="heroVideo"
+								src="<?php echo $hh_video_url; ?>">
 							</video>
 							<svg class="main-banner-svg">
 								<use xlink:href="#document-and-video-element-grid"></use>
@@ -52,216 +52,218 @@
 	</div>
 </section>
 
-
-<?php 
-	$ha_title	= get_field("ha_title");
-	$ha_sub_title	= get_field("ha_sub_title");
-	$ha_tagline	= get_field("ha_tagline");
-	$ha_button_text	= get_field("ha_button_text");
-	$ha_button_url	= get_field("ha_button_url");
-	$ha_content	= get_field("ha_content");
-	$ha_image	= get_field("ha_image");
-	$ha_image_url=validateImage(990,757,$ha_image);
-	$white_tagline	= get_field("white_tagline");
-	$white_title	= get_field("white_title");
-	$white_content	= get_field("white_content");
-	$white_icon_listing	= get_field("white_icon_listing");
-?>
-<section class="home-about">
-	<div class="inner-wrapper">
-		<div class="top-section">
-			<div class="left-div">
-				<div class="title-section">
-					<p class="h-30 tagline-white fade-up"><?php echo $ha_tagline; ?></p>
-					<!-- <div class="container-svg">
-						<svg>
-							<text class="dashed" x="0" y="0" dominant-baseline="hanging">
-								<tspan x="0" dy="0"></?php echo $ha_sub_title; ?></tspan>
+<section class="about-other-services">
+	<svg class="about-other-banner">
+		<use xlink:href="#about-other-banner"></use>
+	</svg>
+	<?php 
+		$ha_title	= get_field("ha_title");
+		$ha_sub_title	= get_field("ha_sub_title");
+		$ha_tagline	= get_field("ha_tagline");
+		$ha_button_text	= get_field("ha_button_text");
+		$ha_button_url	= get_field("ha_button_url");
+		$ha_content	= get_field("ha_content");
+		$ha_image	= get_field("ha_image");
+		$ha_image_url=validateImage(990,757,$ha_image);
+		$white_tagline	= get_field("white_tagline");
+		$white_title	= get_field("white_title");
+		$white_content	= get_field("white_content");
+		$white_icon_listing	= get_field("white_icon_listing");
+	?>
+	<div class="home-about">
+		<div class="inner-wrapper">
+			<div class="top-section">
+				<div class="left-div">
+					<div class="title-section">
+						<p class="h-30 tagline-white fade-up"><?php echo $ha_tagline; ?></p>
+						<svg viewBox="0 0 1000 200" class="d-hide-m fade-up">
+							<text x="10" y="170" font-size="100"  font-weight="400" fill="none" stroke="white" stroke-width="1" stroke-dasharray="2">
+							<?php echo $ha_sub_title; ?>
 							</text>
 						</svg>
-					</div> -->
-					<h3 class="h-100 sub fade-up"><?php echo $ha_sub_title; ?></h3>
-				</div>
-				<h2 class="h-120 main fade-up"><?php echo $ha_title; ?></h2>
-			</div>
-			<a href="<?php echo $ha_button_url; ?>" class="common-btn-blue btn-about fade-up">
-				<div class="btn-wrap">
-					<div class="ar-icon">
-						<svg class="left">
-							<use xlink:href="#left"></use>
-						</svg>
+						<h3 class="h-100 sub fade-up d-hide-t"><?php echo $ha_sub_title; ?></h3>
 					</div>
-					<p class="btn-text"><?php echo $ha_button_text; ?></p>
+					<h2 class="h-120 main fade-up"><?php echo $ha_title; ?></h2>
 				</div>
-			</a>
-		</div>
-		<div class="bottom-section">
-			<div class="image-wrap">
-				<img src="<?php echo $ha_image_url; ?>" alt="" class="white-image">
-			</div>
-			<div class="detail-para">
-				<p class="p-20 white-para fade-up"><?php echo $ha_content; ?></p>
-			</div>
-			<div class="white-section fade-up">
-				<div class="white-section-inner">
-					<p class="h-30 tagline-black"><?php echo $white_tagline; ?></p>
-					<h3 class="h-80-s white-title"><?php echo $white_title; ?></h3>
-					<p class="p-18 white-para"><?php echo $white_content; ?></p>
-					<div class="white-listing">
-						<div class="slide-wrapper">
-							<div class="white-icon-slider">
-								<?php foreach ($white_icon_listing as $white_item) : 
-									$white_icon_title = $white_item["white_icon_title"];
-									$white_icon = $white_item["white_icon"];
-									$white_icon_url=validateImage(85,85,$white_icon);
-								?>
-									<div class="white-item">
-										<div class="white-inner">
-											<img src="<?php echo $white_icon_url; ?>" alt="" class="white-icon">
-											<p class="p-18 white-icon-para"><?php echo $white_icon_title; ?></p>
-										</div>
-									</div>
-								<?php endforeach; ?>
-							</div>
+				<a href="<?php echo $ha_button_url; ?>" class="common-btn-blue btn-about fade-up">
+					<div class="btn-wrap">
+						<div class="ar-icon">
+							<svg class="left">
+								<use xlink:href="#left"></use>
+							</svg>
 						</div>
+						<p class="btn-text"><?php echo $ha_button_text; ?></p>
 					</div>
+				</a>
+			</div>
+			<div class="bottom-section">
+				<div class="image-wrap">
+					<img src="<?php echo $ha_image_url; ?>" alt="" class="white-image">
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<?php 
-	$hs_tagline	= get_field("hs_tagline");
-	$hs_title	= get_field("hs_title");
-	$hs_service_listing	= get_field("hs_service_listing");
-?>
-<section class="home-services">
-	<div class="full-wrapper">
-		<div class="top-section">
-			<div class="title-section">
-				<p class="h-30 tagline-white fade-up"><?php echo $hs_tagline; ?></p>
-				<h3 class="h-120 main fade-up"><?php echo $hs_title; ?></h3>
-			</div>
-		</div>
-		<div class="bottom-section">
-			<div class="slider-wrapper">
-				<div class="services-slider">
-					<?php if($hs_service_listing):
-						foreach($hs_service_listing as $service_item):
-							$service_key        = $service_item["hs_key_service_item"];
-							$service_key_id     = $service_key->ID;
-							$hcp_sevice_name    = get_field("hcp_sevice_name",$service_key_id);
-							$hcp_service_image    = get_field("hcp_service_image",$service_key_id);
-							$hcp_service_butttn_text    = get_field("hcp_service_butttn_text",$service_key_id);
-							$hcp_service_image_url=validateImage(816,416,$hcp_service_image);
-							$hcp_sevice_url=get_the_permalink( $service_key_id);
-					?>
-						<div class="key-service-item fade-up">
-							<div class="key-service-inner">
-								<img src="<?php echo $hcp_service_image_url; ?>" alt="" class="key-service-image">
-								<div class="details-item">
-									<h3 class="h-60 title"><?php echo $hcp_sevice_name; ?></h3>
-									<a href="<?php echo $hcp_sevice_url; ?>" class="common-btn-trans btn-sk">
-										<div class="btn-wrap">
-											<div class="ar-icon">
-												<svg class="left">
-													<use xlink:href="#left"></use>
-												</svg>
+				<div class="detail-para">
+					<p class="p-20 white-para fade-up"><?php echo $ha_content; ?></p>
+				</div>
+				<div class="white-section fade-up">
+					<div class="white-section-inner">
+						<p class="h-30 tagline-black"><?php echo $white_tagline; ?></p>
+						<h3 class="h-80-s white-title"><?php echo $white_title; ?></h3>
+						<p class="p-18 white-para"><?php echo $white_content; ?></p>
+						<div class="white-listing">
+							<div class="slide-wrapper">
+								<div class="white-icon-slider">
+									<?php foreach ($white_icon_listing as $white_item) : 
+										$white_icon_title = $white_item["white_icon_title"];
+										$white_icon = $white_item["white_icon"];
+										$white_icon_url=validateImage(85,85,$white_icon);
+									?>
+										<div class="white-item">
+											<div class="white-inner">
+												<img src="<?php echo $white_icon_url; ?>" alt="" class="white-icon">
+												<p class="p-18 white-icon-para"><?php echo $white_icon_title; ?></p>
 											</div>
-											<p class="btn-text"><?php echo $hcp_service_butttn_text; ?></p>
 										</div>
-									</a>
+									<?php endforeach; ?>
 								</div>
 							</div>
 						</div>
-					<?php
-						endforeach;
-					endif;
-					?>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
 
-<?php 
-	$hos_tagline	= get_field("hos_tagline");
-	$hos_sub_title	= get_field("hos_sub_title");
-	$hos_title	= get_field("hos_title");
-	$hos_button_text	= get_field("hos_button_text");
-	$hos_button_url	= get_field("hos_button_url");
-	$hos_other_services_listing	= get_field("hos_other_services_listing");
-?>
-<section class="home-other-services">
-	<div class="full-wrapper">
-		<div class="top-section">
-			<div class="left-div">
+	<?php 
+		$hs_tagline	= get_field("hs_tagline");
+		$hs_title	= get_field("hs_title");
+		$hs_service_listing	= get_field("hs_service_listing");
+	?>
+	<div class="home-services">
+		<div class="full-wrapper">
+			<div class="top-section">
 				<div class="title-section">
-					<h3 class="h-70 sub fade-up"><?php echo $hos_sub_title; ?></h3>
-					<p class="h-30 tagline-white fade-up"><?php echo $hos_tagline; ?></p>
+					<p class="h-30 tagline-white fade-up"><?php echo $hs_tagline; ?></p>
+					<h3 class="h-120 main fade-up"><?php echo $hs_title; ?></h3>
 				</div>
-				<h2 class="h-120 main fade-up"><?php echo $hos_title; ?></h2>
 			</div>
-			<a href="<?php echo $hos_button_url; ?>" class="common-btn-blue btn-other fade-up">
-				<div class="btn-wrap">
-					<div class="ar-icon">
-						<svg class="left">
-							<use xlink:href="#left"></use>
-						</svg>
-					</div>
-					<p class="btn-text"><?php echo $hos_button_text; ?></p>
-				</div>
-			</a>
-		</div>
-		<div class="bottom-section">
-			<div class="slider-wrapper">
-				<div class="other-services-slider">
-					<?php if($hos_other_services_listing):
-						foreach($hos_other_services_listing as $o_service_item):
-							$service_other        = $o_service_item["hos_other_service_item"];
-							$service_other_id     = $service_other->ID;
-							$hcp_sevice_name    = get_field("hcp_sevice_name",$service_other_id);
-							$hos_service_content    = get_field("hos_service_content",$service_other_id);
-							$hcp_service_image    = get_field("hcp_service_image",$service_other_id);
-							$hcp_service_butttn_text    = get_field("hcp_service_butttn_text",$service_other_id);
-							$hcp_service_image_url=validateImage(228,197,$hcp_service_image);
-							$hcp_sevice_url=get_the_permalink( $service_other_id);
-					?>
-						<div class="other-service-item">
-							<div class="other-service-inner">
-								<img src="<?php echo $hcp_service_image_url; ?>" alt="" class="other-service-image">
-								<div class="details-item">
-									<h3 class="h-60 title"><?php echo $hcp_sevice_name; ?></h3>
-									<p class="p-18 content"><?php echo $hos_service_content; ?></p>
-									<a href="<?php echo $hcp_sevice_url; ?>" class="common-btn-trans btn-so">
-										<div class="btn-wrap">
-											<div class="ar-icon">
-												<svg class="left">
-													<use xlink:href="#left"></use>
-												</svg>
+			<div class="bottom-section">
+				<div class="slider-wrapper">
+					<div class="services-slider">
+						<?php if($hs_service_listing):
+							foreach($hs_service_listing as $service_item):
+								$service_key        = $service_item["hs_key_service_item"];
+								$service_key_id     = $service_key->ID;
+								$hcp_sevice_name    = get_field("hcp_sevice_name",$service_key_id);
+								$hcp_service_image    = get_field("hcp_service_image",$service_key_id);
+								$hcp_service_butttn_text    = get_field("hcp_service_butttn_text",$service_key_id);
+								$hcp_service_image_url=validateImage(816,416,$hcp_service_image);
+								$hcp_sevice_url=get_the_permalink( $service_key_id);
+						?>
+							<div class="key-service-item fade-up">
+								<div class="key-service-inner">
+									<img src="<?php echo $hcp_service_image_url; ?>" alt="" class="key-service-image">
+									<div class="details-item">
+										<h3 class="h-60 title"><?php echo $hcp_sevice_name; ?></h3>
+										<a href="<?php echo $hcp_sevice_url; ?>" class="common-btn-trans btn-sk">
+											<div class="btn-wrap">
+												<div class="ar-icon">
+													<svg class="left">
+														<use xlink:href="#left"></use>
+													</svg>
+												</div>
+												<p class="btn-text"><?php echo $hcp_service_butttn_text; ?></p>
 											</div>
-											<p class="btn-text"><?php echo $hcp_service_butttn_text; ?></p>
-										</div>
-									</a>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-					<?php
-						endforeach;
-					endif;
-					?>
-				</div>
-				<div class="arrow-div">
-					<div class="arrow-left-o">
-						<svg class="arr-left">
-							<use xlink:href="#tc-left"></use>
-						</svg>
+						<?php
+							endforeach;
+						endif;
+						?>
 					</div>
-					<div class="arrow-right-o">
-						<svg class="arr-right">
-							<use xlink:href="#tc-right"></use>
-						</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php 
+		$hos_tagline	= get_field("hos_tagline");
+		$hos_sub_title	= get_field("hos_sub_title");
+		$hos_title	= get_field("hos_title");
+		$hos_button_text	= get_field("hos_button_text");
+		$hos_button_url	= get_field("hos_button_url");
+		$hos_other_services_listing	= get_field("hos_other_services_listing");
+	?>
+	<div class="home-other-services">
+		<div class="full-wrapper">
+			<div class="top-section">
+				<div class="left-div">
+					<div class="title-section">
+						<h3 class="h-70 sub fade-up"><?php echo $hos_sub_title; ?></h3>
+						<p class="h-30 tagline-white fade-up"><?php echo $hos_tagline; ?></p>
+					</div>
+					<h2 class="h-120 main fade-up"><?php echo $hos_title; ?></h2>
+				</div>
+				<a href="<?php echo $hos_button_url; ?>" class="common-btn-blue btn-other fade-up">
+					<div class="btn-wrap">
+						<div class="ar-icon">
+							<svg class="left">
+								<use xlink:href="#left"></use>
+							</svg>
+						</div>
+						<p class="btn-text"><?php echo $hos_button_text; ?></p>
+					</div>
+				</a>
+			</div>
+			<div class="bottom-section">
+				<div class="slider-wrapper">
+					<div class="other-services-slider">
+						<?php if($hos_other_services_listing):
+							foreach($hos_other_services_listing as $o_service_item):
+								$service_other        = $o_service_item["hos_other_service_item"];
+								$service_other_id     = $service_other->ID;
+								$hcp_sevice_name    = get_field("hcp_sevice_name",$service_other_id);
+								$hos_service_content    = get_field("hos_service_content",$service_other_id);
+								$hcp_service_image    = get_field("hcp_service_image",$service_other_id);
+								$hcp_service_butttn_text    = get_field("hcp_service_butttn_text",$service_other_id);
+								$hcp_service_image_url=validateImage(228,197,$hcp_service_image);
+								$hcp_sevice_url=get_the_permalink( $service_other_id);
+						?>
+							<div class="other-service-item">
+								<div class="other-service-inner">
+									<img src="<?php echo $hcp_service_image_url; ?>" alt="" class="other-service-image">
+									<div class="details-item">
+										<h3 class="h-60 title"><?php echo $hcp_sevice_name; ?></h3>
+										<p class="p-18 content"><?php echo $hos_service_content; ?></p>
+										<a href="<?php echo $hcp_sevice_url; ?>" class="common-btn-trans btn-so">
+											<div class="btn-wrap">
+												<div class="ar-icon">
+													<svg class="left">
+														<use xlink:href="#left"></use>
+													</svg>
+												</div>
+												<p class="btn-text"><?php echo $hcp_service_butttn_text; ?></p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						<?php
+							endforeach;
+						endif;
+						?>
+					</div>
+					<div class="arrow-div">
+						<div class="arrow-left-o">
+							<svg class="arr-left">
+								<use xlink:href="#tc-left"></use>
+							</svg>
+						</div>
+						<div class="arrow-right-o">
+							<svg class="arr-right">
+								<use xlink:href="#tc-right"></use>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -277,8 +279,8 @@
 <section class="home-map">
 	<div class="full-wrapper">
 		<div class="video-div">
-			<video autoplay muted loop id="mapVideo">
-				<source src="<?php echo $hm_video_url; ?>" type="video/mp4">
+			<video class="Video-item"  playsinline="" autoplay="" muted="" loop="" id="mapVideo"
+				src="<?php echo $hm_video_url; ?>">
 			</video>
 			<svg class="map-h">
 				<use xlink:href="#map-h"></use>
@@ -366,7 +368,7 @@
 					</svg>
 				</div>
 				<div class="num-pack-industries">
-						01 /<span>06</span>
+						01/<span>06</span>
 				</div>
 				<div class="right-arrow-industries">
 					<svg class="arr-right">
@@ -468,7 +470,7 @@
                             </svg>
                         </div>
                         <div class="num-pack-bulletins">
-                             01 /<span>06</span>
+						<b>01</b>/<span>06</span>
                         </div>
                         <div class="right-arrow-bulletins">
                             <svg class="arr-right">
@@ -560,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentNumber = String(activeIndex + 1).padStart(2, '0'); 
         const currentSpan = numPack?.querySelector("span");
         if (numPack && currentSpan) {
-            numPack.firstChild.textContent = `${currentNumber} /`; 
+            numPack.firstChild.textContent = `${currentNumber}/`; 
         }
     }
 

@@ -282,4 +282,8 @@
 		<path stroke="#fff" stroke-opacity=".13" d="M1639.5 0v534m-328-534v997M983.5 0v997M656.5 0v997M328.5 0v997M.5 0v534m1639 963v380m-328-880v880m-328-880v880m-327-880v880m-328-880v880M.5 1497v380"/>
 	</symbol>
 
+	<symbol id="about-other-banner" viewBox="0 0 1640 3839">
+		<path stroke="#fff" stroke-opacity=".13" d="M1639.5 0v3838.17M1311.7 0v3838.17M983.9 0v3838.17M656.1 0v3838.17M328.3 0v3838.17M.5 0v3838.17"/>
+	</symbol>
+
 </svg>

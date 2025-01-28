@@ -115,18 +115,26 @@
                         </div>
                         <div class="detail-div detail-4 fade-up">
                             <div class="detail-inner">
+                                <?php if($sm_facebook):?>
                                 <a href="<?php echo $sm_facebook; ?>">
                                     <img src="<?php bloginfo('template_directory'); ?>/assets/images/fb-tc.png" alt="" class="c-icon">
                                 </a>
+                                <?php endif; ?>
+                                <?php if($sm_instagram):?>
                                 <a href="<?php echo $sm_instagram; ?>">
                                     <img src="<?php bloginfo('template_directory'); ?>/assets/images/ins-tc.png" alt="" class="c-icon">
                                 </a>
+                                <?php endif; ?>
+                                <?php if($cds_youtube_url):?>
                                 <a href="<?php echo $cds_youtube_url; ?>">
                                     <img src="<?php bloginfo('template_directory'); ?>/assets/images/yt-tc.png" alt="" class="c-icon">
                                 </a>
+                                <?php endif; ?>
+                                <?php if($sm_linkedin):?>
                                 <a href="<?php echo $sm_linkedin; ?>">
                                     <img src="<?php bloginfo('template_directory'); ?>/assets/images/ln-tc.png" alt="" class="c-icon">
                                 </a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -134,9 +142,11 @@
             </div>
         </div>
         <div class="bottom-section">
-            <div class="map-sec fade-up">
-                <?php echo $cds_map_url; ?>
-            </div>
+            <?php if($cds_map_url):?>
+                <div class="map-sec fade-up">
+                    <?php echo $cds_map_url; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

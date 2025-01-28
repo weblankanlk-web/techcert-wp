@@ -389,6 +389,7 @@
 	$htb_mobile_image_url=validateImage(796,485,$htb_mobile_image);
 	$htb_desktop_image	= get_field("htb_desktop_image");
 	$htb_desktop_image_url=validateImage(1232,1003,$htb_desktop_image);
+	$tbis_threat_listing	= get_field("tbis_threat_listing");
 ?>
 <section class="home-threat-bulletins">
 	<div class="main-wrapper">

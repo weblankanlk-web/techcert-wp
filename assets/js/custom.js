@@ -274,6 +274,7 @@ $brands_slider = $('.brands-slider').slick({
         rows:1
       }
     },
+    
     {
       breakpoint: 769,
       settings: {

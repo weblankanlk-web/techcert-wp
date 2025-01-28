@@ -391,6 +391,7 @@
 	$htb_desktop_image_url=validateImage(1232,1003,$htb_desktop_image);
 	$tbis_threat_listing	= get_field("tbis_threat_listing");
 ?>
+
 <section class="home-threat-bulletins">
 	<div class="main-wrapper">
 		<div class="image-container">

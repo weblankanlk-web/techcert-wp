@@ -178,14 +178,14 @@ var $bulletin_slider = $('.bulletin-slider');
 
 $bulletin_slider.on('init', function (event, slick) {
     var totalSlides = slick.slideCount; 
-    $('.num-pack-bulletins').html(`01 / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+    $('.num-pack-bulletins').html(`<b>01</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $bulletin_slider.slick({
   dots: false,
   infinite: true,
   speed: 300,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 2000,
   slidesToShow: 2,
   slidesToScroll: 1,
@@ -238,7 +238,7 @@ $bulletin_slider.slick({
 $bulletin_slider.on('afterChange', function (event, slick, currentSlide) {
   var totalSlides = slick.slideCount; 
   var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
-  $('.num-pack-bulletins').html(`${slideNumber} / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+  $('.num-pack-bulletins').html(`<b>${slideNumber}</b> / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $('.arrow-num-bulletins .left-arrow-bulletins').click(function () {
@@ -515,7 +515,7 @@ $pdf_slider = $('.pdf-slider').slick({
 
 $industry_land_slider.on('init', function (event, slick) {
     var totalSlides = slick.slideCount; 
-    $('.num-pack-indus').html(`01 / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+    $('.num-pack-indus').html(`<b>01</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $industry_land_slider.slick({
@@ -556,7 +556,7 @@ $industry_land_slider.slick({
 $industry_land_slider.on('afterChange', function (event, slick, currentSlide) {
   var totalSlides = slick.slideCount; 
   var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
-  $('.num-pack-indus').html(`${slideNumber} / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+  $('.num-pack-indus').html(`<b>${slideNumber}</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $('.arrow-num-indus .left-arrow-indus').click(function () {
@@ -571,7 +571,7 @@ var $threat_more_slider = $('.threat-more-slider');
 
 $threat_more_slider.on('init', function (event, slick) {
     var totalSlides = slick.slideCount; 
-    $('.num-pack-bm').html(`01 / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+    $('.num-pack-bm').html(`<b>01</b><span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $threat_more_slider.slick({
@@ -618,7 +618,7 @@ $threat_more_slider.slick({
 $threat_more_slider.on('afterChange', function (event, slick, currentSlide) {
   var totalSlides = slick.slideCount; 
   var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
-  $('.num-pack-bm').html(`${slideNumber} / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+  $('.num-pack-bm').html(`<b>${slideNumber}</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $('.arrow-num-bm .left-arrow-bm').click(function () {
@@ -684,7 +684,7 @@ var $news_more_slider = $('.news-more-slider');
 
 $news_more_slider.on('init', function (event, slick) {
     var totalSlides = slick.slideCount; 
-    $('.num-pack-nw').html(`01 / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+    $('.num-pack-nw').html(`<b>01</b><span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $news_more_slider.slick({
@@ -731,7 +731,7 @@ $news_more_slider.slick({
 $news_more_slider.on('afterChange', function (event, slick, currentSlide) {
   var totalSlides = slick.slideCount; 
   var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
-  $('.num-pack-nw').html(`${slideNumber} / <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+  $('.num-pack-nw').html(`<b>${slideNumber}</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $('.arrow-num-nw .left-arrow-nw').click(function () {
@@ -785,3 +785,10 @@ $image_news_slider = $('.image-news-slider').slick({
   $(".career-modal .modal-close").click(function(){
     $(".career-modal").hide();
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const subjectField = document.querySelector('[name="subject-services"]');
+    if (subjectField) {
+         subjectField.value = document.title;
+    }
+});

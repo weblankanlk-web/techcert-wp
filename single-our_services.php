@@ -32,9 +32,9 @@
             <div class="right-inner">
                 <h2 class="main h-120 d-hide-m fade-up"><?php echo $sf_title;?></h2>
                 <div class="video-wrap">
-                <video autoplay muted loop id="singleVideo">
-                    <source src="<?php echo $sf_video_url; ?>" type="video/mp4">
-                </video>
+                    <video class="Video-item"  playsinline="" autoplay="" muted="" loop="" id="singleVideo"
+                        src="<?php echo $sf_video_url; ?>">
+                    </video>
                 </div>
                 <div class="white-div-sec fade-up">
                     <div class="white-section">
@@ -337,7 +337,7 @@
                             </svg>
                         </div>
                         <div class="num-pack-bulletins">
-                             01 /<span>06</span>
+                        <b>01</b><span>06</span>
                         </div>
                         <div class="right-arrow-bulletins">
                             <svg class="arr-right">

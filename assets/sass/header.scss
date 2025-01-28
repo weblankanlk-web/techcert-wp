@@ -1191,6 +1191,7 @@
             }
             .header-inner{
                 flex-wrap: nowrap;
+                justify-content: space-between;
               .left{
                 width: get-vw(384px);
                 margin-right: get-vw(197.8px);
@@ -1209,7 +1210,7 @@
                         ul.navbar-nav{
                             display: flex;
                             flex-direction: row;
-                            gap: get-vw(59.2px);
+                            gap: get-vw(45px);
                             align-items: center;
                             padding: 0;
                             li{

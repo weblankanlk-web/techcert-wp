@@ -199,7 +199,7 @@
                         </svg>
                     </div>
                     <div class="num-pack-bm">
-                            01 /<span>06</span>
+                    <b>01</b><span>06</span>
                     </div>
                     <div class="right-arrow-bm">
                         <svg class="arr-right">

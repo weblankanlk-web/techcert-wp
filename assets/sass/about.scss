@@ -406,8 +406,8 @@
                                 box-shadow:get-vw( 0px) get-vw(4.112px) get-vw(65.785px) get-vw( 0px) rgba(0, 0, 0, 0.10);
                                 padding: get-vw(72px) get-vw(25px) get-vw(39.38px);
                                 img.award-img{
-                                    width: get-vw(251px);
-                                    height:get-vw( 181px);
+                                    width: get-vw(539px);
+                                    height:get-vw(373px);
                                 }
                                 .award-year{
                                     margin-bottom: get-vw(10px);
@@ -426,6 +426,7 @@
                         justify-content: center;
                         gap: unset;
                         margin-top:unset;
+                        display: none;
                         .arrow-left-a{
                             position: absolute;
                             left: get-vw(55px);

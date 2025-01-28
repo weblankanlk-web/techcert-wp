@@ -355,7 +355,7 @@ $awards_slider = $('.awards-slider').slick({
   swipeToSlide: true,
   swipe: 200,
   pauseOnHover: true,
-  slidesToShow: 5,
+  slidesToShow: 2,
   slidesToScroll: 1,
   responsive: [ 
     {

@@ -3119,8 +3119,8 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     padding: 3.75vw 1.3020833333vw 2.0510416667vw;
   }
   .about-awards .full-wrapper .bottom-section .slider-wrapper .awards-slider .award-div .award-inner img.award-img {
-    width: 13.0729166667vw;
-    height: 9.4270833333vw;
+    width: 28.0729166667vw;
+    height: 19.4270833333vw;
   }
   .about-awards .full-wrapper .bottom-section .slider-wrapper .awards-slider .award-div .award-inner .award-year {
     margin-bottom: 0.5208333333vw;
@@ -3136,6 +3136,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     justify-content: center;
     gap: unset;
     margin-top: unset;
+    display: none;
   }
   .about-awards .full-wrapper .bottom-section .slider-wrapper .arrow-div .arrow-left-a {
     position: absolute;

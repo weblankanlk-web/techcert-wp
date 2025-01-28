@@ -263,8 +263,8 @@ $brands_slider = $('.brands-slider').slick({
   swipeToSlide: true,
   swipe: 200,
   pauseOnHover: true,
-  rows:2,
-  slidesToShow: 5,
+  rows:1,
+  slidesToShow: 3,
   slidesToScroll: 1,
   responsive: [ 
     {

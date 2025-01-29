@@ -264,7 +264,7 @@ $brands_slider = $('.brands-slider').slick({
   swipe: 200,
   pauseOnHover: true,
   rows:1,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [ 
     {
@@ -355,7 +355,7 @@ $awards_slider = $('.awards-slider').slick({
   swipeToSlide: true,
   swipe: 200,
   pauseOnHover: true,
-  slidesToShow: 2,
+  slidesToShow: 5,
   slidesToScroll: 1,
   responsive: [ 
     {
@@ -572,7 +572,7 @@ var $threat_more_slider = $('.threat-more-slider');
 
 $threat_more_slider.on('init', function (event, slick) {
     var totalSlides = slick.slideCount; 
-    $('.num-pack-bm').html(`<b>01</b><span>${totalSlides.toString().padStart(2, '0')}</span>`);
+    $('.num-pack-bm').html(`<b>01</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
 });
 
 $threat_more_slider.slick({
@@ -628,6 +628,68 @@ $('.arrow-num-bm .left-arrow-bm').click(function () {
 
 $('.arrow-num-bm .left-arrow-bm').click(function () {
   $threat_more_slider.slick('slickNext');
+});
+
+var $threat_slider = $('.threat-slider');
+
+$threat_slider.on('init', function (event, slick) {
+    var totalSlides = slick.slideCount; 
+    $('.num-pack-bms').html(`<b>01</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+});
+
+$threat_slider.slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 300,
+  autoplay: false,
+  autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  draggable: true,
+  touchMove: true,
+  swipeToSlide: true,
+  swipe: 200,
+  pauseOnHover: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  responsive: [ 
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        centerMode: false,
+        centerPadding: '20px',
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$threat_slider.on('afterChange', function (event, slick, currentSlide) {
+  var totalSlides = slick.slideCount; 
+  var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
+  $('.num-pack-bms').html(`<b>${slideNumber}</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+});
+
+$('.arrow-num-bms .left-arrow-bms').click(function () {
+  $threat_slider.slick('slickPrev');
+});
+
+$('.arrow-num-bms .right-arrow-bms').click(function () {
+  $threat_slider.slick('slickNext');
 });
 
 jQuery(document).ready(function ($) {

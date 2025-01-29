@@ -333,8 +333,9 @@
             .filter-div{
                 width: get-vw(452px);
                 position: sticky;
-                top: 10%;
+                top: 0;
                 right: get-vw(140px);
+                height: max-content;
                 .div-inner{
                     border-radius:get-vw( 22px);
                     border:get-vw(1px) solid rgba(217, 217, 217, 0.70);

@@ -256,39 +256,36 @@
 				</a>
 			</div>
 			<div class="bottom-section">
-				<div class="slider-wrapper">
-					<div class="bulletin-slider">
-					    <?php
+                <div class="slider-wrapper">
+					<div class="threat-slider">
+                    <?php
                             if ($hcp_key_bulletin_listing) :
                                 foreach($hcp_key_bulletin_listing as $bulletin_item):
                                     $bulletin_key        = $bulletin_item["hcp_key_threat_bulletins"];
                                     $bulletin_key_id     = $bulletin_key->ID;
                                     $key_bulletin_title = get_the_title($bulletin_key_id);
+                                    $tb_date = get_the_date("d F Y",$bulletin_key_id);
+									$tbi_sub_title = get_field('tbi_sub_title', $bulletin_key_id);
                                     $key_single_image_url = get_the_post_thumbnail_url($bulletin_key_id, 'large');
                                     $key_single_bulletin_url=get_the_permalink( $bulletin_key_id);
                         ?>
-                            <div class="bulletin-div">
-                                <div class="bulletin-inner">
-                                        <div class="featured-image">
-                                            <img src="<?php echo $key_single_image_url; ?>" alt="">
-                                        </div>
-                                    <div class="post-content">
-                                        <h2 class="post-title h-30">
-                                            <a href="<?php echo $key_single_bulletin_url; ?>"><?php echo $key_bulletin_title; ?></a>
-                                        </h2>
-                                        <a href="<?php echo esc_url($key_single_bulletin_url); ?>" class="common-btn-trans btn-tb-item">
-                                            <div class="btn-wrap">
-                                                <div class="ar-icon">
-                                                    <svg class="left">
-                                                        <use xlink:href="#left"></use>
-                                                    </svg>
-                                                </div>
-                                                <p class="btn-text">Read More</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="button" class="threat-item">
+								<div class="detail-div">
+									<h6 class="p-25 sub"><?php echo $tbi_sub_title; ?></h6>
+									<h3 class="title h-30"><?php echo esc_html($key_bulletin_title); ?></h3>
+									<p class="p-20 tb-date"><?php echo $tb_date; ?></p>
+								</div>
+								<a href="<?php echo $key_single_bulletin_url; ?>" class="common-btn-trans btn-tb">
+									<div class="btn-wrap">
+										<div class="ar-icon">
+											<svg class="left">
+												<use xlink:href="#left"></use>
+											</svg>
+										</div>
+										<p class="btn-text">Read More</p>
+									</div>
+								</a>
+							</button>
                         <?php 
                                 endforeach;
                             endif;
@@ -299,59 +296,56 @@
                                     $bulletin_other        = $bulletin_item["hcp_other_threat_bulletins"];
                                     $bulletin_other_id     = $bulletin_other->ID;
                                     $other_bulletin_title = get_the_title($bulletin_other_id);
+                                    $tb_date = get_the_date("d F Y",$bulletin_other_id);
+									$tbi_sub_title = get_field('tbi_sub_title', $bulletin_other_id);
                                     $other_single_image_url = get_the_post_thumbnail_url($bulletin_other_id, 'large');
                                     $other_single_bulletin_url=get_the_permalink( $bulletin_other_id);
                         ?>
-                            <div class="bulletin-div">
-                                <div class="bulletin-inner">
-                                        <div class="featured-image">
-                                            <img src="<?php echo $other_single_image_url; ?>" alt="">
-                                        </div>
-                                    <div class="post-content">
-                                        <h2 class="post-title h-30">
-                                            <a href="<?php echo $other_single_image_url; ?>"><?php echo $other_bulletin_title; ?></a>
-                                        </h2>
-                                        <a href="<?php echo $other_single_image_url; ?>" class="common-btn-trans btn-tb-item">
-                                            <div class="btn-wrap">
-                                                <div class="ar-icon">
-                                                    <svg class="left">
-                                                        <use xlink:href="#left"></use>
-                                                    </svg>
-                                                </div>
-                                                <p class="btn-text">Read More</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="button" class="threat-item">
+								<div class="detail-div">
+									<h6 class="p-25 sub"><?php echo $tbi_sub_title; ?></h6>
+									<h3 class="title h-30"><?php echo esc_html($other_bulletin_title); ?></h3>
+									<p class="p-20 tb-date"><?php echo $tb_date; ?></p>
+								</div>
+								<a href="<?php echo $other_single_bulletin_url; ?>" class="common-btn-trans btn-tb">
+									<div class="btn-wrap">
+										<div class="ar-icon">
+											<svg class="left">
+												<use xlink:href="#left"></use>
+											</svg>
+										</div>
+										<p class="btn-text">Read More</p>
+									</div>
+								</a>
+							</button>
                         <?php 
                                 endforeach;
                             endif;
 					    ?>
-				    </div>
-					
-					<div class="arrow-num-bulletins">
-                        <div class="left-arrow-bulletins">
-                            <svg class="arr-left">
-                                <use xlink:href="#tc-left"></use>
-                            </svg>
-                        </div>
-                        <div class="num-pack-bulletins">
-                        <b>01</b><span>06</span>
-                        </div>
-                        <div class="right-arrow-bulletins">
-                            <svg class="arr-right">
-                                <use xlink:href="#tc-right"></use>
-                            </svg>
-                        </div>
-                    </div>
-				</div>
+					</div>
+					<div class="arrow-num-bms">
+						<div class="left-arrow-bms">
+							<svg class="arr-left">
+								<use xlink:href="#tc-left"></use>
+							</svg>
+						</div>
+						<div class="num-pack-bms">
+						<b>01</b><span>06</span>
+						</div>
+						<div class="right-arrow-bms">
+							<svg class="arr-right">
+								<use xlink:href="#tc-right"></use>
+							</svg>
+						</div>
+					</div>
+            	</div>
 				<div class="right-div">
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
 <?php
     endif;
 ?>

@@ -388,7 +388,7 @@ p,h1,h2,h3,h4,h5,h6{
     border-radius: 70px;
     border: 1px solid $white;
     padding: 4px 10px 4px 24.5px;
-    width: 50%;
+    width: fit-content;
     text-align: center;
     margin-bottom: 8px;
     position: relative;
@@ -398,7 +398,7 @@ p,h1,h2,h3,h4,h5,h6{
         height: 4.549px;
         width: 4.549px;
         content: "";
-        left: 25px;
+        left: 12.5px;
         background: url("../images/white-dot-tc.png");
         background-repeat: repeat;
         background-size: contain;
@@ -434,21 +434,25 @@ p,h1,h2,h3,h4,h5,h6{
 svg.arr-left{
     border-radius: 5px;
     border: 1px solid $white;
-    background: rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.10);
     width: 40px;
+    padding: 6px;
     height: 38.698px;
     &:hover{
         cursor: pointer;
+        background: rgba(255, 255, 255, 0.30);
     }
 }
 svg.arr-right{
     border-radius: 5px;
     border: 1px solid $white;
-    background: rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.1);
     width: 40px;
+    padding: 6px;
     height: 38.698px;
     &:hover{
         cursor: pointer;
+        background: rgba(255, 255, 255, 0.30);
     }
 }
 @media only screen and (min-width: 768px){

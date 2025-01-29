@@ -127,11 +127,15 @@
 	</footer>
 	<div class="bottom-footer">
 		<div class="bottom-footer-inner">
-			<p class="p-16 fw-6"><?php echo $footer_copyright_text;?></p>
+			<p class="p-16 fw-6">Copyright @ <?php echo date("Y"); ?> - <span>TECHCERT</span> - All Rights Reserved.</p>
 			<p class="p-16 fw-6">Concept Designing & Development By <a href="https://www.weblankan.com" target="_blank" rel="noopener noreferrer"><span class="fw-8" >web lankan</span></a></p>
 		</div>
 	</div>
-
+	<a href="#" class="scrollup">
+		<div class="scrollup-btn">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16,12a1,1,0,0,1-.71-.29L12,8.41,8.71,11.71a1,1,0,0,1-1.41-1.41l4-4a1,1,0,0,1,1.41,0l4,4A1,1,0,0,1,16,12Z"/><path d="M12,18a1,1,0,0,1-1-1V7a1,1,0,0,1,2,0V17A1,1,0,0,1,12,18Z" /></svg>
+		</div>
+	</a>
 	  
 <script src="<?php echo get_theme_file_uri() ?>/assets/js/script-library.js"></script>
 <script src="<?php echo get_theme_file_uri() ?>/assets/js/custom.js"></script>

@@ -681,3 +681,56 @@ footer{
         }
     }
 }
+a.scrollup {
+    --size: 50px;
+    --margin: 16px;
+    max-width: 0;
+    max-height: 0;
+    overflow: visible;
+    transition: opacity .5s,visibility .5s;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: var(--margin);
+    left: calc(100% - var(--margin));
+    z-index: 10;
+  }
+  a.scrollup .scrollup-btn {
+    display: inline-block;
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 4px;
+    width: var(--size);
+    height: var(--size);
+    color: $white;
+    fill: $white;
+    background-color: $primary-color;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: $primary-font;
+    box-shadow: 2px 2px 5px #0007;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  /* show text 'UP' if there is no any element inside .scrollup */
+  a.scrollup:not(:has(*))::before {
+    content: 'UP';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Enable smooth scroll */
+  html:has(a.scrollup) {
+    scroll-behavior: smooth;
+  }
+  /* Hide button on top */
+  html[data-scroll='0'] a.scrollup,
+  body.hide-scrollup a.scrollup,
+  a.scrollup.hide {
+    opacity: 0;
+    visibility: hidden;
+  }

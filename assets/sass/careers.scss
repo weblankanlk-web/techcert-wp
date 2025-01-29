@@ -3,6 +3,7 @@
         background: $black-bg;
         padding-top: 50px;
         padding-bottom: 50px;
+        border-bottom: (1px) solid rgba(255, 255, 255, 0.30);
         .top-section{
             padding-bottom: 25px;
             .title-section{
@@ -95,6 +96,7 @@
         .main-wrapper{
             padding-top: get-vw(140px);
             padding-bottom: get-vw(140px);
+            border-bottom: get-vw(1px) solid rgba(255, 255, 255, 0.30);
             .top-section{
                 padding-bottom: get-vw(50px);
                 .title-section{
@@ -496,8 +498,8 @@
                     }
                 }
                 .image-wrap{
-                    margin-top: get-vw(-320px);
-                    margin-left: get-vw(-100px);
+                    margin-top: get-vw(-665.6px);
+                    margin-left: get-vw(-3.99999px);
                     img{
                         width: get-vw(1085px);
                         height:get-vw( 862px);
@@ -511,13 +513,17 @@
                     width: get-vw(725px);
                     padding: get-vw(90px) get-vw(130px) get-vw(100px);
                     z-index: 2;
-              
+                    margin-left: get-vw(-129px);
                     form{ 
                         label{
                                 margin-top: get-vw(30px);
                                 font-size: get-vw(16px);
                                 position: absolute;
-                                top: get-vw(-38.12px);
+                                top: get-vw(-41.96px);
+                        }
+                        input.wpcf7-form-control.wpcf7-file {
+                            font-size: get-vw(23px) !important;
+                            padding: 0;
                         }
                         input{
                             height: get-vw(35.9125px);
@@ -725,7 +731,7 @@
                 }
                 .main{
                     padding: 0 0 get-vw(20px) get-vw(140px);
-                    width:get-vw( 949px);
+                    width:get-vw( 1179.39px);
                     margin-top: get-vw(-30px);
                 }
                 .image-wrap{
@@ -742,7 +748,7 @@
                 padding: get-vw(140px) 0 get-vw(140px) 0;
                 width: get-vw(831px);
                 position: absolute;
-                right: get-vw(140px);
+                right: get-vw(-167.2px);
                 top: 0;
                 .detail-item{
                     width: 100%;
@@ -755,6 +761,11 @@
                         img{
                             width:get-vw( 85px);
                             height: get-vw(85px);
+                        }
+                        .detail-sec{
+                            .content{
+                                width: get-vw(300px);
+                            }
                         }
                     }
                 }

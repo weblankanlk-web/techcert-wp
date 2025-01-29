@@ -108,6 +108,7 @@
             .share-div{
                 background: $black-bg-3;
                 padding: 20px;
+                margin-bottom: 20px;
                 p{
                     color: $white;
                     font-weight: 700;
@@ -288,6 +289,7 @@
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
+                    margin-bottom: get-vw(30px);
                     p{
                         margin-right: get-vw(35px);
                     }
@@ -308,8 +310,9 @@
             .filter-div{
                 width: get-vw(452px);
                 position: sticky;
-                top: 10%;
+                top: 0;
                 right: get-vw(140px);
+                height: max-content;
                 .div-inner{
                     border-radius:get-vw( 22px);
                     border:get-vw(1px) solid rgba(217, 217, 217, 0.70);
@@ -411,7 +414,7 @@
                                 font-weight: 400;
                                 padding-bottom: 20px;
                                 letter-spacing: -0.7px;
-                                min-height: 60px;
+                                // min-height: 60px;
                             }
                             .tb-date{
                                 color: $white;
@@ -504,7 +507,7 @@
                                     letter-spacing:get-vw(-0.7px);
                                     line-height: get-vw(36px);
                                     text-align: left;
-                                    min-height:get-vw(672.391px);
+                                    // min-height:get-vw(672.391px);
                                 }
                                 .tb-date{
                                     padding-bottom: get-vw(104px);

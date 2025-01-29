@@ -1671,7 +1671,6 @@ html {
   justify-content: center;
   gap: 20px;
   margin-top: 25px;
-  display: none !important;
 }
 @media only screen and (min-width: 1200px) {
   .home-partners .full-wrapper {
@@ -1698,6 +1697,7 @@ html {
   }
   .home-partners .full-wrapper .bottom-section .slider-wrapper .brands-slider .brand-div .brand-inner .brand-para {
     margin-top: 0.5208333333vw;
+    min-height: 1.9791666667vw;
   }
   .home-partners .full-wrapper .bottom-section .slider-wrapper .arrow-div {
     display: flex;
@@ -1705,6 +1705,7 @@ html {
     justify-content: center;
     gap: unset;
     margin-top: unset;
+    display: none;
   }
   .home-partners .full-wrapper .bottom-section .slider-wrapper .arrow-div .arrow-left-b {
     position: absolute;
@@ -1841,6 +1842,13 @@ html {
   position: relative;
   background: #010C1A;
   padding-bottom: 50px;
+}
+.home-threat-bulletins .main-wrapper::before {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .home-threat-bulletins .main-wrapper .image-container {
   position: absolute;
@@ -2091,6 +2099,11 @@ html {
   position: relative;
   z-index: 5;
 }
+.home-industries .main-wrapper .industry-list .title-section .tag-ins {
+  position: absolute;
+  top: 1rem;
+  left: 7rem;
+}
 .home-industries .main-wrapper .industry-list .title-section .main {
   background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);
   background-clip: text;
@@ -2282,7 +2295,7 @@ html {
     right: 5.8708333333vw;
     width: 43.8020833333vw;
     height: 49.375vw;
-    padding: 4.6875vw 0;
+    padding: 3.0875vw 0;
   }
   .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .tab-sec {
     margin-left: -0.5208333333vw;
@@ -2328,8 +2341,9 @@ html {
     width: 27.1875vw;
   }
   .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .btn-inds .btn-wrap {
-    margin-top: 2.8645833333vw;
+    margin-top: 2.6041666667vw;
     position: unset;
+    margin-left: 1.0416666667vw;
   }
   .home-industries .main-wrapper .industry-list .arrow-num-industries {
     gap: 0.5208333333vw;

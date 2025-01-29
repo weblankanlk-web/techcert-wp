@@ -359,6 +359,16 @@
 							<?php endforeach; ?>
 						</ul>
 					</div>
+					<a href="<?php echo esc_url(home_url('/our-industries')); ?>" class="common-btn-blue btn-inds fade-up">
+						<div class="btn-wrap">
+							<div class="ar-icon">
+								<svg class="left">
+									<use xlink:href="#left"></use>
+								</svg>
+							</div>
+							<p class="btn-text">Explore More</p>
+						</div>
+					</a>
                 </div>
             </div>
 			<div class="arrow-num-industries">
@@ -421,66 +431,55 @@
 			</div>
 			<div class="bottom-section">
 				<div class="slider-wrapper">
-					<div class="bulletin-slider">
-					<?php
-					$args = [
-						'post_type' => 'threat_bulletin',
-						'posts_per_page' => 6,
-						'orderby' => 'date',
-						'order' => 'DESC',
-					];
-
-					$query = new WP_Query($args);
-
-					if ($query->have_posts()) :
-						while ($query->have_posts()) : $query->the_post(); ?>
-							<div class="bulletin-div" id="post-<?php the_ID(); ?>">
-								<div class="bulletin-inner">
-									<?php if (has_post_thumbnail()) : ?>
-										<div class="featured-image">
-											<?php the_post_thumbnail('large'); ?>
-										</div>
-									<?php endif; ?>
-									<div class="post-content">
-										<h2 class="post-title h-30">
-											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										</h2>
-										<a href="<?php the_permalink(); ?>" class="common-btn-trans btn-tb-item">
-											<div class="btn-wrap">
-												<div class="ar-icon">
-													<svg class="left">
-														<use xlink:href="#left"></use>
-													</svg>
-												</div>
-												<p class="btn-text">Read More</p>
-											</div>
-										</a>
-									</div>
+					<div class="threat-slider">
+						<?php
+							if ($tbis_threat_listing) :
+								foreach($tbis_threat_listing as $bulletin_item):
+									$bulletin        = $bulletin_item["tbis_threat_bulletin"];
+									$bulletin_id     = $bulletin->ID;
+									$tb_title = get_the_title($bulletin_id);
+									$tb_date = get_the_date("d F Y",$bulletin_id);
+									$tbi_sub_title = get_field('tbi_sub_title', $bulletin_id);
+									$tbi_link=get_the_permalink($bulletin_id);
+						?>
+							<button type="button" class="threat-item">
+								<div class="detail-div">
+									<h6 class="p-25 sub"><?php echo $tbi_sub_title; ?></h6>
+									<h3 class="title h-30"><?php echo esc_html($tb_title); ?></h3>
+									<p class="p-20 tb-date"><?php echo $tb_date; ?></p>
 								</div>
-							</div>
-						<?php endwhile;
-						wp_reset_postdata();
-					else :
-						echo '<p></p>';
-					endif;
-					?>
-				</div>
-					<div class="arrow-num-bulletins">
-                        <div class="left-arrow-bulletins">
-                            <svg class="arr-left">
-                                <use xlink:href="#tc-left"></use>
-                            </svg>
-                        </div>
-                        <div class="num-pack-bulletins">
+								<a href="<?php echo $tbi_link; ?>" class="common-btn-trans btn-tb">
+									<div class="btn-wrap">
+										<div class="ar-icon">
+											<svg class="left">
+												<use xlink:href="#left"></use>
+											</svg>
+										</div>
+										<p class="btn-text">Read More</p>
+									</div>
+								</a>
+							</button>
+						<?php 
+								endforeach;
+							endif;
+						?>
+					</div>
+					<div class="arrow-num-bms">
+						<div class="left-arrow-bms">
+							<svg class="arr-left">
+								<use xlink:href="#tc-left"></use>
+							</svg>
+						</div>
+						<div class="num-pack-bms">
 						<b>01</b>/<span>06</span>
-                        </div>
-                        <div class="right-arrow-bulletins">
-                            <svg class="arr-right">
-                                <use xlink:href="#tc-right"></use>
-                            </svg>
-                        </div>
-                    </div>
-				</div>
+						</div>
+						<div class="right-arrow-bms">
+							<svg class="arr-right">
+								<use xlink:href="#tc-right"></use>
+							</svg>
+						</div>
+					</div>
+            	</div>
 				<div class="right-div">
 				</div>
 			</div>

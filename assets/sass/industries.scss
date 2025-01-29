@@ -1,6 +1,7 @@
 .our-industries{
     .main-wrapper{
         background: $black-bg;
+        padding-top: 60px;
         .industry-item{
             .industry-inner{
                 .top-section{
@@ -147,6 +148,7 @@
     }
     @media only screen and (min-width: 1200px){
         .main-wrapper{
+            padding-top: get-vw(140px);
             .industry-item{
                 &:nth-child(odd){
                     .industry-inner{

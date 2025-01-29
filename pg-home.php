@@ -338,6 +338,7 @@
 						<p class="h-30 tagline-white fade-up"><?php echo $hi_tagline; ?></p>
 						<h3 class="h-120 main fade-up"><?php echo $hi_title; ?></h3>
 					</div>
+					
 					<div class="tab-sec">
 							<ul class="nav nav-tabs" id="inTabs" role="tablist">
 							<?php foreach ($hi_nav_tabs as $index => $tab_item):

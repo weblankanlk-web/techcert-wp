@@ -24,11 +24,13 @@
                 <h6 class="sub h-30 fade-up"><?php echo $tbi_sub_title; ?></h6>
                 <p class="tb-date p-25 fade-up"><b>PUBLISHED : </b><?php echo $tb_date; ?></p>
             </div>
-            <div class="image-wrapper fade-up">
-                <img src="<?php echo $tbi_main_image_url; ?>" alt="">
-            </div>
+            <?php if($tbi_main_image): ?>
+                <div class="image-wrapper fade-up">
+                    <img src="<?php echo $tbi_main_image_url; ?>" alt="">
+                </div>
+            <?php endif; ?>
+            
             <h3 class="title h-70 fade-up"><?php echo $tb_title; ?></h3>
-            <div class="tb-inner-content fade-up"><?php echo $tb_content; ?></div>
             <div class="share-div fade-up">
                 <p class="p-18">SHARE THIS ARETICLE</p>
                 <ul class="social-media-list">
@@ -70,6 +72,8 @@
                     </?php } ?> -->
                 </ul>
             </div>
+            <div class="tb-inner-content fade-up"><?php echo $tb_content; ?></div>
+            
         </div>
         <div class="filter-div">
             <div class="div-inner">

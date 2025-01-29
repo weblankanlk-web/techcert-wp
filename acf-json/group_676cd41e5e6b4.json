@@ -83,6 +83,20 @@
                 "operator": "==",
                 "value": "threat_bulletin"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "29"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "our_services"
+            }
         ]
     ],
     "menu_order": 0,
@@ -94,5 +108,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1735187018
+    "modified": 1738054363
 }

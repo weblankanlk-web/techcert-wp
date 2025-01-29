@@ -57,11 +57,9 @@
                             <p class="p-18 t-des"><?php echo $ttl_designation; ?></p>
                             <div class="detail-inner">
                                 <p class="p-16 t-ach"><?php echo $ttl_achivements; ?></p>
-                                <?php if($ttl_linkedin_url): ?>
-                                    <a href="<?php echo $ttl_linkedin_url; ?>" target="_blank" >
-                                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/Linkedin1.png" alt="" class="t-img">
-                                    </a>
-                                <?php endif;?>
+                                <a href="<?php echo $ttl_linkedin_url; ?>" target="_blank" >
+                                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/linkedin1.png" alt="" class="t-img">
+                                </a>
                             </div>
                         </div>
                     </div>

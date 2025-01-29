@@ -307,7 +307,7 @@
 		</svg>
         <div class="industry-list">
 			<div class="title-section d-hide-t">
-				<p class="h-30 tagline-white fade-up"><?php echo $hi_tagline; ?></p>
+				<p class="h-30 tagline-white fade-up tag-ins"><?php echo $hi_tagline; ?></p>
 				<h3 class="h-120 main fade-up"><?php echo $hi_title; ?></h3>
 			</div>
 			<div class="tab-content" id="inTabsContent">
@@ -338,7 +338,7 @@
 						<p class="h-30 tagline-white fade-up"><?php echo $hi_tagline; ?></p>
 						<h3 class="h-120 main fade-up"><?php echo $hi_title; ?></h3>
 					</div>
-					
+
 					<div class="tab-sec">
 							<ul class="nav nav-tabs" id="inTabs" role="tablist">
 							<?php foreach ($hi_nav_tabs as $index => $tab_item):

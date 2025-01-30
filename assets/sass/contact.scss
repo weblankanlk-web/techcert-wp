@@ -1,4 +1,5 @@
 .contact-map{
+    overflow: hidden;
     .full-wrapper{
         background: $black-bg-2;
         position: relative;
@@ -245,7 +246,7 @@
                         align-items: flex-start;
                         .first-div{
                             .detail-div{
-                                margin-bottom: get-vw(70px);
+                                margin-bottom: get-vw(50px);
                                 &.detail-2{
                                     margin-bottom: get-vw(0px);
                                 }
@@ -258,10 +259,10 @@
                         }
                         .second-div{
                             .detail-div{
-                                margin-bottom: get-vw(70px);
+                                margin-bottom: get-vw(50px);
                                 &.detail-4{
                                     margin-bottom: get-vw(0px);
-                                    padding-top: get-vw(25px);
+                                    // padding-top: get-vw(25px);
                                     .detail-inner{
                                         a{
                                             img.c-icon{
@@ -312,6 +313,7 @@
             .para{
                 color: $white;
                 text-align: center;
+                font-weight: 400;
             }
             .image-wrap{
                 margin-top: -100px;

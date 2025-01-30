@@ -274,9 +274,15 @@ $brands_slider = $('.brands-slider').slick({
         rows:1
       }
     },
-    
     {
-      breakpoint: 769,
+      breakpoint:993,
+      settings: {
+        slidesToShow: 3,
+        rows:1
+      }
+    },
+    {
+      breakpoint: 768,
       settings: {
         slidesToShow: 1,
         centerMode:true,
@@ -407,7 +413,13 @@ $other_services_slider = $('.other-services-slider').slick({
       }
     },
     {
-      breakpoint: 769,
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,
       settings: {
         centerMode: false,
         centerPadding: '20px',
@@ -667,7 +679,7 @@ $threat_slider.slick({
       }
     },
     {
-      breakpoint: 769,
+      breakpoint: 768,
       settings: {
         centerMode: false,
         centerPadding: '20px',
@@ -864,3 +876,37 @@ $(".award-div .award-inner .btn-as").click(function(){
 $(".award-modal .modal-close").click(function(){
   $(".award-modal").hide();
   });
+
+  // JavaScript code to handle scroll events and show/hide the header
+  let lastScrollTop = 0; // to keep track of last scroll position
+  const header = document.querySelector('header'); // the header element
+  let ticking = false;
+
+  window.addEventListener('scroll', function() {
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+    handleScroll();
+    ticking = false;
+    });
+    ticking = true;
+  }
+  });
+
+ function handleScroll() {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    header.classList.add('--hidden');
+    header.classList.remove('sticky');
+  } else {
+    if (currentScroll > 0) {
+    header.classList.remove('--hidden');
+    header.classList.add('sticky');
+    } else {
+    header.classList.remove('sticky');
+    }
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+  }
+

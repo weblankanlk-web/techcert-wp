@@ -467,6 +467,7 @@
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         font-weight: 400;
+                        padding-bottom: 10px;
                     }
                 }
             }
@@ -708,6 +709,16 @@
                 }
             }
             .bottom-section{
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 50%;
+                    background: linear-gradient(180deg, #010C1A 8.92%, rgba(1, 12, 26, 0.00) 59.24%);
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                }
                 .image-wrap{
                     position: absolute;
                     width: 100%;
@@ -814,7 +825,8 @@
         @media only screen and (min-width: 768px){
             .inner-wrapper{
                 .top-section{
-                    margin-bottom: 388px;
+                    // margin-bottom: 388px;
+                    margin-bottom: 428px;
                     .btn-about{
                         top: 200px;
                         left: 35px;
@@ -927,9 +939,10 @@
                         position: absolute;
                         .white-section-inner{
                             border-radius: get-vw(20px);
-                            padding: get-vw(70px) get-vw(90px) get-vw(61px);
+                            padding: get-vw(70px) get-vw(53.52px) get-vw(61px);
                             .white-title{
                                 margin-bottom: get-vw(47px);
+                                line-height: get-vw(62px);
                             }
                             .white-para{
                                 margin-bottom: get-vw(40px);
@@ -937,9 +950,12 @@
                             .white-listing{
                                 .slide-wrapper{
                                     .white-icon-slider{
-                                        gap: get-vw(50px);
+                                        // gap: get-vw(50px);
+                                        gap: unset;
+                                        justify-content: space-between;
+                                        column-count: unset;
                                         .white-item{
-                                            width: 19%;
+                                            width: 25%;
                                             .white-inner{
                                                 gap: get-vw(20px);
                                                 img.white-icon{
@@ -1130,7 +1146,7 @@
                     font-size: 100px;
                 }
                 .para{
-                    color: $white;
+                    color: $white-text;
                     padding: 0 35px 40px;
                     text-align: center;
                     font-weight: 300;
@@ -1215,13 +1231,15 @@
         padding-bottom: 50px;
         &::before{
             width: 100%;
-            height: 50%;
+            height: 32%;
             position: absolute;
+            content: "";
             top: 0;
             left: 0;
-
+            z-index: 1;
+            background: linear-gradient(180deg, #101525 0%, #101525 42.36%, rgba(16, 21, 37, 0) 100%)
         }
-        
+
         .image-container{
             position: absolute;
             left: 0;
@@ -1276,6 +1294,7 @@
                             padding: 30px;
                             width: 100%;
                             margin: 0 10px;
+                            border: 1px solid rgba(255, 255, 255, 0.30);
                             &:hover{
                                 background: linear-gradient(180deg, #151F3D 15.61%, #3853A3 159.79%);
                             }
@@ -1308,6 +1327,7 @@
                                     padding-bottom: 40px;
                                     line-height: 30px; /* 150% */
                                     letter-spacing: 2px;
+                                    font-weight: 400;
                                 }
                             }
                             .btn-tb{
@@ -1349,6 +1369,11 @@
     @media only screen and (min-width: 1200px){
         .main-wrapper{
             padding-bottom: get-vw(140px);
+            &::before{
+                width: 70%;
+                height: 100%;
+                background: linear-gradient(90deg, #101525 0%, #101525 42.36%, rgba(16, 21, 37, 0) 100%)
+            }
             .image-container{
                 height: get-vw(1003px);
                 left: unset;
@@ -1552,6 +1577,7 @@
                 z-index: 5;
                 .bottom-inner{
                     .tab-sec{
+                        margin-top: 20px;
                         ul#inTabs{
                             margin: 0;
                             display: block;
@@ -1728,6 +1754,7 @@
                     .bottom-inner{
                         .tab-sec{
                             margin-left: get-vw(-10px);
+                            margin-top: unset;
                             ul#inTabs{
                                 li.nav-item{
                                     margin-bottom: get-vw(15px);

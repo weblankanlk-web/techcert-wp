@@ -861,12 +861,21 @@ $image_news_slider = $('.image-news-slider').slick({
     $(".career-modal").hide();
   });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const subjectField = document.querySelector('[name="subject-services"]');
-    if (subjectField) {
-         subjectField.value = document.title;
-    }
+//   document.addEventListener('DOMContentLoaded', function() {
+//     const subjectField = document.querySelector('[name="subject-services"]');
+//     if (subjectField) {
+
+//          subjectField.value = document.title;
+//     }
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const subjectField = document.querySelector('[name="subject-services"]');
+  if (subjectField && wpData.pageTitle) {
+      subjectField.value = wpData.pageTitle;
+  }
 });
+
 
 $(".award-div .award-inner .btn-as").click(function(){
   $(".award-modal").show();

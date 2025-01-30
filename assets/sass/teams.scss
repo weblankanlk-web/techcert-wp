@@ -86,7 +86,7 @@
                             .t-des{
                                 color: $white;
                                 padding: 5px 10px;
-                                width: 50%;
+                                width: fit-content;
                                 text-align: center;
                                 border-radius: 4px;
                                 background: $secondary-color;
@@ -136,6 +136,9 @@
                             .deatil-div{
                                 gap: get-vw(10px);
                                 align-items: flex-end;
+                                .tag-bod{
+                                    margin-bottom: get-vw(10px);
+                                }
                             }
                             .main{
                                 margin-top: get-vw(-4px);
@@ -151,7 +154,7 @@
                     }
                     .bottom-section{
                         gap: get-vw(20px);
-                        padding-top: get-vw(60px);
+                        padding-top: get-vw(69px);
                         .content-div{
                             border-radius: get-vw(8px);
                             &:hover{

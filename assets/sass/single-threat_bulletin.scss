@@ -4,6 +4,7 @@
         padding-bottom: 50px;
         display: flex;
         flex-direction: column-reverse;
+        padding-top: 50px;
         .detail-div{
             .date-contain{
                 .sub{
@@ -183,6 +184,9 @@
                                 font-size: 14px;
                                 line-height: 14px;
                                 font-weight: 400;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
                             }
                         }
                     }
@@ -266,7 +270,7 @@
                         font-size: get-vw(40px);
                         line-height: get-vw(46px); /* 115% */
                         padding-bottom: get-vw(42px);
-                        padding-top: get-vw(28px);
+                        // padding-top: get-vw(28px);
                     }
                     ul{
                         padding-bottom: get-vw(54px);
@@ -284,7 +288,7 @@
                     }
                 }
                 .share-div{
-                    padding: get-vw(18px);
+                    padding: get-vw(10px) get-vw(18px);
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -389,6 +393,7 @@
                         padding: 30px;
                         width: 100%;
                         margin: 0 10px;
+                        border: 1px solid rgba(255, 255, 255, 0.30);
                         &:hover{
                             background: linear-gradient(180deg, #151F3D 15.61%, #3853A3 159.79%);
                         }
@@ -422,6 +427,7 @@
                                 padding-bottom: 40px;
                                 line-height: 30px; /* 150% */
                                 letter-spacing: 2px;
+                                font-weight: 400;
                             }
                         }
                         .btn-tb{

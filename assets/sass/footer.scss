@@ -202,6 +202,7 @@ footer{
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-weight: 400;
+                    padding-top: 2px;
                     span{
                         font-weight: 700;
                     }
@@ -598,6 +599,7 @@ footer{
                         font-size: get-vw(140px);
                         line-height: get-vw(105px);
                         letter-spacing: get-vw(-8.4px);
+                        padding-top: unset;
                      }
                      img{
                         width: get-vw(379px);

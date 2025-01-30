@@ -600,7 +600,7 @@
                             .other-service-item{
                                 margin: get-vw(5px);
                                 .other-service-inner{
-                                    padding: get-vw(89px) get-vw(70px) get-vw(60px);
+                                    padding: get-vw(89px) get-vw(48.88px) get-vw(60px);
                                     border-radius:get-vw( 6px);
                                     border:get-vw( 1px) solid rgba(255, 255, 255, 0.30);
                                     img.other-service-image{
@@ -1804,8 +1804,9 @@
                         .btn-inds{
                             .btn-wrap{
                                 margin-top: get-vw(50px);
-                                position: unset;
+                                position: relative;
                                 margin-left: get-vw(20px);
+                                bottom: 0;
                             }
                         }
                     }

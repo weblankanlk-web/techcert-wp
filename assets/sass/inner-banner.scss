@@ -52,6 +52,7 @@
                     letter-spacing: -1.8px;
                     text-align: center;
                     padding-bottom: 10px;
+                    padding-right: 2px;
                 }
                 .main{
                     background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);
@@ -62,13 +63,17 @@
                     letter-spacing: -3.6px;
                     text-align: center;
                     padding-bottom: 10px;
+                    padding-right: 2px;
                 }
                 .banner-content{
                     color: $white;
                     text-align: center;
                     padding-top: 22px;
+                    font-family: $secondary-font;
                     font-weight: 300;
                     line-height: 18px; /* 128.571% */
+                    font-size: 14px;
+                    color: $white-text;
                     span{
                         color:$secondary-color;
                         font-weight: 600;
@@ -113,16 +118,20 @@
                     padding-bottom: get-vw(75px);
                     .sub{
                         letter-spacing:get-vw( -4.8px);
+                        padding-right: get-vw(5px);
                     }
                     .main{
                         line-height: get-vw(105px);
                         letter-spacing:get-vw( -7.2px);
                         padding-bottom: get-vw(15px);
+                        padding-right: get-vw(5px);
                     }
                     .banner-content{
                         padding-top: get-vw(19px);
                         width: get-vw(1075px);
                         line-height: get-vw(30px); /* 166.667% */
+                        letter-spacing: get-vw(1.1px);
+                        font-size: get-vw(18px);
                     }
                 }
             }

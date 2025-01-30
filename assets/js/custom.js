@@ -576,7 +576,7 @@ $('.arrow-num-indus .left-arrow-indus').click(function () {
   $industry_land_slider.slick('slickPrev');
 });
 
-$('.arrow-num-indus .left-arrow-indus').click(function () {
+$('.arrow-num-indus .right-arrow-indus').click(function () {
   $industry_land_slider.slick('slickNext');
 });
 

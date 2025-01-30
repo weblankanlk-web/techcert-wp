@@ -1,6 +1,7 @@
 .threat-bulletin-section{
     .main-wrapper{
         background: $black-bg;
+        padding-top: 50px;
         .wrapper-filter{
             position: relative;
             display: flex;
@@ -15,6 +16,7 @@
                         border: 0;
                         padding: 30px;
                         width: 100%;
+                        border: 1px solid rgba(255, 255, 255, 0.30);
                         &:hover{
                             background: linear-gradient(180deg, #151F3D 15.61%, #3853A3 159.79%);
                         }
@@ -47,6 +49,7 @@
                                 padding-bottom: 40px;
                                 line-height: 30px; /* 150% */
                                 letter-spacing: 2px;
+                                font-weight: 400;
                             }
                         }
                         .btn-tb{
@@ -81,7 +84,7 @@
                         font-weight: 400;
                         line-height: normal;
                         letter-spacing: -0.4px;
-                        margin-right: 5px;
+                        margin-right: 15px;
                         text-decoration: none;
                         &.current-page{
                             background: $primary-color;
@@ -128,6 +131,9 @@
                                         font-size: 14px;
                                         line-height: 14px;
                                         font-weight: 400;
+                                        &:hover{
+                                            text-decoration: underline;
+                                        }
                                     }
                                 }
                             }
@@ -157,7 +163,7 @@
                     .threats-landing-slider{
                         column-count: 2;
                         button.threat-item{
-                            width: 48.5%;
+                            width: 47.5%;
                         }
                     }
                } 

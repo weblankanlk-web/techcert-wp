@@ -84,9 +84,9 @@
         </div>
         <div class="filter-div">
             <div class="div-inner">
-                <div class="search-articles fade-up">
+                <!-- <div class="search-articles fade-up">
                     <input type="text" id="search" placeholder="Search Article">
-                </div>
+                </div> -->
                 <div class="filter-articles-div">
                     <div class="latest-articles filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Recent Articles</h3>

@@ -1127,7 +1127,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
   }
   footer .footer-inner .footer-main {
     width: 62.8125vw;
-    padding: 5.0520833333vw 5.2083333333vw 3.6458333333vw;
+    padding: 5.0520833333vw 4.2083333333vw 3.6458333333vw;
     position: relative;
   }
   footer .footer-inner .footer-main::after {
@@ -1295,7 +1295,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     font-size: 7.2916666667vw;
     line-height: 5.46875vw;
     letter-spacing: -0.4375vw;
-    padding-top: unset;
+    padding-top: 0.1041666667vw;
   }
   footer .footer-inner .footer-details .top-section img {
     width: 19.7395833333vw;

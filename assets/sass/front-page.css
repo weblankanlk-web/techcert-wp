@@ -1317,7 +1317,7 @@ html {
     margin: 0.2604166667vw;
   }
   .about-other-services .home-other-services .full-wrapper .bottom-section .slider-wrapper .other-services-slider .other-service-item .other-service-inner {
-    padding: 4.6354166667vw 3.6458333333vw 3.125vw;
+    padding: 4.6354166667vw 2.5458333333vw 3.125vw;
     border-radius: 0.3125vw;
     border: 0.0520833333vw solid rgba(255, 255, 255, 0.3);
   }
@@ -2370,8 +2370,9 @@ html {
   }
   .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .btn-inds .btn-wrap {
     margin-top: 2.6041666667vw;
-    position: unset;
+    position: relative;
     margin-left: 1.0416666667vw;
+    bottom: 0;
   }
   .home-industries .main-wrapper .industry-list .arrow-num-industries {
     gap: 0.5208333333vw;

@@ -36,7 +36,7 @@
                         <?php
                             if($ttl_tagline):
                         ?>
-                            <p class="h-30 tagline-white fade-up"><?php echo $ttl_tagline; ?></p>
+                            <p class="h-30 tagline-white fade-up tag-bod"><?php echo $ttl_tagline; ?></p>
                         <?php
                             endif;
                         ?>

@@ -3,6 +3,7 @@
         background: $black-bg;
         display: flex;
         flex-direction: column-reverse;
+        padding-top: 50px;
         .single-inner{
             .featured-section{
                 &:hover{
@@ -213,6 +214,9 @@
                                 font-size: 14px;
                                 line-height: 14px;
                                 font-weight: 400;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
                             }
                         }
                     }

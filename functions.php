@@ -992,4 +992,13 @@ add_action('wp_ajax_filter_events', 'filter_events_by_search');
 add_action('wp_ajax_nopriv_filter_events', 'filter_events_by_search');
 
 
+function enqueue_custom_script() {
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom.js', array(), null, true);
+
+    // Pass WordPress title to JavaScript
+    wp_localize_script('custom-script', 'wpData', array(
+        'pageTitle' => get_the_title(),
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');
 

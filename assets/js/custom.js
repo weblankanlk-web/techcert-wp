@@ -524,61 +524,67 @@ $pdf_slider = $('.pdf-slider').slick({
     updateButtonState();
   });
 
-  var $industry_land_slider = $('.industry-land-slider');
+$(document).ready(function () {
+  $('.industry-item').each(function (index) {
+      $(this).addClass('industry-item-' + (index + 1)); // Add unique class
+      
+      var $industryItem = $(this);
+      var $slider = $industryItem.find('.industry-land-slider');
+      var $counter = $industryItem.find('.num-pack-indus');
 
-$industry_land_slider.on('init', function (event, slick) {
-    var totalSlides = slick.slideCount; 
-    $('.num-pack-indus').html(`<b>01</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
+      $slider.on('init', function (event, slick) {
+          var totalSlides = slick.slideCount; 
+          $counter.html(`<b>01</b>/<span>${totalSlides.toString().padStart(2, '0')}</span>`);
+      });
+
+      $slider.slick({
+          dots: false,
+          arrows: false, // We control navigation manually
+          infinite: true,
+          speed: 300,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          draggable: true,
+          touchMove: true,
+          swipeToSlide: true,
+          pauseOnHover: true,
+          responsive: [
+              {
+                  breakpoint: 1025,
+                  settings: {
+                      slidesToShow: 2,
+                  }
+              },
+              {
+                  breakpoint: 769,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                  }
+              }
+          ]
+      });
+
+      $slider.on('afterChange', function (event, slick, currentSlide) {
+          var totalSlides = slick.slideCount;
+          var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
+          $counter.html(`<b>${slideNumber}</b>/<span>${totalSlides.toString().padStart(2, '0')}</span>`);
+      });
+
+      // Fix: Ensure only the closest slider moves
+      $industryItem.find('.arrow-num-indus .left-arrow-indus').click(function () {
+          $slider.slick('slickPrev');
+      });
+
+      $industryItem.find('.arrow-num-indus .right-arrow-indus').click(function () {
+          $slider.slick('slickNext');
+      });
+  });
 });
 
-$industry_land_slider.slick({
-  dots: false,
-  arrows: false,
-  infinite: true,
-  speed: 300,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  draggable: true,
-  touchMove: true,
-  swipeToSlide: true,
-  swipe: 200,
-  pauseOnHover: true,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  responsive: [ 
-    {
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        centerMode: false,
-        centerPadding: '20px',
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
 
-$industry_land_slider.on('afterChange', function (event, slick, currentSlide) {
-  var totalSlides = slick.slideCount; 
-  var slideNumber = (currentSlide + 1).toString().padStart(2, '0');
-  $('.num-pack-indus').html(`<b>${slideNumber}</b>/ <span>${totalSlides.toString().padStart(2, '0')}</span>`);
-});
-
-$('.arrow-num-indus .left-arrow-indus').click(function () {
-  $industry_land_slider.slick('slickPrev');
-});
-
-$('.arrow-num-indus .right-arrow-indus').click(function () {
-  $industry_land_slider.slick('slickNext');
-});
 
 var $threat_more_slider = $('.threat-more-slider');
 

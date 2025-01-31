@@ -49,7 +49,7 @@
                         height:120px;
                         width:170px;
                         object-fit: cover;
-                        transform: scale(0.9);
+                        transform: scale(1);
                         transition: .7s;
                     }
                     .details-item{
@@ -108,7 +108,7 @@
                 .other-service-item{
                     width: 32.5%;
                     .other-service-inner{
-                        padding: get-vw(89px) get-vw(70px) get-vw(60px);
+                        padding: get-vw(70px) get-vw(70px) get-vw(60px);
                         border-radius:get-vw( 6px);
                         border:get-vw( 1px) solid rgba(255, 255, 255, 0.30);
                         img.other-service-image{

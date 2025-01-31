@@ -379,7 +379,7 @@
 					</svg>
 				</div>
 				<div class="num-pack-industries">
-						01/<span>06</span>
+						<b>01</b>/<span>06</span>
 				</div>
 				<div class="right-arrow-industries">
 					<svg class="arr-right">
@@ -562,24 +562,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateNumberDisplay() {
         const currentNumber = String(activeIndex + 1).padStart(2, '0'); 
-        const currentSpan = numPack?.querySelector("span");
-        if (numPack && currentSpan) {
-            numPack.firstChild.textContent = `${currentNumber}/`; 
+        if (numPack) {
+            numPack.innerHTML = `<b>${currentNumber}</b>/ <span>${String(totalTabs).padStart(2, '0')}</span>`;
         }
     }
 
     function updateTabs(newIndex) {
-        if (newIndex >= 0 && newIndex < tabs.length) {
-            tabs[activeIndex].classList.remove("active");
-            tabPanes[activeIndex].classList.remove("show", "active");
-
-            activeIndex = newIndex;
-
-            tabs[activeIndex].classList.add("active");
-            tabPanes[activeIndex].classList.add("show", "active");
-
-            updateNumberDisplay(); 
+        if (newIndex < 0) {
+            newIndex = totalTabs - 1; // Go to last tab if moving left from first tab
+        } else if (newIndex >= totalTabs) {
+            newIndex = 0; // Go to first tab if moving right from last tab
         }
+
+        tabs[activeIndex].classList.remove("active");
+        tabPanes[activeIndex].classList.remove("show", "active");
+
+        activeIndex = newIndex;
+
+        tabs[activeIndex].classList.add("active");
+        tabPanes[activeIndex].classList.add("show", "active");
+
+        updateNumberDisplay(); 
     }
 
     tabs.forEach((tab, index) => {

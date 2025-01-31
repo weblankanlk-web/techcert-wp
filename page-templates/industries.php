@@ -13,14 +13,16 @@
 
 <section class="our-industries">
     <div class="main-wrapper">
-        <?php foreach ($ip_industry_listing as $industry_item):
+        <?php 
+        $n=1;
+        foreach ($ip_industry_listing as $industry_item):
             $ip_title = $industry_item["ip_title"];
             $ip_image = $industry_item["ip_image"];
             $ip_content = $industry_item["ip_content"];
             $ip_industry_slider = $industry_item["ip_industry_slider"];
             $ip_image_url=validateImage(1012,807,$ip_image);
         ?>
-            <div class="industry-item">
+            <div class="industry-item <?php $n; ?>">
                 <div class="industry-inner">
                     <div class="top-section">
                         <div class="left-div">
@@ -81,7 +83,7 @@
                                     </svg>
                                 </div>
                                 <div class="num-pack-indus">
-                                    01 /<span>06</span>
+                                    <b>01</b>/<span>06</span>
                                 </div>
                                 <div class="right-arrow-indus">
                                     <svg class="arr-right">
@@ -93,7 +95,9 @@
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php 
+        $n++;
+    endforeach; ?>
     </div>
 </section>
 

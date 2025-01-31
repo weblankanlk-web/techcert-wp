@@ -1225,7 +1225,7 @@ html {
   height: 120px;
   width: 170px;
   object-fit: cover;
-  transform: scale(0.9);
+  transform: scale(1);
   transition: 0.7s;
 }
 .about-other-services .home-other-services .full-wrapper .bottom-section .slider-wrapper .other-services-slider .other-service-item .other-service-inner .details-item {
@@ -1283,9 +1283,9 @@ html {
     content: "";
     width: 100%;
     height: 18.59375vw;
-    background: linear-gradient(180deg, #0A0C10 0%, rgba(10, 12, 16, 0) 50.14%);
+    background: linear-gradient(0deg, #010C1A 0%, #010C1A 45.36%, #010A0E 0%);
     left: 0;
-    bottom: -11.3vw;
+    bottom: -11.2vw;
     z-index: 2;
   }
   .about-other-services .home-other-services .full-wrapper .top-section {
@@ -1317,7 +1317,7 @@ html {
     margin: 0.2604166667vw;
   }
   .about-other-services .home-other-services .full-wrapper .bottom-section .slider-wrapper .other-services-slider .other-service-item .other-service-inner {
-    padding: 4.6354166667vw 2.5458333333vw 3.125vw;
+    padding: 3.6458333333vw 2.5458333333vw 3.125vw;
     border-radius: 0.3125vw;
     border: 0.0520833333vw solid rgba(255, 255, 255, 0.3);
   }
@@ -1325,7 +1325,7 @@ html {
     height: 10.2604166667vw;
     width: 21.3541666667vw;
     object-fit: contain;
-    margin-bottom: 1.9791666667vw;
+    margin-bottom: 1.3020833333vw;
   }
   .about-other-services .home-other-services .full-wrapper .bottom-section .slider-wrapper .other-services-slider .other-service-item .other-service-inner .details-item .title {
     margin-bottom: 1.9791666667vw;
@@ -1847,7 +1847,7 @@ html {
   .home-map .full-wrapper .details-section .detail-inner .para {
     padding: 0;
     text-align: left;
-    width: 23.75vw;
+    width: 29.7395833333vw;
     letter-spacing: 0.0625vw;
   }
 }
@@ -1877,7 +1877,7 @@ html {
 .home-threat-bulletins .main-wrapper .image-container .image-wrap::after {
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(0deg, #0A0C10 0.01%, rgba(10, 12, 16, 0) 43.63%);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1987,7 +1987,7 @@ html {
   .home-threat-bulletins .main-wrapper::before {
     width: 70%;
     height: 87%;
-    background: linear-gradient(90deg, #101525 0%, #101525 42.36%, rgba(16, 21, 37, 0) 100%);
+    background: linear-gradient(90deg, #0A0C10 0.01%, rgba(10, 12, 16, 0) 43.63%);
   }
   .home-threat-bulletins .main-wrapper .image-container {
     height: 52.2395833333vw;
@@ -2322,7 +2322,7 @@ html {
     right: 5.8708333333vw;
     width: 43.8020833333vw;
     height: 49.375vw;
-    padding: 3.0875vw 0;
+    padding: 5.0875vw 0;
   }
   .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .tab-sec {
     margin-left: -0.5208333333vw;
@@ -2367,6 +2367,11 @@ html {
   .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .tab-sec ul#inTabs li.nav-item button.nav-link.active::after {
     height: 0.0520833333vw;
     width: 27.1875vw;
+  }
+  .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .btn-inds {
+    position: absolute;
+    top: 11.4583333333vw;
+    right: -2.1354166667vw;
   }
   .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .btn-inds .btn-wrap {
     margin-top: 2.6041666667vw;

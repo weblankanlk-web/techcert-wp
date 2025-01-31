@@ -1186,7 +1186,7 @@ footer .footer-inner .footer-details .footer-socail-media ul.footer-social-media
     column-count: 2;
   }
   footer .footer-inner .footer-main .footer-menu .menu-footer-secondary-menu-container ul#footer_sub li::after {
-    width: 100%;
+    width: 95%;
     height: 0.0520833333vw;
     top: 1.8229166667vw;
   }
@@ -3851,7 +3851,7 @@ a.scrollup.hide {
   .contact-map .full-wrapper .details-section .detail-inner .para {
     padding: 0;
     text-align: left;
-    width: 23.75vw;
+    width: 29.7395833333vw;
   }
 }
 
@@ -4243,7 +4243,7 @@ a.scrollup.hide {
 .services-threat-bulletins .main-wrapper .image-container .image-wrap::after {
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(0deg, #0A0C10 0.01%, rgba(10, 12, 16, 0) 43.63%);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4347,7 +4347,7 @@ a.scrollup.hide {
   .services-threat-bulletins .main-wrapper::before {
     width: 70%;
     height: 100%;
-    background: linear-gradient(90deg, #101525 0%, #101525 42.36%, rgba(16, 21, 37, 0) 100%);
+    background: linear-gradient(90deg, #0A0C10 0.01%, rgba(10, 12, 16, 0) 43.63%);
   }
   .services-threat-bulletins .main-wrapper .image-container {
     height: 52.2395833333vw;
@@ -5342,7 +5342,7 @@ a.scrollup.hide {
   height: 120px;
   width: 170px;
   object-fit: cover;
-  transform: scale(0.9);
+  transform: scale(1);
   transition: 0.7s;
 }
 .other-services-landing .main-wrapper .other-services-listing .other-service-item .other-service-inner .details-item {
@@ -5398,7 +5398,7 @@ a.scrollup.hide {
     width: 32.5%;
   }
   .other-services-landing .main-wrapper .other-services-listing .other-service-item .other-service-inner {
-    padding: 4.6354166667vw 3.6458333333vw 3.125vw;
+    padding: 3.6458333333vw 3.6458333333vw 3.125vw;
     border-radius: 0.3125vw;
     border: 0.0520833333vw solid rgba(255, 255, 255, 0.3);
   }
@@ -5803,7 +5803,7 @@ a.scrollup.hide {
   font-family: "Forma DJR Micro", sans-serif;
   font-size: 26px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: normal;
   color: #ffffff;
 }

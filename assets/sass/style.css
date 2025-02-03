@@ -1747,6 +1747,10 @@ a.scrollup.hide {
   padding: 10px 21px;
   font-weight: 400;
 }
+#navbar_main_mobile.show .header-inner .container-fluid .header-main-menu .navbar-nav-mobile li.menu-item-191 .sub-menu {
+  overflow-y: hidden;
+  height: 140px;
+}
 #navbar_main_mobile.show .header-inner .container-fluid .header-main-menu .navbar-nav-mobile li .sub-menu-toggle {
   display: none;
 }

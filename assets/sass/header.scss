@@ -361,7 +361,12 @@
                         list-style: none;
                         padding: (10px) (21px);
                         font-weight: 400;
-
+                        &.menu-item-191{
+                            .sub-menu{
+                                overflow-y: hidden;
+                                height: 140px;
+                            }
+                        }
                         .sub-menu-toggle{
                             display: none;
                         }

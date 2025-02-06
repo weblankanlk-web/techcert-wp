@@ -431,7 +431,7 @@
     .home-other-services{
         .full-wrapper{
             background: $black-bg;
-            padding-bottom: 60px;
+            // padding-bottom: 60px;
             position: relative;
             svg.other-services-svg{
                 width: 100%;
@@ -738,7 +738,7 @@
                     margin-bottom: 50px;
                     .white-para{
                         color: $white-text;
-                        text-align: left;
+                        text-align: justify;
                         font-weight: 300;
                         span{
                             color: $secondary-color;
@@ -776,6 +776,11 @@
                                     gap: 24px;
                                     .white-item{
                                         width: 45%;
+                                        &:last-child{
+                                            .white-icon-para{
+                                                width: 50%;
+                                            }
+                                        }
                                         .white-inner{
                                             display: flex;
                                             flex-direction: column;
@@ -808,6 +813,11 @@
                                 .slide-wrapper{
                                     .white-icon-slider{
                                         .white-item{
+                                            &:last-child{
+                                               .white-icon-para{
+                                                width: 100%;
+                                               }
+                                            }
                                             .white-inner{
                                                 .white-icon-para{
                                                     min-height: unset;
@@ -1119,6 +1129,7 @@
                 width: 790px;
                 height: 480px;
                 object-fit: cover;
+                object-position: center;
             }
             svg.map-h{
                 width: 790px;
@@ -1507,7 +1518,7 @@
     .main-wrapper{
         background: $black-bg;
         padding-bottom: 100px;
-        padding-top: 60px;
+        padding-top: 80px;
         position: relative;
         background: linear-gradient(270deg, #0A0C10 -24.66%, #151F3D 135.99%);
         z-index: 1;
@@ -1527,8 +1538,8 @@
                 z-index: 5;
                 .tag-ins{
                     position: absolute;
-                    top: 1rem;
-                    left: 7rem;
+                    top: -.9rem;
+                    left: 0rem;
                 }
                 .main{
                     background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);

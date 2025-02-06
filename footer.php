@@ -222,6 +222,7 @@
 			window.scrollTo({ top: 0, behavior: "smooth" });
 		});
 		});
+		
 </script>
 </body>
 </html>

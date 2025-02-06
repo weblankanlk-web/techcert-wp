@@ -71,7 +71,7 @@
                 margin-bottom: 50px;
                 .white-para p{
                     color: $white-text;
-                    text-align: left;
+                    text-align: justify;
                     font-weight: 300;
                     span{
                         color: $secondary-color;
@@ -207,6 +207,7 @@
             top: 0;
             padding: 40px 25px 60px;
             z-index: 2;
+            border-bottom:(1px) solid rgba(255, 255, 255, 0.30);
             .white-section{
                 .white-section-inner{
                     border-radius: 20px;
@@ -315,10 +316,12 @@
                 img{
                     width: get-vw(1921px);
                     height:get-vw( 827px);
+                    border-bottom:get-vw(1px) solid rgba(255, 255, 255, 0.30);
                 }
             }
             .white-div-sec{
                 padding: 0 get-vw(140px);
+                border-bottom:0;
                 .white-section{
                     width: get-vw(927px);
                     z-index: 3;

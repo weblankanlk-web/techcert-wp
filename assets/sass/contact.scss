@@ -18,6 +18,7 @@
                 width: 1199px;
                 height: 480px;
                 object-fit: cover;
+                object-position: center;
             }
             svg.map-h{
                 width: 1199px;
@@ -229,7 +230,7 @@
     @media only screen and (min-width: 1200px){
         .full-wrapper{
             .top-section{
-                padding: get-vw(130px) get-vw(100px);
+                padding: get-vw(105px) get-vw(100px);
                 .main-wrapper{
                     .left-div{
                         width: get-vw(590.6px);
@@ -586,6 +587,7 @@
                         textarea{
                                 border-bottom: get-vw(1px) solid rgba(146, 172, 191, 0.36);
                                 height: get-vw(35.9125px);
+                                font-size: get-vw(30px);
                                 &::placeholder{
                                     font-size: get-vw(30px); 
                                     font-weight: 700; 

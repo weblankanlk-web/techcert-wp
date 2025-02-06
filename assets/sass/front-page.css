@@ -1157,7 +1157,6 @@ html {
 }
 .about-other-services .home-other-services .full-wrapper {
   background: #010C1A;
-  padding-bottom: 60px;
   position: relative;
 }
 .about-other-services .home-other-services .full-wrapper svg.other-services-svg {
@@ -1446,7 +1445,7 @@ html {
 }
 .about-other-services .home-about .inner-wrapper .bottom-section .detail-para .white-para {
   color: #D2D2D2;
-  text-align: left;
+  text-align: justify;
   font-weight: 300;
 }
 .about-other-services .home-about .inner-wrapper .bottom-section .detail-para .white-para span {
@@ -1483,6 +1482,9 @@ html {
 .about-other-services .home-about .inner-wrapper .bottom-section .white-section .white-section-inner .white-listing .slide-wrapper .white-icon-slider .white-item {
   width: 45%;
 }
+.about-other-services .home-about .inner-wrapper .bottom-section .white-section .white-section-inner .white-listing .slide-wrapper .white-icon-slider .white-item:last-child .white-icon-para {
+  width: 50%;
+}
 .about-other-services .home-about .inner-wrapper .bottom-section .white-section .white-section-inner .white-listing .slide-wrapper .white-icon-slider .white-item .white-inner {
   display: flex;
   flex-direction: column;
@@ -1499,6 +1501,9 @@ html {
   min-height: 45px;
 }
 @media only screen and (min-width: 422px) {
+  .about-other-services .home-about .inner-wrapper .bottom-section .white-section .white-section-inner .white-listing .slide-wrapper .white-icon-slider .white-item:last-child .white-icon-para {
+    width: 100%;
+  }
   .about-other-services .home-about .inner-wrapper .bottom-section .white-section .white-section-inner .white-listing .slide-wrapper .white-icon-slider .white-item .white-inner .white-icon-para {
     min-height: unset;
   }
@@ -1758,6 +1763,7 @@ html {
   width: 790px;
   height: 480px;
   object-fit: cover;
+  object-position: center;
 }
 .home-map .full-wrapper .video-div svg.map-h {
   width: 790px;
@@ -2104,7 +2110,7 @@ html {
 .home-industries .main-wrapper {
   background: #010C1A;
   padding-bottom: 100px;
-  padding-top: 60px;
+  padding-top: 80px;
   position: relative;
   background: linear-gradient(270deg, #0A0C10 -24.66%, #151F3D 135.99%);
   z-index: 1;
@@ -2125,8 +2131,8 @@ html {
 }
 .home-industries .main-wrapper .industry-list .title-section .tag-ins {
   position: absolute;
-  top: 1rem;
-  left: 7rem;
+  top: -0.9rem;
+  left: 0rem;
 }
 .home-industries .main-wrapper .industry-list .title-section .main {
   background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);

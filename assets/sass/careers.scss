@@ -761,8 +761,8 @@
                         padding-bottom: get-vw(72px);
                         display: flex;
                         flex-direction: row;
-                        gap: get-vw(68.4px);
-                        align-items: center;
+                        gap: get-vw(60.4px);
+                        align-items: flex-start;
                         img{
                             width:get-vw( 85px);
                             height: get-vw(85px);

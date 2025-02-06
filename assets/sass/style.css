@@ -2596,7 +2596,6 @@ a.scrollup.hide {
     width: 20vw;
   }
   .header .header-main .main-wrapper .header-inner .mid {
-    margin-right: 2.6041666667vw;
     z-index: 6;
   }
   .header .header-main .main-wrapper .header-inner .mid #navbar_main .menu-primary-menu-container ul.navbar-nav {
@@ -3008,7 +3007,7 @@ a.scrollup.hide {
 }
 .about-first .inner-wrapper .bottom-section .detail-para .white-para p {
   color: #D2D2D2;
-  text-align: left;
+  text-align: justify;
   font-weight: 300;
 }
 .about-first .inner-wrapper .bottom-section .detail-para .white-para p span {
@@ -3129,6 +3128,7 @@ a.scrollup.hide {
   top: 0;
   padding: 40px 25px 60px;
   z-index: 2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .about-white .full-wrapper .white-div-sec .white-section .white-section-inner {
   border-radius: 20px;
@@ -3198,9 +3198,11 @@ a.scrollup.hide {
   .about-white .full-wrapper .image-container img {
     width: 100.0520833333vw;
     height: 43.0729166667vw;
+    border-bottom: 0.0520833333vw solid rgba(255, 255, 255, 0.3);
   }
   .about-white .full-wrapper .white-div-sec {
     padding: 0 7.2916666667vw;
+    border-bottom: 0;
   }
   .about-white .full-wrapper .white-div-sec .white-section {
     width: 48.28125vw;
@@ -3703,7 +3705,7 @@ a.scrollup.hide {
     align-items: flex-end;
   }
   .team-listing-sec .main-wrapper .team-div .team-inner .top-section.left .deatil-div .tag-bod {
-    margin-bottom: 0.5208333333vw;
+    margin-bottom: 0.7208333333vw;
   }
   .team-listing-sec .main-wrapper .team-div .team-inner .top-section.left .main {
     margin-top: -0.2083333333vw;
@@ -3768,6 +3770,7 @@ a.scrollup.hide {
   width: 1199px;
   height: 480px;
   object-fit: cover;
+  object-position: center;
 }
 .contact-map .full-wrapper .video-div svg.map-h {
   width: 1199px;
@@ -3943,7 +3946,7 @@ a.scrollup.hide {
 }
 @media only screen and (min-width: 1200px) {
   .contact-details .full-wrapper .top-section {
-    padding: 6.7708333333vw 5.2083333333vw;
+    padding: 5.46875vw 5.2083333333vw;
   }
   .contact-details .full-wrapper .top-section .main-wrapper .left-div {
     width: 30.7604166667vw;
@@ -4207,6 +4210,7 @@ a.scrollup.hide {
   .contact-page-form .main-wrapper .right-div .form-wrap form textarea {
     border-bottom: 0.0520833333vw solid rgba(146, 172, 191, 0.36);
     height: 1.8704427083vw;
+    font-size: 1.5625vw;
   }
   .contact-page-form .main-wrapper .right-div .form-wrap form textarea::placeholder {
     font-size: 1.5625vw;
@@ -5402,7 +5406,7 @@ a.scrollup.hide {
     width: 32.5%;
   }
   .other-services-landing .main-wrapper .other-services-listing .other-service-item .other-service-inner {
-    padding: 3.6458333333vw 3.6458333333vw 3.125vw;
+    padding: 3.6458333333vw 2.5458333333vw 3.125vw;
     border-radius: 0.3125vw;
     border: 0.0520833333vw solid rgba(255, 255, 255, 0.3);
   }
@@ -5760,7 +5764,7 @@ a.scrollup.hide {
   height: 120px;
   width: 170px;
   object-fit: cover;
-  transform: scale(0.9);
+  transform: scale(1);
   transition: 0.7s;
 }
 .our-industries .main-wrapper .industry-item .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner .details-item {
@@ -5860,6 +5864,7 @@ a.scrollup.hide {
     font-size: 6.25vw;
     padding-bottom: 2.4479166667vw;
     line-height: 6.25vw;
+    padding-right: 0.2604166667vw;
     letter-spacing: -0.375vw;
   }
   .our-industries .main-wrapper .industry-item:nth-child(odd) .industry-inner .top-section .right-div .title span {
@@ -5972,6 +5977,7 @@ a.scrollup.hide {
     padding-bottom: 2.4479166667vw;
     line-height: 6.25vw;
     letter-spacing: -0.375vw;
+    padding-right: 0.2604166667vw;
   }
   .our-industries .main-wrapper .industry-item:nth-child(even) .industry-inner .top-section .right-div .title span {
     font-weight: 400;
@@ -8332,8 +8338,8 @@ a.scrollup.hide {
     padding-bottom: 3.75vw;
     display: flex;
     flex-direction: row;
-    gap: 3.5625vw;
-    align-items: center;
+    gap: 3.1458333333vw;
+    align-items: flex-start;
   }
   .career-details .full-wrapper .bottom-section .detail-item .detail-inner img {
     width: 4.4270833333vw;

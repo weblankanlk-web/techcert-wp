@@ -59,7 +59,7 @@
                                         height:120px;
                                         width:170px;
                                         object-fit: cover;
-                                        transform: scale(0.9);
+                                        transform: scale(1);
                                         transition: .7s;
                                     }
                                     .details-item{
@@ -179,8 +179,10 @@
                                     font-size: get-vw(120px);
                                     padding-bottom: get-vw(47px);
                                     line-height: get-vw(120px);
+                                    padding-right: get-vw(5px);
                                     // width: get-vw(958px);
                                     letter-spacing: get-vw(-7.2px);
+                                    
                                     span{
                                         font-weight: 400;
                                     }
@@ -303,6 +305,7 @@
                                     line-height: get-vw(120px);
                                     // width: get-vw(958px);
                                     letter-spacing: get-vw(-7.2px);
+                                    padding-right: get-vw(5px);
                                     span{
                                         font-weight: 400;
                                     }

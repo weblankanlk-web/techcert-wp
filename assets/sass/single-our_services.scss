@@ -897,9 +897,11 @@
                         color: $primary-color;
                     }
                 }
-                ul.point-list{
-                    padding: 0 0 0 20px;
-                    margin: 0;
+                .points-sec{
+                    ul.point-list{
+                        padding: 0 0 0 20px;
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -936,12 +938,14 @@
             flex-direction: column;
             position: relative;
             padding-bottom: 0;
-            padding-top: get-vw(315.6px);
+            // padding-top: get-vw(315.6px);
+            padding-top: get-vw(181.2px);
             .image-container{
                 width: 100%;
                 margin-bottom: 0;
                 position: absolute;
-                bottom: get-vw(60px);
+                // bottom: get-vw(60px);
+                bottom: get-vw(136.8px);
                 img{
                     width: get-vw(1919px);
                     height:get-vw( 875px);
@@ -950,6 +954,7 @@
             .detail-div{
                 width: 100%;
                 padding-top: 0;
+                height: get-vw(1008px);
                 .detail-inner{
                     margin: 0;
                     padding: get-vw(120px) get-vw(206.2px) get-vw(120px) get-vw(187px);
@@ -961,10 +966,23 @@
                         margin-bottom: get-vw(50px);
                         width: 56%;
                         line-height: get-vw(76px);
+                        font-size: get-vw(70px);
                     }
-                    ul.point-list{
-                        padding: 0 0 0 get-vw(30px);
-                        width: get-vw(601.594px);
+                    .points-sec{
+                        height: get-vw(560px);
+                        overflow: scroll;
+                        ul.point-list{
+                            padding: 0 0 0 get-vw(30px);
+                            width: get-vw(601.594px);
+                            .point-item{
+                                font-size: get-vw(23px);
+                                line-height: get-vw(30px);
+                                margin-bottom: get-vw(20px);
+                                span{
+                                    font-weight: 400;
+                                }
+                            }
+                        }
                     }
                 }
             }

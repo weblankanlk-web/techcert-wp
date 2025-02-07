@@ -2384,6 +2384,7 @@ html {
     position: absolute;
     top: 11.4583333333vw;
     right: -2.1354166667vw;
+    z-index: 7;
   }
   .home-industries .main-wrapper .industry-list .bottom-section .bottom-inner .btn-inds .btn-wrap {
     margin-top: 2.6041666667vw;

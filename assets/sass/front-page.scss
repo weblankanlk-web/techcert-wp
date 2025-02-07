@@ -1827,6 +1827,7 @@
                             position: absolute;
                             top: get-vw(220px);
                             right: get-vw(-41px);
+                            z-index: 7;
                             .btn-wrap{
                                 margin-top: get-vw(50px);
                                 position: relative;

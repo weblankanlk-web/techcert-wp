@@ -871,7 +871,7 @@
     
         @media only screen and (min-width: 1200px){
             .inner-wrapper{
-                padding-top: get-vw(100px);
+                padding-top: get-vw(12px);
                 display: flex;
                 flex-direction: column;
                 height: get-vw(1037px);
@@ -885,6 +885,11 @@
                     .left-div{
                         .title-section{
                             gap: get-vw(10px);
+                            svg {
+                                max-width: get-vw(900px);
+                                position: relative;
+                                top: get-vw(7px);
+                              }
                             .sub{
                                 font-size:get-vw( 100px);
                                 line-height:get-vw( 120px); /* 120% */
@@ -1672,6 +1677,7 @@
                             position: absolute;
                             bottom: -154px;
                             right: 0;
+                            z-index: 6;
                         }
                     }
                 }

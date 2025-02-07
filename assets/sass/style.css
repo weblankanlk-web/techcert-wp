@@ -4958,7 +4958,7 @@ a.scrollup.hide {
   font-weight: 700;
   color: #3752A3;
 }
-.services_detail-include .full-wrapper .detail-div .detail-inner ul.point-list {
+.services_detail-include .full-wrapper .detail-div .detail-inner .points-sec ul.point-list {
   padding: 0 0 0 20px;
   margin: 0;
 }
@@ -4990,13 +4990,13 @@ a.scrollup.hide {
     flex-direction: column;
     position: relative;
     padding-bottom: 0;
-    padding-top: 16.4375vw;
+    padding-top: 9.4375vw;
   }
   .services_detail-include .full-wrapper .image-container {
     width: 100%;
     margin-bottom: 0;
     position: absolute;
-    bottom: 3.125vw;
+    bottom: 7.125vw;
   }
   .services_detail-include .full-wrapper .image-container img {
     width: 99.9479166667vw;
@@ -5005,6 +5005,7 @@ a.scrollup.hide {
   .services_detail-include .full-wrapper .detail-div {
     width: 100%;
     padding-top: 0;
+    height: 52.5vw;
   }
   .services_detail-include .full-wrapper .detail-div .detail-inner {
     margin: 0;
@@ -5018,10 +5019,23 @@ a.scrollup.hide {
     margin-bottom: 2.6041666667vw;
     width: 56%;
     line-height: 3.9583333333vw;
+    font-size: 3.6458333333vw;
   }
-  .services_detail-include .full-wrapper .detail-div .detail-inner ul.point-list {
+  .services_detail-include .full-wrapper .detail-div .detail-inner .points-sec {
+    height: 29.1666666667vw;
+    overflow: scroll;
+  }
+  .services_detail-include .full-wrapper .detail-div .detail-inner .points-sec ul.point-list {
     padding: 0 0 0 1.5625vw;
     width: 31.3330208333vw;
+  }
+  .services_detail-include .full-wrapper .detail-div .detail-inner .points-sec ul.point-list .point-item {
+    font-size: 1.1979166667vw;
+    line-height: 1.5625vw;
+    margin-bottom: 1.0416666667vw;
+  }
+  .services_detail-include .full-wrapper .detail-div .detail-inner .points-sec ul.point-list .point-item span {
+    font-weight: 400;
   }
 }
 

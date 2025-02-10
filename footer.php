@@ -51,8 +51,8 @@
 						)
 					); ?>
 				</div>
-				<video autoplay muted loop id="footerVideo">
-					<source src="<?php bloginfo('template_directory'); ?>/assets/videos/footer-bg.mp4" type="video/mp4">
+				<video class="Video-item"  playsinline="" autoplay="" muted="" loop="" id="footerVideo"
+					src="<?php bloginfo('template_directory'); ?>/assets/videos/footer-bg.mp4">
 				</video>
 			</div>
 			<!-- footer Main -->
@@ -127,11 +127,15 @@
 	</footer>
 	<div class="bottom-footer">
 		<div class="bottom-footer-inner">
-			<p class="p-16 fw-6"><?php echo $footer_copyright_text;?></p>
+			<p class="p-16 fw-6">Copyright @ <?php echo date("Y"); ?> - <span>TECHCERT</span> - All Rights Reserved.</p>
 			<p class="p-16 fw-6">Concept Designing & Development By <a href="https://www.weblankan.com" target="_blank" rel="noopener noreferrer"><span class="fw-8" >web lankan</span></a></p>
 		</div>
 	</div>
-
+	<a href="#" class="scrollup" id="backToTop">
+		<div class="scrollup-btn">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16,12a1,1,0,0,1-.71-.29L12,8.41,8.71,11.71a1,1,0,0,1-1.41-1.41l4-4a1,1,0,0,1,1.41,0l4,4A1,1,0,0,1,16,12Z"/><path d="M12,18a1,1,0,0,1-1-1V7a1,1,0,0,1,2,0V17A1,1,0,0,1,12,18Z" /></svg>
+		</div>
+	</a>
 	  
 <script src="<?php echo get_theme_file_uri() ?>/assets/js/script-library.js"></script>
 <script src="<?php echo get_theme_file_uri() ?>/assets/js/custom.js"></script>
@@ -139,30 +143,34 @@
 <?php wp_footer(); ?>
 <script>
 	$(document).ready(function() {
-		// When menu button is clicked
-		$('#mobile-hum').on('click', function(e) {
-		
-			e.preventDefault(); // Prevent default anchor behavior
-			$('#navbar_main_mobile').addClass('show'); // Show the off-canvas menu
-		});
+    // When mobile menu button is clicked
+    $('#mobile-hum').on('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        $('#navbar_main_mobile').addClass('show'); // Show the off-canvas menu
+    });
 
-		// When close button is clicked
-		$('#close-menu-mobile').on('click', function() {
-			$('#navbar_main_mobile').removeClass('show'); // Hide the off-canvas menu
-		});
+    // When mobile close button is clicked
+    $('#close-menu-mobile').on('click', function() {
+        $('#navbar_main_mobile').removeClass('show'); // Hide the off-canvas menu
+    });
 
-		$('#desktop-hum').on('click', function(e) {
-		
-		e.preventDefault(); // Prevent default anchor behavior
-		$('#navbar_main_desktop').addClass('show'); // Show the off-canvas menu
-		});
+    // When desktop menu button is clicked
+    $('#desktop-hum').on('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        $('#navbar_main_desktop').addClass('show'); // Show the off-canvas menu
+    });
 
-		// When close button is clicked
-		$('#close-menu-desktop').on('click', function() {
-			$('#navbar_main_desktop').removeClass('show'); // Hide the off-canvas menu
-		});
+    // When desktop close button is clicked
+    $('#close-menu-desktop').on('click', function() {
+        $('#navbar_main_desktop').removeClass('show'); // Hide the off-canvas menu
+    });
 
-	});
+    // Remove 'show' class from navbars when scrolling
+    $(document).on("scroll", function() {
+        $('#navbar_main_mobile, #navbar_main_desktop').removeClass('show');
+    });
+});
+
 
 		document.addEventListener('DOMContentLoaded', function() {
 		// Fade-up animation on scroll
@@ -182,16 +190,39 @@
 		});
 	});
 
-	document.addEventListener('DOMContentLoaded', function() {
-		var body = document.body;
-		window.addEventListener('scroll', function() {
-			if (window.scrollY > 0) {
-				body.classList.add('scrolled');
+	document.addEventListener("DOMContentLoaded", function() {
+		const video = document.querySelector('.Video-item');
+		if (video) {
+			video.play().catch(error => {
+				console.error('Video autoplay blocked:', error);
+			});
+		}
+		});
+
+	// document.addEventListener('DOMContentLoaded', function() {
+	// 	var body = document.body;
+	// 	window.addEventListener('scroll', function() {
+	// 		if (window.scrollY > 0) {
+	// 			body.classList.add('scrolled');
+	// 		} else {
+	// 			body.classList.remove('scrolled');
+	// 		}
+	// 	});
+	// });
+	document.addEventListener("DOMContentLoaded", function() {
+		var backToTopBtn = document.getElementById("backToTop");
+		window.addEventListener("scroll", function() {
+			if (window.scrollY > window.innerHeight) {
+				backToTopBtn.classList.add("scrolled");
 			} else {
-				body.classList.remove('scrolled');
+				backToTopBtn.classList.remove("scrolled");
 			}
 		});
-	});
-  </script>
+		backToTopBtn.addEventListener("click", function() {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+		});
+		
+</script>
 </body>
 </html>

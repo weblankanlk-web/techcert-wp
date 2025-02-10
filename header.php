@@ -18,7 +18,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 	<!-- Google Font Link Here -->
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<?php
 		$favicon_icon		= get_field("favicon_icon","option");
 		$favicon_icon_url	= validateImage(32,32,$favicon_icon);
@@ -46,6 +48,10 @@
 <?php 
 	$main_logo		= get_field("main_logo","option");
 	$main_logo_url	= validateImage(380,64,$main_logo);
+	$sm_facebook	= get_field("sm_facebook","option");
+    $sm_whatsapp	= get_field("sm_whatsapp","option");
+    $sm_instagram	= get_field("sm_instagram","option");
+    $sm_linkedin		= get_field("sm_linkedin","option");
 ?>
 <header id="header" class="header">
 	<div class="header-main">
@@ -103,6 +109,40 @@
 					)
 				); ?>
 			</div>
+			<div class="logo-side">
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+					<img src="<?php echo $main_logo_url; ?> " alt="" />
+				</a>
+			</div>
+			<ul class="social-media-list">
+				<?php if($sm_facebook){?>
+					<li>
+						<a href="<?php echo $sm_facebook; ?>" class="social-media-link">
+							<svg class="fb-t">
+								<use xlink:href="#fb-t"></use>
+							</svg>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if($sm_linkedin){?>
+					<li>
+						<a href="<?php echo $sm_linkedin; ?>" class="social-media-link">
+							<svg class="ln-t">
+								<use xlink:href="#ln-t"></use>
+							</svg>
+						</a>
+					</li>
+				<?php } ?>
+				<?php if($sm_instagram){?>
+					<li>
+						<a href="<?php echo $sm_instagram; ?>" class="social-media-link">
+							<svg class="inst-t">
+								<use xlink:href="#inst-t"></use>
+							</svg>
+						</a>
+					</li>
+				<?php } ?>
+			</ul>
 		</div>
 	</div>
 </nav>
@@ -226,15 +266,11 @@
 							echo "<".$in_banner_title_tag." class='banner-title'>".$in_banner_title."</".$in_banner_title_tag.">";	
 						}	
 					?>
-					 
-
 					<?php if($in_banner_link_url){?>
 						<a href="<?php echo $in_banner_link_url; ?>" class="slider-content-link">
 							<?php echo $in_banner_link_text;?>
 						</a>
 					<?php } ?>   
-					
-
 				</div>
 			</div>
 		<?php 

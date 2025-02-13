@@ -58,7 +58,7 @@
                                     img.insdustry-land-image{
                                         height:120px;
                                         width:170px;
-                                        object-fit: cover;
+                                        object-fit: contain;
                                         transform: scale(1);
                                         transition: .7s;
                                     }

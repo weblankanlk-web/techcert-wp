@@ -1,21 +1,23 @@
 <?php
-	/*
-		Template Name: News Event Category
-	*/
-	get_header();
-    $queried_object = get_queried_object();
+/*
+    Template Name: News Event Category
+*/
+get_header();
+$queried_object = get_queried_object();
+$category_name = $queried_object->name;
+$category_id = $queried_object->term_id; // Get the current category ID
 ?>
 
 <?php
     $your_query = new WP_Query( 'pagename=news-updates' );
     while ( $your_query->have_posts() ) : $your_query->the_post();
-        $ib_tagline	= get_field("ib_tagline");
-        $ib_main_title	= get_field("ib_main_title");
-        $ib_content	= get_field("ib_content");
-        $ib_desktop_image	= get_field("ib_desktop_image");
-        $ib_desktop_image_url=validateImage(1920,830,$ib_desktop_image);
-        $ib_mobile_image	= get_field("ib_mobile_image");
-        $ib_mobile_image_url=validateImage(375,699,$ib_mobile_image);
+        $ib_tagline    = get_field("ib_tagline");
+        $ib_main_title = get_field("ib_main_title");
+        $ib_content    = get_field("ib_content");
+        $ib_desktop_image = get_field("ib_desktop_image");
+        $ib_desktop_image_url = validateImage(1920,830,$ib_desktop_image);
+        $ib_mobile_image = get_field("ib_mobile_image");
+        $ib_mobile_image_url = validateImage(375,699,$ib_mobile_image);
         ?>
         <?php if($ib_desktop_image || $ib_mobile_image): ?>
     <section class="inner-bannner-tc">
@@ -32,7 +34,7 @@
                         <h1 class="h-80 sub fade-up"><?php echo $ib_tagline; ?></h1>
                     <?php endif;?>
                     <?php if($ib_main_title):?>
-                        <h2 class="h-120 fw-5 main fade-up">News Categories</h2>
+                        <h2 class="h-120 fw-5 main fade-up"><?php echo esc_html($category_name); ?></h2>
                     <?php endif;?>
                     <?php if($ib_content):?>
                         <p class="banner-content h-18 fade-up"><?php echo $ib_content; ?></p>
@@ -121,19 +123,24 @@
         </div>
         <div class="filter-div">
             <div class="div-inner">
-                <!-- <div class="search-articles fade-up">
-                    <input type="text" id="search" placeholder="Search Article">
-                </div> -->
                 <div class="filter-articles-div">
                     <div class="latest-articles filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Recent Articles</h3>
                         <ul>
                             <?php
+                            $category_id = $queried_object->term_id; // Get the current category ID
                             $latest_articles = new WP_Query(array(
                                 'post_type' => 'news_events',
                                 'posts_per_page' => 5,
                                 'orderby' => 'date',
-                                'order' => 'DESC'
+                                'order' => 'DESC',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'news_categories',
+                                        'field'    => 'term_id',
+                                        'terms'    => $category_id, // Filter by current category
+                                    ),
+                                ),
                             ));
                             if ($latest_articles->have_posts()) :
                                 while ($latest_articles->have_posts()) : $latest_articles->the_post(); ?>
@@ -161,7 +168,7 @@
                             ));
                             if (!empty($categories) && !is_wp_error($categories)) :
                                 foreach ($categories as $category) : 
-                                     $term_link = get_term_link($category);?>
+                                     $term_link = get_term_link($category); ?>
                                     <li>
                                         <a href="<?php echo esc_url($term_link); ?>" class="category-filter" data-category="<?php echo esc_attr($category->term_id); ?>">
                                             <?php echo esc_html($category->name); ?>
@@ -185,25 +192,11 @@
                                 'show_post_count' => false,
                                 'echo'            => 1,
                                 'order'           => 'DESC',
-                                'post_type'         => 'news_events'
+                                'post_type'       => 'news_events'
                             );
 
                             wp_get_archives($args);
                          ?>
-                         <!-- </?php
-                              $args = array(
-                                'type'            => 'monthly',
-                                'limit'           => '',
-                                'format'          => 'html', 
-                                'before'          => '',
-                                'after'           => '',
-                                'show_post_count' => false,
-                                'echo'            => 1,
-                                'order'           => 'DESC',
-                                'post_type'         => 'news_events'
-                            );
-                            wp_get_archives( $args );
-                         ?> -->
                     </div>
                 </div>
             </div>
@@ -212,5 +205,5 @@
 </section>
 
 <?php
-	get_footer();
+get_footer();
 ?>

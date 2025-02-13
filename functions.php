@@ -900,39 +900,63 @@ add_action('wp_enqueue_scripts', 'enqueue_ajax_scripts');
 
 
 function filter_events_by_search() {
+    // Get the filter inputs from the request
     $search_term = isset($_POST['search']) ? sanitize_text_field($_POST['search']) : '';
+    $category_slug = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : ''; // Filter by category
+    $year = isset($_POST['year']) ? intval($_POST['year']) : ''; // Filter by year
     $paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
 
+    // Prepare the query arguments
     $args = array(
         'post_type' => 'news_events',
-        'posts_per_page' => 2,
+        'posts_per_page' => 4,
         'paged' => $paged,
         'orderby' => 'date',
         'order' => 'DESC',
     );
 
+    // If a search term is provided, add it to the query
     if ($search_term) {
         $args['s'] = $search_term; 
     }
 
+    // Handle category filtering
+    if ($category_slug) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'news_categories',
+				'field'    => 'slug',
+				'terms'    => $category_slug, // Filter by category term
+                'operator' => 'IN',
+            ),
+        );
+    }
+
+    // Handle filtering by year if specified
+    if ($year) {
+        $args['year'] = $year; // Filter by year
+    }
+
+    // Run the query
     $events = new WP_Query($args);
 
+    // Start output buffering for the events
     ob_start();
     if ($events->have_posts()) :
         while ($events->have_posts()) : $events->the_post();
             $event_single_url = get_the_permalink();
             $ne_publish_date = get_the_date('j');
-			$ne_publish_month = get_the_date('M, Y');
+            $ne_publish_month = get_the_date('M, Y');
             $event_title = get_the_title();
             $ne_read_time = get_field("ne_read_time");
             $event_single_image = get_the_post_thumbnail_url(get_the_ID(), 'large');
             ?>
-            <div class="events-section fade-up" id="post-<?php the_ID(); ?>">
+            <div class="events-section" id="post-<?php the_ID(); ?>">
                 <div class="event-inner">
                     <a href="<?php echo esc_url($event_single_url); ?>">
                         <?php if ($event_single_image): ?>
                             <div class="featured-image">
-                                <img src="<?php echo $event_single_image; ?>" alt="">
+                                <img src="<?php echo $event_single_image; ?>" alt="Event image">
                             </div>
                         <?php endif; ?>
                     </a>
@@ -945,7 +969,7 @@ function filter_events_by_search() {
                         <a href="<?php echo esc_url($event_single_url); ?>">
                             <h2 class="event-title h-30"><?php echo esc_html($event_title); ?></h2>
                         </a>
-                        <a href="<?php echo $event_single_url; ?>" class="common-btn-trans btn-news">
+                        <a href="<?php echo esc_url($event_single_url); ?>" class="common-btn-trans btn-news">
                             <div class="btn-wrap">
                                 <div class="ar-icon">
                                     <svg class="left">
@@ -965,22 +989,46 @@ function filter_events_by_search() {
     endif;
     $events_html = ob_get_clean();
 
-    // Pagination
+    // Start output buffering for pagination
     ob_start();
-    echo paginate_links(array(
-        'total' => $events->max_num_pages,
-        'current' => $paged,
-        'format' => '?paged=%#%',
-        'show_all' => false,
-        'type' => 'plain',
-        'end_size' => 2,
-        'mid_size' => 1,
-        'prev_next' => false,
-        'before_page_number' => '<span class="page-link" data-page="',
-        'after_page_number' => '</span>',
-    ));
+    echo '<div class="pagination-wrapper">';
+
+    if ($events->found_posts > $args['posts_per_page'] && $events->max_num_pages > 1) :
+        // Previous page button
+        if ($paged > 1) :
+            echo '<a href="?paged=' . ($paged - 1) . '" class="pagination-link prev-page">';
+            echo '<svg class="left-arrow"><use xlink:href="#left-tb"></use></svg>';
+            echo '</a>';
+        else :
+            echo '<a href="#" class="pagination-link prev-page disabled">';
+            echo '<svg class="left-arrow"><use xlink:href="#left-tb"></use></svg>';
+            echo '</a>';
+        endif;
+
+        // Pagination numbers
+        echo '<div class="page-numbers">';
+        for ($i = 1; $i <= $events->max_num_pages; $i++) {
+            echo '<a href="?paged=' . $i . '" class="page-number ' . ($paged == $i ? 'current-page' : '') . '">' . $i . '</a>';
+        }
+        echo '</div>';
+
+        // Next page button
+        if ($paged < $events->max_num_pages) :
+            echo '<a href="?paged=' . ($paged + 1) . '" class="pagination-link next-page">';
+            echo '<svg class="right-arrow"><use xlink:href="#right-tb"></use></svg>';
+            echo '</a>';
+        else :
+            echo '<a href="#" class="pagination-link next-page disabled">';
+            echo '<svg class="right-arrow"><use xlink:href="#right-tb"></use></svg>';
+            echo '</a>';
+        endif;
+    endif;
+
+    echo '</div>';
+
     $pagination_html = ob_get_clean();
 
+    // Send the response back to the AJAX request
     wp_send_json(array(
         'events' => $events_html,
         'pagination' => $pagination_html,
@@ -988,17 +1036,30 @@ function filter_events_by_search() {
 
     wp_die();
 }
+
+
 add_action('wp_ajax_filter_events', 'filter_events_by_search');
 add_action('wp_ajax_nopriv_filter_events', 'filter_events_by_search');
 
-
 function enqueue_custom_script() {
-    wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom.js', array(), null, true);
+    // Enqueue your custom.js (or ajax-filter.js)
+    wp_enqueue_script('ajax-filter', get_template_directory_uri() . '/js/custom.js', array('jquery'), null, true);
 
-    // Pass WordPress title to JavaScript
-    wp_localize_script('custom-script', 'wpData', array(
-        'pageTitle' => get_the_title(),
+    // Pass AJAX URL to JavaScript
+    wp_localize_script('ajax-filter', 'ajax_params', array(
+        'ajax_url' => admin_url('admin-ajax.php')  // Correct AJAX URL for WordPress
     ));
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_script');
+
+
+// function enqueue_custom_script() {
+//     wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom.js', array(), null, true);
+
+//     // Pass WordPress title to JavaScript
+//     wp_localize_script('custom-script', 'wpData', array(
+//         'pageTitle' => get_the_title(),
+//     ));
+// }
+// add_action('wp_enqueue_scripts', 'enqueue_custom_script');
 

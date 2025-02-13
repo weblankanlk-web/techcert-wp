@@ -87,13 +87,14 @@ footer{
                     ul#footer_sub{
                         margin: 0;
                         display: block;
-                        column-count: 2;
+                        column-count: 1;
                         li{
                             position: relative;
+                            margin-bottom: 12px;
                             &::after{
                                 content: "";
                                 position: absolute;
-                                width: 100%;
+                                width: 50%;
                                 height: 1px;
                                 bottom: 0;
                                 left: 0;
@@ -690,8 +691,8 @@ a.scrollup {
     max-height: 0;
     overflow: visible;
     transition: opacity .5s,visibility .5s;
-    position: sticky;
-    position: -webkit-sticky;
+    position: relative;
+    position: --webkit-relative;
     bottom: var(--margin);
     left: calc(100% - var(--margin));
     z-index: 10;

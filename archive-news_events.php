@@ -39,7 +39,7 @@
                         <h1 class="h-80 sub fade-up"><?php echo $ib_tagline; ?></h1>
                     <?php endif;?>
                     <?php if($ib_main_title):?>
-                        <h2 class="h-120 fw-5 main fade-up">News Archive</h2>
+                        <h2 class="h-120 fw-5 main fade-up"><?php echo esc_html($year); ?></h2>
                     <?php endif;?>
                     <?php if($ib_content):?>
                         <p class="banner-content h-18 fade-up"><?php echo $ib_content; ?></p>
@@ -140,7 +140,8 @@
                                 'post_type' => 'news_events',
                                 'posts_per_page' => 5,
                                 'orderby' => 'date',
-                                'order' => 'DESC'
+                                'order' => 'DESC',
+                                'year' => $year, 
                             ));
                             if ($latest_articles->have_posts()) :
                                 while ($latest_articles->have_posts()) : $latest_articles->the_post(); ?>
@@ -157,7 +158,7 @@
                     </div>
                     <div class="categories filter-item fade-up">
                         <h3 class="filter-title p-18 fw-7">Categories</h3>
-                        <ul>
+                        <ul id="category">
                             <?php
                             $featured_category = get_term_by('slug', 'featured', 'news_categories');
                             $excluded_id = $featured_category ? $featured_category->term_id : null;

@@ -14,18 +14,21 @@
             z-index: 1;
         }
         .video-div{
+            position: relative;
+            z-index: 1;
+            overflow-y: hidden;
             video#mapVideo{
-                width: 1199px;
+                width: 457px;
                 height: 480px;
                 object-fit: cover;
-                object-position: center;
+                object-position: right;
             }
             svg.map-h{
-                width: 1199px;
+                width: 790px;
                 height: 500px;
                 position: absolute;
                 top: 0;
-                left:0;
+                left:-349px;
                 z-index: 2;
             }
         }
@@ -61,12 +64,14 @@
         .full-wrapper{
             .video-div{
                 video#mapVideo{
-                    width: 1199px;
+                    // width: 1199px;
+                    width: 100%;
                     height: 480px;
                     object-fit: cover;
                 }
                 svg.map-h{
-                    width: 1199px;
+                    // width: 1199px;
+                    width: 100%;
                     height: 500px;
                     position: absolute;
                     top: 0;

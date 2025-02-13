@@ -56,6 +56,15 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-block-end: 0;
 }
 
+*::selection {
+  color: white;
+  background: transparent;
+}
+
+span::selection {
+  color: #3752A3;
+}
+
 .btn {
   width: fit-content;
 }
@@ -825,6 +834,7 @@ html {
 }
 .home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner .main-wrapper .detail-item .main {
   margin-bottom: 8px;
+  padding-top: 2px;
 }
 .home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner .main-wrapper .detail-item .sub {
   color: #ffffff;
@@ -873,6 +883,7 @@ html {
   .home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner .main-wrapper .detail-item .main {
     width: 44.0625vw;
     margin-bottom: 0;
+    padding-top: 0.1041666667vw;
   }
   .home-hero-section .full-wrapper .slider-wrapper .hero-slider .hero-item .hero-inner .main-wrapper .btn-hero {
     margin-bottom: 1.8229166667vw;
@@ -1353,13 +1364,13 @@ html {
   .about-other-services .home-other-services .full-wrapper .bottom-section .slider-wrapper .arrow-div .arrow-left-o {
     position: absolute;
     left: 0.8645833333vw;
-    top: 14.4166666667vw;
+    top: 16.4166666667vw;
     z-index: 4;
   }
   .about-other-services .home-other-services .full-wrapper .bottom-section .slider-wrapper .arrow-div .arrow-right-o {
     position: absolute;
     right: 0.8645833333vw;
-    top: 14.4166666667vw;
+    top: 16.4166666667vw;
     z-index: 4;
   }
 }
@@ -1671,18 +1682,10 @@ html {
   align-items: center;
   padding: 10px 25px;
 }
-.home-partners .full-wrapper .bottom-section .slider-wrapper .brands-slider .brand-div .brand-inner:hover img.brand-img {
-  filter: none;
-}
 .home-partners .full-wrapper .bottom-section .slider-wrapper .brands-slider .brand-div .brand-inner img.brand-img {
   width: 244.355px;
   height: 100px;
   object-fit: contain;
-  filter: grayscale(100%) brightness(1000%);
-  transition: filter 0.5s ease;
-}
-.home-partners .full-wrapper .bottom-section .slider-wrapper .brands-slider .brand-div .brand-inner img.brand-img:hover {
-  filter: none;
 }
 .home-partners .full-wrapper .bottom-section .slider-wrapper .brands-slider .brand-div .brand-inner .brand-para {
   text-align: center;
@@ -1729,7 +1732,6 @@ html {
     justify-content: center;
     gap: unset;
     margin-top: unset;
-    display: none;
   }
   .home-partners .full-wrapper .bottom-section .slider-wrapper .arrow-div .arrow-left-b {
     position: absolute;
@@ -1762,20 +1764,20 @@ html {
 .home-map .full-wrapper .video-div {
   position: relative;
   z-index: 1;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .home-map .full-wrapper .video-div video#mapVideo {
-  width: 790px;
+  width: 457px;
   height: 480px;
   object-fit: cover;
-  object-position: center;
+  object-position: right;
 }
 .home-map .full-wrapper .video-div svg.map-h {
   width: 790px;
   height: 500px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -349px;
   z-index: 2;
 }
 .home-map .full-wrapper .details-section {
@@ -1809,12 +1811,12 @@ html {
 }
 @media only screen and (min-width: 768px) {
   .home-map .full-wrapper .video-div video#mapVideo {
-    width: 1199px;
+    width: 100%;
     height: 480px;
     object-fit: cover;
   }
   .home-map .full-wrapper .video-div svg.map-h {
-    width: 1199px;
+    width: 100%;
     height: 500px;
     position: absolute;
     top: 0;

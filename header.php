@@ -17,6 +17,11 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+	<title><?php bloginfo('name'); echo ' | '; is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
 	<!-- Google Font Link Here -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

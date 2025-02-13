@@ -28,7 +28,7 @@
                 ?>
                 <div class="listing-item">
                     <div class="team-item" data-name="<?php echo $name ?>" data-position="<?php echo $ot_position ?>" data-description="<?php echo $ot_description?>" data-img="<?php echo $profile_imge_url;?>">                        
-                        <img src="<?php echo $profile_imge_url; ?>" class="team-img">
+                        <img src="<?php echo $profile_imge_url; ?>" class="team-img" alt="">
                         <div class="team-content">
                             <?php if($name){?>
                                 <h2 class="team-name">
@@ -53,7 +53,7 @@
 
 <div class="team-modal" id="main-team-modal">
     <div class="modal-content-box">
-        <img src="" class="team-modal-img">
+        <img src="" class="team-modal-img" alt="">
         <div class="team-modal-content">
             <div class="modal-close">
                 <svg class="closeicon">
@@ -61,7 +61,7 @@
                 </svg>
             </div> 
 
-            <img src="" class="modal-img">
+            <img src="" class="modal-img" alt="">
             <div class="modal-content">
 
             </div> 

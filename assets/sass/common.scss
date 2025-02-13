@@ -22,6 +22,15 @@ p,h1,h2,h3,h4,h5,h6{
     margin-block-end: 0;
 }
 
+*::selection {
+    color: white;
+    background: transparent;
+}
+
+span::selection {
+    color: $primary-color;
+}
+
 .btn{
     width: fit-content;
     a{

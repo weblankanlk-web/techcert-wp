@@ -8,12 +8,10 @@
  * @subpackage Twenty_Twenty_One
  * @since Twenty Twenty-One 1.0
  */
-
-get_header();
-?>
+get_header(); ?>
 
 	<header class="page-header alignwide">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'twentytwentyone' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e('Nothing here', 'twentytwentyone'); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="error-404 not-found default-max-width">

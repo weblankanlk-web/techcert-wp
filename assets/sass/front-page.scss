@@ -45,6 +45,7 @@
                             .detail-item{
                                 .main{
                                     margin-bottom: 8px;
+                                    padding-top: 2px;
                                 }
                                 .sub{
                                     color: $white;
@@ -111,6 +112,7 @@
                                     .main{
                                         width: get-vw(846px);
                                         margin-bottom: 0;
+                                        padding-top: get-vw(2px);
                                     }
                                 }
                                 .btn-hero{
@@ -641,13 +643,13 @@
                             .arrow-left-o{
                                 position: absolute;
                                 left: get-vw(16.6px);
-                                top: get-vw(276.8px);
+                                top: get-vw(315.2px);
                                 z-index: 4;
                             }
                             .arrow-right-o{
                                 position: absolute;
                                 right: get-vw(16.6px);
-                                top: get-vw(276.8px);
+                                top: get-vw(315.2px);
                                 z-index: 4;
                             }
                         }
@@ -1022,20 +1024,10 @@
                             flex-direction: column;
                             align-items: center;
                             padding: 10px 25px;
-                            &:hover{
-                                img.brand-img{
-                                    filter: none;
-                                }
-                            }
                             img.brand-img{
                                 width: 244.355px;
                                 height: 100px;
                                 object-fit: contain;
-                                filter: grayscale(100%) brightness(1000%);
-                                transition: filter 0.5s ease;
-                                &:hover{
-                                    filter: none;
-                                }
                             }
                             .brand-para{
                                 text-align: center;
@@ -1091,7 +1083,7 @@
                         justify-content: center;
                         gap: unset;
                         margin-top:unset;
-                        display: none;
+                        // display: none;
                         .arrow-left-b{
                             position: absolute;
                             left: get-vw(55px);
@@ -1129,19 +1121,19 @@
         .video-div{
             position: relative;
             z-index: 1;
-            overflow-y: scroll;
+            overflow-y: hidden;
             video#mapVideo{
-                width: 790px;
+                width: 457px;
                 height: 480px;
                 object-fit: cover;
-                object-position: center;
+                object-position: right;
             }
             svg.map-h{
                 width: 790px;
                 height: 500px;
                 position: absolute;
                 top: 0;
-                left:0;
+                left:-349px;
                 z-index: 2;
             }
         }
@@ -1180,12 +1172,14 @@
         .full-wrapper{
             .video-div{
                 video#mapVideo{
-                    width: 1199px;
+                    // width: 1199px;
+                    width: 100%;
                     height: 480px;
                     object-fit: cover;
                 }
                 svg.map-h{
-                    width: 1199px;
+                    // width: 1199px;
+                    width: 100%;
                     height: 500px;
                     position: absolute;
                     top: 0;

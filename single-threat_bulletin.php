@@ -34,33 +34,27 @@
             <div class="share-div fade-up">
                 <p class="p-18">SHARE THIS ARTICLE</p>
                 <ul class="social-media-list">
-                    <?php if($sm_facebook){?>
                         <li>
-                            <a href="<?php echo $sm_facebook; ?>" class="social-media-link">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" class="social-media-link" target="_blank" rel="noopener noreferrer">
                                 <svg class="fb-t">
                                     <use xlink:href="#fb-t"></use>
                                 </svg>
                             </a>
                         </li>
-                    <?php } ?>
-                    <?php if($sm_linkedin){?>
                         <li>
-                            <a href="<?php echo $sm_linkedin; ?>" class="social-media-link">
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode(get_permalink()); ?>" class="social-media-link" target="_blank" rel="noopener noreferrer">
                                 <svg class="ln-t">
                                     <use xlink:href="#ln-t"></use>
                                 </svg>
                             </a>
                         </li>
-                    <?php } ?>
-                    <?php if($sm_instagram){?>
                         <li>
-                            <a href="<?php echo $sm_instagram; ?>" class="social-media-link">
+                            <a href="https://www.instagram.com/" class="social-media-link" target="_blank">
                                 <svg class="inst-t">
                                     <use xlink:href="#inst-t"></use>
                                 </svg>
                             </a>
                         </li>
-                    <?php } ?>
                     <!-- </?php if($sm_whatsapp){?>
                         <li>
                             <a href="</?php echo $sm_whatsapp; ?>" class="social-media-link">

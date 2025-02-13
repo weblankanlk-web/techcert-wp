@@ -97,6 +97,15 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-block-end: 0;
 }
 
+*::selection {
+  color: white;
+  background: transparent;
+}
+
+span::selection {
+  color: #3752A3;
+}
+
 .btn {
   width: fit-content;
 }

@@ -249,55 +249,77 @@ $('.arrow-num-bulletins .right-arrow-bulletins').click(function () {
   $bulletin_slider.slick('slickNext');
 });
 
-$brands_slider = $('.brands-slider').slick({
-  dots: false,
-  arrows: false,
-  infinite: true,
-  speed: 300,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  draggable: true,
-  touchMove: true,
-  swipeToSlide: true,
-  swipe: 200,
-  pauseOnHover: true,
-  rows:1,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [ 
-    {
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 3,
-        rows:1
+$(document).ready(function () {
+  var $brandsSlider = $('.brands-slider');
+
+  $brandsSlider.on('init', function (event, slick) {
+    toggleArrowVisibility(slick);
+  }).slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    draggable: true,
+    touchMove: true,
+    swipeToSlide: true,
+    swipe: 200,
+    pauseOnHover: true,
+    rows: 1,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          rows: 1
+        }
+      },
+      {
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 3,
+          rows: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerModePadding: "100px",
+          rows: 1
+        }
       }
-    },
-    {
-      breakpoint:993,
-      settings: {
-        slidesToShow: 3,
-        rows:1
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        centerMode:true,
-        centerModePadding:"100px",
-        rows:1
-      }
-    }
-  ]
+    ]
   });
-$('.arrow-right-b').on('click', function() {
-$brands_slider.slick('slickNext');
+
+  function toggleArrowVisibility(slick) {
+    var totalSlides = slick.slideCount;
+    var slidesToShow = slick.options.slidesToShow;
+
+    if (totalSlides <= slidesToShow) {
+      $('.arrow-right-b, .arrow-left-b').hide();
+    } else {
+      $('.arrow-right-b, .arrow-left-b').show();
+    }
+  }
+
+  $brandsSlider.on('breakpoint', function (event, slick) {
+    toggleArrowVisibility(slick);
+  });
+
+  $('.arrow-right-b').on('click', function () {
+    $brandsSlider.slick('slickNext');
+  });
+
+  $('.arrow-left-b').on('click', function () {
+    $brandsSlider.slick('slickPrev');
+  });
 });
-$('.arrow-left-b').on('click', function() {
-$brands_slider.slick('slickPrev');
-});
+
 
 function initializeSlider() {
   if ($(window).width() < 768) {
@@ -339,54 +361,73 @@ function initializeSlider() {
   }
 }
 
-// Initializing the slider
 initializeSlider();
 
-// Re-initializing on window resize
 $(window).resize(function() {
   initializeSlider();
 });
 
-$awards_slider = $('.awards-slider').slick({
-  dots: false,
-  arrows: false,
-  infinite: true,
-  speed: 300,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  draggable: true,
-  touchMove: true,
-  swipeToSlide: true,
-  swipe: 200,
-  pauseOnHover: true,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  responsive: [ 
-    {
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 3,
-        rows:1
+$(document).ready(function () {
+  var $awardsSlider = $('.awards-slider');
+
+  $awardsSlider.on('init', function (event, slick) {
+    toggleArrowVisibility(slick);
+  }).slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    draggable: true,
+    touchMove: true,
+    swipeToSlide: true,
+    swipe: 200,
+    pauseOnHover: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          rows: 1
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerModePadding: "100px",
+          rows: 1
+        }
       }
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 1,
-        centerMode:true,
-        centerModePadding:"100px",
-        rows:1
-      }
-    }
-  ]
+    ]
   });
-$('.arrow-right-a').on('click', function() {
-$awards_slider.slick('slickNext');
-});
-$('.arrow-left-a').on('click', function() {
-$awards_slider.slick('slickPrev');
+
+  function toggleArrowVisibility(slick) {
+    var totalSlides = slick.slideCount;
+    var slidesToShow = slick.options.slidesToShow;
+
+    if (totalSlides <= slidesToShow) {
+      $('.arrow-right-a, .arrow-left-a').hide();
+    } else {
+      $('.arrow-right-a, .arrow-left-a').show();
+    }
+  }
+
+  $awardsSlider.on('breakpoint', function (event, slick) {
+    toggleArrowVisibility(slick);
+  });
+
+  $('.arrow-right-a').on('click', function () {
+    $awardsSlider.slick('slickNext');
+  });
+
+  $('.arrow-left-a').on('click', function () {
+    $awardsSlider.slick('slickPrev');
+  });
 });
 
 $other_services_slider = $('.other-services-slider').slick({
@@ -644,7 +685,7 @@ $('.arrow-num-bm .left-arrow-bm').click(function () {
   $threat_more_slider.slick('slickPrev');
 });
 
-$('.arrow-num-bm .left-arrow-bm').click(function () {
+$('.arrow-num-bm .right-arrow-bm').click(function () {
   $threat_more_slider.slick('slickNext');
 });
 
@@ -717,13 +758,18 @@ jQuery(document).ready(function ($) {
    * @param {number} page - The page number for pagination.
    */
   function loadEvents(searchTerm = '', page = 1) {
+      var categorySlug = getCategoryFromUrl();
+      var year = getYearFromUrl();
+
       $.ajax({
-          url: ajax_params.ajax_url, 
+          url: ajax_params.ajax_url, // Make sure this is localized in your theme or plugin
           type: 'POST',
           data: {
-              action: 'filter_events',
+              action: 'filter_events', // The PHP function handling this action
               search: searchTerm,
-              paged: page,
+              category: categorySlug,
+              year: year,
+              paged: page // Pass page number for pagination
           },
           beforeSend: function () {
               $('#event-content').html('<p>Loading events...</p>');
@@ -734,7 +780,7 @@ jQuery(document).ready(function ($) {
                   $('#pagination').html(response.pagination);
               } else {
                   $('#event-content').html('<p>No events found.</p>');
-                  $('#pagination').html(''); 
+                  $('#pagination').html(''); // Clear pagination if no events are found
               }
           },
           error: function () {
@@ -744,22 +790,42 @@ jQuery(document).ready(function ($) {
       });
   }
 
+  // Search input filter
   $('#search').on('keyup', function () {
       const searchTerm = $(this).val(); 
-      loadEvents(searchTerm, 1); 
+      loadEvents(searchTerm, 1); // Always reset to page 1 on search
   });
 
+  // Pagination click event
   $('#pagination').on('click', '.page-link', function (e) {
       e.preventDefault(); 
       const page = $(this).data('page'); 
       const searchTerm = $('#search').val();
       if (page) {
-          loadEvents(searchTerm, page); 
+          loadEvents(searchTerm, page); // Trigger load events with updated page
       }
   });
 
-  loadEvents();
+  // Initial load
+  loadEvents(); // First load on page load
+
+  // Helper functions to get category/year from the URL
+  function getCategoryFromUrl() {
+    const match = window.location.pathname.match(/news_categories\/([^/]+)/);
+    if (match) {
+        var categorySlug = match[1]; // Correctly defining the variable here
+        console.log('Category Slug from URL:', categorySlug); // Debugging the category slug
+        return categorySlug;
+    }
+    return ''; // Return an empty string if no match is found
+}
+
+  function getYearFromUrl() {
+      const match = window.location.pathname.match(/\/(\d{4})\//); // Matches year like /2024/
+      return match ? match[1] : '';
+  }
 });
+
 
 var $news_more_slider = $('.news-more-slider');
 
@@ -925,3 +991,4 @@ $(".award-modal .modal-close").click(function(){
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
   }
 
+  

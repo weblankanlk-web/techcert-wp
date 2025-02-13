@@ -125,6 +125,7 @@
 			<!-- footer Details -->
 		</div>
 	</footer>
+	
 	<div class="bottom-footer">
 		<div class="bottom-footer-inner">
 			<p class="p-16 fw-6">Copyright @ <?php echo date("Y"); ?> - <span>TECHCERT</span> - All Rights Reserved.</p>

@@ -188,7 +188,7 @@
 .about-white{
     .full-wrapper{
         position: relative;
-        padding-bottom: 60px;
+        padding-bottom: 0;
         background: $black-bg;
         &::before{
             width: 100%;
@@ -316,7 +316,7 @@
     }
     @media only screen and (min-width: 1200px){
         .full-wrapper{
-            padding-bottom: get-vw(140px);
+            padding-bottom: get-vw(0px);
             .image-container{
                 img{
                     width: get-vw(1921px);
@@ -373,6 +373,7 @@
     .full-wrapper{
         background: $black-bg;
         padding-bottom: 60px;
+        padding-top: 60px;
         .top-section{
             padding: 0 35px 10px;
             .main{
@@ -451,6 +452,7 @@
         .full-wrapper{
             position: relative;
             padding-bottom: get-vw(140px);
+            padding-top: get-vw(140px);
             .top-section{
                 padding: 0 get-vw(140px)get-vw(40px);
                 .main{
@@ -480,7 +482,7 @@
                                 .award-para{
                                     // margin-top:get-vw(10px);
                                     width: get-vw(222.344px);
-                                    min-height:get-vw( 44px);
+                                    min-height:get-vw( 60px);
                                 }
                                 .btn-as{
                                     margin-top: get-vw(30px);
@@ -494,17 +496,16 @@
                         justify-content: center;
                         gap: unset;
                         margin-top:unset;
-                        display: none;
                         .arrow-left-a{
                             position: absolute;
                             left: get-vw(55px);
-                            top: get-vw(276.8px);
+                            top: get-vw(468.8px);
                             z-index: 4;
                         }
                         .arrow-right-a{
                             position: absolute;
                             right: get-vw(55px);
-                            top: get-vw(276.8px);
+                            top: get-vw(468.8px);
                             z-index: 4;
                         }
                     }

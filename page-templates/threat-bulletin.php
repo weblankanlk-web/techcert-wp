@@ -58,12 +58,14 @@
                 </div>
             
                 <div class="pagination-wrapper">
-                    <a href="<?php echo ($paged > 1) ? '?paged=' . ($paged - 1) : '#'; ?>" 
-                    class="pagination-link prev-page <?php echo ($paged == 1) ? 'disabled' : ''; ?>">
-                        <svg class="left-arrow">
-                            <use xlink:href="#left-tb"></use>
-                        </svg>
-                    </a>
+                    <?php if ($loop->found_posts > $args['posts_per_page']): ?>
+                        <a href="<?php echo ($paged > 1) ? '?paged=' . ($paged - 1) : '#'; ?>" 
+                        class="pagination-link prev-page <?php echo ($paged == 1) ? 'disabled' : ''; ?>">
+                            <svg class="left-arrow">
+                                <use xlink:href="#left-tb"></use>
+                            </svg>
+                        </a>
+                    <?php endif; ?>
 
                     <div class="page-numbers">
                         <?php
@@ -74,13 +76,17 @@
                         }
                         ?>
                     </div>
-                    <a href="<?php echo ($paged < $total_pages) ? '?paged=' . ($paged + 1) : '#'; ?>" 
-                    class="pagination-link next-page <?php echo ($paged == $total_pages) ? 'disabled' : ''; ?>">
-                        <svg class="right-arrow">
-                            <use xlink:href="#right-tb"></use>
-                        </svg>
-                    </a>
+
+                    <?php if ($loop->found_posts > $args['posts_per_page']): ?>
+                        <a href="<?php echo ($paged < $total_pages) ? '?paged=' . ($paged + 1) : '#'; ?>" 
+                        class="pagination-link next-page <?php echo ($paged == $total_pages) ? 'disabled' : ''; ?>">
+                            <svg class="right-arrow">
+                                <use xlink:href="#right-tb"></use>
+                            </svg>
+                        </a>
+                    <?php endif; ?>
                 </div>
+
             </div>
             <div class="filter-div">
                 <div class="div-inner">

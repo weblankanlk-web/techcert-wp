@@ -88,7 +88,7 @@
                         text-decoration: none;
                         &.current-page{
                             background: $primary-color;
-                            padding: 10px 15px;
+                            padding: 6px 15px;
                             border-radius: 100px;
                             margin-right: 10px;
                         }
@@ -125,6 +125,7 @@
                                 li{
                                     list-style: none;
                                     padding-bottom: 10px;
+                                    position: relative;
                                     a{
                                         text-decoration: none;
                                         color: white;
@@ -133,6 +134,18 @@
                                         font-weight: 400;
                                         &:hover{
                                             text-decoration: underline;
+                                            &::after{
+                                                background: url(../images/news.png);
+                                                background-repeat: no-repeat;
+                                                background-size: contain;
+                                                position: absolute;
+                                                right: 0;
+                                                bottom: 20px;
+                                                content: "";
+                                                width: 20px;
+                                                height: 20px;
+                                                z-index: 3;
+                                            }
                                         }
                                     }
                                 }
@@ -140,12 +153,28 @@
                             li{
                                 list-style: none;
                                 padding-bottom: 10px;
+                                position: relative;
                                 a{
                                     text-decoration: none;
                                     color: white;
                                     font-size: 14px;
                                     line-height: 14px;
                                     font-weight: 400;
+                                    &:hover{
+                                        text-decoration: underline;
+                                        &::after{
+                                            background: url(../images/news.png);
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            position: absolute;
+                                            right: 0;
+                                            bottom: 20px;
+                                            content: "";
+                                            width: 20px;
+                                            height: 20px;
+                                            z-index: 3;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -244,7 +273,7 @@
                                 margin-right: 0;
                             }
                             &.current-page{
-                                padding: get-vw(13.92px) get-vw(20px);
+                                padding: get-vw(13.92px) get-vw(23.84px);
                                 border-radius: get-vw(100px);
                                 margin-right:get-vw(35px);
                             }

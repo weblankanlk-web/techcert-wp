@@ -509,7 +509,6 @@
                                     align-items: center;
                                     .title{
                                         color: $white;
-                                        margin-bottom: 30px;
                                         text-align: center;
                                         font-family: $primary-font;
                                         font-size: 40px;
@@ -1302,7 +1301,6 @@
                     .threat-slider{
                         button.threat-item{
                             background: $black-bg-3;
-                            border: 0;
                             padding: 30px;
                             width: 100%;
                             margin: 0 10px;
@@ -1515,7 +1513,7 @@
 
 .home-industries{
     .main-wrapper{
-        background: $black-bg;
+        // background: $black-bg;
         padding-bottom: 100px;
         padding-top: 80px;
         position: relative;

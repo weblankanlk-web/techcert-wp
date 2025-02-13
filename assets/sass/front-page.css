@@ -1245,7 +1245,6 @@ html {
 }
 .about-other-services .home-other-services .full-wrapper .bottom-section .slider-wrapper .other-services-slider .other-service-item .other-service-inner .details-item .title {
   color: #ffffff;
-  margin-bottom: 30px;
   text-align: center;
   font-family: "Forma DJR Micro", sans-serif;
   font-size: 40px;
@@ -1924,7 +1923,6 @@ html {
 }
 .home-threat-bulletins .main-wrapper .main-div .bottom-section .slider-wrapper .threat-slider button.threat-item {
   background: #151F3D;
-  border: 0;
   padding: 30px;
   width: 100%;
   margin: 0 10px;
@@ -2115,7 +2113,6 @@ html {
 }
 
 .home-industries .main-wrapper {
-  background: #010C1A;
   padding-bottom: 100px;
   padding-top: 80px;
   position: relative;

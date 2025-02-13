@@ -2858,7 +2858,6 @@ a.scrollup.hide {
   padding-right: 2px;
 }
 .inner-bannner-tc .full-wrapper .banner-details .inner-wrapper .banner-content {
-  color: #ffffff;
   text-align: center;
   padding-top: 22px;
   font-family: "Poppins", sans-serif;
@@ -4282,7 +4281,6 @@ a.scrollup.hide {
 }
 .services-threat-bulletins .main-wrapper .main-div .bottom-section .slider-wrapper .threat-slider button.threat-item {
   background: #151F3D;
-  border: 0;
   padding: 30px;
   width: 100%;
   margin: 0 10px;
@@ -5376,7 +5374,6 @@ a.scrollup.hide {
 }
 .other-services-landing .main-wrapper .other-services-listing .other-service-item .other-service-inner .details-item .title {
   color: #ffffff;
-  margin-bottom: 30px;
   text-align: center;
   font-family: "Forma DJR Micro", sans-serif;
   font-size: 40px;
@@ -6304,7 +6301,6 @@ a.scrollup.hide {
 }
 @media only screen and (min-width: 1200px) {
   .threat-bulletin-inner .main-wrapper {
-    padding-bottom: 0;
     flex-direction: row;
     padding: 5.2083333333vw 7.2916666667vw;
     justify-content: space-between;
@@ -6460,7 +6456,6 @@ a.scrollup.hide {
 }
 .more-threat-slider .full-wrapper .bottom-section .slider-wrapper .threat-more-slider button.threat-item {
   background: #151F3D;
-  border: 0;
   padding: 30px;
   width: 100%;
   margin: 0 10px;
@@ -7688,7 +7683,6 @@ a.scrollup.hide {
 }
 @media only screen and (min-width: 1200px) {
   .news-updates-inner .main-wrapper {
-    padding-bottom: 0;
     flex-direction: row;
     padding: 5.2083333333vw 7.2916666667vw;
     justify-content: space-between;

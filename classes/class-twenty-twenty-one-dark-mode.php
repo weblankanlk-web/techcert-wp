@@ -360,7 +360,7 @@ class Twenty_Twenty_One_Dark_Mode {
 	 */
 	public function the_script() {
 		echo '<script>';
-		include get_template_directory() . '/assets/js/dark-mode-toggler.js'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude
+		include_once get_template_directory() . '/assets/js/dark-mode-toggler.js'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude
 		echo '</script>';
 	}
 

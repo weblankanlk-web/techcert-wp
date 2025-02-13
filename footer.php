@@ -31,7 +31,7 @@
 			<!-- footer Main -->
 			<div class="footer-main">
 				<div class="image-wrap">
-					<img src="<?php echo $footer_logo_url;?>" class="footer-logo">
+					<img src="<?php echo $footer_logo_url;?>" class="footer-logo" alt="">
 				</div>
 				<div class="footer-menu">
 					<?php wp_nav_menu(
@@ -125,7 +125,7 @@
 			<!-- footer Details -->
 		</div>
 	</footer>
-	
+
 	<div class="bottom-footer">
 		<div class="bottom-footer-inner">
 			<p class="p-16 fw-6">Copyright @ <?php echo date("Y"); ?> - <span>TECHCERT</span> - All Rights Reserved.</p>
@@ -140,7 +140,7 @@
 	  
 <script src="<?php echo get_theme_file_uri() ?>/assets/js/script-library.js"></script>
 <script src="<?php echo get_theme_file_uri() ?>/assets/js/custom.js"></script>
-<?php	include dirname(__FILE__) . '/svg/svg-library.php';?>
+<?php	include_once dirname(__FILE__) . '/svg/svg-library.php';?>
 <?php wp_footer(); ?>
 <script>
 	$(document).ready(function() {

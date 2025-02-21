@@ -31,7 +31,7 @@
 			<!-- footer Main -->
 			<div class="footer-main">
 				<div class="image-wrap">
-					<img src="<?php echo $footer_logo_url;?>" class="footer-logo">
+					<img src="<?php echo $footer_logo_url;?>" class="footer-logo" alt="">
 				</div>
 				<div class="footer-menu">
 					<?php wp_nav_menu(
@@ -91,14 +91,14 @@
 					<ul class="footer-social-media-list">
 						<?php if($sm_facebook){?>
 							<li>
-								<a href="<?php echo $sm_facebook; ?>" class="footer-social-media-link">
+								<a href="<?php echo $sm_facebook; ?>" class="footer-social-media-link" target="_blank" rel="noopener">
 									<h6 class="fw-5 social">Facebook</h6>
 								</a>
 							</li>
 						<?php } ?>
 						<?php if($sm_instagram){?>
 							<li>
-								<a href="<?php echo $sm_instagram; ?>" class="footer-social-media-link">
+								<a href="<?php echo $sm_instagram; ?>" class="footer-social-media-link" target="_blank" rel="noopener">
 									<h6 class="fw-5 social">instagram</h6>
 								</a>
 							</li>
@@ -106,7 +106,7 @@
 
 						<?php if($sm_linkedin){?>
 							<li>
-								<a href="<?php echo $sm_linkedin; ?>" class="footer-social-media-link">
+								<a href="<?php echo $sm_linkedin; ?>" class="footer-social-media-link" target="_blank" rel="noopener">
 									<h6 class="fw-5 social">Linkedin</h6>
 								</a>
 							</li>
@@ -114,7 +114,7 @@
 
 						<?php if($sm_whatsapp){?>
 							<li>
-								<a href="<?php echo $sm_whatsapp; ?>" class="footer-social-media-link">
+								<a href="<?php echo $sm_whatsapp; ?>" class="footer-social-media-link" target="_blank" rel="noopener">
 									<h6 class="fw-5 social">whatsapp</h6>
 								</a>
 							</li>
@@ -140,7 +140,7 @@
 	
 <script src="<?php echo get_theme_file_uri() ?>/assets/js/script-library.js"></script>
 <script src="<?php echo get_theme_file_uri() ?>/assets/js/custom.js"></script>
-<?php	include dirname(__FILE__) . '/svg/svg-library.php';?>
+<?php	include_once dirname(__FILE__) . '/svg/svg-library.php';?>
 <?php wp_footer(); ?>
 <script>
 	$(document).ready(function() {

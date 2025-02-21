@@ -17,6 +17,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title><?php bloginfo('name'); echo ' | '; is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 	<!-- Google Font Link Here -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,7 +118,7 @@
 			<ul class="social-media-list">
 				<?php if($sm_facebook){?>
 					<li>
-						<a href="<?php echo $sm_facebook; ?>" class="social-media-link">
+						<a href="<?php echo $sm_facebook; ?>" class="social-media-link" target="_blank" rel="noopener">
 							<svg class="fb-t">
 								<use xlink:href="#fb-t"></use>
 							</svg>
@@ -126,7 +127,7 @@
 				<?php } ?>
 				<?php if($sm_linkedin){?>
 					<li>
-						<a href="<?php echo $sm_linkedin; ?>" class="social-media-link">
+						<a href="<?php echo $sm_linkedin; ?>" class="social-media-link" target="_blank" rel="noopener">
 							<svg class="ln-t">
 								<use xlink:href="#ln-t"></use>
 							</svg>
@@ -135,7 +136,7 @@
 				<?php } ?>
 				<?php if($sm_instagram){?>
 					<li>
-						<a href="<?php echo $sm_instagram; ?>" class="social-media-link">
+						<a href="<?php echo $sm_instagram; ?>" class="social-media-link" target="_blank" rel="noopener">
 							<svg class="inst-t">
 								<use xlink:href="#inst-t"></use>
 							</svg>

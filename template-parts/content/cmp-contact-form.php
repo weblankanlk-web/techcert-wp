@@ -16,7 +16,7 @@
                         ?>
                             <div class="contact-row">
                                 <div class="contact-icon">
-                                    <img src="<?php echo $cw_icon_url; ?>">
+                                    <img src="<?php echo $cw_icon_url; ?>" alt="">
                                 </div>
                                 <div class="contact-content">
                                     <div class="label">

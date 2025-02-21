@@ -2210,7 +2210,7 @@ input[type=reset]:disabled,
 }
 
 .wp-block-group {
-	display: block;
+	/* display: block; */
 	clear: both;
 	display: flow-root;
 }

@@ -54,7 +54,7 @@
                 <ul class="social-media-list">
                     <?php if($sm_facebook){?>
                         <li>
-                            <a href="<?php echo $sm_facebook; ?>" class="social-media-link">
+                            <a href="<?php echo $sm_facebook; ?>" class="social-media-link" target="_blank" rel="noopener">
                                 <svg class="fb-t">
                                     <use xlink:href="#fb-t"></use>
                                 </svg>
@@ -63,7 +63,7 @@
                     <?php } ?>
                     <?php if($sm_linkedin){?>
                         <li>
-                            <a href="<?php echo $sm_linkedin; ?>" class="social-media-link">
+                            <a href="<?php echo $sm_linkedin; ?>" class="social-media-link" target="_blank" rel="noopener">
                                 <svg class="ln-t">
                                     <use xlink:href="#ln-t"></use>
                                 </svg>
@@ -72,7 +72,7 @@
                     <?php } ?>
                     <?php if($sm_instagram){?>
                         <li>
-                            <a href="<?php echo $sm_instagram; ?>" class="social-media-link">
+                            <a href="<?php echo $sm_instagram; ?>" class="social-media-link" target="_blank" rel="noopener">
                                 <svg class="inst-t">
                                     <use xlink:href="#inst-t"></use>
                                 </svg>
@@ -207,7 +207,7 @@
                                     <img src="<?php bloginfo('template_directory'); ?>/assets/images/file.png" alt="">
                                     <p class="name p-18"><?php echo $vf_file_name; ?></p>
                                 </div>
-                                <a href="<?php echo $vf_pdf_url; ?>" class="p-18 link-pdf" target="_blank">Read More</a>
+                                <a href="<?php echo $vf_pdf_url; ?>" class="p-18 link-pdf" target="_blank" rel="noopener">Read More</a>
                             </div>
                         </div>
                         <?php

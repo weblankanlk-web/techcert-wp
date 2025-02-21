@@ -1,8 +1,8 @@
 @import "variable.scss";
 
 @function get-vw($target) {
-    $vw-context: (1920*.01) * 1px;
-    $res: (calc($target/$vw-context)) * 1vw;
+    $vw-context: (1920 * 0.01) * 1px;
+    $res: ($target / $vw-context) * 1vw;
     @return $res;
 }
 body{

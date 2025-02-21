@@ -32,7 +32,7 @@
             ?>
                         <div>
                             <div class="item"> 
-                                <img src="<?php echo $ics_image_url; ?>">
+                                <img src="<?php echo $ics_image_url; ?>" alt="">
                                 <div class="item-content">
                                     <?php if($ics_card_title){?>
                                         <h2 class="item-content-title">

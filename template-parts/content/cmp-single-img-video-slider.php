@@ -34,7 +34,7 @@
                 <picture>
                     <source media="(min-width:1200px)" srcset="<?php echo $ivss_desktop_image_url; ?>">
                     <source media="(min-width:768px)" srcset="<?php echo $ivss_ipad_image; ?>">
-                    <img src="<?php echo $ivss_mobile_image_url;?>">
+                    <img src="<?php echo $ivss_mobile_image_url;?>" alt="">
                 </picture>
 
                 <?php if($ivvs_video_url){?>

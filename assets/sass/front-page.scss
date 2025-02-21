@@ -587,7 +587,6 @@
                                     align-items: center;
                                     .title{
                                         color: $white;
-                                        margin-bottom: 30px;
                                         text-align: center;
                                         font-family: $primary-font;
                                         // font-size: 40px;
@@ -1482,7 +1481,6 @@
                         }
                         button.threat-item{
                             background: $black-bg-3;
-                            border: 0;
                             padding: 50px 30px;
                             width: 100%;
                             margin: 0 10px;
@@ -1702,7 +1700,7 @@
 
 .home-industries{
     .main-wrapper{
-        background: $black-bg;
+        // background: $black-bg;
         padding-bottom: 140px;
         padding-top: 100px;
         position: relative;

@@ -1442,7 +1442,6 @@ a.scrollup.hide {
 }
 
 #navbar_main_mobile {
-  position: relative;
   background: rgba(0, 0, 0, 0.84);
   display: none;
   position: fixed;
@@ -1502,7 +1501,6 @@ a.scrollup.hide {
   display: flex;
   flex-direction: column;
   background: none;
-  padding-right: 0;
   position: relative;
   top: 0;
   bottom: 0;
@@ -1517,7 +1515,6 @@ a.scrollup.hide {
   list-style: none;
   margin: 0;
   background-color: transparent;
-  list-style: none;
   border-radius: 150px;
   padding: 10px 21px;
   font-weight: 400;
@@ -1575,7 +1572,6 @@ a.scrollup.hide {
   backdrop-filter: blur(19.5px);
   position: absolute;
   left: 0;
-  display: none;
   transition: 0.7s;
   padding: 0;
   padding: 16px 0;
@@ -1597,7 +1593,6 @@ a.scrollup.hide {
   display: flex;
   flex-direction: column;
   background: none;
-  padding-right: 0;
   position: relative;
   top: 0;
   bottom: 0;
@@ -1608,7 +1603,6 @@ a.scrollup.hide {
   gap: 50px;
 }
 #navbar_main_mobile .header-inner .container-fluid .header-main-menu .navbar-nav-mobile-sub li {
-  list-style: none;
   margin: 0 20px;
   background-color: transparent;
   list-style: none;
@@ -1669,7 +1663,6 @@ a.scrollup.hide {
   backdrop-filter: blur(19.5px);
   position: absolute;
   left: 0;
-  display: none;
   transition: 0.7s;
   padding: 0;
   padding: 16px 0;
@@ -1689,7 +1682,6 @@ a.scrollup.hide {
 }
 
 #navbar_main_mobile.show {
-  display: block;
   transform: translateX(0);
   position: fixed;
   top: 0;
@@ -1717,7 +1709,6 @@ a.scrollup.hide {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
   width: 100%;
 }
 #navbar_main_mobile.show .header-inner .container-fluid .close-btn img {
@@ -1748,7 +1739,6 @@ a.scrollup.hide {
   display: flex;
   flex-direction: column;
   background: none;
-  padding-right: 0;
   position: relative;
   top: 0;
   bottom: 0;
@@ -1759,7 +1749,6 @@ a.scrollup.hide {
   gap: 15px;
 }
 #navbar_main_mobile.show .header-inner .container-fluid .header-main-menu .menu-mobile-menu-container .navbar-nav-mobile li {
-  list-style: none;
   margin: 0;
   background-color: transparent;
   list-style: none;
@@ -1919,7 +1908,6 @@ a.scrollup.hide {
   display: flex;
   flex-direction: column;
   background: none;
-  padding-right: 0;
   position: relative;
   top: 0;
   bottom: 0;
@@ -1931,7 +1919,6 @@ a.scrollup.hide {
   margin: 0;
 }
 #navbar_main_mobile.show .header-inner .container-fluid .header-main-menu .menu-mobile-menu-container .navbar-nav-mobile-sub li {
-  list-style: none;
   margin: 0 20px;
   background-color: transparent;
   list-style: none;
@@ -2063,7 +2050,6 @@ a.scrollup.hide {
 }
 
 #navbar_main_desktop {
-  position: relative;
   background: rgba(0, 0, 0, 0.84);
   display: none;
   position: fixed;
@@ -2119,7 +2105,6 @@ a.scrollup.hide {
   display: flex;
   flex-direction: column;
   background: none;
-  padding-right: 0;
   position: relative;
   top: 0;
   bottom: 0;
@@ -2130,7 +2115,6 @@ a.scrollup.hide {
   gap: 2.6041666667vw;
 }
 #navbar_main_desktop .header-inner .container-fluid .header-main-menu .navbar-nav-desktop-sub li {
-  list-style: none;
   margin: 0 1.0416666667vw;
   background-color: transparent;
   list-style: none;
@@ -2197,7 +2181,6 @@ a.scrollup.hide {
   padding: 0.8333333333vw 0;
   min-width: 13.3333333333vw;
   top: 2.7395833333vw;
-  display: none;
 }
 #navbar_main_desktop .header-inner .container-fluid .header-main-menu .navbar-nav-desktop-sub .sub-menu li {
   padding: 0.2083333333vw 1.0416666667vw;
@@ -2211,7 +2194,6 @@ a.scrollup.hide {
 }
 
 #navbar_main_desktop.show {
-  display: block;
   transform: translateX(0);
   position: fixed;
   top: 0;
@@ -2268,7 +2250,6 @@ a.scrollup.hide {
   display: flex;
   flex-direction: column;
   background: none;
-  padding-right: 0;
   position: relative;
   top: 0;
   bottom: 0;
@@ -2279,7 +2260,6 @@ a.scrollup.hide {
   gap: 2.6041666667vw;
 }
 #navbar_main_desktop.show .header-inner .container-fluid .header-main-menu .navbar-nav-desktop-sub li {
-  list-style: none;
   margin: 0 1.0416666667vw;
   background-color: transparent;
   list-style: none;
@@ -2908,7 +2888,6 @@ a.scrollup.hide {
   font-weight: 600;
 }
 .inner-bannner-tc .full-wrapper .banner-details .inner-wrapper .banner-content {
-  color: #ffffff;
   text-align: center;
   padding-top: 22px;
   font-family: "Poppins", sans-serif;
@@ -4390,7 +4369,6 @@ a.scrollup.hide {
 }
 .services-threat-bulletins .main-wrapper .main-div .bottom-section .slider-wrapper .threat-slider button.threat-item {
   background: #151F3D;
-  border: 0;
   padding: 50px 30px;
   width: 100%;
   margin: 0 10px;
@@ -5507,7 +5485,6 @@ a.scrollup.hide {
 }
 .other-services-landing .main-wrapper .other-services-listing .other-service-item .other-service-inner .details-item .title {
   color: #ffffff;
-  margin-bottom: 30px;
   text-align: center;
   font-family: "Forma DJR Micro", sans-serif;
   font-size: 30px;
@@ -5597,8 +5574,7 @@ a.scrollup.hide {
 }
 .threat-bulletin-section .main-wrapper .wrapper-filter .threat-wrapper .threats-landing-slider button.threat-item {
   background: #151F3D;
-  border: 0;
-  padding: 30px;
+  padding: 50px 30px;
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
@@ -5627,6 +5603,7 @@ a.scrollup.hide {
   font-weight: 400;
   padding-bottom: 20px;
   letter-spacing: -0.7px;
+  min-height: 80px;
 }
 .threat-bulletin-section .main-wrapper .wrapper-filter .threat-wrapper .threats-landing-slider button.threat-item .detail-div .tb-date {
   color: #ffffff;
@@ -5803,6 +5780,7 @@ a.scrollup.hide {
     letter-spacing: -0.0364583333vw;
     line-height: 1.875vw;
     text-align: left;
+    min-height: unset;
   }
   .threat-bulletin-section .main-wrapper .wrapper-filter .threat-wrapper .threats-landing-slider button.threat-item .detail-div .tb-date {
     padding-bottom: 5.4166666667vw;
@@ -5967,7 +5945,6 @@ a.scrollup.hide {
 }
 .our-industries .main-wrapper .industry-item .industry-inner .bottom-section .slider-wrapper .industry-land-slider .insdustry-land-item .insdustry-land-inner .details-item .title {
   color: #ffffff;
-  margin-bottom: 30px;
   text-align: center;
   font-family: "Forma DJR Micro", sans-serif;
   font-size: 35px;
@@ -6455,7 +6432,6 @@ a.scrollup.hide {
 }
 @media only screen and (min-width: 1200px) {
   .threat-bulletin-inner .main-wrapper {
-    padding-bottom: 0;
     flex-direction: row;
     padding: 5.2083333333vw 7.2916666667vw;
     justify-content: space-between;
@@ -6611,8 +6587,7 @@ a.scrollup.hide {
 }
 .more-threat-slider .full-wrapper .bottom-section .slider-wrapper .threat-more-slider button.threat-item {
   background: #151F3D;
-  border: 0;
-  padding: 30px;
+  padding: 50px 30px;
   width: 100%;
   margin: 0 10px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -6642,6 +6617,7 @@ a.scrollup.hide {
   font-weight: 400;
   padding-bottom: 20px;
   letter-spacing: -0.7px;
+  min-height: 80px;
 }
 .more-threat-slider .full-wrapper .bottom-section .slider-wrapper .threat-more-slider button.threat-item .detail-div .tb-date {
   color: #ffffff;
@@ -6725,6 +6701,7 @@ a.scrollup.hide {
     letter-spacing: -0.0364583333vw;
     line-height: 1.875vw;
     text-align: left;
+    min-height: unset;
   }
   .more-threat-slider .full-wrapper .bottom-section .slider-wrapper .threat-more-slider button.threat-item .detail-div .tb-date {
     padding-bottom: 5.4166666667vw;
@@ -7838,7 +7815,6 @@ a.scrollup.hide {
 }
 @media only screen and (min-width: 1200px) {
   .news-updates-inner .main-wrapper {
-    padding-bottom: 0;
     flex-direction: row;
     padding: 5.2083333333vw 7.2916666667vw;
     justify-content: space-between;

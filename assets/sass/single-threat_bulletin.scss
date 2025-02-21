@@ -220,7 +220,6 @@
     }
     @media only screen and (min-width: 1200px){
         .main-wrapper{
-            padding-bottom: 0;
             flex-direction: row;
             padding: get-vw(100px) get-vw(140px);
             justify-content: space-between;
@@ -389,8 +388,7 @@
                 .threat-more-slider{
                     button.threat-item{
                         background: $black-bg-3;
-                        border: 0;
-                        padding: 30px;
+                        padding: 50px 30px;
                         width: 100%;
                         margin: 0 10px;
                         border: 1px solid rgba(255, 255, 255, 0.30);
@@ -420,6 +418,7 @@
                                 font-weight: 400;
                                 padding-bottom: 20px;
                                 letter-spacing: -0.7px;
+                                min-height: 80px;
                                 // min-height: 60px;
                             }
                             .tb-date{
@@ -515,6 +514,7 @@
                                     letter-spacing:get-vw(-0.7px);
                                     line-height: get-vw(36px);
                                     text-align: left;
+                                    min-height: unset;
                                     // min-height:get-vw(672.391px);
                                 }
                                 .tb-date{

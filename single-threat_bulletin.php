@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/" class="social-media-link" target="_blank" target="_blank" >
+                            <a href="https://www.instagram.com/" class="social-media-link" target="_blank" rel="noopener" >
                                 <svg class="inst-t">
                                     <use xlink:href="#inst-t"></use>
                                 </svg>

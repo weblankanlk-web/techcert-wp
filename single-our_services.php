@@ -373,7 +373,7 @@
                 <h4 class="h-80-s main fade-up"><?php echo $ssm_title;?></h4>
                 <h3 class="h-30 sub fade-up"><?php echo $ssm_sub_title;?></h3>
                 <div class="btn-group">
-                    <a href="<?php echo $sm_whatsapp; ?>" class="common-btn-green btn-sc-1 fade-up" target="_blank" target="_blank" >
+                    <a href="<?php echo $sm_whatsapp; ?>" class="common-btn-green btn-sc-1 fade-up" target="_blank" rel="noopener" >
                         <div class="btn-wrap">
                             <div class="ar-icon">
                                 <svg class="left">

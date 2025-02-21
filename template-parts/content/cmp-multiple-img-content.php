@@ -13,7 +13,7 @@
                     $mic_image_url  = validateImage(700,500,$mic_image);  
                 ?>
             <div class="img-item">
-                <img src="<?php echo $mic_image_url;?>" alt="">
+                <img src="<?php echo $mic_image_url;?>">
             </div>
             <?php 
                 } 

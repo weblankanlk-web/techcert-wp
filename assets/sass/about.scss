@@ -1,6 +1,6 @@
 .about-first{
     .inner-wrapper{
-        padding-top: 27px;
+        padding-top: 70px;
         background: $black-bg;
         position: relative;
         padding-bottom: 60px;
@@ -217,7 +217,7 @@
                 .white-section-inner{
                     border-radius: 20px;
                     background: $white-bg-2;
-                    padding: 35px 39px 40px 22px;
+                    padding: 35px 39px 40px 25px;
                     .white-title{
                         width: 90%;
                         margin-bottom: 30px;
@@ -247,10 +247,10 @@
                                         display: flex;
                                         flex-direction: column;
                                         align-items: center;
-                                        gap: 10px;
+                                        gap: 5px;
                                         img.white-icon{
-                                            width: 48px;
-                                            height: 48px;
+                                            width: 55px;
+                                            height: 55px;
                                             object-fit: contain; 
                                         }
                                         .white-icon-para{
@@ -335,12 +335,17 @@
                     .white-section-inner{
                         border-radius: get-vw(20px);
                         padding: get-vw(70px) get-vw(53.52px) get-vw(61px);
+                        .tagline-black{
+                            margin-left: get-vw(40px);
+                        }
                         .white-title{
                             margin-bottom: get-vw(47px);
                             line-height: get-vw(62px);
+                            margin-left: get-vw(40px);
                         }
                         .white-para{
                             margin-bottom: get-vw(40px);
+                            margin-left: get-vw(40px);
                         }
                         .white-listing{
                             .slide-wrapper{
@@ -392,6 +397,29 @@
         .bottom-section{
             .slider-wrapper{
                 .awards-slider{
+                    .slick-dots{
+                        bottom: -30px;
+                        li{
+                           button{
+                                &::before{
+                                    color: $white;
+                                    opacity: .25;
+                                    margin: 5px;
+                                    font-size: 8px;
+                                }
+                           }
+                           &.slick-active{
+                            button{
+                                &::before{
+                                    color: $secondary-color;
+                                    opacity: 1;
+                                    margin: 5px;
+                                    font-size: 10px;
+                                }
+                           }
+                           }
+                        }
+                    }
                     .award-div{
                         overflow: hidden;
                         &:hover{
@@ -439,7 +467,7 @@
                     }
                 }
                 .arrow-div{
-                    display: flex;
+                    // display: flex;
                     flex-direction: row;
                     justify-content: center;
                     gap: 20px;

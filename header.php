@@ -17,11 +17,6 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-
-	<title><?php bloginfo('name'); echo ' | '; is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-
 	<!-- Google Font Link Here -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -159,20 +154,28 @@
 				<img class="close-menu" id="close-menu-mobile" src="<?php bloginfo('template_directory'); ?>/assets/images/header-mobile.png" alt="">
 			</div>
 			<div class="header-main-menu">
-				<?php wp_nav_menu(
+				<!-- </?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
 						'depth'           => 2,
 						'menu_class'      => 'navbar-nav-mobile navbardropdown--mobile',
 						'menu_id'         => 'primary'
 					)
-				); ?>
-				<?php wp_nav_menu(
+				); ?> -->
+				<!-- </?php wp_nav_menu(
 					array(
 						'theme_location'  => 'sub',
 						'depth'           => 2,
 						'menu_class'      => 'navbar-nav-mobile-sub navbardropdown-mobile-sub',
 						'menu_id'         => 'sub'
+					)
+				); ?> -->
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'mobile',
+						'depth'           => 2,
+						'menu_class'      => 'navbar-nav-mobile navbardropdown--mobile',
+						'menu_id'         => 'mobile'
 					)
 				); ?>
 			</div>

@@ -1,6 +1,7 @@
 <?php 
     $ib_tagline	= get_field("ib_tagline");
     $ib_main_title	= get_field("ib_main_title");
+    $ib_sub_title	= get_field("ib_sub_title");
     $ib_content	= get_field("ib_content");
     $ib_desktop_image	= get_field("ib_desktop_image");
     $ib_desktop_image_url=validateImage(1920,830,$ib_desktop_image);
@@ -19,7 +20,10 @@
             <div class="banner-details">
                 <div class="inner-wrapper">
                     <?php if($ib_tagline):?>
-                        <h1 class="h-80 sub fade-up"><?php echo $ib_tagline; ?></h1>
+                        <h2 class="h-80 sub fade-up"><?php echo $ib_tagline; ?></h2>
+                    <?php endif;?>
+                    <?php if($ib_sub_title):?>
+                        <h2 class="h-80 sub-t fade-up"><?php echo $ib_sub_title; ?></h2>
                     <?php endif;?>
                     <?php if($ib_main_title):?>
                         <h2 class="h-120 fw-5 main fade-up"><?php echo $ib_main_title; ?></h2>

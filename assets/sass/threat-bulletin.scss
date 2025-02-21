@@ -13,9 +13,11 @@
                     gap: 20px;
                     button.threat-item{
                         background: $black-bg-3;
+                        border: 0;
                         padding: 30px;
                         width: 100%;
                         border: 1px solid rgba(255, 255, 255, 0.30);
+                        border-radius:(10px);
                         &:hover{
                             background: linear-gradient(180deg, #151F3D 15.61%, #3853A3 159.79%);
                         }
@@ -218,6 +220,7 @@
                             flex-direction: column;
                             align-items: flex-start;
                             justify-content: space-between;
+                            border-radius:get-vw(10px);
                             .detail-div{
                                 .sub{
                                     padding-bottom: get-vw(40px);

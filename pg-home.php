@@ -253,7 +253,7 @@
 						endif;
 						?>
 					</div>
-					<div class="arrow-div">
+					<div class="arrow-div  d-hide-m">
 						<div class="arrow-left-o">
 							<svg class="arr-left">
 								<use xlink:href="#tc-left"></use>
@@ -372,7 +372,7 @@
 					</a>
                 </div>
             </div>
-			<div class="arrow-num-industries">
+			<div class="arrow-num-industries d-hide-m">
 				<div class="left-arrow-industries">
 					<svg class="arr-left">
 						<use xlink:href="#tc-left"></use>
@@ -465,7 +465,7 @@
 							endif;
 						?>
 					</div>
-					<div class="arrow-num-bms">
+					<div class="arrow-num-bms d-hide-m">
 						<div class="left-arrow-bms">
 							<svg class="arr-left">
 								<use xlink:href="#tc-left"></use>
@@ -518,7 +518,7 @@
 					endforeach;
 					?>
 				</div>
-				<div class="arrow-div">
+				<div class="arrow-div  d-hide-m">
 					<div class="arrow-left-b">
 						<svg class="arr-left">
 							<use xlink:href="#tc-left"></use>

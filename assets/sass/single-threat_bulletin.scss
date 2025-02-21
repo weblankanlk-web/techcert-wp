@@ -220,6 +220,7 @@
     }
     @media only screen and (min-width: 1200px){
         .main-wrapper{
+            padding-bottom: 0;
             flex-direction: row;
             padding: get-vw(100px) get-vw(140px);
             justify-content: space-between;
@@ -388,10 +389,12 @@
                 .threat-more-slider{
                     button.threat-item{
                         background: $black-bg-3;
+                        border: 0;
                         padding: 30px;
                         width: 100%;
                         margin: 0 10px;
                         border: 1px solid rgba(255, 255, 255, 0.30);
+                        border-radius:(10px);
                         &:hover{
                             background: linear-gradient(180deg, #151F3D 15.61%, #3853A3 159.79%);
                         }
@@ -436,7 +439,7 @@
                     }
                 }
                 .arrow-num-bm{
-                    display: flex;
+                    // display: flex;
                     flex-direction: row;
                     justify-content: center;
                     gap: 15px;
@@ -493,6 +496,7 @@
                             align-items: flex-start;
                             justify-content: space-between;
                             height: get-vw(576.391px);
+                            border-radius:get-vw(10px);
                             .detail-div{
                                 .sub{
                                     padding-bottom: get-vw(40px);
@@ -530,6 +534,7 @@
                     .arrow-num-bm{
                         gap: get-vw(10px);
                         margin-top: 0;
+                        display: flex;
                         position: absolute;
                         left: get-vw(-153.6px);
                         bottom: get-vw(170px);

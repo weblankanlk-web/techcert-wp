@@ -207,7 +207,7 @@
                                     <img src="<?php bloginfo('template_directory'); ?>/assets/images/file.png" alt="">
                                     <p class="name p-18"><?php echo $vf_file_name; ?></p>
                                 </div>
-                                <a href="<?php echo $vf_pdf_url; ?>" class="p-18 link-pdf" target="_blank" rel="noopener">Read More</a>
+                                <a href="<?php echo $vf_pdf_url; ?>" class="p-18 link-pdf" target="_blank">Read More</a>
                             </div>
                         </div>
                         <?php

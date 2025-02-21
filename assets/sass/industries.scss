@@ -37,6 +37,29 @@
                     padding: 50px 0;
                     .slider-wrapper{
                         .industry-land-slider{
+                            .slick-dots{
+                                bottom: -30px;
+                                li{
+                                   button{
+                                        &::before{
+                                            color: $white;
+                                            opacity: .25;
+                                            margin: 5px;
+                                            font-size: 8px;
+                                        }
+                                   }
+                                   &.slick-active{
+                                    button{
+                                        &::before{
+                                            color: $secondary-color;
+                                            opacity: 1;
+                                            margin: 5px;
+                                            font-size: 10px;
+                                        }
+                                   }
+                                   }
+                                }
+                            }
                             .insdustry-land-item{
                                 margin: 0 10px;
                                 .insdustry-land-inner{
@@ -68,20 +91,21 @@
                                         align-items: center;
                                         .title{
                                             color: $white;
+                                            margin-bottom: 30px;
                                             text-align: center;
                                             font-family: $primary-font;
-                                            font-size: 40px;
+                                            font-size: 35px;
                                             font-style: normal;
-                                            font-weight: 700;
+                                            font-weight: 600;
                                             line-height: 35px;
                                             letter-spacing: -2px;
                                             margin-bottom: 20px;
                                             min-height: 137.8px;
                                             span{
                                                 font-family: $primary-font;
-                                                font-size: 30px;
+                                                font-size: 35px;
                                                 font-style: normal;
-                                                font-weight: 400;
+                                                font-weight:6400;
                                                 line-height: 35px;
                                                 letter-spacing: -2px;
                                             }
@@ -96,7 +120,7 @@
                             }
                         }
                         .arrow-num-indus{
-                            display: flex;
+                            display:flex;
                             flex-direction: row;
                             justify-content: center;
                             gap: 20px;
@@ -181,7 +205,6 @@
                                     padding-right: get-vw(5px);
                                     // width: get-vw(958px);
                                     letter-spacing: get-vw(-7.2px);
-                                    
                                     span{
                                         font-weight: 400;
                                     }
@@ -206,10 +229,11 @@
                                     .insdustry-land-item{
                                         margin: get-vw(5px);
                                         .insdustry-land-inner{
-                                            padding: get-vw(89px) get-vw(62.32px) get-vw(60px);
+                                            padding: get-vw(89px) get-vw(39.28px) get-vw(60px);
                                             border-radius:get-vw( 6px);
                                             border:get-vw( 1px) solid rgba(255, 255, 255, 0.30);
-                                            height: get-vw(590px);
+                                            // height: get-vw(590px);
+                                            height: get-vw(632.234px);
                                             img.insdustry-land-image{
                                                 height: get-vw(197px);
                                                 width: get-vw(410px);
@@ -219,12 +243,12 @@
                                             .details-item{
                                                 .title{
                                                     margin-bottom:get-vw(38px);
-                                                    font-size: get-vw(50px);
+                                                    font-size: get-vw(45px);
                                                     line-height: get-vw(45px);
                                                     letter-spacing: get-vw(-2.5px);
                                                     min-height: get-vw(141.664px);
                                                     span{
-                                                        font-size: get-vw(30px);
+                                                        font-size: get-vw(45px);
                                                         line-height: get-vw(21.96px); /* 150% */
                                                         letter-spacing: get-vw(-1.5px);
                                                     }
@@ -239,6 +263,7 @@
                                 .arrow-num-indus{
                                     gap: get-vw(10px);
                                     margin-top: 0;
+                                    display: flex;
                                     position: absolute;
                                     left: get-vw(-152.8px);
                                     top: get-vw(263px);
@@ -329,10 +354,11 @@
                                     .insdustry-land-item{
                                         margin: get-vw(5px);
                                         .insdustry-land-inner{
-                                            padding: get-vw(89px) get-vw(62.32px) get-vw(60px);
+                                            // padding: get-vw(89px) get-vw(62.32px) get-vw(60px);
+                                            padding: get-vw(89px) get-vw(39.28px) get-vw(60px);
                                             border-radius:get-vw( 6px);
                                             border:get-vw( 1px) solid rgba(255, 255, 255, 0.30);
-                                            height: get-vw(590px);
+                                            height: get-vw(632.234px);
                                             img.insdustry-land-image{
                                                 height: get-vw(197px);
                                                 width: get-vw(410px);
@@ -342,12 +368,12 @@
                                             .details-item{
                                                 .title{
                                                     margin-bottom:get-vw(38px);
-                                                    font-size: get-vw(50px);
+                                                    font-size: get-vw(45px);
                                                     line-height: get-vw(45px);
                                                     letter-spacing: get-vw(-2.5px);
                                                     min-height: get-vw(141.664px);
                                                     span{
-                                                        font-size: get-vw(30px);
+                                                        font-size: get-vw(45px);
                                                         line-height: get-vw(21.96px); /* 150% */
                                                         letter-spacing: get-vw(-1.5px);
                                                     }
@@ -362,6 +388,7 @@
                                 .arrow-num-indus{
                                     gap: get-vw(10px);
                                     margin-top: 0;
+                                    display: flex;
                                     position: absolute;
                                     right: get-vw(-152.8px);
                                     top: get-vw(263px);

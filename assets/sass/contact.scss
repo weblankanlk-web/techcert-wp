@@ -17,6 +17,7 @@
             position: relative;
             z-index: 1;
             overflow-y: hidden;
+            overflow-x: hidden;
             video#mapVideo{
                 width: 457px;
                 height: 480px;
@@ -43,7 +44,7 @@
                 justify-content: space-between;
                 align-items: flex-end;
                 .main{
-                    background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);
+                    background: $white;
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -84,6 +85,7 @@
                     align-items: center;
                     .main{
                         font-size: 102px;
+                        padding-right: 4px;
                     }
                 }
             }
@@ -114,6 +116,11 @@
                     .main{
                         width: get-vw(746px);
                         font-size: get-vw(200px);
+                        background: linear-gradient(101deg, #4061AD 8.54%, #FFF 73.98%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        padding-right: unset;
                     }
                     .para{
                         padding: 0;
@@ -306,7 +313,7 @@
         background: $black-bg;
         padding-bottom: 50px;
         .left-div{
-            padding: 50px 0;
+            padding: 70px 0 50px;
             .main{
                 color: $white;
                 text-align: center;
@@ -502,6 +509,18 @@
             .right-div{
                 .form-wrap{
                     padding: 60px;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 992px){
+        .main-wrapper{
+            .left-div{
+                .image-wrap{
+                    margin-top: -300px;
+                    img{
+                        height: 700px;
+                    }
                 }
             }
         }

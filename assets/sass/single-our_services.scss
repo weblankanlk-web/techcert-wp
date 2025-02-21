@@ -2,10 +2,11 @@
     .main-wrapper{
         position: relative;
         background: $black-bg;
+        padding: 0;
         padding-bottom: 50px;
         &::before{
             width: 100%;
-            height: 32%;
+            height: 50%;
             position: absolute;
             content: "";
             top: 0;
@@ -43,7 +44,7 @@
             .top-section{
                 position: relative;
                 z-index: 1;
-                padding: 60px 0 30px 0;
+                padding: 60px 35px 30px 35px;
                 .first-sec{
                     .main{
                         color: $white;
@@ -55,14 +56,40 @@
                 }
             }
             .bottom-section{
+                padding: 0 15px;
                 .slider-wrapper{
                     .threat-slider{
+                        .slick-dots{
+                            bottom: -50px;
+                            li{
+                               button{
+                                    &::before{
+                                        color: $white;
+                                        opacity: .25;
+                                        margin: 5px;
+                                        font-size: 8px;
+                                    }
+                               }
+                               &.slick-active{
+                                button{
+                                    &::before{
+                                        color: $secondary-color;
+                                        opacity: 1;
+                                        margin: 5px;
+                                        font-size: 10px;
+                                    }
+                               }
+                               }
+                            }
+                        }
                         button.threat-item{
                             background: $black-bg-3;
-                            padding: 30px;
+                            border: 0;
+                            padding: 50px 30px;
                             width: 100%;
                             margin: 0 10px;
                             border: 1px solid rgba(255, 255, 255, 0.30);
+                            border-radius:(10px);
                             &:hover{
                                 background: linear-gradient(180deg, #151F3D 15.61%, #3853A3 159.79%);
                             }
@@ -88,6 +115,7 @@
                                     font-weight: 400;
                                     padding-bottom: 20px;
                                     letter-spacing: -0.7px;
+                                    min-height: 80px;
                                 }
                                 .tb-date{
                                     color: $white;
@@ -105,7 +133,7 @@
                         }
                     }
                     .arrow-num-bms{
-                        display: flex;
+                        display: none;
                         flex-direction: row;
                         justify-content: center;
                         gap: 20px;
@@ -135,6 +163,7 @@
     }
     @media only screen and (min-width: 1200px){
         .main-wrapper{
+            padding: 0;
             padding-bottom: get-vw(140px);
             &::before{
                 width: 70%;
@@ -175,7 +204,7 @@
                     flex-direction: row;
                     align-items: flex-end;
                     justify-content: space-between;
-                    padding: get-vw(140px) 0 get-vw(44px) 0;
+                    padding: get-vw(140px) get-vw(140px) get-vw(44px) get-vw(140px);
                     .first-sec{
                         .main{
                             width: get-vw(804px);
@@ -185,6 +214,7 @@
                 }
                 .bottom-section{ 
                     position: relative; 
+                    padding: 0 get-vw(140px);
                     .slider-wrapper{
                         width: get-vw(1015px);
                         position: relative;
@@ -202,6 +232,7 @@
                                         padding-bottom: get-vw(40px);
                                         text-align: left;
                                         padding-left: get-vw(45px);
+                                        border-radius:get-vw(10px);
                                         &::before{
                                             width: get-vw(10px);
                                             height: get-vw(10px);
@@ -215,6 +246,7 @@
                                         letter-spacing:get-vw(-0.7px);
                                         line-height: get-vw(36px);
                                         text-align: left;
+                                        min-height: unset;
                                     }
                                     .tb-date{
                                         padding-bottom: get-vw(104px);
@@ -237,6 +269,7 @@
                             right: get-vw(-133.6px);
                             top: get-vw(263px);
                             flex-direction: column;
+                            display: flex;
                             .left-arrow-bms{
                                 svg{
                                     border: radius get-vw(7px);
@@ -470,6 +503,18 @@
             }
         }
     }
+    @media only screen and (min-width: 992px){
+        .main-wrapper{
+            .left-div{
+                .image-wrap{
+                    margin-top: -300px;
+                    img{
+                        height: 700px;
+                    }
+                }
+            }
+        }
+    }
     @media only screen and (min-width: 1200px){
         .main-wrapper{
             padding: get-vw(140px) get-vw(240px) get-vw(140px);
@@ -659,7 +704,7 @@
                         .white-section-inner{
                             border-radius: 20px;
                             background: $white-bg-2;
-                            padding: 35px 39px 40px 22px;
+                            padding: 35px 39px 40px 25px;
                             .white-title{
                                 width: 90%;
                                 margin-bottom: 30px;
@@ -689,10 +734,10 @@
                                                 display: flex;
                                                 flex-direction: column;
                                                 align-items: center;
-                                                gap: 10px;
+                                                gap: 5px;
                                                 img.white-icon{
-                                                    width: 48px;
-                                                    height: 48px;
+                                                    width: 55px;
+                                                    height: 55px;
                                                     object-fit: contain; 
                                                 }
                                                 .white-icon-para{
@@ -834,12 +879,17 @@
                             .white-section-inner{
                                 border-radius: get-vw(20px);
                                 padding: get-vw(70px) get-vw(53.52px) get-vw(61px);
+                                .tagline-black{
+                                    margin-left: get-vw(40px);
+                                }
                                 .white-title{
                                     margin-bottom: get-vw(47px);
                                     line-height: get-vw(62px);
+                                    margin-left: get-vw(40px);
                                 }
                                 .white-para{
                                     margin-bottom: get-vw(40px);
+                                    margin-left: get-vw(40px);
                                 }
                                 .white-listing{
                                     .slide-wrapper{
@@ -900,6 +950,9 @@
                     ul.point-list{
                         padding: 0 0 0 20px;
                         margin: 0;
+                        .point-item{
+                            margin-bottom: 10px;
+                        }
                     }
                 }
             }

@@ -629,6 +629,7 @@
     }
     @media only screen and (min-width: 1200px){
         .main-wrapper{
+            padding-bottom: 0;
             flex-direction: row;
             padding: get-vw(100px) get-vw(140px);
             justify-content: space-between;

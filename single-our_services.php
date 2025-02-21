@@ -161,7 +161,7 @@
                                     <img src="<?php bloginfo('template_directory'); ?>/assets/images/file.png" alt="">
                                     <p class="name p-18"><?php echo $vf_file_name; ?></p>
                                 </div>
-                                <a href="<?php echo $vf_pdf_url; ?>" class="p-18 link-pdf" target="_blank" rel="noopener">Read More</a>
+                                <a href="<?php echo $vf_pdf_url; ?>" class="p-18 link-pdf" target="_blank">Read More</a>
                             </div>
                         </div>
                         <?php
@@ -373,7 +373,7 @@
                 <h4 class="h-80-s main fade-up"><?php echo $ssm_title;?></h4>
                 <h3 class="h-30 sub fade-up"><?php echo $ssm_sub_title;?></h3>
                 <div class="btn-group">
-                    <a href="<?php echo $sm_whatsapp; ?>" class="common-btn-green btn-sc-1 fade-up" target="_blank"  rel="noopener">
+                    <a href="<?php echo $sm_whatsapp; ?>" class="common-btn-green btn-sc-1 fade-up" target="_blank">
                         <div class="btn-wrap">
                             <div class="ar-icon">
                                 <svg class="left">
@@ -383,7 +383,7 @@
                             <p class="btn-text"><?php echo $ssm_first_button_text;?></p>
                         </div>
                     </a>
-                    <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="common-btn-blue btn-sc-2 fade-up">
+                    <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="common-btn-blue btn-sc-2 fade-up" target="_blank">
                         <div class="btn-wrap">
                             <div class="ar-icon">
                                 <svg class="left">

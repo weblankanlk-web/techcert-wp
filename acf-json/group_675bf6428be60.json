@@ -97,6 +97,27 @@
             "append": ""
         },
         {
+            "key": "field_67aeb6f6962f3",
+            "label": "Sub Title",
+            "name": "ib_sub_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_675bfa0132dcb",
             "label": "Content",
             "name": "ib_content",
@@ -157,5 +178,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1735297062
+    "modified": 1739503371
 }

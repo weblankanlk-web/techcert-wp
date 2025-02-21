@@ -2,7 +2,7 @@
 
 @function get-vw($target) {
     $vw-context: (1920*.01) * 1px;
-    $res: ($target/$vw-context) * 1vw;
+    $res: (calc($target/$vw-context)) * 1vw;
     @return $res;
 }
 body{
@@ -83,6 +83,7 @@ span::selection {
 .fw-9{
     font-weight: 900;
 }
+
 
 .d-hide-m {
     display: none;
@@ -686,6 +687,7 @@ svg.arr-right{
 html{
     scroll-behavior: smooth;
 }
+
 
 @media only screen and (min-width: 768px){
     ::-webkit-scrollbar {

@@ -12,7 +12,7 @@
                 ?>
                 
                     <div>
-                        <img src="<?php echo $ls_logo_image_url;?>" class="logo-img" alt="">
+                        <img src="<?php echo $ls_logo_image_url;?>" class="logo-img">
                     </div>
 
                 <?php 

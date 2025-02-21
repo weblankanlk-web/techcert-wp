@@ -3,7 +3,7 @@
 
 
 
-/* .wrap-breadcrumb {
+.wrap-breadcrumb {
     border-bottom: 1px solid #afafaf;
 }
 
@@ -31,7 +31,7 @@
     padding-left: 0 !important;
 }
 
-*/
+
 
 
 
@@ -39,7 +39,7 @@
 
 /* contact us  */
 
-/* .titleContat {
+.titleContat {
     color: var(--black);
     font-family: var(--OutfitFont);
     font-size: var(--font-64);
@@ -61,25 +61,24 @@
     padding: 75px 125px;
     border: none;
     background: #F4F4F4;
-}*/
-
-/* .visitText{
+}
+.visitText{
     color: #031227;
     font-family: Outfit;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500; */
-    /* line-height: 182.938%; 29.27px */
-    /* letter-spacing: 0.32px;
+    font-weight: 500;
+    line-height: 182.938%; /* 29.27px */
+    letter-spacing: 0.32px;
 }
 .addres-main,.addres-main a {
     color: #031227;
     font-family: Outfit;
     font-size: 32px;
     font-style: normal;
-    font-weight: 500; */
-    /* line-height: 103%; 32.96px */
-    /* letter-spacing: -1.92px;
+    font-weight: 500;
+    line-height: 103%; /* 32.96px */
+    letter-spacing: -1.92px;
 }
 .addres-main a {
     text-decoration: none;
@@ -139,4 +138,4 @@ select.wpcf7-form-control.wpcf7-select.form-control {
     border: 0;
     border-bottom: 1px solid var(--ash-color);
     border-radius: 0;
-}  */
+}

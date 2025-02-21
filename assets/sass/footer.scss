@@ -288,8 +288,8 @@ footer{
                         width: 4px;
                         height: 4px;
                         border-radius: 8px;
-                        left: -.8rem;
-                        top: .4rem;
+                        left: .2rem;
+                        top: .5rem;
                         background: black;
                        }
                         width: 50%;
@@ -313,6 +313,7 @@ footer{
                                 line-height: normal;
                                 letter-spacing: 1.4px;
                                 text-transform: uppercase;
+                                text-align: center;
                             }
                         }
                     }
@@ -473,7 +474,6 @@ footer{
                                     width: 95%;
                                     height: get-vw(1px);
                                     top: get-vw(35px);
-                                   
                                 }
                                 &::marker{
                                     font-size: get-vw(30px);
@@ -535,6 +535,7 @@ footer{
                                         margin-bottom: get-vw(25px);
                                         list-style: none;
                                         position: relative;
+                                        width: get-vw(318.3px);
                                         &.current-menu-item{
                                             a {
                                                 color: $secondary-color;
@@ -713,7 +714,7 @@ a.scrollup {
     font-family: $primary-font;
     box-shadow: 2px 2px 5px #0007;
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
     right: 0;
   }
   /* show text 'UP' if there is no any element inside .scrollup */

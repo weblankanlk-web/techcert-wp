@@ -1066,6 +1066,7 @@ html {
   width: 100%;
 }
 .cmp-team-listing .section-inner .team-listing .listing-item .team-item .team-content {
+  padding: 10px;
   background-color: #2a2a2a;
   padding: 15px;
 }

@@ -19,7 +19,7 @@
 <div class="comp-img-content-section <?php echo $ciw_text_first_class; ?>">
     <div class="section-inner">
         <div class="img-wrap">
-            <img src="<?php echo $cic_image_url; ?>" alt="">
+            <img src="<?php echo $cic_image_url; ?>">
         </div>
         <div class="content-wrap"> 
             <?php if($ciw_tagline){ ?>

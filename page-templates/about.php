@@ -182,7 +182,7 @@
 						endforeach;
 						?>
 				</div>
-				<div class="arrow-div">
+				<div class="arrow-div d-hide-m">
 					<div class="arrow-left-a">
 						<svg class="arr-left">
 							<use xlink:href="#tc-left"></use>

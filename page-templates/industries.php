@@ -76,7 +76,7 @@
                                     endforeach;
                                 ?>
 				            </div>
-                            <div class="arrow-num-indus">
+                            <div class="arrow-num-indus d-hide-m">
                                 <div class="left-arrow-indus">
                                     <svg class="arr-left">
                                         <use xlink:href="#tc-left"></use>

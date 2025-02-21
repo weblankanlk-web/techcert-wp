@@ -290,7 +290,8 @@ $(document).ready(function () {
           slidesToShow: 1,
           centerMode: true,
           centerModePadding: "100px",
-          rows: 1
+          rows: 1,
+          dots:true
         }
       }
     ]
@@ -320,7 +321,6 @@ $(document).ready(function () {
   });
 });
 
-
 function initializeSlider() {
   if ($(window).width() < 768) {
     if (!$('.services-slider').hasClass('slick-initialized')) { 
@@ -331,6 +331,8 @@ function initializeSlider() {
         speed: 300,
         autoplay: true,
         autoplaySpeed: 2000,
+        slidesToShow: 2,
+        slidesToScroll: 1,
         draggable: true,
         touchMove: true,
         swipeToSlide: true,
@@ -346,7 +348,8 @@ function initializeSlider() {
               centerMode: false,
               centerPadding: '20px',
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              dots:true
             }
           }
         ]
@@ -386,6 +389,13 @@ $(document).ready(function () {
     slidesToScroll: 1,
     responsive: [
       {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          rows: 1
+        }
+      },
+      {
         breakpoint: 1025,
         settings: {
           slidesToShow: 3,
@@ -398,7 +408,8 @@ $(document).ready(function () {
           slidesToShow: 1,
           centerMode: true,
           centerModePadding: "100px",
-          rows: 1
+          rows: 1,
+          dots:true
         }
       }
     ]
@@ -435,6 +446,8 @@ $other_services_slider = $('.other-services-slider').slick({
   speed: 300,
   autoplay: true,
   autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
   draggable: true,
   touchMove: true,
   swipeToSlide: true,
@@ -443,6 +456,12 @@ $other_services_slider = $('.other-services-slider').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [ 
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
     {
       breakpoint: 1025,
       settings: {
@@ -480,6 +499,8 @@ $pdf_slider = $('.pdf-slider').slick({
   speed: 300,
   autoplay: true,
   autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
   draggable: true,
   touchMove: true,
   swipeToSlide: true,
@@ -635,6 +656,8 @@ $threat_more_slider.slick({
   speed: 300,
   autoplay: true,
   autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
   draggable: true,
   touchMove: true,
   swipeToSlide: true,
@@ -661,7 +684,8 @@ $threat_more_slider.slick({
         centerMode: false,
         centerPadding: '20px',
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        dots:true
       }
     }
   ]
@@ -693,8 +717,10 @@ $threat_slider.slick({
   arrows: false,
   infinite: true,
   speed: 300,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
   draggable: true,
   touchMove: true,
   swipeToSlide: true,
@@ -721,7 +747,8 @@ $threat_slider.slick({
         centerMode: false,
         centerPadding: '20px',
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        dots:true
       }
     }
   ]
@@ -831,6 +858,8 @@ $news_more_slider.slick({
   speed: 300,
   autoplay: true,
   autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
   draggable: true,
   touchMove: true,
   swipeToSlide: true,
@@ -884,6 +913,8 @@ $image_news_slider = $('.image-news-slider').slick({
   speed: 300,
   autoplay: true,
   autoplaySpeed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 1,
   draggable: true,
   touchMove: true,
   swipeToSlide: true,

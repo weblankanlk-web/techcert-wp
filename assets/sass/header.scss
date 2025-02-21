@@ -2,7 +2,7 @@
     display: none;
 }
 #navbar_main_mobile{
-    // position: relative;
+    position: relative;
     background: rgba(0, 0, 0, 0.84);
     display:none;
 //    height:100vh;
@@ -32,6 +32,7 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            width: 100%;
             .close-btn{
                 
                 // position: absolute;
@@ -57,116 +58,123 @@
                     display: inline-flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
+                    align-items: flex-start;
                     gap:0px;
                     margin-top: 50px;
                 &.menu-open-active { 
                 right: auto;
                 }
-                .navbar-nav-mobile {
-                    display: flex;
-                    flex-direction: column;
-                    background: none;
-                    position: relative;
-                    top: 0;
-                    bottom: 0;
-                    right: 0;
-                    width: auto;
-                    transition: .7s;
-                    padding: 0;
-                    gap: 50px;
-
-                        li {
-                            list-style: none;
-                            margin: 0 get-vw(20px);
-                            background-color: transparent;
-                            border-radius: get-vw(150px);
-                            padding: get-vw(10px) get-vw(21px);
-                            font-weight: 400;
-
-                            .sub-menu-toggle{
-                                display: none;
-                            }
-                            &.menu-item-has-children {
-                                position: relative;
-                                &:after {
-                                    position: absolute;
-                                    content: '';
-                                    background-image: url(../images/down-arrow.png);
-                                    background-size: contain;
-                                    width: (13px);
-                                    height: (13px);
-                                    background-repeat: no-repeat;
-                                    background-position: center;
-                                    top: 4px;
-                                    bottom: 0;
-                                    right: 7px;
-                                    margin: auto;
-                                } 
-                            }
-                            a {
-                                text-decoration: none;
-                                color: $white;
-                                text-align: center;
-                                font-size: 16px;
-                                font-style: normal;
-                                font-weight: 400;
-                                line-height: 114%; /* 72.96px */
-                                position: relative;
-                                &:hover{
-                                    font-weight: 700;
-                                }
-                                &:active{
-                                    font-weight: 700;
-                                } 
-
-                            }
-                            &.current_page_item {
-                                a {
-                                    color: $white;
-                                font-weight: 700;
-                                }
-                            }
-                            &.menu-item-has-children {
-                                position: relative;
-                                // &:hover {
-                                //     .sub-menu { 
-                                //         display: block;
-                                //         transition: .7s;
-                                //     }
-                                // }
-                                    &.active{
-                                    .sub-menu {
-                                    display: block;
-                                    transition: .7s;
-                                    } 
-                                    }
-                            }
-                            
-                        }
-                        .sub-menu {
-                            background: rgba(0, 0, 0, 0.34);
-                            -webkit-backdrop-filter: blur(19.5px);
-                            backdrop-filter: blur(19.5px);
-                            position: absolute;
-                            left: 0;
-                            transition: .7s;
-                            padding: 0;
-                            padding: 16px 0;
-                            min-width: 256px;
-                            top: 52.6px;
-                            display: none;
+                .menu-mobile-menu-container{
+                    width: 100%;
+                    .navbar-nav-mobile {
+                        display: flex;
+                        flex-direction: column;
+                        background: none;
+                        padding-right: 0;
+                        position: relative;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: auto;
+                        transition: .7s;
+                        padding: 0;
+                        gap: 50px;
+                        align-items: flex-start;
                             li {
-                                padding: 4px 20px;
+                                list-style: none;
+                                margin: 0;
+                                background-color: transparent;
+                                list-style: none;
+                                border-radius:(150px);
+                                padding: (10px) (21px);
+                                font-weight: 400;
+    
+                                .sub-menu-toggle{
+                                    display: none;
+                                }
+                                &.menu-item-has-children {
+                                    position: relative;
+                                    &:after {
+                                        position: absolute;
+                                        content: '';
+                                        background-image: url(../images/down-arrow.png);
+                                        background-size: contain;
+                                        width: (13px);
+                                        height: (13px);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        top: 4px;
+                                        bottom: 0;
+                                        right: 7px;
+                                        margin: auto;
+                                    } 
+                                }
+                                a {
+                                        text-decoration: none;
+                                    color: $white;
+                                    text-align: center;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 114%; /* 72.96px */
+                                    position: relative;
+                                    &:hover{
+                                        font-weight: 700;
+                                    }
+                                    &:active{
+                                        font-weight: 700;
+                                    } 
+    
+                                }
+                                &.current_page_item {
+                                    a {
+                                        color: $white;
+                                    font-weight: 700;
+                                    }
+                                }
+                                &.menu-item-has-children {
+                                    position: relative;
+                                    // &:hover {
+                                    //     .sub-menu { 
+                                    //         display: block;
+                                    //         transition: .7s;
+                                    //     }
+                                    // }
+                                        &.active{
+                                        .sub-menu {
+                                        display: block;
+                                        transition: .7s;
+                                        } 
+                                        }
+                                }
+                                
                             }
-                            
-                        }
-                        .sub-menu-toggle {
-                            span {
+                            .sub-menu {
+                                background: rgba(0, 0, 0, 0.34);
+                                -webkit-backdrop-filter: blur(19.5px);
+                                backdrop-filter: blur(19.5px);
+                                position: absolute;
+                                left: 0;
                                 display: none;
+                                transition: .7s;
+                                padding: 0;
+                                padding: 16px 0;
+                                min-width: 256px;
+                                top: 52.6px;
+                                display: none;
+                                li {
+                                    padding: 4px 20px;
+                                }
+                                
                             }
-                        }
+                            .sub-menu-toggle {
+                                span {
+                                    display: none;
+                                }
+                            }
+                    }
                 }
+               
                 &.menu-open-active .navbar-nav-mobile { 
                     right: 0;
                     left: 0;
@@ -175,6 +183,7 @@
                     display: flex;
                     flex-direction: column;
                     background: none;
+                    padding-right: 0;
                     position: relative;
                     top: 0;
                     bottom: 0;
@@ -186,10 +195,11 @@
 
                         li {
                             list-style: none;
-                            margin: 0 get-vw(20px);
+                            margin: 0 (20px);
                             background-color: transparent;
-                            border-radius: get-vw(150px);
-                            padding: get-vw(10px) get-vw(21px);
+                            list-style: none;
+                            border-radius:(150px);
+                            padding: (10px) (21px);
                             font-weight: 400;
 
                             .sub-menu-toggle{
@@ -258,6 +268,7 @@
                             backdrop-filter: blur(19.5px);
                             position: absolute;
                             left: 0;
+                            display: none;
                             transition: .7s;
                             padding: 0;
                             padding: 16px 0;
@@ -284,7 +295,7 @@
     }
 }
 #navbar_main_mobile.show{
-    // display: block;
+    display: block;
     transform: translateX(0);
     position: fixed;
     top: 0;
@@ -310,6 +321,7 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            width: 100%;
             .close-btn{
                     img{
                         cursor: pointer;
@@ -323,22 +335,25 @@
                         margin-right: -5%;
                     }
             }
-            .header-main-menu{
-                list-style: none;
-                padding-left: 0;
-                display: inline-flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap:0px;
-                margin-top: 50px;
-                &.menu-open-active { 
-                    right: auto;
-                }
+        width: 100%;
+        .header-main-menu{
+            list-style: none;
+            padding-left: 0;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap:0px;
+            margin-top: 50px;
+            &.menu-open-active { 
+                right: auto;
+            }
+            .menu-mobile-menu-container{
                 .navbar-nav-mobile {
                     display: flex;
                     flex-direction: column;
                     background: none;
+                    padding-right: 0;
                     position: relative;
                     top: 0;
                     bottom: 0;
@@ -346,17 +361,20 @@
                     width: auto;
                     transition: .7s;
                     padding: 0;
-                    gap: 25px;
+                    gap: 15px;
                     li {
                         list-style: none;
-                        margin: 0 (20px);
+                        margin: 0 ;
                         background-color: transparent;
+                        list-style: none;
                         padding: (10px) (21px);
                         font-weight: 400;
-                        &.menu-item-191{
+                        width: 100%;
+                        text-align: left;
+                        &.menu-item-872{
                             .sub-menu{
                                 overflow-y: hidden;
-                                height: 140px;
+                                height: 126px;
                             }
                         }
                         .sub-menu-toggle{
@@ -383,7 +401,7 @@
                             text-decoration: none;
                             color: $white;
                             text-align: center;
-                            font-size: 18px;
+                            font-size: 20px;
                             font-style: normal;
                             font-weight: 400;
                             line-height: 114%; /* 72.96px */
@@ -428,7 +446,6 @@
                                 } 
                                 }
                         }
-                        
                     }
                     .sub-menu {
                         border-radius: (10px);
@@ -436,12 +453,12 @@
                         -webkit-backdrop-filter: blur(19.5px);
                         backdrop-filter: blur(19.5px);
                         position: absolute;
-                        left: -25%;
+                        left: 0%;
                         transition: .7s;
                         padding:30px;
-                        min-width: 300px;
-                        width:300px;
-                        top: (35.6px);
+                        min-width: 100%;
+                        width:100%;
+                        top: 3rem;
                         display: none;
                         z-index: 200;
                         height: 360px;
@@ -467,6 +484,9 @@
                             padding: 0 0 (10px);
                             list-style: none;
                             text-align: left;
+                            &:last-child{
+                                padding: 0;
+                            }
                             a{
                                 color: $white;
                                 font-size: (16px);
@@ -500,7 +520,7 @@
                                 }
                             }
                         }
-                      
+                    
                     }
                     .sub-menu-toggle {
                         span {
@@ -516,6 +536,7 @@
                     display: flex;
                     flex-direction: column;
                     background: none;
+                    padding-right: 0;
                     position: relative;
                     top: 0;
                     bottom: 0;
@@ -529,8 +550,11 @@
                         list-style: none;
                         margin: 0 (20px);
                         background-color: transparent;
+                        list-style: none;
                         padding: (10px) (21px);
                         font-weight: 400;
+                        width: 100%;
+                        text-align: left;
 
                         .sub-menu-toggle{
                             display: none;
@@ -620,6 +644,7 @@
                         li {
                             padding: 0 0 (10px);
                             list-style: none;
+                            text-align: left;
                             a{
                                 color: $white;
                                 font-size: (16px);
@@ -653,7 +678,7 @@
                                 }
                             }
                         }
-                      
+                    
                     }
                     .sub-menu-toggle {
                         span {
@@ -665,12 +690,13 @@
                     right: 0;
                     left: 0;
                 }
-            }    
+            }  
+            }
         }
     }
 } 
 #navbar_main_desktop{
-    // position: relative;
+    position: relative;
     background: rgba(0, 0, 0, 0.84);
     display:none;
 //    height:100vh;
@@ -727,6 +753,7 @@
                 display: flex;
                 flex-direction: column;
                 background: none;
+                padding-right: 0;
                 position: relative;
                 top: 0;
                 bottom: 0;
@@ -740,6 +767,7 @@
                         list-style: none;
                         margin: 0 get-vw(20px);
                         background-color: transparent;
+                        list-style: none;
                         border-radius: get-vw(150px);
                         padding: get-vw(10px) get-vw(21px);
                         font-weight: 400;
@@ -810,6 +838,7 @@
                         backdrop-filter: blur(19.5px);
                         position: absolute;
                         left: 0;
+                        display: none;
                         transition: .7s;
                         padding: 0;
                         padding: get-vw(16px) 0;
@@ -841,7 +870,7 @@
     }
 }
 #navbar_main_desktop.show{
-    // display: block;
+    display: block;
     transform: translateX(0);
     position: fixed;
     top: 0;
@@ -896,6 +925,7 @@
                     display: flex;
                     flex-direction: column;
                     background: none;
+                    padding-right: 0;
                     position: relative;
                     top: 0;
                     bottom: 0;
@@ -905,6 +935,7 @@
                     padding: 0;
                     gap:get-vw( 50px);
                     li {
+                        list-style: none;
                         margin: 0 get-vw(20px);
                         background-color: transparent;
                         list-style: none;

@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/" class="social-media-link" target="_blank"  rel="noopener">
+                            <a href="https://www.instagram.com/" class="social-media-link" target="_blank">
                                 <svg class="inst-t">
                                     <use xlink:href="#inst-t"></use>
                                 </svg>
@@ -190,7 +190,7 @@
                         endif;
                     ?>
                 </div>
-                <div class="arrow-num-bm">
+                <div class="arrow-num-bm d-hide-m">
                     <div class="left-arrow-bm">
                         <svg class="arr-left">
                             <use xlink:href="#tc-left"></use>

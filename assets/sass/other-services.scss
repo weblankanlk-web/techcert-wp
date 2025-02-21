@@ -46,8 +46,8 @@
                         }
                     }
                     img.other-service-image{
-                        height:120px;
-                        width:170px;
+                        height:140px;
+                        width:150px;
                         object-fit: cover;
                         transform: scale(1);
                         transition: .7s;
@@ -58,12 +58,13 @@
                         align-items: center;
                         .title{
                             color: $white;
+                            margin-bottom: 30px;
                             text-align: center;
                             font-family: $primary-font;
-                            font-size: 40px;
+                            font-size: 30px;
                             font-style: normal;
-                            font-weight: 700;
-                            line-height: 45px;
+                            font-weight: 600;
+                            line-height: 35px;
                             letter-spacing: -2.5px;
                             margin-bottom: 20px;
                             min-height: 137.8px;
@@ -71,7 +72,7 @@
                                 font-family: $primary-font;
                                 font-size: 30px;
                                 font-style: normal;
-                                font-weight: 400;
+                                font-weight: 600;
                                 line-height: 35px;
                                 letter-spacing: -1.5px;
                             }
@@ -119,19 +120,19 @@
                         .details-item{
                             .title{
                                 margin-bottom:get-vw(38px);
-                                font-size: get-vw(50px);
+                                font-size: get-vw(45px);
                                 line-height: get-vw(45px);
                                 letter-spacing: get-vw(-2.5px);
                                 min-height: get-vw(141.664px);
                                 span{
-                                    font-size: get-vw(30px);
+                                    font-size: get-vw(45px);
                                     line-height: get-vw(45px); /* 150% */
                                     letter-spacing: get-vw(-1.5px);
                                 }
                             }
                             .content{
                                 margin-bottom: get-vw(49px);
-                                min-height: get-vw(90px);
+                                min-height: get-vw(120px);
                             }
                         }
                     }

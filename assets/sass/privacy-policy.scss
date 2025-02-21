@@ -26,7 +26,6 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 160%;
-                    text-transform: capitalize;
                     a{
                         color: $white;
                     }
@@ -35,11 +34,10 @@
             h4{
                 color: $white;
                 font-family: $primary-font;
-                font-size: 20px;
+                font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 160%; /* 40px */
-                text-transform: capitalize;
                 padding-bottom: 20px;
             }
             p{
@@ -49,7 +47,6 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 160%; /* 28.8px */
-                text-transform: capitalize;
                 padding-bottom: 20px;
             }
         }

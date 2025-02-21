@@ -13,7 +13,7 @@
             <div class="testimonial-item">
                 <div class="testimonial-card">
                     <div class="test-img-name-wrap">
-                        <img class="image" src="" alt="">
+                        <img class="image" src="">
                         <div class="test-img-name">
                             <h3 class="test-img-name"></h3>
                             <span class="test-location"></span>

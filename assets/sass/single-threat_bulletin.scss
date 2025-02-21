@@ -386,6 +386,29 @@
             padding: 0 0 50px;
             .slider-wrapper{
                 .threat-more-slider{
+                    .slick-dots{
+                        bottom: -30px;
+                        li{
+                           button{
+                                &::before{
+                                    color: $white;
+                                    opacity: .25;
+                                    margin: 5px;
+                                    font-size: 25px;
+                                }
+                           }
+                           &.slick-active{
+                            button{
+                                &::before{
+                                    color: $secondary-color;
+                                    opacity: 1;
+                                    margin: 5px;
+                                    font-size: 30px;
+                                }
+                           }
+                           }
+                        }
+                    }
                     button.threat-item{
                         background: $black-bg-3;
                         padding: 50px 30px;

@@ -1128,6 +1128,9 @@
                 color: $white;
                 text-align: center;
                 font-weight: 400;
+                &::selection{
+                    background: transparent;
+                }
                 span{
                     color: $primary-color;
                     font-weight: 700;
@@ -1445,6 +1448,9 @@
                         color: $white;
                         margin-bottom: 32px;
                         font-weight: 400;
+                        &::selection{
+                            background: transparent;
+                        }
                         span{
                             color: $primary-color;
                             font-weight: 700;

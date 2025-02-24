@@ -52,7 +52,7 @@
 					); ?>
 				</div>
 				<video class="Video-item"  playsinline="" autoplay="" muted="" loop="" id="footerVideo"
-					src="<?php bloginfo('template_directory'); ?>/assets/videos/footer-bg.mov">
+					src="<?php bloginfo('template_directory'); ?>/assets/videos/footer-bg.mp4">
 				</video>
 			</div>
 			<!-- footer Main -->
